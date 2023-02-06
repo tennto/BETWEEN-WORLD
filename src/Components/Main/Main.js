@@ -5,15 +5,23 @@ import Nickname from "../Nickname/Nickname";
 import HappyText1 from "../MoodLine/HappyText1";
 import SadText1 from "../MoodLine/SadText1";
 import ThrillText1 from "../MoodLine/ThrillText1";
+import HappyAnime1 from "../AnimationLine/Happy/HappyAnime1";
+import SadAnime1 from "../AnimationLine/Sad/SadAnime1";
+import ThrillAnime1 from "../AnimationLine/Thrill/ThrillAnime1";
+import NicknameAnime from "../Nickname/NicknameAnime";
+import MoodSelectAnime from "../MoodSelect/MoodSelectAnime";
+import MoodSelect from "../MoodSelect/MoodSelect";
 
 const Main = () => {
   const status = useSelector((state) => state);
   const dispatch = useDispatch();
 
-  // 분위기 테마 별 State 및 리턴컴포넌트 선언
+  // 분위기 테마 별 State 및 최초 상위 리턴컴포넌트 선언
   const setMoodStatus = () => {
     if (status.moodSelect === 1) {
       return <Nickname />;
+    } else if (status.moodSelect === 2) {
+      return <MoodSelect />;
     } else if (status.moodSelect === 100) {
       return <HappyText1 />;
     } else if (status.moodSelect === 200) {
@@ -27,13 +35,15 @@ const Main = () => {
   // 확인 후 컴포넌트 변경 예정
   const setAnimation = () => {
     if (status.moodSelect === 1) {
-      return <Nickname />;
+      return <NicknameAnime />;
+    } else if (status.moodSelect === 2) {
+      return <MoodSelectAnime />;
     } else if (status.moodSelect === 100) {
-      return <HappyText1 />;
+      return <HappyAnime1 />;
     } else if (status.moodSelect === 200) {
-      return <SadText1 />;
+      return <SadAnime1 />;
     } else if (status.moodSelect === 300) {
-      return <ThrillText1 />;
+      return <ThrillAnime1 />;
     }
   };
 
@@ -65,10 +75,7 @@ const Main = () => {
           </button>
           {setAnimation()}
         </div>
-        <div className="textNselect">
-          <h2>Text & Select Area1</h2>
-          {setMoodStatus()}
-        </div>
+        <div className="textNselect">{setMoodStatus()}</div>
       </div>
     </div>
   );
