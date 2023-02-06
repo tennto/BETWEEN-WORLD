@@ -12,7 +12,8 @@ const root = createRoot(container);
 
 // 초기값 설정
 // textLine 은 대화 상태를 관리하기 위한 프로퍼티
-//
+// moodSelect 는 스토리라인 상태를 관리하기 위한 프로퍼티
+// userInfoArr 는 유저데이터를 위한 프로퍼티
 const initialState = {
   textLine: 1,
   moodSelect: 1,
@@ -23,7 +24,7 @@ const initialState = {
 const happMood = "HAPPY_MOOD";
 const sadMood = "SAD_MOOD";
 const thrillMood = "THRILL_MOOD";
-
+const NNextBtn1 = "NNAME_NEXT1";
 // reducer 설정
 function reducer(state = initialState, action) {
   switch (action.type) {
@@ -43,6 +44,12 @@ function reducer(state = initialState, action) {
       return {
         ...state,
         moodSelect: 300,
+      };
+    }
+    case NNextBtn1: {
+      return {
+        ...state,
+        moodSelect: 2,
       };
     }
     default: {
