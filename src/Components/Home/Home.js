@@ -6,7 +6,7 @@ const Home = () => {
     <div className="container">
       <h1 className="Title_0">Between World</h1>
       <a href="/main">
-        <button className="enterBtn">시작</button>
+        <button className="enterBtn">시작합니다</button>
       </a>
     </div>
   );
