@@ -15,25 +15,17 @@ const Nickname = () => {
 
   const textFlow = () => {
     if (nextBtn === 1) {
-      console.log(nextBtn);
-      return (
-        <>
-          <h3 className="dialog">여긴 꿈세계와 현실세계 사이의 틈..</h3>
-          <img className="gonguh" src={gonguh} alt="gonguh" />
-        </>
-      );
+      return <Dialog0 />;
     } else if (nextBtn === 2) {
       console.log(nextBtn);
-      return (
-        <>
-          <h3 className="dialog">(여긴 어디지..?)</h3>
-          <img className="wagi" src={wagi} alt="wagi" />
-        </>
-      );
+      return <Dialog1 />;
     } else if (nextBtn === 3) {
       console.log(nextBtn);
-      return <h3 className="dialog">닉네임 세번째 대화</h3>;
+      return <Dialog2 />;
     } else if (nextBtn === 4) {
+      console.log(nextBtn);
+      return <Dialog3 />;
+    } else if (nextBtn === 5) {
       setTimeout(function () {
         goToSelect();
       }, 1);
@@ -53,6 +45,49 @@ const Nickname = () => {
         다음
       </button>
     </div>
+  );
+};
+
+const Dialog0 = () => {
+  return (
+    <>
+      <h3 className="dialog_wagi1">
+        음...
+        <br />
+        (알 수 없는 곳에서 눈을 뜬 주인공, 정처없이 걷는다){" "}
+      </h3>
+      <img className="wagi" src={wagi} alt="wagi" />
+    </>
+  );
+};
+
+const Dialog1 = () => {
+  return (
+    <>
+      <h3 className="dialog_oneline">
+        (알 수 없는 존재를 마주치고, 그것은 말을 걸어온다)
+      </h3>
+      <img className="gonguh" src={gonguh} alt="gonguh" />
+    </>
+  );
+};
+
+const Dialog2 = () => {
+  return (
+    <>
+      <h3 className="dialog_oneline">너는 누구지?</h3>
+      <img className="gonguh" src={gonguh} alt="gonguh" />
+    </>
+  );
+};
+
+const Dialog3 = () => {
+  return (
+    <>
+      <h3 className="dialog_oneline">내가 너를 어떻게 정의해야 하지?</h3>
+
+      <img className="gonguh" src={gonguh} alt="gonguh" />
+    </>
   );
 };
 
