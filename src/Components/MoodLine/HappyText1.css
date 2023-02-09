@@ -1,0 +1,44 @@
+.happy_choice {
+  position: relative;
+  z-index: -1;
+}
+.selec_1 {
+  position: relative;
+  display: inline-block;
+  border: 1px solid red;
+  height: 200px;
+  width: 420px;
+  margin-right: 26px;
+  z-index: 1;
+}
+.selec_2 {
+  position: relative;
+  display: inline-block;
+  border: 1px solid red;
+  height: 200px;
+  width: 420px;
+  margin-left: 26px;
+  z-index: 1;
+}
+
+.selec_cover1 {
+  position: absolute;
+  left: 0px;
+  display: inline-block;
+  z-index: 10;
+  height: 200px;
+  width: 424px;
+  margin-right: 26px;
+  background-color: black;
+}
+
+.selec_cover2 {
+  position: absolute;
+  right: -26px;
+  display: inline-block;
+  z-index: 10;
+  height: 200px;
+  width: 424px;
+  margin-right: 26px;
+  background-color: black;
+}
