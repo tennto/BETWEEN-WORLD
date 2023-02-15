@@ -3,42 +3,37 @@
   z-index: -1;
 }
 .selec_1 {
-  position: relative;
+  position: absolute;
   display: inline-block;
-  border: 1px solid red;
+  background-color: black;
   height: 200px;
   width: 420px;
   margin-right: 26px;
-  z-index: 1;
 }
+
 .selec_2 {
-  position: relative;
+  position: absolute;
   display: inline-block;
-  border: 1px solid red;
+  background-color: black;
   height: 200px;
   width: 420px;
   margin-left: 26px;
-  z-index: 1;
 }
-
-.selec_cover1 {
+.hover1 {
   position: absolute;
-  left: 0px;
-  display: inline-block;
-  z-index: 10;
+  background-color: whitesmoke;
   height: 200px;
-  width: 424px;
+  width: 420px;
   margin-right: 26px;
-  background-color: black;
 }
-
-.selec_cover2 {
+.hover2 {
   position: absolute;
-  right: -26px;
-  display: inline-block;
-  z-index: 10;
-  height: 200px;
-  width: 424px;
-  margin-right: 26px;
   background-color: black;
+  height: 200px;
+  width: 420px;
+  margin-right: 26px;
+  background-color: aqua;
+}
+.hover2:hover {
+  display: none;
 }
