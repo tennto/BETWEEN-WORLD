@@ -14,7 +14,7 @@
 .selec_2 {
   position: absolute;
   display: inline-block;
-  background-color: black;
+  background-color: yellow;
   height: 200px;
   width: 420px;
   margin-left: 26px;
@@ -33,7 +33,4 @@
   width: 420px;
   margin-right: 26px;
   background-color: aqua;
-}
-.hover2:hover {
-  display: none;
 }
