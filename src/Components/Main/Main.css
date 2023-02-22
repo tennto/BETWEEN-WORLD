@@ -1,0 +1,45 @@
+.Container_m {
+  max-height: 800px;
+}
+.bg {
+  width: 1440px;
+  max-height: 760px;
+  position: absolute;
+  opacity: 40%;
+  top: 0;
+  left: 0;
+}
+.Content_box {
+  width: 900px;
+  height: 460px;
+  margin: 32px auto;
+  /* background-color: #f4f4f4; */
+  border: 2px solid #383838;
+  position: relative;
+}
+
+.textNselect {
+  width: 900px;
+  height: 200px;
+  margin: 10px auto;
+  border: 2px solid #383838;
+}
+
+@keyframes fadein {
+  /* Safari and Chrome */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeout {
+  /* Safari and Chrome */
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
