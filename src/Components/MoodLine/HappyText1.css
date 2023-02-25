@@ -6,10 +6,9 @@
   position: absolute;
   display: inline-block;
   background-color: white;
-  height: 150px;
+  height: 200px;
   width: 420px;
   margin-right: 26px;
-  border: 1px solid;
 }
 
 .selec_2 {
@@ -22,10 +21,9 @@
 .hover1 {
   position: absolute;
     background-color: white;
-  height: 150px;
+  height: 200px;
   width: 420px;
   margin-right: 26px;
-  border: 1px solid;
 }
 .hover2 {
   position: absolute;
@@ -34,11 +32,8 @@
   width: 450px;
   margin-right: 26px;
 }
-.happy1_2{
-  height: 150px;
-  width: 420px;
-}
-.happy1_1{
-  height: 150px;
+
+.happy1{
+  height: 200px;
   width: 420px;
 }
