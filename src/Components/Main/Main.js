@@ -9,8 +9,11 @@ import HappyAnime1 from "../AnimationLine/Happy/HappyAnime1";
 import SadAnime1 from "../AnimationLine/Sad/SadAnime1";
 import ThrillAnime1 from "../AnimationLine/Thrill/ThrillAnime1";
 import NicknameAnime from "../Nickname/NicknameAnime";
-import MoodSelectAnime from "../MoodSelect/MoodSelectAnime";
-import MoodSelect from "../MoodSelect/MoodSelect";
+import NicknameAnime2 from "../Nickname/NicknameAnime2";
+import NicknameAnime3 from "../Nickname/NicknameAnime3";
+import NicknameAnime4 from "../Nickname/NicknameAnime4";
+import ChapterNo2 from "../chapterNo2/chapterNo2";
+import NicknameAnime5 from "../Nickname/NicknameAnime5";
 
 const Main = () => {
   const status = useSelector((state) => state);
@@ -21,13 +24,15 @@ const Main = () => {
     if (status.moodSelect === 1) {
       return <Nickname />;
     } else if (status.moodSelect === 2) {
-      return <MoodSelect />;
-    } else if (status.moodSelect === 100) {
-      return <HappyText1 />;
-    } else if (status.moodSelect === 200) {
-      return <SadText1 />;
-    } else if (status.moodSelect === 300) {
-      return <ThrillText1 />;
+      return <Nickname />;
+    } else if (status.moodSelect === 3) {
+      return <Nickname />;
+    } else if (status.moodSelect === 4) {
+      return <Nickname />;
+    } else if (status.moodSelect === 5) {
+      return <Nickname />;
+    } else if (status.moodSelect === 6) {
+      return <ChapterNo2 />;
     }
   };
 
@@ -37,7 +42,15 @@ const Main = () => {
     if (status.moodSelect === 1) {
       return <NicknameAnime />;
     } else if (status.moodSelect === 2) {
-      return <MoodSelectAnime />;
+      return <NicknameAnime2 />;
+    } else if (status.moodSelect === 3) {
+      return <NicknameAnime3 />;
+    } else if (status.moodSelect === 4) {
+      return <NicknameAnime4 />;
+    } else if (status.moodSelect === 5) {
+      return <NicknameAnime5 />;
+    } else if (status.moodSelect === 6) {
+      return <ChapterNo2 />;
     } else if (status.moodSelect === 100) {
       return <HappyAnime1 />;
     } else if (status.moodSelect === 200) {
@@ -52,27 +65,6 @@ const Main = () => {
       <div className="Container_m">
         <div className="Content_box">
           <h2>Animation Area</h2>
-          <button
-            onClick={() => {
-              dispatch({ type: "HAPPY_MOOD" });
-            }}
-          >
-            행복테마
-          </button>
-          <button
-            onClick={() => {
-              dispatch({ type: "SAD_MOOD" });
-            }}
-          >
-            슬픈테마
-          </button>
-          <button
-            onClick={() => {
-              dispatch({ type: "THRILL_MOOD" });
-            }}
-          >
-            긴장테마
-          </button>
           {setAnimation()}
         </div>
         <div className="textNselect">{setMoodStatus()}</div>

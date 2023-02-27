@@ -53,6 +53,13 @@
   left: -42px;
 }
 
+.nicknameInput {
+  width: 200px;
+  height: 30px;
+  font-size: 28px;
+  font-family: "ongeul";
+}
+
 @font-face {
   font-family: "ongeul";
   src: url("./ongeul.ttf");
