@@ -14,12 +14,15 @@
   left: 20px;
 }
 
-.nextBtn {
+.nextBtn0 {
   position: absolute;
   width: 60px;
   height: 40px;
   bottom: 20px;
   right: 20px;
+}
+.nextBtn1 {
+  display: none;
 }
 
 .dialog_wagi1 {
@@ -72,4 +75,11 @@
   to {
     opacity: 1;
   }
+}
+
+.choiceSex {
+  width: 200px;
+  height: 200px;
+  background-color: aliceblue;
+  display: inline-block;
 }

@@ -1,24 +1,21 @@
 .Container_m {
   max-height: 800px;
 }
-.bg {
-  width: 1440px;
-  max-height: 760px;
-  position: absolute;
-  opacity: 40%;
-  top: 0;
-  left: 0;
-}
+
 .Content_box {
+  background-color: whitesmoke;
   width: 900px;
   height: 460px;
   margin: 32px auto;
   /* background-color: #f4f4f4; */
-  border: 2px solid #383838;
+  border: none;
+  box-shadow: 2px 6px 12px #cecece;
+  border-radius: 20px;
   position: relative;
 }
 
 .textNselect {
+  background-color: whitesmoke;
   width: 900px;
   height: 200px;
   margin: 10px auto;
