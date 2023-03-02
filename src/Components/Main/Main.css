@@ -2,24 +2,33 @@
   max-height: 800px;
 }
 
+.maincomp {
+  background-image: url("./background.png");
+  background-size: cover;
+}
+
 .Content_box {
-  background-color: whitesmoke;
+  /* background-image: url("./box1.png");
+  background-position: center;
+  background-size: 86%;
+  background-repeat: no-repeat; */
   width: 900px;
   height: 460px;
   margin: 32px auto;
-  /* background-color: #f4f4f4; */
+
   border: none;
-  box-shadow: 2px 6px 12px #cecece;
-  border-radius: 20px;
   position: relative;
 }
 
 .textNselect {
-  background-color: whitesmoke;
+  background-color: white;
   width: 900px;
   height: 200px;
   margin: 10px auto;
-  border: 2px solid #383838;
+  border-radius: 20px;
+  /* border: 2px solid #383838; */
+  border: none;
+  box-shadow: 0px 4px 12px #cecece;
 }
 
 @keyframes fadein {

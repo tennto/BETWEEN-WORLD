@@ -59,7 +59,7 @@ const Main = () => {
     } else if (status.moodSelect === 6) {
       return <C2Anime1 />;
     } else if (status.moodSelect === 100) {
-      return <HappyAnime1 />;
+      return <C2Anime1 />;
     } else if (status.moodSelect === 200) {
       return <SadAnime1 />;
     } else if (status.moodSelect === 300) {
@@ -73,27 +73,6 @@ const Main = () => {
         <div className="Content_box">
           <h2>Animation Area</h2>
           {setAnimation()}
-          <button
-            onClick={() => {
-              dispatch({ type: "index/HAPPY_MOOD" });
-            }}
-          >
-            행복테마
-          </button>
-          <button
-            onClick={() => {
-              dispatch({ type: "index/SAD_MOOD" });
-            }}
-          >
-            슬픈테마
-          </button>
-          <button
-            onClick={() => {
-              dispatch({ type: "index/THRILL_MOOD" });
-            }}
-          >
-            긴장테마
-          </button>
         </div>
         <div className="textNselect">{setMoodStatus()}</div>
       </div>

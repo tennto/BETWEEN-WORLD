@@ -8,7 +8,7 @@ const Nickname = () => {
   const status = useSelector((state) => state);
   const dispatch = useDispatch();
   let [nextBtn, setNextBtn] = useState(1);
-  let [warpBtn, setWarpBtn] = useState(0);
+  let [changeBox, setChangeBox] = useState(0);
 
   console.log(nextBtn);
 
@@ -24,16 +24,19 @@ const Nickname = () => {
     } else if (nextBtn === 5) {
       return <Dialog4 />;
     } else if (nextBtn === 6) {
+      setTimeout(() => {
+        setChangeBox(1);
+      }, 10);
       return <Dialog5 />;
     }
   };
 
   return (
     <div className="nicknameBox">
-      <div className="caracterIcon"></div>
+      <div className={"caracterIcon" + changeBox}></div>
       {textFlow()}
       <button
-        className={"nextBtn" + warpBtn}
+        className={"nextBtn" + changeBox}
         onClick={() => {
           setNextBtn(nextBtn + 1);
         }}
@@ -123,7 +126,7 @@ const Dialog5 = () => {
       >
         하남자
       </button>
-      <div className="choiceSex">하여자</div>
+      <button className="choiceSex">하여자</button>
     </>
   );
 };
