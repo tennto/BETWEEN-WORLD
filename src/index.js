@@ -54,13 +54,19 @@ export const setSound5 = (sound5) => {
   return { type: SET_SOUND5, sound5 };
 };
 
-// 액션 명 설정
-const HAPPY_MOOD = "index/HAPPY_MOOD";
-const SAD_MOOD = "index/SAD_MOOD";
-const THRILL_MOOD = "index/THRILL_MOOD";
+// 액션 명 설정 - 남자버전
+const HAPPY_MOOD = "index/HAPPY_MOOD_B";
+const SAD_MOOD = "index/SAD_MOOD_B";
+const THRILL_MOOD = "index/THRILL_MOOD_B";
+
+// 액션 명 설정 - 여자버전
+const HAPPY_MOOD_G = "index/HAPPY_MOOD_G";
+const SAD_MOOD_G = "index/SAD_MOOD_G";
+const THRILL_MOOD_G = "index/THRILL_MOOD_G";
 
 // 챕터 2번 멜로디선택 컴포넌트 노출 용
 const STORY_NO2 = "index/STORY_NO2";
+const STORY_NO3 = "index/STORY_NO3";
 // #1 애니메이션 / 텍스트 동기화 용
 const PLUS_STATE1 = "index/PLUS_STATE1";
 const PLUS_STATE2 = "index/PLUS_STATE2";
@@ -75,31 +81,59 @@ const SET_SOUND3 = "index/SET_SOUND3";
 const SET_SOUND4 = "index/SET_SOUND4";
 const SET_SOUND5 = "index/SET_SOUND5";
 
+// #2 애니메이션 / 텍스트 동기화 용 여자버전
+const HAPPY_1001 = "index/HAPPY_101";
+const HAPPY_1002 = "index/HAPPY_1002";
+
 // reducer 설정
 function reducer(state = initialState, action) {
   switch (action.type) {
     case HAPPY_MOOD: {
       return {
         ...state,
-        moodSelect: 100,
+        moodSelect: 1000,
       };
     }
     case SAD_MOOD: {
       return {
         ...state,
-        moodSelect: 200,
+        moodSelect: 2000,
       };
     }
     case THRILL_MOOD: {
       return {
         ...state,
-        moodSelect: 300,
+        moodSelect: 3000,
+      };
+    }
+    case HAPPY_MOOD_G: {
+      return {
+        ...state,
+        moodSelect: 1400,
+      };
+    }
+    case SAD_MOOD_G: {
+      return {
+        ...state,
+        moodSelect: 2400,
+      };
+    }
+    case THRILL_MOOD_G: {
+      return {
+        ...state,
+        moodSelect: 3400,
       };
     }
     case STORY_NO2: {
       return {
         ...state,
         moodSelect: 6,
+      };
+    }
+    case STORY_NO3: {
+      return {
+        ...state,
+        moodSelect: 7,
       };
     }
     // #1 - 애니메이션 변경 1번
@@ -148,6 +182,18 @@ function reducer(state = initialState, action) {
           ...state.playersound,
           sound2: [action.sound2],
         },
+      };
+    }
+    case HAPPY_1001: {
+      return {
+        ...state,
+        moodSelect: 1001,
+      };
+    }
+    case HAPPY_1002: {
+      return {
+        ...state,
+        moodSelect: 1002,
       };
     }
     default: {

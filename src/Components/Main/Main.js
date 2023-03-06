@@ -13,10 +13,21 @@ import NicknameAnime2 from "../Nickname/NicknameAnime2";
 import NicknameAnime3 from "../Nickname/NicknameAnime3";
 import NicknameAnime4 from "../Nickname/NicknameAnime4";
 import ChapterNo2 from "../chapterNo2/Chapter2";
+import ChapterNo3 from "../../chapterNo3/ChapterNo3";
 import NicknameAnime5 from "../Nickname/NicknameAnime5";
 import C2Anime1 from "../chapterNo2/C2Anime1";
 import ReactHowler from "../../howler/ReactHowler.js";
 import { useState } from "react";
+import C3Anime1 from "../../chapterNo3/C3Anime1";
+import SeaOrMountainGirl from "../SeaOrMountain/SeaOrMountainGirl";
+import SOMAnimeGirl1 from "../SeaOrMountain/SOMAnimeGirl1";
+import CGAnime1 from "../ChapterGirl/CGAnime1";
+import ChapterGirl from "../ChapterGirl/ChapterGirl";
+import SOMAnimeBoy1 from "../SeaOrMountain/SOMAnimeBoy1";
+import C3AnimeBoy1 from "../../chapterNo3/C3AnimeBoy1";
+import HappyAnimeBoy1 from "../AnimationLine/Happy/HappyAnimeBoy1";
+import SadAnimeBoy1 from "../AnimationLine/Sad/SadAnimeBoy1";
+import ThrillAnimeBoy1 from "../AnimationLine/Thrill/ThrillAnimeBoy1";
 
 const Main = () => {
   const status = useSelector((state) => state);
@@ -73,11 +84,19 @@ const Main = () => {
       return <Nickname />;
     } else if (status.moodSelect === 6) {
       return <ChapterNo2 />;
-    } else if (status.moodSelect === 100) {
+    } else if (status.moodSelect === 7) {
+      return <ChapterGirl />;
+    } else if (status.moodSelect === 1000) {
       return <HappyText1 />;
-    } else if (status.moodSelect === 200) {
+    } else if (status.moodSelect === 1400) {
+      return <HappyText1 />;
+    } else if (status.moodSelect === 1001) {
+      return <ChapterNo3 />;
+    } else if (status.moodSelect === 1002) {
+      return <SeaOrMountainGirl />;
+    } else if (status.moodSelect === 2000) {
       return <SadText1 />;
-    } else if (status.moodSelect === 300) {
+    } else if (status.moodSelect === 3000) {
       return <ThrillText1 />;
     }
   };
@@ -96,12 +115,30 @@ const Main = () => {
     } else if (status.moodSelect === 5) {
       return <NicknameAnime5 />;
     } else if (status.moodSelect === 6) {
+      // 남자
       return <C2Anime1 />;
-    } else if (status.moodSelect === 100) {
+    } else if (status.moodSelect === 7) {
+      // 여자
+      return <CGAnime1 />;
+    } else if (status.moodSelect === 1000) {
+      return <HappyAnimeBoy1 />;
+    } else if (status.moodSelect === 1001) {
+      return <C3AnimeBoy1 />;
+    } else if (status.moodSelect === 1002) {
+      return <SOMAnimeBoy1 />;
+    } else if (status.moodSelect === 2000) {
+      return <SadAnimeBoy1 />;
+    } else if (status.moodSelect === 3000) {
+      return <ThrillAnimeBoy1 />;
+    } else if (status.moodSelect === 1400) {
       return <HappyAnime1 />;
-    } else if (status.moodSelect === 200) {
+    } else if (status.moodSelect === 1401) {
+      return <C3Anime1 />;
+    } else if (status.moodSelect === 1402) {
+      return <SOMAnimeGirl1 />;
+    } else if (status.moodSelect === 2400) {
       return <SadAnime1 />;
-    } else if (status.moodSelect === 300) {
+    } else if (status.moodSelect === 3400) {
       return <ThrillAnime1 />;
     }
   };

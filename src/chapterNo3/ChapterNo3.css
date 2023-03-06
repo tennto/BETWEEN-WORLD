@@ -1,0 +1,42 @@
+.choiceNo1 {
+  width: 200px;
+  height: 200px;
+  background-color: aliceblue;
+  display: inline-block;
+}
+.nextBtn0 {
+  width: 60px;
+  height: 40px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+.nextBtn1 {
+  display: none;
+}
+.CP3_UPPER {
+  width: 900px;
+  height: 200px;
+  position: relative;
+}
+@font-face {
+  font-family: "ongeul";
+  src: url("../Components/Nickname/ongeul.ttf");
+}
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.dialog_oneline {
+  animation: fadein 3s;
+  font-family: "ongeul";
+  position: absolute;
+  top: 50.5px;
+  left: 240px;
+  font-size: 32px;
+}
