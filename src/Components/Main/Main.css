@@ -1,5 +1,6 @@
 .Container_m {
   max-height: 800px;
+  position: relative;
 }
 
 .maincomp {
@@ -18,6 +19,15 @@
 
   border: none;
   position: relative;
+}
+
+.playlist {
+  position:absolute;
+  background-color: white;
+  border: 1px solid; 
+  margin-left: 100px;
+  width:200px;
+  height: 400px;
 }
 
 .textNselect {

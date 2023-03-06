@@ -15,10 +15,49 @@ import NicknameAnime4 from "../Nickname/NicknameAnime4";
 import ChapterNo2 from "../chapterNo2/Chapter2";
 import NicknameAnime5 from "../Nickname/NicknameAnime5";
 import C2Anime1 from "../chapterNo2/C2Anime1";
+import ReactHowler from "../../howler/ReactHowler.js";
+import { useState } from "react";
 
 const Main = () => {
   const status = useSelector((state) => state);
   const dispatch = useDispatch();
+  const [play, setPlaying] = useState(true);
+  const playerplaylist = [];
+
+  //왼쪽 상단 플레이리스트 저장
+  const savePlaylist = () => {
+    if (status.playersound.sound1 !== "") {
+      playerplaylist.push(status.playersound.sound1);
+    }
+    if (status.playersound.sound2 !== "") {
+      playerplaylist.push(status.playersound.sound2);
+    }
+    return (
+      <>
+        <ReactHowler
+          src={"example_sound.mp3"}
+          playing={play}
+          loop={false}
+          mute={false}
+          volume={1.0}
+        />
+        <button
+          onClick={() => {
+            setPlaying(false);
+          }}
+        >
+          멈춤
+        </button>
+        <button
+          onClick={() => {
+            setPlaying(true);
+          }}
+        >
+          실행
+        </button>
+      </>
+    );
+  };
 
   // 분위기 테마 별 State 및 최초 상위 리턴컴포넌트 선언
   const setMoodStatus = () => {
@@ -59,7 +98,7 @@ const Main = () => {
     } else if (status.moodSelect === 6) {
       return <C2Anime1 />;
     } else if (status.moodSelect === 100) {
-      return <C2Anime1 />;
+      return <HappyAnime1 />;
     } else if (status.moodSelect === 200) {
       return <SadAnime1 />;
     } else if (status.moodSelect === 300) {
@@ -70,9 +109,31 @@ const Main = () => {
   return (
     <div className="maincomp">
       <div className="Container_m">
+        <div className="playlist">{savePlaylist()}</div>
         <div className="Content_box">
           <h2>Animation Area</h2>
           {setAnimation()}
+          <button
+            onClick={() => {
+              dispatch({ type: "index/HAPPY_MOOD" });
+            }}
+          >
+            행복테마
+          </button>
+          <button
+            onClick={() => {
+              dispatch({ type: "index/SAD_MOOD" });
+            }}
+          >
+            슬픈테마
+          </button>
+          <button
+            onClick={() => {
+              dispatch({ type: "index/THRILL_MOOD" });
+            }}
+          >
+            긴장테마
+          </button>
         </div>
         <div className="textNselect">{setMoodStatus()}</div>
       </div>

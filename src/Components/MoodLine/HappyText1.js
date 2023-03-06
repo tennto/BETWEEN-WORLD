@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./HappyText1.css";
-import Happyfirst1 from "../Music/Happyfirst1";
-import Happyfirst2 from "../Music/Happyfirst2";
+import Example2 from "../Music/Example2";
+import Example from "../Music/Example";
 
 
 
@@ -35,8 +35,8 @@ const HappyText1 = () => {
 
   return (
     <>
-      <div className="selec_1" onMouseOut={()=>{setVisible2(1)}} > <Happyfirst2 /></div>
-      <div className="hover1" onMouseOut={()=>{setVisible(1)}} > <Happyfirst1 /></div>
+      <div className="selec_1" onMouseOut={()=>{setVisible2(1)}} > <Example2 /></div>
+      <div className="hover1" onMouseOut={()=>{setVisible(1)}} > <Example /></div>
       {isHovering2()}
       {isHovering()}
     </>

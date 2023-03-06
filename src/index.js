@@ -22,6 +22,36 @@ const initialState = {
   userInfoArr: [],
   add: 1,
   userName: "",
+  playersound: [
+    {
+      player: "",
+      sound1: "",
+      sound2: "",
+      sound3: "",
+      sound4: "",
+      sound5: "",
+    },
+  ],
+};
+
+export const setName = (name) => {
+  return { type: SET_NAME, name };
+};
+
+export const setSound1 = (sound1) => {
+  return { type: SET_SOUND1, sound1 };
+};
+export const setSound2 = (sound2) => {
+  return { type: SET_SOUND2, sound2 };
+};
+export const setSound3 = (sound3) => {
+  return { type: SET_SOUND3, sound3 };
+};
+export const setSound4 = (sound4) => {
+  return { type: SET_SOUND4, sound4 };
+};
+export const setSound5 = (sound5) => {
+  return { type: SET_SOUND5, sound5 };
 };
 
 // 액션 명 설정
@@ -31,7 +61,6 @@ const THRILL_MOOD = "index/THRILL_MOOD";
 
 // 챕터 2번 멜로디선택 컴포넌트 노출 용
 const STORY_NO2 = "index/STORY_NO2";
-
 // #1 애니메이션 / 텍스트 동기화 용
 const PLUS_STATE1 = "index/PLUS_STATE1";
 const PLUS_STATE2 = "index/PLUS_STATE2";
@@ -39,10 +68,12 @@ const PLUS_STATE3 = "index/PLUS_STATE3";
 const PLUS_STATE4 = "index/PLUS_STATE4";
 // 유저 이름 저장
 const SET_NAME = "index/SET_NAME";
-
-export const setName = (name) => {
-  return { type: SET_NAME, name };
-};
+// 유저 사운드 저장
+const SET_SOUND1 = "index/SET_SOUND1";
+const SET_SOUND2 = "index/SET_SOUND2";
+const SET_SOUND3 = "index/SET_SOUND3";
+const SET_SOUND4 = "index/SET_SOUND4";
+const SET_SOUND5 = "index/SET_SOUND5";
 
 // reducer 설정
 function reducer(state = initialState, action) {
@@ -99,6 +130,25 @@ function reducer(state = initialState, action) {
     }
     case SET_NAME: {
       return { ...state, userName: action.name };
+    }
+    //사운드 저장
+    case SET_SOUND1: {
+      return {
+        ...state,
+        playersound: {
+          ...state.playersound,
+          sound1: [action.sound1],
+        },
+      };
+    }
+    case SET_SOUND2: {
+      return {
+        ...state,
+        playersound: {
+          ...state.playersound,
+          sound2: [action.sound2],
+        },
+      };
     }
     default: {
       return state;
