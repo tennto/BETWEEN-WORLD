@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import "./Nickname.css";
 import { setName } from "../../index";
-import ChapterNo2 from "../chapterNo2/Chapter2";
+import ChapterBoy from "../ChapterBoy/ChapterBoy";
 
 const Nickname = () => {
   const status = useSelector((state) => state);

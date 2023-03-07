@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import "../../css/ChapterGirl.css";
+import "../../css/Chapter2.css";
 
-const ChapterGirl = () => {
+const ChapterBoy = () => {
   const dispatch = useDispatch();
   let [nextBtn, setNextBtn] = useState(0);
   let [changeBox, setChangeBox] = useState(0);
@@ -21,8 +21,8 @@ const ChapterGirl = () => {
   };
 
   return (
-    <div className="CP2_UPPER_G">
-      <div className={"caracterIcon_G" + changeBox}></div>
+    <div className="CP2_UPPER">
+      <div className={"caracterIcon" + changeBox}></div>
       {DialogFlow()}
       <button
         className={"nextBtn" + changeBox}
@@ -59,7 +59,7 @@ const Dialog2 = () => {
     <>
       <div
         onClick={() => {
-          dispatch({ type: "index/HAPPY_MOOD_G" });
+          dispatch({ type: "index/HAPPY_MOOD_B" });
         }}
         className="CH_BOX"
       >
@@ -70,7 +70,7 @@ const Dialog2 = () => {
       </div>
       <div
         onClick={() => {
-          dispatch({ type: "index/SAD_MOOD_G" });
+          dispatch({ type: "index/SAD_MOOD_B" });
         }}
         className="CH_BOX"
       >
@@ -82,7 +82,7 @@ const Dialog2 = () => {
       </div>
       <div
         onClick={() => {
-          dispatch({ type: "index/THRILL_MOOD_G" });
+          dispatch({ type: "index/THRILL_MOOD_B" });
         }}
         className="CH_BOX"
       >
@@ -96,4 +96,4 @@ const Dialog2 = () => {
   );
 };
 
-export default ChapterGirl;
+export default ChapterBoy;

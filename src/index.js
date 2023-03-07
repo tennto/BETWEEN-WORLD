@@ -86,11 +86,11 @@ const SET_SOUND5 = "index/SET_SOUND5";
 //=======
 // #2 애니메이션 / 텍스트 동기화 용 여자버전
 //>>>>>>> Stashed changes
-const HAPPY_1001 = "index/HAPPY_1001";
+const CSBOY_1001 = "index/CSBOY_1001";
 const HAPPY_1002 = "index/HAPPY_1002";
 
 // #2 애니메이션 / 텍스트 동기화 용 여자버전
-const HAPPY_1401 = "index/HAPPY_1401";
+const CSGIRL_1401 = "index/CSGIRL_1401";
 const HAPPY_1402 = "index/HAPPY_1402";
 
 // reducer 설정
@@ -192,7 +192,7 @@ function reducer(state = initialState, action) {
         },
       };
     }
-    case HAPPY_1001: {
+    case CSBOY_1001: {
       return {
         ...state,
         moodSelect: 1001,
@@ -204,7 +204,7 @@ function reducer(state = initialState, action) {
         moodSelect: 1002,
       };
     }
-    case HAPPY_1401: {
+    case CSGIRL_1401: {
       return {
         ...state,
         moodSelect: 1401,

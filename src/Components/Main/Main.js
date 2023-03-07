@@ -2,32 +2,37 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import "./Main.css";
 import Nickname from "../Nickname/Nickname";
-import HappyText1 from "../MoodLine/HappyText1";
-import SadText1 from "../MoodLine/SadText1";
-import ThrillText1 from "../MoodLine/ThrillText1";
-import HappyAnime1 from "../AnimationLine/Happy/HappyAnime1";
-import SadAnime1 from "../AnimationLine/Sad/SadAnime1";
-import ThrillAnime1 from "../AnimationLine/Thrill/ThrillAnime1";
+import HappyTextBoy from "../ChapterBoy/HappyTextBoy";
+import HappyTextGirl from "../ChapterGirl/HappyTextGirl";
+import SadTextBoy from "../ChapterBoy/SadTextBoy";
+import ThrillTextBoy from "../ChapterBoy/ThrillTextBoy";
+import SadTextGirl from "../ChapterGirl/SadTextGirl";
+import ThrillTextGirl from "../ChapterGirl/ThrillTextGirl";
+import HappyAnimeGirl from "../ChapterGirl/HappyAnimeGirl";
+import SadAnimeGirl from "../ChapterGirl/SadAnimeGirl";
+import ThrillAnimeGirl from "../ChapterGirl/ThrillAnimeGirl";
 import NicknameAnime from "../Nickname/NicknameAnime";
 import NicknameAnime2 from "../Nickname/NicknameAnime2";
 import NicknameAnime3 from "../Nickname/NicknameAnime3";
 import NicknameAnime4 from "../Nickname/NicknameAnime4";
-import ChapterNo2 from "../chapterNo2/Chapter2";
-import ChapterNo3 from "../../chapterNo3/ChapterNo3";
+import ChapterBoy from "../ChapterBoy/ChapterBoy";
+import ChapterGirl from "../ChapterGirl/ChapterGirl";
 import NicknameAnime5 from "../Nickname/NicknameAnime5";
-import C2Anime1 from "../chapterNo2/C2Anime1";
+import C2AnimeBoy from "../ChapterBoy/C2AnimeBoy";
 import ReactHowler from "../../howler/ReactHowler.js";
 import { useState } from "react";
-import C3Anime1 from "../../chapterNo3/C3Anime1";
-import SeaOrMountainGirl from "../SeaOrMountain/SeaOrMountainGirl";
-import SOMAnimeGirl1 from "../SeaOrMountain/SOMAnimeGirl1";
-import CGAnime1 from "../ChapterGirl/CGAnime1";
-import ChapterGirl from "../ChapterGirl/ChapterGirl";
-import SOMAnimeBoy1 from "../SeaOrMountain/SOMAnimeBoy1";
-import C3AnimeBoy1 from "../../chapterNo3/C3AnimeBoy1";
-import HappyAnimeBoy1 from "../AnimationLine/Happy/HappyAnimeBoy1";
-import SadAnimeBoy1 from "../AnimationLine/Sad/SadAnimeBoy1";
-import ThrillAnimeBoy1 from "../AnimationLine/Thrill/ThrillAnimeBoy1";
+import C3AnimeGirl from "../ChapterGirl/C3AnimeGirl";
+import SeaOrMountainGirl from "../ChapterGirl/SeaOrMountainGirl";
+import SeaOrMountainBoy from "../ChapterBoy/SeaOrMountainBoy";
+import SOMAnimeGirl from "../ChapterGirl/SOMAnimeGirl";
+import CGAnimeGirl from "../ChapterGirl/CGAnimeGirl";
+import ChapterBoyStart from "../ChapterBoy/ChapterBoyStart";
+import ChapterGirlStart from "../ChapterGirl/ChapterGirlStart";
+import SOMAnimeBoy from "../ChapterBoy/SOMAnimeBoy";
+import C3AnimeBoy from "../ChapterBoy/C3AnimeBoy";
+import HappyAnimeBoy from "../ChapterBoy/HappyAnimeBoy";
+import SadAnimeBoy from "../ChapterBoy/SadAnimeBoy";
+import ThrillAnimeBoy from "../ChapterBoy/ThrillAnimeBoy";
 
 const Main = () => {
   const status = useSelector((state) => state);
@@ -89,23 +94,29 @@ const Main = () => {
     } else if (status.moodSelect === 5) {
       return <Nickname />;
     } else if (status.moodSelect === 6) {
-      return <ChapterNo2 />;
+      return <ChapterBoy />;
     } else if (status.moodSelect === 7) {
       return <ChapterGirl />;
     } else if (status.moodSelect === 1000) {
-      return <HappyText1 />;
+      return <HappyTextBoy />;
     } else if (status.moodSelect === 1400) {
-      return <HappyText1 />;
-    } else if (status.moodSelect === 1001) {
-      return <ChapterNo3 />;
-    } else if (status.moodSelect === 1401) {
-      return <ChapterGirl />; // Example 3 /4 에서 디스패치 1401번대 요청
-    } else if (status.moodSelect === 1002) {
-      return <SeaOrMountainGirl />;
+      return <HappyTextGirl />;
     } else if (status.moodSelect === 2000) {
-      return <SadText1 />;
+      return <SadTextBoy />;
+    } else if (status.moodSelect === 2400) {
+      return <SadTextGirl />;
     } else if (status.moodSelect === 3000) {
-      return <ThrillText1 />;
+      return <ThrillTextBoy />;
+    } else if (status.moodSelect === 3400) {
+      return <ThrillTextGirl />;
+    } else if (status.moodSelect === 1001) {
+      return <ChapterBoyStart />;
+    } else if (status.moodSelect === 1401) {
+      return <ChapterGirlStart />;
+    } else if (status.moodSelect === 1002) {
+      return <SeaOrMountainBoy />;
+    } else if (status.moodSelect === 1402) {
+      return <SeaOrMountainGirl />;
     }
   };
 
@@ -124,31 +135,31 @@ const Main = () => {
       return <NicknameAnime5 />;
     } else if (status.moodSelect === 6) {
       // 남자 애니메이션 분기점
-      return <C2Anime1 />;
+      return <C2AnimeBoy />;
     } else if (status.moodSelect === 1000) {
-      return <HappyAnimeBoy1 />;
+      return <HappyAnimeBoy />;
     } else if (status.moodSelect === 1001) {
-      return <C3AnimeBoy1 />;
+      return <C3AnimeBoy />;
     } else if (status.moodSelect === 1002) {
-      return <SOMAnimeBoy1 />;
+      return <SOMAnimeBoy />;
     } else if (status.moodSelect === 2000) {
-      return <SadAnimeBoy1 />;
+      return <SadAnimeBoy />;
     } else if (status.moodSelect === 3000) {
-      return <ThrillAnimeBoy1 />;
+      return <ThrillAnimeBoy />;
     }
     // 여자 애니메이션 분기점
     else if (status.moodSelect === 7) {
-      return <CGAnime1 />;
+      return <CGAnimeGirl />;
     } else if (status.moodSelect === 1400) {
-      return <HappyAnime1 />; // HappyAnimeGirl 로 변경 -> Example 3/4
+      return <HappyAnimeGirl />;
     } else if (status.moodSelect === 1401) {
-      return <C3Anime1 />;
+      return <C3AnimeGirl />;
     } else if (status.moodSelect === 1402) {
-      return <SOMAnimeGirl1 />;
+      return <SOMAnimeGirl />;
     } else if (status.moodSelect === 2400) {
-      return <SadAnime1 />;
+      return <SadAnimeGirl />;
     } else if (status.moodSelect === 3400) {
-      return <ThrillAnime1 />;
+      return <ThrillAnimeGirl />;
     }
   };
 
@@ -159,27 +170,6 @@ const Main = () => {
         <div className="Content_box">
           <h2>Animation Area</h2>
           {setAnimation()}
-          <button
-            onClick={() => {
-              dispatch({ type: "index/HAPPY_MOOD" });
-            }}
-          >
-            행복테마
-          </button>
-          <button
-            onClick={() => {
-              dispatch({ type: "index/SAD_MOOD" });
-            }}
-          >
-            슬픈테마
-          </button>
-          <button
-            onClick={() => {
-              dispatch({ type: "index/THRILL_MOOD" });
-            }}
-          >
-            긴장테마
-          </button>
         </div>
         <div className="textNselect">{setMoodStatus()}</div>
       </div>
