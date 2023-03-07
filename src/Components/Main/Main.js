@@ -92,6 +92,8 @@ const Main = () => {
       return <HappyText1 />;
     } else if (status.moodSelect === 1001) {
       return <ChapterNo3 />;
+    } else if (status.moodSelect === 1401) {
+      return <ChapterGirl />; // Example 3 /4 에서 디스패치 1401번대 요청
     } else if (status.moodSelect === 1002) {
       return <SeaOrMountainGirl />;
     } else if (status.moodSelect === 2000) {
@@ -115,11 +117,8 @@ const Main = () => {
     } else if (status.moodSelect === 5) {
       return <NicknameAnime5 />;
     } else if (status.moodSelect === 6) {
-      // 남자
+      // 남자 애니메이션 분기점
       return <C2Anime1 />;
-    } else if (status.moodSelect === 7) {
-      // 여자
-      return <CGAnime1 />;
     } else if (status.moodSelect === 1000) {
       return <HappyAnimeBoy1 />;
     } else if (status.moodSelect === 1001) {
@@ -130,8 +129,12 @@ const Main = () => {
       return <SadAnimeBoy1 />;
     } else if (status.moodSelect === 3000) {
       return <ThrillAnimeBoy1 />;
+    }
+    // 여자 애니메이션 분기점
+    else if (status.moodSelect === 7) {
+      return <CGAnime1 />;
     } else if (status.moodSelect === 1400) {
-      return <HappyAnime1 />;
+      return <HappyAnime1 />; // HappyAnimeGirl 로 변경 -> Example 3/4
     } else if (status.moodSelect === 1401) {
       return <C3Anime1 />;
     } else if (status.moodSelect === 1402) {

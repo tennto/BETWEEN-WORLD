@@ -54,12 +54,12 @@ export const setSound5 = (sound5) => {
   return { type: SET_SOUND5, sound5 };
 };
 
-// 액션 명 설정 - 남자버전
+// 선택지 액션 - 남자버전
 const HAPPY_MOOD = "index/HAPPY_MOOD_B";
 const SAD_MOOD = "index/SAD_MOOD_B";
 const THRILL_MOOD = "index/THRILL_MOOD_B";
 
-// 액션 명 설정 - 여자버전
+// 선택지 액션 - 여자버전
 const HAPPY_MOOD_G = "index/HAPPY_MOOD_G";
 const SAD_MOOD_G = "index/SAD_MOOD_G";
 const THRILL_MOOD_G = "index/THRILL_MOOD_G";
@@ -81,9 +81,13 @@ const SET_SOUND3 = "index/SET_SOUND3";
 const SET_SOUND4 = "index/SET_SOUND4";
 const SET_SOUND5 = "index/SET_SOUND5";
 
-// #2 애니메이션 / 텍스트 동기화 용 여자버전
-const HAPPY_1001 = "index/HAPPY_101";
+// #2 애니메이션 / 텍스트 동기화 용 남자버전
+const HAPPY_1001 = "index/HAPPY_1001";
 const HAPPY_1002 = "index/HAPPY_1002";
+
+// #2 애니메이션 / 텍스트 동기화 용 여자버전
+const HAPPY_1401 = "index/HAPPY_1401";
+const HAPPY_1402 = "index/HAPPY_1402";
 
 // reducer 설정
 function reducer(state = initialState, action) {
@@ -194,6 +198,18 @@ function reducer(state = initialState, action) {
       return {
         ...state,
         moodSelect: 1002,
+      };
+    }
+    case HAPPY_1401: {
+      return {
+        ...state,
+        moodSelect: 1401,
+      };
+    }
+    case HAPPY_1402: {
+      return {
+        ...state,
+        moodSelect: 1402,
       };
     }
     default: {
