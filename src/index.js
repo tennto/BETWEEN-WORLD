@@ -81,7 +81,11 @@ const SET_SOUND3 = "index/SET_SOUND3";
 const SET_SOUND4 = "index/SET_SOUND4";
 const SET_SOUND5 = "index/SET_SOUND5";
 
+//<<<<<<< Updated upstream
 // #2 애니메이션 / 텍스트 동기화 용 남자버전
+//=======
+// #2 애니메이션 / 텍스트 동기화 용 여자버전
+//>>>>>>> Stashed changes
 const HAPPY_1001 = "index/HAPPY_1001";
 const HAPPY_1002 = "index/HAPPY_1002";
 

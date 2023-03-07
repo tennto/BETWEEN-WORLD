@@ -33,41 +33,47 @@ const Main = () => {
   const status = useSelector((state) => state);
   const dispatch = useDispatch();
   const [play, setPlaying] = useState(true);
-  const playerplaylist = [];
+  const playarr = [];
 
   //왼쪽 상단 플레이리스트 저장
   const savePlaylist = () => {
-    if (status.playersound.sound1 !== "") {
-      playerplaylist.push(status.playersound.sound1);
+    for (var i = 1; i < 5; i++) {
+      if (status.playersound.sound1 !== "") {
+        playarr.push(status.playersound.sound1);
+        console.log(playarr[i - 1]);
+      }
     }
-    if (status.playersound.sound2 !== "") {
-      playerplaylist.push(status.playersound.sound2);
+
+    if (playarr[0] === undefined) {
+      return "";
+    } else {
+      return (
+        <>
+          <p>사운드 1</p>
+          <ReactHowler
+            src={playarr[0]}
+            playing={play}
+            loop={false}
+            mute={false}
+            volume={1.0}
+          />
+          <button
+            onClick={() => {
+              setPlaying(false);
+            }}
+          >
+            멈춤
+          </button>
+          <button
+            onClick={() => {
+              setPlaying(true);
+            }}
+          >
+            실행
+          </button>
+        </>
+      );
     }
-    return (
-      <>
-        <ReactHowler
-          src={"example_sound.mp3"}
-          playing={play}
-          loop={false}
-          mute={false}
-          volume={1.0}
-        />
-        <button
-          onClick={() => {
-            setPlaying(false);
-          }}
-        >
-          멈춤
-        </button>
-        <button
-          onClick={() => {
-            setPlaying(true);
-          }}
-        >
-          실행
-        </button>
-      </>
-    );
   };
 
   // 분위기 테마 별 State 및 최초 상위 리턴컴포넌트 선언
