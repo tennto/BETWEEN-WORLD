@@ -126,7 +126,14 @@ const Dialog5 = () => {
       >
         하남자
       </button>
-      <button className="choiceSex">하여자</button>
+      <button
+        className="choiceSex"
+        onClick={() => {
+          dispatch({ type: "index/STORY_NO3" });
+        }}
+      >
+        하여자
+      </button>
     </>
   );
 };

@@ -5,13 +5,16 @@
   position: relative;
 }
 
-.caracterIcon {
+.caracterIcon0 {
   border: 2px solid #383838;
   height: 160px;
   width: 160px;
   position: absolute;
   top: 20px;
   left: 20px;
+}
+.characterIcon1 {
+  display: none;
 }
 
 .nextBtn0 {

@@ -1,11 +1,12 @@
 .Container_m {
-  max-height: 800px;
+  max-height: 1000px;
+  background-color: white;
   position: relative;
 }
 
 .maincomp {
-  background-image: url("./background.png");
-  background-size: cover;
+  /* background-image: url("./background.png");
+  background-size: cover; */
 }
 
 .Content_box {
@@ -13,20 +14,21 @@
   background-position: center;
   background-size: 86%;
   background-repeat: no-repeat; */
+  border-radius: 20px;
   width: 900px;
   height: 460px;
   margin: 32px auto;
-
   border: none;
   position: relative;
+  box-shadow: 0px 4px 12px #cecece;
 }
 
 .playlist {
-  position:absolute;
+  position: absolute;
   background-color: white;
-  border: 1px solid; 
+  border: 1px solid;
   margin-left: 100px;
-  width:200px;
+  width: 200px;
   height: 400px;
 }
 
