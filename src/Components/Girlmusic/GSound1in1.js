@@ -5,7 +5,7 @@ import { setSound1 } from "../../index";
 import "../../css/HappyText.css";
 
 const GSound1in1 = () => {
-  const status = useSelector((state) => state);
+  // const status = useSelector((state) => state);
   const dispatch = useDispatch();
   const [play, setPlaying] = useState(false);
 

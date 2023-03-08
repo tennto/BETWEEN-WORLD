@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import "../../css/ChapterNo3.css";
 
-const ChapterBoyStart = () => {
+const ChapterGirlStart = () => {
   let [nextBtn, setNextBtn] = useState(1);
   let [changeBox, setChangeBox] = useState(0);
 
@@ -158,8 +158,8 @@ const Dialog8 = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     setTimeout(() => {
-      dispatch({ type: "index/HAPPY_1402" });
-    }, 5000);
+      dispatch({ type: "index/SOMGIRL_1402" });
+    }, 1000);
   }, [dispatch]);
 
   return (
@@ -169,4 +169,4 @@ const Dialog8 = () => {
   );
 };
 
-export default ChapterBoyStart;
+export default ChapterGirlStart;

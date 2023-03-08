@@ -33,30 +33,153 @@ import C3AnimeBoy from "../ChapterBoy/C3AnimeBoy";
 import HappyAnimeBoy from "../ChapterBoy/HappyAnimeBoy";
 import SadAnimeBoy from "../ChapterBoy/SadAnimeBoy";
 import ThrillAnimeBoy from "../ChapterBoy/ThrillAnimeBoy";
+import SnowManBoy from "../ChapterBoy/SnowManBoy";
+import SMAnimeBoy from "../ChapterBoy/SMAnimeBoy";
+import SnowManGirl from "../ChapterGirl/SnowManGirl";
+import SMAnimeGirl from "../ChapterGirl/SMAnimeGirl";
 
 const Main = () => {
   const status = useSelector((state) => state);
   const dispatch = useDispatch();
   const [play, setPlaying] = useState(true);
-  const playarr = [];
-
   //왼쪽 상단 플레이리스트 저장
-  const savePlaylist = () => {
-    for (var i = 1; i < 5; i++) {
-      if (status.playersound.sound1 !== "") {
-        playarr.push(status.playersound.sound1);
-        console.log(playarr[i - 1]);
-      }
-    }
-
-    if (playarr[0] === undefined) {
+  const savePlaylist1 = () => {
+    if (status.playersound.sound1 === undefined) {
       return "";
     } else {
       return (
         <>
           <p>사운드 1</p>
           <ReactHowler
-            src={playarr[0]}
+            src={status.playersound.sound1}
+            playing={play}
+            loop={false}
+            mute={false}
+            volume={1.0}
+          />
+          <button
+            onClick={() => {
+              setPlaying(false);
+            }}
+          >
+            멈춤
+          </button>
+          <button
+            onClick={() => {
+              setPlaying(true);
+            }}
+          >
+            실행
+          </button>
+        </>
+      );
+    }
+  };
+  const savePlaylist2 = () => {
+    if (status.playersound.sound2 === undefined) {
+      return "";
+    } else {
+      return (
+        <>
+          <p>사운드 2</p>
+          <ReactHowler
+            src={status.playersound.sound2}
+            playing={play}
+            loop={false}
+            mute={false}
+            volume={1.0}
+          />
+          <button
+            onClick={() => {
+              setPlaying(false);
+            }}
+          >
+            멈춤
+          </button>
+          <button
+            onClick={() => {
+              setPlaying(true);
+            }}
+          >
+            실행
+          </button>
+        </>
+      );
+    }
+  };
+  const savePlaylist3 = () => {
+    if (status.playersound.sound3 === undefined) {
+      return "";
+    } else {
+      return (
+        <>
+          <p>사운드 3</p>
+          <ReactHowler
+            src={status.playersound.sound3}
+            playing={play}
+            loop={false}
+            mute={false}
+            volume={1.0}
+          />
+          <button
+            onClick={() => {
+              setPlaying(false);
+            }}
+          >
+            멈춤
+          </button>
+          <button
+            onClick={() => {
+              setPlaying(true);
+            }}
+          >
+            실행
+          </button>
+        </>
+      );
+    }
+  };
+  const savePlaylist4 = () => {
+    if (status.playersound.sound4 === undefined) {
+      return "";
+    } else {
+      return (
+        <>
+          <p>사운드 4</p>
+          <ReactHowler
+            src={status.playersound.sound4}
+            playing={play}
+            loop={false}
+            mute={false}
+            volume={1.0}
+          />
+          <button
+            onClick={() => {
+              setPlaying(false);
+            }}
+          >
+            멈춤
+          </button>
+          <button
+            onClick={() => {
+              setPlaying(true);
+            }}
+          >
+            실행
+          </button>
+        </>
+      );
+    }
+  };
+  const savePlaylist5 = () => {
+    if (status.playersound.sound5 === undefined) {
+      return "";
+    } else {
+      return (
+        <>
+          <p>사운드 5</p>
+          <ReactHowler
+            src={status.playersound.sound5}
             playing={play}
             loop={false}
             mute={false}
@@ -117,6 +240,10 @@ const Main = () => {
       return <SeaOrMountainBoy />;
     } else if (status.moodSelect === 1402) {
       return <SeaOrMountainGirl />;
+    } else if (status.moodSelect === 1004) {
+      return <SnowManBoy />;
+    } else if (status.moodSelect === 1404) {
+      return <SnowManGirl />;
     }
   };
 
@@ -142,6 +269,8 @@ const Main = () => {
       return <C3AnimeBoy />;
     } else if (status.moodSelect === 1002) {
       return <SOMAnimeBoy />;
+    } else if (status.moodSelect === 1004) {
+      return <SMAnimeBoy />;
     } else if (status.moodSelect === 2000) {
       return <SadAnimeBoy />;
     } else if (status.moodSelect === 3000) {
@@ -156,6 +285,8 @@ const Main = () => {
       return <C3AnimeGirl />;
     } else if (status.moodSelect === 1402) {
       return <SOMAnimeGirl />;
+    } else if (status.moodSelect === 1404) {
+      return <SMAnimeGirl />;
     } else if (status.moodSelect === 2400) {
       return <SadAnimeGirl />;
     } else if (status.moodSelect === 3400) {
@@ -166,7 +297,23 @@ const Main = () => {
   return (
     <div className="maincomp">
       <div className="Container_m">
-        <div className="playlist">{savePlaylist()}</div>
+        <table className="playlist">
+          <tr>
+            <th>{savePlaylist1()}</th>
+          </tr>
+          <tr>
+            <th>{savePlaylist2()}</th>
+          </tr>
+          <tr>
+            <th>{savePlaylist3()}</th>
+          </tr>
+          <tr>
+            <th>{savePlaylist4()}</th>
+          </tr>
+          <tr>
+            <th>{savePlaylist5()}</th>
+          </tr>
+        </table>
         <div className="Content_box">
           <h2>Animation Area</h2>
           {setAnimation()}

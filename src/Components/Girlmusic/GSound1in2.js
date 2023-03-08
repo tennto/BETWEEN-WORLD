@@ -5,7 +5,7 @@ import { setSound2 } from "../../index";
 import "../../css/HappyText.css";
 
 const GSound1in2 = () => {
-  const status = useSelector((state) => state);
+  // const status = useSelector((state) => state);
   const dispatch = useDispatch();
   const [play, setPlaying] = useState(false);
 
@@ -30,7 +30,6 @@ const GSound1in2 = () => {
       <button
         onClick={() => {
           setPlaying(false);
-          console.log(status.userInfoArr);
         }}
       >
         {" "}

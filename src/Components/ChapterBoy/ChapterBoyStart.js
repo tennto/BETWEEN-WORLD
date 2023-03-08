@@ -150,8 +150,8 @@ const Dialog8 = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     setTimeout(() => {
-      dispatch({ type: "index/HAPPY_1002" });
-    }, 5000);
+      dispatch({ type: "index/SOMBOY_1002" });
+    }, 1000);
   }, [dispatch]);
 
   return (

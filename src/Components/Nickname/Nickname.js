@@ -20,7 +20,7 @@ const Nickname = () => {
     } else if (nextBtn === 3) {
       return <Dialog2 />;
     } else if (nextBtn === 4) {
-      return <Dialog3 />;
+      return <Dialog3 nextBtn={nextBtn} setNextBtn={setNextBtn} />;
     } else if (nextBtn === 5) {
       return <Dialog4 />;
     } else if (nextBtn === 6) {
@@ -30,19 +30,29 @@ const Nickname = () => {
       return <Dialog5 />;
     }
   };
+  //이름 입력할 때 버튼 없애는 함수
+  const btnDelete = () => {
+    if (nextBtn === 4) {
+      return "";
+    } else {
+      return (
+        <button
+          className={"nextBtn" + changeBox}
+          onClick={() => {
+            setNextBtn(nextBtn + 1);
+          }}
+        >
+          다음
+        </button>
+      );
+    }
+  };
 
   return (
     <div className="nicknameBox">
       <div className={"caracterIcon" + changeBox}></div>
       {textFlow()}
-      <button
-        className={"nextBtn" + changeBox}
-        onClick={() => {
-          setNextBtn(nextBtn + 1);
-        }}
-      >
-        다음
-      </button>
+      {btnDelete()}
     </div>
   );
 };
@@ -75,7 +85,7 @@ const Dialog2 = () => {
   );
 };
 
-const Dialog3 = () => {
+const Dialog3 = (props) => {
   const status = useSelector((state) => state);
   const name = React.useRef(null);
   const dispatch = useDispatch();
@@ -91,6 +101,7 @@ const Dialog3 = () => {
         onClick={() => {
           dispatch(setName(name.current.value));
           console.log(status.userName);
+          props.setNextBtn(props.nextBtn + 1);
         }}
       >
         입력하기

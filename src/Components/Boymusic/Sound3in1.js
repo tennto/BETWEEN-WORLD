@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import ReactHowler from "../../howler/ReactHowler.js";
 import { useSelector, useDispatch } from "react-redux";
-import { setSound1 } from "../../index";
+import { setSound3 } from "../../index";
 import "../../css/HappyText.css";
 
 const Sound3in1 = () => {
-  const status = useSelector((state) => state);
+  // const status = useSelector((state) => state);
   const dispatch = useDispatch();
   const [play, setPlaying] = useState(false);
 
@@ -46,7 +46,7 @@ const Sound3in1 = () => {
       <button
         id="saveButtons"
         onClick={() => {
-          dispatch(setSound1("The Quiet Aftermath - Sir Cubworth.mp3"));
+          dispatch(setSound3("The Quiet Aftermath - Sir Cubworth.mp3"));
           dispatch({ type: "index/CSBOY_1001" });
         }}
       >
