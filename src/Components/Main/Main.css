@@ -1,12 +1,15 @@
+body {
+  /* overflow: hidden; */
+}
+
 .Container_m {
-  max-height: 1000px;
+  max-height: 1080px;
   background-color: white;
   position: relative;
+  margin: 0 0;
 }
 
 .maincomp {
-  /* background-image: url("./background.png");
-  background-size: cover; */
 }
 
 .Content_box {
@@ -14,13 +17,14 @@
   background-position: center;
   background-size: 86%;
   background-repeat: no-repeat; */
-  border-radius: 20px;
-  width: 900px;
-  height: 460px;
+  border-radius: 16px;
+  width: 1920px;
+  height: 1080px;
   margin: 32px auto;
   border: none;
   position: relative;
   box-shadow: 0px 4px 12px #cecece;
+  margin-bottom: -40px;
 }
 
 .playlist {
@@ -33,14 +37,17 @@
 }
 
 .textNselect {
+  position: absolute;
   background-color: white;
   width: 900px;
-  height: 200px;
+  height: 180px;
   margin: 10px auto;
   border-radius: 20px;
+  bottom: 40px;
+  left: 510px;
   /* border: 2px solid #383838; */
   border: none;
-  box-shadow: 0px 4px 12px #cecece;
+  box-shadow: 2px 4px 12px #646464;
 }
 
 @keyframes fadein {

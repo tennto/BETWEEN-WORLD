@@ -1,14 +1,15 @@
 .nicknameBox {
   width: 900px;
-  height: 200px;
+  height: 180px;
   /* background-color: aqua; */
   position: relative;
 }
 
 .caracterIcon0 {
-  border: 2px solid #383838;
-  height: 160px;
-  width: 160px;
+  border: 2px solid #4c4c4c;
+  border-radius: 10px;
+  height: 140px;
+  width: 140px;
   position: absolute;
   top: 20px;
   left: 20px;
@@ -17,12 +18,23 @@
   display: none;
 }
 
-.nextBtn0 {
+.NnextBtn0 {
   position: absolute;
-  width: 60px;
+  background-color: #383838;
+  color: whitesmoke;
+  border: none;
+  border-radius: 20px;
+  width: 80px;
   height: 40px;
   bottom: 20px;
   right: 20px;
+  transition: 0.5s ease-in-out;
+}
+.NnextBtn0:hover {
+  transform: scale(1.1);
+  transition: 0.5s ease-in-out;
+  box-shadow: 0px 2px 6px #cecece;
+  font-weight: 700;
 }
 .nextBtn1 {
   display: none;
