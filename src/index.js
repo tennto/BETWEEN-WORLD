@@ -18,6 +18,7 @@ const root = createRoot(container);
 
 const initialState = {
   textLine: 1,
+  btnReset: 0,
   moodSelect: 1,
   userInfoArr: [],
   add: 1,
@@ -83,16 +84,15 @@ const SET_SOUND5 = "index/SET_SOUND5";
 
 //<<<<<<< Updated upstream
 // #2 애니메이션 / 텍스트 동기화 용 남자버전
-//=======
-// #2 애니메이션 / 텍스트 동기화 용 여자버전
 //>>>>>>> Stashed changes
 const CSBOY_1001 = "index/CSBOY_1001";
-const HAPPY_1002 = "index/HAPPY_1002";
+const SOMBOY_1002 = "index/SOMBOY_1002";
+const SMBOY_1004 = "index/SMBOY_1004";
 
 // #2 애니메이션 / 텍스트 동기화 용 여자버전
 const CSGIRL_1401 = "index/CSGIRL_1401";
-const HAPPY_1402 = "index/HAPPY_1402";
-
+const SOMGIRL_1402 = "index/SOMGIRL_1402";
+const SMGIRL_1404 = "index/SMGIRL_1404";
 // reducer 설정
 function reducer(state = initialState, action) {
   switch (action.type) {
@@ -192,16 +192,49 @@ function reducer(state = initialState, action) {
         },
       };
     }
+    case SET_SOUND3: {
+      return {
+        ...state,
+        playersound: {
+          ...state.playersound,
+          sound3: [action.sound3],
+        },
+      };
+    }
+    case SET_SOUND4: {
+      return {
+        ...state,
+        playersound: {
+          ...state.playersound,
+          sound4: [action.sound4],
+        },
+      };
+    }
+    case SET_SOUND5: {
+      return {
+        ...state,
+        playersound: {
+          ...state.playersound,
+          sound5: [action.sound5],
+        },
+      };
+    }
     case CSBOY_1001: {
       return {
         ...state,
         moodSelect: 1001,
       };
     }
-    case HAPPY_1002: {
+    case SOMBOY_1002: {
       return {
         ...state,
         moodSelect: 1002,
+      };
+    }
+    case SMBOY_1004: {
+      return {
+        ...state,
+        moodSelect: 1004,
       };
     }
     case CSGIRL_1401: {
@@ -210,10 +243,16 @@ function reducer(state = initialState, action) {
         moodSelect: 1401,
       };
     }
-    case HAPPY_1402: {
+    case SOMGIRL_1402: {
       return {
         ...state,
         moodSelect: 1402,
+      };
+    }
+    case SMGIRL_1404: {
+      return {
+        ...state,
+        moodSelect: 1404,
       };
     }
     default: {

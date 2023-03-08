@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import ReactHowler from "../../howler/ReactHowler.js";
 import { useSelector, useDispatch } from "react-redux";
-import { setSound2 } from "../../index";
-import "../../css/HappyText.css";
+import { setSound4 } from "../../index";
 
-const Sound2in2 = () => {
+const Sound4in1 = (props) => {
   // const status = useSelector((state) => state);
   const dispatch = useDispatch();
   const [play, setPlaying] = useState(false);
@@ -20,13 +19,13 @@ const Sound2in2 = () => {
       }}
     >
       <ReactHowler
-        src={["Elegy - Wayne Jones.mp3"]}
+        src={["The Quiet Aftermath - Sir Cubworth.mp3"]}
         playing={play}
         loop={false}
         mute={false}
         volume={1.0}
       />
-      <p>음악2 뒷면</p>
+      <p>음악1 뒷면</p>
       <button
         onClick={() => {
           setPlaying(false);
@@ -46,8 +45,8 @@ const Sound2in2 = () => {
       <button
         id="saveButtons"
         onClick={() => {
-          dispatch(setSound2("Elegy - Wayne Jones.mp3"));
-          dispatch({ type: "index/CSBOY_1001" });
+          dispatch(setSound4("The Quiet Aftermath - Sir Cubworth.mp3"));
+          props.setNextBtn(props.nextBtn + 1);
         }}
       >
         저장하기
@@ -56,4 +55,4 @@ const Sound2in2 = () => {
   );
 };
 
-export default Sound2in2;
+export default Sound4in1;
