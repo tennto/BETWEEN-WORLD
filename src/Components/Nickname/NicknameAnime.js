@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import anime1 from "./anime1.png";
+import anime1 from "./bg0.png";
 import "./Anime1.css";
 
 const NicknameAnime = () => {
