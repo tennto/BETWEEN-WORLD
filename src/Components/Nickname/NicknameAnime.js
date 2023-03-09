@@ -1,10 +1,12 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import anime1 from "./anime1.png";
+import "./Anime1.css";
 
 const NicknameAnime = () => {
   return (
     <div>
-      <h1>#1 - 1번 공허한 배경</h1>
+      <img className="bg_1" src={anime1} alt="anime1" />
     </div>
   );
 };
