@@ -17,16 +17,21 @@ const Sound4in1 = (props) => {
       onMouseLeave={() => {
         setPlaying(false);
       }}
+      onClick={() => {
+        dispatch(setSound4("바람소리,나뭇잎.mp3"));
+        props.setNextBtn(props.nextBtn + 1);
+      }}
     >
       <ReactHowler
-        src={["The Quiet Aftermath - Sir Cubworth.mp3"]}
+        src={["바람소리,나뭇잎.mp3"]}
         playing={play}
         loop={false}
         mute={false}
-        volume={1.0}
+        volume={0.4}
       />
       <p>음악1 뒷면</p>
-      <button
+      <h1>산_멜로디</h1>
+      {/* <button
         onClick={() => {
           setPlaying(false);
         }}
@@ -50,7 +55,7 @@ const Sound4in1 = (props) => {
         }}
       >
         저장하기
-      </button>
+      </button> */}
     </div>
   );
 };

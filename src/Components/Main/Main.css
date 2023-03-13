@@ -30,7 +30,6 @@ body {
 .playlist {
   position: absolute;
   background-color: white;
-  border: 1px solid;
   margin-left: 100px;
   width: 200px;
   height: 400px;

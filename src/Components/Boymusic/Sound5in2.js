@@ -17,16 +17,21 @@ const Sound5in2 = (props) => {
       onMouseLeave={() => {
         setPlaying(false);
       }}
+      onClick={() => {
+        dispatch(setSound5("Cooper Ave - The Westerlies.mp3"));
+        props.setNextBtn(props.nextBtn + 1);
+      }}
     >
       <ReactHowler
         src={["Cooper Ave - The Westerlies.mp3"]}
         playing={play}
         loop={false}
         mute={false}
-        volume={1.0}
+        volume={0}
       />
       <p>음악2 뒷면</p>
-      <button
+      <h1>모닥불X_멜로디</h1>
+      {/* <button
         onClick={() => {
           setPlaying(false);
         }}
@@ -50,7 +55,7 @@ const Sound5in2 = (props) => {
         }}
       >
         저장하기
-      </button>
+      </button> */}
     </div>
   );
 };

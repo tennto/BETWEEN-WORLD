@@ -18,16 +18,21 @@ const Sound1in1 = () => {
       onMouseLeave={() => {
         setPlaying(false);
       }}
+      onClick={() => {
+        dispatch(setSound1("Cooper Ave - The Westerlies.mp3"));
+        dispatch({ type: "index/CSBOY_1001" });
+      }}
     >
       <ReactHowler
-        src={["example_sound.mp3"]}
+        src={["Cooper Ave - The Westerlies.mp3"]}
         playing={play}
         loop={false}
         mute={false}
         volume={1.0}
       />
       <p>음악1 뒷면</p>
-      <button
+      <h1>HAPPY_멜로디 1</h1>
+      {/* <button
         onClick={() => {
           setPlaying(false);
         }}
@@ -51,7 +56,7 @@ const Sound1in1 = () => {
         }}
       >
         저장하기
-      </button>
+      </button> */}
     </div>
   );
 };

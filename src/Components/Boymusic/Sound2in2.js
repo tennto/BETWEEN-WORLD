@@ -18,6 +18,10 @@ const Sound2in2 = () => {
       onMouseLeave={() => {
         setPlaying(false);
       }}
+      onClick={() => {
+        dispatch(setSound2("Elegy - Wayne Jones.mp3"));
+        dispatch({ type: "index/CSBOY_1001" });
+      }}
     >
       <ReactHowler
         src={["Elegy - Wayne Jones.mp3"]}
@@ -27,7 +31,8 @@ const Sound2in2 = () => {
         volume={1.0}
       />
       <p>음악2 뒷면</p>
-      <button
+      <h1>SAD_멜로디2</h1>
+      {/* <button
         onClick={() => {
           setPlaying(false);
         }}
@@ -51,7 +56,7 @@ const Sound2in2 = () => {
         }}
       >
         저장하기
-      </button>
+      </button> */}
     </div>
   );
 };

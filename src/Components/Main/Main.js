@@ -37,6 +37,10 @@ import SnowManBoy from "../ChapterBoy/SnowManBoy";
 import SMAnimeBoy from "../ChapterBoy/SMAnimeBoy";
 import SnowManGirl from "../ChapterGirl/SnowManGirl";
 import SMAnimeGirl from "../ChapterGirl/SMAnimeGirl";
+import RainTaeRuBoy from "../ChapterBoy/RainTaeRuBoy";
+import RTRAnimeBoy from "../ChapterBoy/RTRAnimeBoy";
+import RTRAnimeGirl from "../ChapterGirl/RTRAnimeGirl";
+import RainTaeRuGirl from "../ChapterGirl/RainTaeRuGirl";
 
 const Main = () => {
   const status = useSelector((state) => state);
@@ -244,6 +248,10 @@ const Main = () => {
       return <SnowManBoy />;
     } else if (status.moodSelect === 1404) {
       return <SnowManGirl />;
+    } else if (status.moodSelect === 1003) {
+      return <RainTaeRuBoy />;
+    } else if (status.moodSelect === 1403) {
+      return <RainTaeRuGirl />;
     }
   };
 
@@ -269,6 +277,8 @@ const Main = () => {
       return <C3AnimeBoy />;
     } else if (status.moodSelect === 1002) {
       return <SOMAnimeBoy />;
+    } else if (status.moodSelect === 1003) {
+      return <RTRAnimeBoy />;
     } else if (status.moodSelect === 1004) {
       return <SMAnimeBoy />;
     } else if (status.moodSelect === 2000) {
@@ -285,6 +295,8 @@ const Main = () => {
       return <C3AnimeGirl />;
     } else if (status.moodSelect === 1402) {
       return <SOMAnimeGirl />;
+    } else if (status.moodSelect === 1403) {
+      return <RTRAnimeGirl />;
     } else if (status.moodSelect === 1404) {
       return <SMAnimeGirl />;
     } else if (status.moodSelect === 2400) {

@@ -96,16 +96,18 @@ const Dialog3 = (props) => {
   return (
     <>
       <h3 className="dialog_oneline">당신의 이름은..?</h3>
-      <input ref={name} className="nicknameInput" />
-      <button
-        onClick={() => {
-          dispatch(setName(name.current.value));
-          console.log(status.userName);
-          props.setNextBtn(props.nextBtn + 1);
-        }}
-      >
-        입력하기
-      </button>
+      <div className="nicknameDiv">
+        <input ref={name} className="nicknameInput" />
+        <button
+          onClick={() => {
+            dispatch(setName(name.current.value));
+            console.log(status.userName);
+            props.setNextBtn(props.nextBtn + 1);
+          }}
+        >
+          입력하기
+        </button>
+      </div>
     </>
   );
 };

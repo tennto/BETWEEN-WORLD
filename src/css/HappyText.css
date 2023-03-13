@@ -13,27 +13,27 @@
 
 .selec_2 {
   position: absolute;
-    background-color: white;
+  background-color: white;
   display: inline-block;
   height: 200px;
   width: 450px;
 }
 .hover1 {
   position: absolute;
-    background-color: white;
+  background-color: white;
   height: 200px;
   width: 420px;
   margin-right: 26px;
 }
 .hover2 {
   position: absolute;
-    background-color: white;
+  background-color: white;
   height: 200px;
   width: 450px;
   margin-right: 26px;
 }
 
-.happy1{
+.happy1 {
   height: 200px;
   width: 420px;
 }
