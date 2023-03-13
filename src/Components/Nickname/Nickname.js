@@ -59,9 +59,9 @@ const Nickname = () => {
 
 const Dialog0 = () => {
   return (
-    <>
-      <h3 className="dialog_oneline">1번 대화내용입니다</h3>
-    </>
+    <div className="forFade">
+      <h3 className="dialog_oneline">알 수 없는 곳에 도착하였습니다</h3>
+    </div>
   );
 };
 

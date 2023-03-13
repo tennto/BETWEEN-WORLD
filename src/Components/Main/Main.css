@@ -37,16 +37,16 @@ body {
 
 .textNselect {
   position: absolute;
-  background-color: white;
+  /* background-color: white; */
   width: 900px;
-  height: 180px;
+  height: 200px;
   margin: 10px auto;
   border-radius: 20px;
   bottom: 40px;
   left: 510px;
   /* border: 2px solid #383838; */
-  border: none;
-  box-shadow: 2px 4px 12px #646464;
+  /* border: none;
+  box-shadow: 2px 4px 12px #646464; */
 }
 
 @keyframes fadein {
