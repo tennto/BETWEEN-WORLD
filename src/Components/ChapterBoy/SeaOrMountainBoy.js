@@ -128,7 +128,7 @@ const Dialog3 = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     setTimeout(() => {
-      dispatch({ type: "index/SMBOY_1004" });
+      dispatch({ type: "index/RTRBOY_1003" });
     }, 1000);
   }, [dispatch]);
   return (

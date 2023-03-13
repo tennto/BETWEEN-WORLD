@@ -31,6 +31,7 @@ const initialState = {
       sound3: "",
       sound4: "",
       sound5: "",
+      sound6: "",
     },
   ],
 };
@@ -53,6 +54,9 @@ export const setSound4 = (sound4) => {
 };
 export const setSound5 = (sound5) => {
   return { type: SET_SOUND5, sound5 };
+};
+export const setSound6 = (sound6) => {
+  return { type: SET_SOUND6, sound6 };
 };
 
 // 선택지 액션 - 남자버전
@@ -81,17 +85,20 @@ const SET_SOUND2 = "index/SET_SOUND2";
 const SET_SOUND3 = "index/SET_SOUND3";
 const SET_SOUND4 = "index/SET_SOUND4";
 const SET_SOUND5 = "index/SET_SOUND5";
+const SET_SOUND6 = "index/SET_SOUND6";
 
 //<<<<<<< Updated upstream
 // #2 애니메이션 / 텍스트 동기화 용 남자버전
 //>>>>>>> Stashed changes
 const CSBOY_1001 = "index/CSBOY_1001";
 const SOMBOY_1002 = "index/SOMBOY_1002";
+const RTRBOY_1003 = "index/RTRBOY_1003";
 const SMBOY_1004 = "index/SMBOY_1004";
 
 // #2 애니메이션 / 텍스트 동기화 용 여자버전
 const CSGIRL_1401 = "index/CSGIRL_1401";
 const SOMGIRL_1402 = "index/SOMGIRL_1402";
+const RTRGIRL_1403 = "index/RTRGIRL_1403";
 const SMGIRL_1404 = "index/SMGIRL_1404";
 // reducer 설정
 function reducer(state = initialState, action) {
@@ -219,6 +226,15 @@ function reducer(state = initialState, action) {
         },
       };
     }
+    case SET_SOUND6: {
+      return {
+        ...state,
+        playersound: {
+          ...state.playersound,
+          sound6: [action.sound6],
+        },
+      };
+    }
     case CSBOY_1001: {
       return {
         ...state,
@@ -229,6 +245,12 @@ function reducer(state = initialState, action) {
       return {
         ...state,
         moodSelect: 1002,
+      };
+    }
+    case RTRBOY_1003: {
+      return {
+        ...state,
+        moodSelect: 1003,
       };
     }
     case SMBOY_1004: {
@@ -247,6 +269,12 @@ function reducer(state = initialState, action) {
       return {
         ...state,
         moodSelect: 1402,
+      };
+    }
+    case RTRGIRL_1403: {
+      return {
+        ...state,
+        moodSelect: 1403,
       };
     }
     case SMGIRL_1404: {

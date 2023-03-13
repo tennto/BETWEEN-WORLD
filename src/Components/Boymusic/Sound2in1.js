@@ -18,16 +18,21 @@ const Sound2in1 = () => {
       onMouseLeave={() => {
         setPlaying(false);
       }}
+      onClick={() => {
+        dispatch(setSound2("Decision - The Tower of Light.mp3"));
+        dispatch({ type: "index/CSBOY_1001" });
+      }}
     >
       <ReactHowler
-        src={["Falling Rain - Myuu.mp3"]}
+        src={["Decision - The Tower of Light.mp3"]}
         playing={play}
         loop={false}
         mute={false}
         volume={1.0}
       />
       <p>음악1 뒷면</p>
-      <button
+      <h1>SAD_멜로디1</h1>
+      {/* <button
         onClick={() => {
           setPlaying(false);
         }}
@@ -51,7 +56,7 @@ const Sound2in1 = () => {
         }}
       >
         저장하기
-      </button>
+      </button> */}
     </div>
   );
 };

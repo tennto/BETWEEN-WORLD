@@ -17,16 +17,21 @@ const Sound5in1 = (props) => {
       onMouseLeave={() => {
         setPlaying(false);
       }}
+      onClick={() => {
+        dispatch(setSound5("모닥불소리.wav"));
+        props.setNextBtn(props.nextBtn + 1);
+      }}
     >
       <ReactHowler
-        src={["The Quiet Aftermath - Sir Cubworth.mp3"]}
+        src={"모닥불소리.wav"}
         playing={play}
         loop={false}
         mute={false}
         volume={1.0}
       />
       <p>음악1 뒷면</p>
-      <button
+      <h1>모닥불O_멜로디</h1>
+      {/* <button
         onClick={() => {
           setPlaying(false);
         }}
@@ -50,7 +55,7 @@ const Sound5in1 = (props) => {
         }}
       >
         저장하기
-      </button>
+      </button> */}
     </div>
   );
 };

@@ -18,16 +18,21 @@ const Sound1in2 = () => {
       onMouseLeave={() => {
         setPlaying(false);
       }}
+      onClick={() => {
+        dispatch(setSound1("Harlequin - Kevin MacLeod.mp3"));
+        dispatch({ type: "index/CSBOY_1001" });
+      }}
     >
       <ReactHowler
-        src={["rain.mp3"]}
+        src={["Harlequin - Kevin MacLeod.mp3"]}
         playing={play}
         loop={false}
         mute={false}
         volume={1.0}
       />
       <p>음악2 뒷면</p>
-      <button
+      <h1>HAPPY_멜로디 1</h1>
+      {/* <button
         onClick={() => {
           setPlaying(false);
         }}
@@ -51,7 +56,7 @@ const Sound1in2 = () => {
         }}
       >
         저장하기
-      </button>
+      </button> */}
     </div>
   );
 };

@@ -18,6 +18,10 @@ const Sound3in1 = () => {
       onMouseLeave={() => {
         setPlaying(false);
       }}
+      onClick={() => {
+        dispatch(setSound3("The Quiet Aftermath - Sir Cubworth.mp3"));
+        dispatch({ type: "index/CSBOY_1001" });
+      }}
     >
       <ReactHowler
         src={["The Quiet Aftermath - Sir Cubworth.mp3"]}
@@ -27,7 +31,8 @@ const Sound3in1 = () => {
         volume={1.0}
       />
       <p>음악1 뒷면</p>
-      <button
+      <h1>THRILL_멜로디1</h1>
+      {/* <button
         onClick={() => {
           setPlaying(false);
         }}
@@ -51,7 +56,7 @@ const Sound3in1 = () => {
         }}
       >
         저장하기
-      </button>
+      </button> */}
     </div>
   );
 };

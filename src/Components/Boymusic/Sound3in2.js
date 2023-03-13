@@ -18,16 +18,21 @@ const Sound3in2 = () => {
       onMouseLeave={() => {
         setPlaying(false);
       }}
+      onClick={() => {
+        dispatch(setSound3("Falling Rain - Myuu.mp3"));
+        dispatch({ type: "index/CSBOY_1001" });
+      }}
     >
       <ReactHowler
-        src={["Cooper Ave - The Westerlies.mp3"]}
+        src={["Falling Rain - Myuu.mp3"]}
         playing={play}
         loop={false}
         mute={false}
         volume={1.0}
       />
       <p>음악2 뒷면</p>
-      <button
+      <h1>THRILL_멜로디2</h1>
+      {/* <button
         onClick={() => {
           setPlaying(false);
         }}
@@ -51,7 +56,7 @@ const Sound3in2 = () => {
         }}
       >
         저장하기
-      </button>
+      </button> */}
     </div>
   );
 };

@@ -12,8 +12,8 @@
 .Content_box {
   /* background-image: url("./box1.png");
   background-position: center;
-  background-size: 86%;
-  background-repeat: no-repeat; */
+  background-size: 86%; */
+  background-repeat: no-repeat;
   border-radius: 20px;
   width: 900px;
   height: 460px;
@@ -26,7 +26,6 @@
 .playlist {
   position: absolute;
   background-color: white;
-  border: 1px solid;
   margin-left: 100px;
   width: 200px;
   height: 400px;

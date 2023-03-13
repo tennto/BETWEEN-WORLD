@@ -58,7 +58,15 @@
   top: -30px;
   left: -42px;
 }
-
+.nicknameDiv {
+  border: 1px solid;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  left: 300px;
+  bottom: 200px;
+  background-color: white;
+}
 .nicknameInput {
   width: 200px;
   height: 30px;
