@@ -327,7 +327,7 @@ const Main = () => {
           </tr>
         </table>
         <div className="Content_box">
-          <h2>Animation Area</h2>
+          {/* <h2>Animation Area</h2> */}
           {setAnimation()}
         </div>
         <div className="textNselect">{setMoodStatus()}</div>

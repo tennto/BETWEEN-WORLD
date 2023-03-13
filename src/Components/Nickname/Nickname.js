@@ -37,7 +37,7 @@ const Nickname = () => {
     } else {
       return (
         <button
-          className={"nextBtn" + changeBox}
+          className={"NnextBtn" + changeBox}
           onClick={() => {
             setNextBtn(nextBtn + 1);
           }}
