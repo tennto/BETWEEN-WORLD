@@ -19,15 +19,17 @@
 }
 
 .NnextBtn0 {
+  animation: fadein 3s;
   position: absolute;
   background-color: #383838;
   color: whitesmoke;
   border: none;
+  font-size: 12px;
   border-radius: 20px;
-  width: 80px;
-  height: 40px;
+  width: 60px;
+  height: 30px;
   bottom: 20px;
-  right: 20px;
+  right: 80px;
   transition: 0.5s ease-in-out;
 }
 .NnextBtn0:hover {
@@ -36,7 +38,7 @@
   box-shadow: 0px 2px 6px #cecece;
   font-weight: 700;
 }
-.nextBtn1 {
+.NnextBtn1 {
   display: none;
 }
 
@@ -71,18 +73,56 @@
   left: -42px;
 }
 .nicknameDiv {
-  border: 1px solid;
-  width: 300px;
-  height: 300px;
+  animation: fadein 3s;
+  width: 400px;
+  height: 400px;
   position: absolute;
-  left: 300px;
-  bottom: 200px;
-  background-color: white;
+  border-radius: 12px;
+  left: 249px;
+  bottom: 360px;
+  background-color: whitesmoke;
+  box-shadow: 0px 2px 6px #cecece;
 }
 .nicknameInput {
+  padding-left: 14px;
   width: 200px;
-  height: 30px;
-  font-size: 28px;
+  height: 40px;
+  position: absolute;
+  border-radius: 6px;
+  border: 1px solid #4c4c4c;
+  top: 160px;
+  left: 91px;
+  font-size: 32px;
+  font-family: "ongeul";
+}
+
+.inputBtn {
+  position: absolute;
+  bottom: 80px;
+  left: 130px;
+  width: 140px;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  box-shadow: 0px 2px 6px #cecece;
+  transition: 0.3s ease-in;
+}
+.inputBtn:hover {
+  background-color: #383838;
+  color: whitesmoke;
+  transition: 0.3s ease-in;
+  transform: scale(1.05);
+  font-weight: 700;
+}
+
+.decoinput {
+  max-width: 400px;
+}
+.notice_input {
+  position: absolute;
+  top: 40px;
+  left: 128px;
+  font-size: 32px;
   font-family: "ongeul";
 }
 
@@ -101,18 +141,59 @@
 }
 
 .choiceSex {
-  width: 200px;
-  height: 200px;
-  background-color: aliceblue;
+  width: 360px;
+  height: 600px;
+  background-color: whitesmoke;
   display: inline-block;
+  margin: 0 20px;
+  border-radius: 20px;
+  position: relative;
+  border: none;
+  box-shadow: 0px 2px 6px #cecece;
+  transition: 0.5s ease-in;
+}
+.choiceSex:hover {
+  background-color: #fffbf0;
+  transition: 0.5s ease-in;
+  transform: scale(1.02);
+}
+
+.sexBox {
+  animation: fadein 3s;
+  bottom: 200px;
+  position: absolute;
+  left: 50px;
+}
+.sexdeco {
+  max-width: 360px;
+}
+.sexText {
+  position: absolute;
+  top: 40px;
+  left: 162px;
+  font-size: 32px;
+  font-family: "ongeul";
+}
+.wata1 {
+  max-width: 360px;
+  position: absolute;
+}
+.wagi1 {
+  max-width: 360px;
+  position: absolute;
 }
 
 .forFade {
   animation: fadein 3s;
-  background-color: white;
+  background-color: whitesmoke;
   width: 900px;
   height: 200px;
   border: none;
   border-radius: 20px;
   box-shadow: 0px 2px 6px #cecece;
+}
+
+.deco {
+  max-width: 900px;
+  opacity: 70%;
 }
