@@ -263,11 +263,11 @@ const Main = () => {
     } else if (status.moodSelect === 2) {
       return <NicknameAnime2 />;
     } else if (status.moodSelect === 3) {
-      return <NicknameAnime3 />;
+      return <NicknameAnime2 />;
     } else if (status.moodSelect === 4) {
-      return <NicknameAnime4 />;
+      return <NicknameAnime2 />;
     } else if (status.moodSelect === 5) {
-      return <NicknameAnime5 />;
+      return <NicknameAnime2 />;
     } else if (status.moodSelect === 6) {
       // 남자 애니메이션 분기점
       return <C2AnimeBoy />;
