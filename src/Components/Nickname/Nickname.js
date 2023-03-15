@@ -3,6 +3,11 @@ import { useSelector, useDispatch } from "react-redux";
 import "./Nickname.css";
 import { setName } from "../../index";
 import ChapterBoy from "../ChapterBoy/ChapterBoy";
+import deco from "./textdecoration.png";
+import decoinput from "./inputdeco.png";
+import sexdeco from "./sexdeco.png";
+import wata1 from "./wata1.png";
+import wagi1 from "./wagi1.png";
 
 const Nickname = () => {
   const status = useSelector((state) => state);
@@ -50,7 +55,7 @@ const Nickname = () => {
 
   return (
     <div className="nicknameBox">
-      <div className={"caracterIcon" + changeBox}></div>
+      {/* <div className={"caracterIcon" + changeBox}></div> */}
       {textFlow()}
       {btnDelete()}
     </div>
@@ -60,6 +65,7 @@ const Nickname = () => {
 const Dialog0 = () => {
   return (
     <div className="forFade">
+      <img className="deco" src={deco} alt="deco" />
       <h3 className="dialog_oneline">알 수 없는 곳에 도착하였습니다</h3>
     </div>
   );
@@ -71,17 +77,19 @@ const Dialog1 = () => {
     dispatch({ type: "index/PLUS_STATE1" });
   }, []);
   return (
-    <>
+    <div className="forFade">
+      <img className="deco" src={deco} alt="deco" />
       <h3 className="dialog_oneline">캐릭터 실루엣 등장</h3>
-    </>
+    </div>
   );
 };
 
 const Dialog2 = () => {
   return (
-    <>
+    <div className="forFade">
+      <img className="deco" src={deco} alt="deco" />
       <h3 className="dialog_oneline">. . .</h3>
-    </>
+    </div>
   );
 };
 
@@ -94,11 +102,15 @@ const Dialog3 = (props) => {
   }, []);
 
   return (
-    <>
+    <div className="forFade">
+      <img className="deco" src={deco} alt="deco" />
       <h3 className="dialog_oneline">당신의 이름은..?</h3>
       <div className="nicknameDiv">
+        <img className="decoinput" src={decoinput} alt="decoinp" />
+        <p className="notice_input">닉네임을 입력해주세요</p>
         <input ref={name} className="nicknameInput" />
         <button
+          className="inputBtn"
           onClick={() => {
             dispatch(setName(name.current.value));
             console.log(status.userName);
@@ -108,7 +120,7 @@ const Dialog3 = (props) => {
           입력하기
         </button>
       </div>
-    </>
+    </div>
   );
 };
 const Dialog4 = () => {
@@ -118,9 +130,10 @@ const Dialog4 = () => {
     dispatch({ type: "index/PLUS_STATE3" });
   }, []);
   return (
-    <>
-      <h3 className="dialog_oneline">{status.userName}라고 하는구나..?</h3>
-    </>
+    <div className="forFade">
+      <img className="deco" src={deco} alt="deco" />
+      <h3 className="dialog_oneline">{status.userName} (이)라고 하는구나..?</h3>
+    </div>
   );
 };
 const Dialog5 = () => {
@@ -130,14 +143,16 @@ const Dialog5 = () => {
   }, []);
 
   return (
-    <>
+    <div className="sexBox">
       <button
         className="choiceSex"
         onClick={() => {
           dispatch({ type: "index/STORY_NO2" });
         }}
       >
-        하남자
+        <img className="wata1" src={wata1} alt="wata1" />
+        <p className="sexText">남자</p>
+        <img className="sexdeco" src={sexdeco} alt="sexdeco" />
       </button>
       <button
         className="choiceSex"
@@ -145,9 +160,11 @@ const Dialog5 = () => {
           dispatch({ type: "index/STORY_NO3" });
         }}
       >
-        하여자
+        <img className="wagi1" src={wagi1} alt="wagi1" />
+        <p className="sexText">여자</p>
+        <img className="sexdeco" src={sexdeco} alt="sexdeco" />
       </button>
-    </>
+    </div>
   );
 };
 
