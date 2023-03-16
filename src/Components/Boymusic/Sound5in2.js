@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import ReactHowler from "../../howler/ReactHowler.js";
 import { useSelector, useDispatch } from "react-redux";
 import { setSound5 } from "../../index";
+import "../../css/Card.css";
 
 const Sound5in2 = (props) => {
   // const status = useSelector((state) => state);

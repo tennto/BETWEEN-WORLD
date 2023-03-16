@@ -1,70 +1,38 @@
 import React, { useState } from "react";
-import "../../css/HappyText.css";
 import Sound1in2 from "../Boymusic/Sound1in2";
 import Sound1in1 from "../Boymusic/Sound1in1";
+import "../../css/Card.css";
+import carddeco from "../carddeco.png";
+import carddecoback from "../carddecoback.png";
 
 const HappyTextBoy = () => {
-  const [visible, setVisible] = useState(1);
-  const [visible2, setVisible2] = useState(1);
-
-  const isHovering = () => {
-    if (visible === 1) {
-      return (
-        <div
-          className="hover2"
-          onClick={() => {
-            setVisible(0);
-          }}
-        >
-          음악 1(앞면)
-        </div>
-      );
-    } else {
-      return "";
-    }
-  };
-
-  const isHovering2 = () => {
-    if (visible2 === 1) {
-      return (
-        <div
-          className="selec_2"
-          onClick={() => {
-            setVisible2(0);
-          }}
-        >
-          음악 2 (앞면)
-        </div>
-      );
-    } else {
-      return "";
-    }
-  };
-
   return (
     <>
-      <div
-        className="selec_1"
-        onMouseOut={() => {
-          setVisible2(1);
-        }}
-      >
-        {" "}
-        <Sound1in2 />
+      <div className="wrap">
+        <div className="card">
+          <div className="card-front">
+            <img className="carddeco" src={carddeco} alt="carddeco1" />
+            <p>사운드 1앞면</p>
+          </div>
+          <div className="card-back">
+            <img className="carddeco" src={carddecoback} alt="carddeco1" />
+            <Sound1in1 />
+          </div>
+        </div>
       </div>
-      <div
-        className="hover1"
-        onMouseOut={() => {
-          setVisible(1);
-        }}
-      >
-        {" "}
-        <Sound1in1 />
+      <div className="wrap2">
+        <div className="card2">
+          <div className="card-front2">
+            <img className="carddeco" src={carddeco} alt="carddeco1" />
+            사운드 2앞면
+          </div>
+          <div className="card-back2">
+            <img className="carddeco" src={carddecoback} alt="carddeco1" />
+            <Sound1in2 />
+          </div>
+        </div>
       </div>
-      {isHovering2()}
-      {isHovering()}
     </>
   );
 };
-
 export default HappyTextBoy;
