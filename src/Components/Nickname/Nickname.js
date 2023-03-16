@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import "./Nickname.css";
 import { setName } from "../../index";
 import ChapterBoy from "../ChapterBoy/ChapterBoy";
-import deco from "./textdecoration.png";
+import deco from "../../Components/textdecoration.png";
 import decoinput from "./inputdeco.png";
 import sexdeco from "./sexdeco.png";
 import wata1 from "./wata1.png";

@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import "../../css/Chapter2.css";
+import deco from "../../Components/textdecoration.png";
+import chdeco from "./chdeco.png";
 
 const ChapterBoy = () => {
   const dispatch = useDispatch();
@@ -22,10 +24,10 @@ const ChapterBoy = () => {
 
   return (
     <div className="CP2_UPPER">
-      <div className={"caracterIcon" + changeBox}></div>
+      {/* <div className={"caracterIcon" + changeBox}></div> */}
       {DialogFlow()}
       <button
-        className={"nextBtn" + changeBox}
+        className={"c2boynextBtn" + changeBox}
         onClick={() => {
           setNextBtn(nextBtn + 1);
         }}
@@ -38,17 +40,19 @@ const ChapterBoy = () => {
 
 const Dialog0 = () => {
   return (
-    <>
+    <div className="forFade_b">
+      <img className="deco" src={deco} alt="deco" />
       <h3 className="dialog_oneline">. . .</h3>
-    </>
+    </div>
   );
 };
 
 const Dialog1 = () => {
   return (
-    <>
+    <div className="forFade_b">
+      <img className="deco" src={deco} alt="deco" />
       <h3 className="dialog_oneline">여긴.. 어디지..?</h3>
-    </>
+    </div>
   );
 };
 
@@ -56,13 +60,14 @@ const Dialog2 = () => {
   const status = useSelector((state) => state);
   const dispatch = useDispatch();
   return (
-    <>
+    <div className="forFade_mood">
       <div
         onClick={() => {
           dispatch({ type: "index/HAPPY_MOOD_B" });
         }}
         className="CH_BOX"
       >
+        <img className="chdeco" src={chdeco} alt="cddeco" />
         <p>
           처음 와보는 곳<br />
           신난다..!
@@ -74,6 +79,7 @@ const Dialog2 = () => {
         }}
         className="CH_BOX"
       >
+        <img className="chdeco" src={chdeco} alt="cddeco" />
         <p>
           낯선 곳은 항상
           <br />
@@ -86,13 +92,14 @@ const Dialog2 = () => {
         }}
         className="CH_BOX"
       >
+        <img className="chdeco" src={chdeco} alt="cddeco" />
         <p>
           도대체 어디지..
           <br />
           긴장돼...
         </p>
       </div>
-    </>
+    </div>
   );
 };
 

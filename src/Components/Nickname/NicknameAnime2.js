@@ -1,9 +1,17 @@
 import React from "react";
+import { Player } from "@lottiefiles/react-lottie-player";
+import nick1 from "./data1.json";
 
 const MoodSelectAnime = () => {
   return (
     <div>
-      <h1>#1 - 2번 실루엣 등장</h1>
+      <Player
+        src={nick1}
+        style={{ width: "1920px" }}
+        autoplay={true}
+        loop={false}
+        speed={1}
+      />
     </div>
   );
 };
