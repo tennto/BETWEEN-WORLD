@@ -1,10 +1,9 @@
-# Getting Started with Create React App and Redux
+# 2023 숭실대학교 글로벌미디어학부 졸업전시 팀 ROUGH PANDA
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+![btwlogo](https://user-images.githubusercontent.com/109796814/225480480-13bdd993-dfa9-4e71-990c-570721e5dc13.png)
 
-## Available Scripts
-
-In the project directory, you can run:
+## 프로젝트 실행하기
+프로젝트 경로(beetweenworld 디렉토리) 상에서 아래 명령어를 통해 실행할 수 있습니다
 
 ### `npm start`
 
