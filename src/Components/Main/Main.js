@@ -41,6 +41,16 @@ import RainTaeRuBoy from "../ChapterBoy/RainTaeRuBoy";
 import RTRAnimeBoy from "../ChapterBoy/RTRAnimeBoy";
 import RTRAnimeGirl from "../ChapterGirl/RTRAnimeGirl";
 import RainTaeRuGirl from "../ChapterGirl/RainTaeRuGirl";
+import CricKatBoy from "../ChapterBoy/CricKatBoy";
+import CKAnimeBoy from "../ChapterBoy/CKAnimeBoy";
+import CKAnimeGirl from "../ChapterGirl/CKAnimeGirl";
+import CricKatGirl from "../ChapterGirl/CricKatGirl";
+import BIRDAnimeBoy from "../ChapterBoy/BIRDAnimeBoy";
+import BirdBoy from "../ChapterBoy/BirdBoy";
+import BIRDAnimeGirl from "../ChapterGirl/BIRDAnimeGirl";
+import BirdGirl from "../ChapterGirl/BirdGirl";
+
+// import axios from "axios";
 
 const Main = () => {
   const status = useSelector((state) => state);
@@ -207,6 +217,102 @@ const Main = () => {
       );
     }
   };
+  const savePlaylist6 = () => {
+    if (status.playersound.sound6 === undefined) {
+      return "";
+    } else {
+      return (
+        <>
+          <p>사운드 6</p>
+          <ReactHowler
+            src={status.playersound.sound6}
+            playing={play}
+            loop={false}
+            mute={false}
+            volume={0.1}
+          />
+          <button
+            onClick={() => {
+              setPlaying(false);
+            }}
+          >
+            멈춤
+          </button>
+          <button
+            onClick={() => {
+              setPlaying(true);
+            }}
+          >
+            실행
+          </button>
+        </>
+      );
+    }
+  };
+  const savePlaylist7 = () => {
+    if (status.playersound.sound7 === undefined) {
+      return "";
+    } else {
+      return (
+        <>
+          <p>사운드 7</p>
+          <ReactHowler
+            src={status.playersound.sound7}
+            playing={play}
+            loop={false}
+            mute={false}
+            volume={1.0}
+          />
+          <button
+            onClick={() => {
+              setPlaying(false);
+            }}
+          >
+            멈춤
+          </button>
+          <button
+            onClick={() => {
+              setPlaying(true);
+            }}
+          >
+            실행
+          </button>
+        </>
+      );
+    }
+  };
+  const savePlaylist8 = () => {
+    if (status.playersound.sound8 === undefined) {
+      return "";
+    } else {
+      return (
+        <>
+          <p>사운드 8</p>
+          <ReactHowler
+            src={status.playersound.sound8}
+            playing={play}
+            loop={false}
+            mute={false}
+            volume={1.0}
+          />
+          <button
+            onClick={() => {
+              setPlaying(false);
+            }}
+          >
+            멈춤
+          </button>
+          <button
+            onClick={() => {
+              setPlaying(true);
+            }}
+          >
+            실행
+          </button>
+        </>
+      );
+    }
+  };
 
   // 분위기 테마 별 State 및 최초 상위 리턴컴포넌트 선언
   const setMoodStatus = () => {
@@ -244,14 +350,22 @@ const Main = () => {
       return <SeaOrMountainBoy />;
     } else if (status.moodSelect === 1402) {
       return <SeaOrMountainGirl />;
-    } else if (status.moodSelect === 1004) {
-      return <SnowManBoy />;
-    } else if (status.moodSelect === 1404) {
-      return <SnowManGirl />;
     } else if (status.moodSelect === 1003) {
       return <RainTaeRuBoy />;
     } else if (status.moodSelect === 1403) {
       return <RainTaeRuGirl />;
+    } else if (status.moodSelect === 1004) {
+      return <SnowManBoy />;
+    } else if (status.moodSelect === 1404) {
+      return <SnowManGirl />;
+    } else if (status.moodSelect === 1005) {
+      return <CricKatBoy />;
+    } else if (status.moodSelect === 1405) {
+      return <CricKatGirl />;
+    } else if (status.moodSelect === 1006) {
+      return <BirdBoy />;
+    } else if (status.moodSelect === 1406) {
+      return <BirdGirl />;
     }
   };
 
@@ -281,6 +395,10 @@ const Main = () => {
       return <RTRAnimeBoy />;
     } else if (status.moodSelect === 1004) {
       return <SMAnimeBoy />;
+    } else if (status.moodSelect === 1005) {
+      return <CKAnimeBoy />;
+    } else if (status.moodSelect === 1006) {
+      return <BIRDAnimeBoy />;
     } else if (status.moodSelect === 2000) {
       return <SadAnimeBoy />;
     } else if (status.moodSelect === 3000) {
@@ -299,6 +417,10 @@ const Main = () => {
       return <RTRAnimeGirl />;
     } else if (status.moodSelect === 1404) {
       return <SMAnimeGirl />;
+    } else if (status.moodSelect === 1405) {
+      return <CKAnimeGirl />;
+    } else if (status.moodSelect === 1406) {
+      return <BIRDAnimeGirl />;
     } else if (status.moodSelect === 2400) {
       return <SadAnimeGirl />;
     } else if (status.moodSelect === 3400) {
@@ -309,6 +431,14 @@ const Main = () => {
   return (
     <div className="maincomp">
       <div className="Container_m">
+        {/*         
+        <button
+          onClick={() => {
+            axios.post("/gallery", { name: "status.playersound.sound6" });
+          }}
+        >
+          server save button
+        </button> */}
         <table className="playlist">
           <tr>
             <th>{savePlaylist1()}</th>
@@ -323,7 +453,16 @@ const Main = () => {
             <th>{savePlaylist4()}</th>
           </tr>
           <tr>
+            <th>{savePlaylist6()}</th>
+          </tr>
+          <tr>
             <th>{savePlaylist5()}</th>
+          </tr>
+          <tr>
+            <th>{savePlaylist7()}</th>
+          </tr>
+          <tr>
+            <th>{savePlaylist8()}</th>
           </tr>
         </table>
         <div className="Content_box">

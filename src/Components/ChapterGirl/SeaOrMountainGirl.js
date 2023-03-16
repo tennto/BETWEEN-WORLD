@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import GSound4in2 from "../Girlmusic/GSound4in2";
 import GSound4in1 from "../Girlmusic/GSound4in1";
 import "../../css/Chapter2.css";
-import "../../css/HappyText.css";
+import "../../css/Card.css";
 
 const SeaOrMountainGirl = () => {
   let [nextBtn, setNextBtn] = useState(0);
@@ -60,66 +60,25 @@ const Dialog1 = () => {
 
 const Dialog2 = (props) => {
   const status = useSelector((state) => state);
-  const dispatch = useDispatch();
-  let [nextBtn, setNextBtn] = useState(0);
-  const [visible, setVisible] = useState(1);
-  const [visible2, setVisible2] = useState(1);
 
-  const isHovering = () => {
-    if (visible === 1) {
-      return (
-        <div
-          className="hover2"
-          onClick={() => {
-            setVisible(0);
-          }}
-        >
-          음악 1(앞면)
-        </div>
-      );
-    } else {
-      return "";
-    }
-  };
-
-  const isHovering2 = () => {
-    if (visible2 === 1) {
-      return (
-        <div
-          className="selec_2"
-          onClick={() => {
-            setVisible2(0);
-          }}
-        >
-          음악 2 (앞면)
-        </div>
-      );
-    } else {
-      return "";
-    }
-  };
   return (
     <>
-      <div
-        className="selec_1"
-        onMouseOut={() => {
-          setVisible2(1);
-        }}
-      >
-        {" "}
-        <GSound4in2 {...props} />
+      <div className="wrap">
+        <div className="card">
+          <div className="card-front">사운드 1앞면</div>
+          <div className="card-back">
+            <GSound4in1 {...props} />
+          </div>
+        </div>
       </div>
-      <div
-        className="hover1"
-        onMouseOut={() => {
-          setVisible(1);
-        }}
-      >
-        {" "}
-        <GSound4in1 {...props} />
+      <div className="wrap2">
+        <div className="card2">
+          <div className="card-front2">사운드 2앞면</div>
+          <div className="card-back2">
+            <GSound4in2 {...props} />
+          </div>
+        </div>
       </div>
-      {isHovering2()}
-      {isHovering()}
     </>
   );
 };

@@ -1,0 +1,114 @@
+.wrap {
+  position: relative;
+  width: 400px;
+  height: 180px;
+  right: 50px;
+  margin: 50px auto;
+  border-radius: 20px;
+  perspective: 500px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  transition: all 1s;
+  transform-style: preserve-3d;
+}
+
+.wrap:hover .card {
+  transform: rotateY(180deg);
+}
+
+.card > div {
+  position: absolute;
+  top: -40px;
+  right: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-size: 20px;
+  border-radius: 20px;
+  backface-visibility: hidden;
+}
+
+.card-front {
+  box-shadow: 0px 2px 6px #cecece;
+  background-color: whitesmoke;
+  z-index: 10;
+}
+
+.card-back {
+  box-shadow: 0px 2px 6px #cecece;
+  background-color: whitesmoke;
+  z-index: 5;
+  transform: rotateY(180deg);
+}
+
+.wrap2 {
+  position: relative;
+  width: 400px;
+  height: 180px;
+  left: 50px;
+  margin: 50px auto;
+  border-radius: 20px;
+  perspective: 500px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.card2 {
+  width: 100%;
+  height: 100%;
+  transition: all 1s;
+  transform-style: preserve-3d;
+}
+
+.wrap2:hover .card2 {
+  transform: rotateY(180deg);
+}
+
+.card2 > div {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-size: 20px;
+  border-radius: 20px;
+  backface-visibility: hidden;
+}
+
+.card-front2 {
+  box-shadow: 0px 2px 6px #cecece;
+  background-color: whitesmoke;
+  z-index: 10;
+}
+
+.card-back2 {
+  box-shadow: 0px 2px 6px #cecece;
+  background-color: whitesmoke;
+  z-index: 5;
+  transform: rotateY(180deg);
+}
+.carddeco {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.happy_choice {
+  position: relative;
+  z-index: -1;
+}
+.happy1 {
+  height: 200px;
+  width: 420px;
+  z-index: 4;
+}

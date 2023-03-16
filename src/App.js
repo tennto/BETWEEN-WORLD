@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Main from "./Components/Main/Main";
 import Home from "./Components/Home/Home";
 import Ending from "./Components/Ending/Ending";
+import Gallery from "./Components/Gallery/Gallery";
 
 const App = () => {
   // const checknum = useSelector((state) => state);
@@ -17,6 +18,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/main" element={<Main />} />
           <Route path="/ending" element={<Ending />} />
+          <Route path="/gallery" element={<Gallery />} />
         </Routes>
       </Router>
 

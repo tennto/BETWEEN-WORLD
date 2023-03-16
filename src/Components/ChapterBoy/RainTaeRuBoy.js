@@ -3,7 +3,9 @@ import { useDispatch, useSelector } from "react-redux";
 import Sound6in2 from "../Boymusic/Sound6in2";
 import Sound6in1 from "../Boymusic/Sound6in1";
 import "../../css/Chapter2.css";
-import "../../css/HappyText.css";
+import "../../css/Card.css";
+import carddeco from "../carddeco.png";
+import carddecoback from "../carddecoback.png";
 
 const RainTaeRuBoy = () => {
   let [nextBtn, setNextBtn] = useState(0);
@@ -217,66 +219,33 @@ const Dialog15 = () => {
 
 const Dialog16 = (props) => {
   const status = useSelector((state) => state);
-  const dispatch = useDispatch();
-  let [nextBtn, setNextBtn] = useState(0);
-  const [visible, setVisible] = useState(1);
-  const [visible2, setVisible2] = useState(1);
 
-  const isHovering = () => {
-    if (visible === 1) {
-      return (
-        <div
-          className="hover2"
-          onClick={() => {
-            setVisible(0);
-          }}
-        >
-          슬픔을 나누면 줄어드는 것. 반듯이 매단다.
-        </div>
-      );
-    } else {
-      return "";
-    }
-  };
-
-  const isHovering2 = () => {
-    if (visible2 === 1) {
-      return (
-        <div
-          className="selec_2"
-          onClick={() => {
-            setVisible2(0);
-          }}
-        >
-          슬픔은 전염병 같이 남에게도 옮는 것. 거꾸로 매단다.
-        </div>
-      );
-    } else {
-      return "";
-    }
-  };
   return (
     <>
-      <div
-        className="selec_1"
-        onMouseOut={() => {
-          setVisible2(1);
-        }}
-      >
-        {" "}
-        <Sound6in2 {...props} />
+      <div className="wrap">
+        <div className="card">
+          <div className="card-front">
+            <img className="carddeco" src={carddeco} alt="carddeco1" />
+            사운드 1앞면
+          </div>
+          <div className="card-back">
+            <img className="carddeco" src={carddecoback} alt="carddeco1" />
+            <Sound6in1 {...props} />
+          </div>
+        </div>
       </div>
-      <div
-        className="hover1"
-        onMouseOut={() => {
-          setVisible(1);
-        }}
-      >
-        {" "}
-        <Sound6in1 {...props} />
+      <div className="wrap2">
+        <div className="card2">
+          <div className="card-front2">
+            <img className="carddeco" src={carddeco} alt="carddeco1" />
+            사운드 2앞면
+          </div>
+          <div className="card-back2">
+            <img className="carddeco" src={carddecoback} alt="carddeco1" />
+            <Sound6in2 {...props} />
+          </div>
+        </div>
       </div>
-      {isHovering2()}
-      {isHovering()}
     </>
   );
 };

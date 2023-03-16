@@ -41,6 +41,13 @@ const ChapterBoyStart = () => {
       return <Dialog8 />;
     }
   };
+  const buttonCount = () => {
+    if (nextBtn === 4) {
+      setNextBtn(nextBtn + 2);
+    } else {
+      setNextBtn(nextBtn + 1);
+    }
+  };
 
   return (
     <div className="CP3_UPPER">
@@ -48,7 +55,7 @@ const ChapterBoyStart = () => {
       <button
         className={"nextBtn" + changeBox}
         onClick={() => {
-          setNextBtn(nextBtn + 1);
+          buttonCount();
         }}
       >
         다음
