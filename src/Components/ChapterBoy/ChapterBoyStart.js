@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import "../../css/ChapterNo3.css";
+import deco from "../textdecoration.png";
+import chdeco from "./chdeco.png";
 
 const ChapterBoyStart = () => {
   let [nextBtn, setNextBtn] = useState(1);
@@ -66,17 +68,19 @@ const ChapterBoyStart = () => {
 
 const Dialog1 = () => {
   return (
-    <>
+    <div className="forFade">
+      <img className="deco" src={deco} alt="deco1" />
       <p className="dialog_oneline">너는 누구지...?</p>
-    </>
+    </div>
   );
 };
 const Dialog2 = () => {
   const status = useSelector((state) => state);
   return (
-    <>
+    <div className="forFade">
+      <img className="deco" src={deco} alt="deco1" />
       <p className="dialog_oneline">{status.userName}이라고 하는구나..</p>
-    </>
+    </div>
   );
 };
 
@@ -84,14 +88,15 @@ const Dialog3 = (props) => {
   const { nextBtn, setNextBtn } = props;
 
   return (
-    <>
+    <div className="fadelick">
       <button
         className="choiceNo1"
         onClick={() => {
           setNextBtn(4);
         }}
       >
-        여기는 어디야..?
+        <img className="chdeco_b1" src={chdeco} alt="chdeco2" />
+        <p>여기는 어디야..?</p>
       </button>
       <button
         className="choiceNo1"
@@ -99,57 +104,64 @@ const Dialog3 = (props) => {
           setNextBtn(5);
         }}
       >
-        너는 누구야..?
+        <img className="chdeco_b1" src={chdeco} alt="chdeco2" />
+        <p> 당신은 누구야..?</p>
       </button>
-    </>
+    </div>
   );
 };
 
 const DialogA = () => {
   return (
-    <>
+    <div className="forFade">
+      <img className="deco" src={deco} alt="deco1" />
       <p className="dialog_oneline">여기가 어딘지는 중요하지 않아</p>
-    </>
+    </div>
   );
 };
 
 const DialogB = () => {
   return (
-    <>
+    <div className="forFade">
+      <img className="deco" src={deco} alt="deco1" />
       <p className="dialog_oneline">내가 누군지는 중요하지 않아</p>
-    </>
+    </div>
   );
 };
 
 const Dialog4 = () => {
   return (
-    <>
+    <div className="forFade">
+      <img className="deco" src={deco} alt="deco1" />
       <p className="dialog_oneline">네가 어떤 사람인지,</p>
-    </>
+    </div>
   );
 };
 
 const Dialog5 = () => {
   return (
-    <>
+    <div className="forFade">
+      <img className="deco" src={deco} alt="deco1" />
       <p className="dialog_oneline">네가 어떤 선택을 할지 정말 궁금한걸</p>
-    </>
+    </div>
   );
 };
 
 const Dialog6 = () => {
   return (
-    <>
-      <p className="dialog_oneline">선택은 한 번뿐.</p>
-    </>
+    <div className="forFade">
+      <img className="deco" src={deco} alt="deco1" />
+      <p className="dialog_oneline">선택은 한 번뿐 .</p>
+    </div>
   );
 };
 
 const Dialog7 = () => {
   return (
-    <>
+    <div className="forFade">
+      <img className="deco" src={deco} alt="deco1" />
       <p className="dialog_oneline">신중하게 선택해</p>
-    </>
+    </div>
   );
 };
 
@@ -162,9 +174,10 @@ const Dialog8 = () => {
   }, [dispatch]);
 
   return (
-    <>
+    <div className="forFade">
+      <img className="deco" src={deco} alt="deco1" />
       <p className="dialog_oneline">시작한다...</p>
-    </>
+    </div>
   );
 };
 

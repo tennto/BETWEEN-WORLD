@@ -159,7 +159,7 @@
 }
 
 .sexBox {
-  animation: fadein 3s;
+  animation: fadein 1s;
   bottom: 200px;
   position: absolute;
   left: 50px;
@@ -177,14 +177,18 @@
 .wata1 {
   max-width: 360px;
   position: absolute;
+  left: -12px;
+  top: 24px;
 }
 .wagi1 {
   max-width: 360px;
   position: absolute;
+  left: -12px;
+  top: 24px;
 }
 
 .forFade {
-  animation: fadein 3s;
+  animation: fadein 1s;
   background-color: whitesmoke;
   width: 900px;
   height: 200px;

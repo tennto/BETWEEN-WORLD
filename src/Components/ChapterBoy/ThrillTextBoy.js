@@ -4,6 +4,7 @@ import Sound3in1 from "../Boymusic/Sound3in1";
 import "../../css/Card.css";
 import carddeco from "../carddeco.png";
 import carddecoback from "../carddecoback.png";
+import coverdeco from "../backdeco.png";
 
 const ThrillTextBoy = () => {
   return (
@@ -12,7 +13,7 @@ const ThrillTextBoy = () => {
         <div className="card">
           <div className="card-front">
             <img className="carddeco" src={carddeco} alt="carddeco1" />
-            사운드 1앞면
+            <img className="coverdeco" src={coverdeco} alt="coverdeco" />
           </div>
           <div className="card-back">
             <img className="carddeco" src={carddecoback} alt="carddeco1" />
@@ -24,7 +25,7 @@ const ThrillTextBoy = () => {
         <div className="card2">
           <div className="card-front2">
             <img className="carddeco" src={carddeco} alt="carddeco1" />
-            사운드 2앞면
+            <img className="coverdeco" src={coverdeco} alt="coverdeco" />
           </div>
           <div className="card-back2">
             <img className="carddeco" src={carddecoback} alt="carddeco1" />

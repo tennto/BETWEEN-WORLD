@@ -13,7 +13,7 @@
 .card {
   width: 100%;
   height: 100%;
-  transition: all 1s;
+  transition: all 1.5s;
   transform-style: preserve-3d;
 }
 
@@ -22,6 +22,7 @@
 }
 
 .card > div {
+  font-family: "ongeul";
   position: absolute;
   top: -40px;
   right: 0px;
@@ -31,7 +32,7 @@
   width: 100%;
   height: 100%;
   font-size: 20px;
-  border-radius: 20px;
+  border-radius: 12px;
   backface-visibility: hidden;
 }
 
@@ -54,7 +55,7 @@
   height: 180px;
   left: 50px;
   margin: 50px auto;
-  border-radius: 20px;
+  border-radius: 12px;
   perspective: 500px;
   cursor: pointer;
   display: inline-block;
@@ -63,7 +64,7 @@
 .card2 {
   width: 100%;
   height: 100%;
-  transition: all 1s;
+  transition: all 1.5s;
   transform-style: preserve-3d;
 }
 
@@ -72,6 +73,7 @@
 }
 
 .card2 > div {
+  font-family: "ongeul";
   position: absolute;
   top: -40px;
   left: 0;
@@ -81,7 +83,7 @@
   width: 100%;
   height: 100%;
   font-size: 20px;
-  border-radius: 20px;
+  border-radius: 12px;
   backface-visibility: hidden;
 }
 
@@ -111,4 +113,26 @@
   height: 200px;
   width: 420px;
   z-index: 4;
+}
+
+.coverdeco {
+  max-width: 200px;
+  opacity: 40%;
+}
+
+@font-face {
+  font-family: "ongeul";
+  src: url("../Components/Nickname/ongeul.ttf");
+}
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fadelick {
+  animation: fadein 3s;
 }

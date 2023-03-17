@@ -4,6 +4,9 @@ import GSound4in2 from "../Girlmusic/GSound4in2";
 import GSound4in1 from "../Girlmusic/GSound4in1";
 import "../../css/Chapter2.css";
 import "../../css/Card.css";
+import deco from "../textdecoration.png";
+import carddeco from "../carddeco.png";
+import carddecoback from "../carddecoback.png";
 
 const SeaOrMountainGirl = () => {
   let [nextBtn, setNextBtn] = useState(0);
@@ -26,7 +29,7 @@ const SeaOrMountainGirl = () => {
 
   return (
     <div className="CP2_UPPER">
-      <div className={"caracterIcon" + changeBox}></div>
+      {/* <div className={"caracterIcon" + changeBox}></div> */}
       {DialogFlow()}
       <button
         className={"nextBtn" + changeBox}
@@ -42,19 +45,21 @@ const SeaOrMountainGirl = () => {
 
 const Dialog0 = () => {
   return (
-    <>
-      <h3 className="dialog_oneline">
+    <div className="forFade">
+      <img className="deco" src={deco} alt="deco_som2" />
+      <p className="dialog_oneline">
         지혜로운 자는 바다를 좋아하고,어진이는 산을 좋아한다고 했다.
-      </h3>
-    </>
+      </p>
+    </div>
   );
 };
 
 const Dialog1 = () => {
   return (
-    <>
-      <h3 className="dialog_oneline">너는 어느 쪽?</h3>
-    </>
+    <div className="forFade">
+      <img className="deco" src={deco} alt="deco_som2" />
+      <p className="dialog_oneline">너는 어느 쪽?</p>
+    </div>
   );
 };
 
@@ -65,16 +70,24 @@ const Dialog2 = (props) => {
     <>
       <div className="wrap">
         <div className="card">
-          <div className="card-front">사운드 1앞면</div>
+          <div className="card-front">
+            <img className="carddeco" src={carddeco} alt="carddeco1" />
+            사운드 1앞면
+          </div>
           <div className="card-back">
+            <img className="carddeco" src={carddecoback} alt="carddeco1" />
             <GSound4in1 {...props} />
           </div>
         </div>
       </div>
       <div className="wrap2">
         <div className="card2">
-          <div className="card-front2">사운드 2앞면</div>
+          <div className="card-front2">
+            <img className="carddeco" src={carddeco} alt="carddeco1" />
+            사운드 2앞면
+          </div>
           <div className="card-back2">
+            <img className="carddeco" src={carddecoback} alt="carddeco1" />
             <GSound4in2 {...props} />
           </div>
         </div>
@@ -91,9 +104,10 @@ const Dialog3 = () => {
     }, 1000);
   }, [dispatch]);
   return (
-    <>
-      <h3 className="dialog_oneline">...</h3>
-    </>
+    <div className="forFade">
+      <img className="deco" src={deco} alt="deco_som2" />
+      <p className="dialog_oneline">...</p>
+    </div>
   );
 };
 

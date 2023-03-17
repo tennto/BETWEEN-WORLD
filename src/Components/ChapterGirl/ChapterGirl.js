@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import "../../css/ChapterGirl.css";
+import deco from "../textdecoration.png";
+import chdeco from "../ChapterBoy/chdeco.png";
 
 const ChapterGirl = () => {
   const dispatch = useDispatch();
@@ -22,7 +24,7 @@ const ChapterGirl = () => {
 
   return (
     <div className="CP2_UPPER_G">
-      <div className={"caracterIcon_G" + changeBox}></div>
+      {/* <div className={"caracterIcon_G" + changeBox}></div> */}
       {DialogFlow()}
       <button
         className={"nextBtn" + changeBox}
@@ -38,17 +40,19 @@ const ChapterGirl = () => {
 
 const Dialog0 = () => {
   return (
-    <>
+    <div className="forFade">
+      <img className="deco" src={deco} alt="deco2" />
       <h3 className="dialog_oneline">. . .</h3>
-    </>
+    </div>
   );
 };
 
 const Dialog1 = () => {
   return (
-    <>
+    <div className="forFade">
+      <img className="deco" src={deco} alt="deco2" />
       <h3 className="dialog_oneline">여긴.. 어디지..?</h3>
-    </>
+    </div>
   );
 };
 
@@ -63,6 +67,7 @@ const Dialog2 = () => {
         }}
         className="CH_BOX"
       >
+        <img className="chdeco" src={chdeco} alt="chdeco_2" />
         <p>
           처음 와보는 곳<br />
           신난다..!
@@ -74,6 +79,7 @@ const Dialog2 = () => {
         }}
         className="CH_BOX"
       >
+        <img className="chdeco" src={chdeco} alt="chdeco_2" />
         <p>
           낯선 곳은 항상
           <br />
@@ -86,6 +92,7 @@ const Dialog2 = () => {
         }}
         className="CH_BOX"
       >
+        <img className="chdeco" src={chdeco} alt="chdeco_2" />
         <p>
           도대체 어디지..
           <br />

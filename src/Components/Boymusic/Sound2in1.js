@@ -30,7 +30,7 @@ const Sound2in1 = () => {
         mute={false}
         volume={1.0}
       />
-      <p>음악1 뒷면</p>
+      <p>신난다! 조금은 들뜨는데..?</p>
       <h1>SAD_멜로디1</h1>
       {/* <button
         onClick={() => {
