@@ -29,6 +29,15 @@
   border-radius: 20px;
   box-shadow: 0px 2px 6px #cecece;
 }
+.forFade_g {
+  animation: fadein 3s;
+  background-color: whitesmoke;
+  width: 900px;
+  height: 200px;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0px 2px 6px #cecece;
+}
 
 .forFade_mood {
   animation: fadein 3s;
@@ -59,7 +68,7 @@
   background-color: whitesmoke;
   display: inline-block;
   margin: 0 20px;
-  border-radius: 20px;
+  border-radius: 12px;
   position: relative;
   border: none;
   box-shadow: 0px 2px 6px #cecece;
@@ -105,4 +114,8 @@
 .deco {
   max-width: 900px;
   opacity: 70%;
+}
+
+.fadelick {
+  animation: fadein 1s;
 }

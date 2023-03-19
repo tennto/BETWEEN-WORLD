@@ -2,3 +2,16 @@
   width: 1920px;
   height: 1080px;
 }
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fadelick {
+  animation: fadein 1s;
+}

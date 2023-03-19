@@ -4,6 +4,7 @@ import Sound4in2 from "../Boymusic/Sound4in2";
 import Sound4in1 from "../Boymusic/Sound4in1";
 import "../../css/Chapter2.css";
 import "../../css/Card.css";
+import deco from "../textdecoration.png";
 import carddeco from "../carddeco.png";
 import carddecoback from "../carddecoback.png";
 
@@ -28,7 +29,7 @@ const SeaOrMountainBoy = () => {
 
   return (
     <div className="CP2_UPPER">
-      <div className={"caracterIcon" + changeBox}></div>
+      {/* <div className={"caracterIcon" + changeBox}></div> */}
       {DialogFlow()}
       <button
         className={"nextBtn" + changeBox}
@@ -44,19 +45,21 @@ const SeaOrMountainBoy = () => {
 
 const Dialog0 = () => {
   return (
-    <>
-      <h3 className="dialog_oneline">
-        지혜로운 자는 바다를 좋아하고,어진이는 산을 좋아한다고 했다.
-      </h3>
-    </>
+    <div className="forFade_g">
+      <img className="deco" src={deco} alt="deco_som" />
+      <p className="dialog_oneline">
+        지혜로운 자는 바다를 좋아하고, 어진 이는 산을 좋아한다고 했다...
+      </p>
+    </div>
   );
 };
 
 const Dialog1 = () => {
   return (
-    <>
-      <h3 className="dialog_oneline">너는 어느 쪽?</h3>
-    </>
+    <div className="forFade_g">
+      <img className="deco" src={deco} alt="deco_som" />
+      <p className="dialog_oneline">너는 어느 쪽?</p>
+    </div>
   );
 };
 
@@ -64,7 +67,7 @@ const Dialog2 = (props) => {
   const status = useSelector((state) => state);
 
   return (
-    <>
+    <div className="fadelick">
       <div className="wrap">
         <div className="card">
           <div className="card-front">
@@ -89,7 +92,7 @@ const Dialog2 = (props) => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

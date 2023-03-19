@@ -5,14 +5,16 @@ import "../../css/Card.css";
 import carddeco from "../carddeco.png";
 import carddecoback from "../carddecoback.png";
 
+import coverdeco from "../backdeco.png";
+
 const HappyTextBoy = () => {
   return (
-    <>
+    <div className="fadelick">
       <div className="wrap">
         <div className="card">
           <div className="card-front">
             <img className="carddeco" src={carddeco} alt="carddeco1" />
-            <p>사운드 1앞면</p>
+            <img className="coverdeco" src={coverdeco} alt="coverdeco" />
           </div>
           <div className="card-back">
             <img className="carddeco" src={carddecoback} alt="carddeco1" />
@@ -24,7 +26,7 @@ const HappyTextBoy = () => {
         <div className="card2">
           <div className="card-front2">
             <img className="carddeco" src={carddeco} alt="carddeco1" />
-            사운드 2앞면
+            <img className="coverdeco" src={coverdeco} alt="coverdeco" />
           </div>
           <div className="card-back2">
             <img className="carddeco" src={carddecoback} alt="carddeco1" />
@@ -32,7 +34,7 @@ const HappyTextBoy = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 export default HappyTextBoy;
