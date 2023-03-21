@@ -32,8 +32,11 @@ const Sound1in1 = () => {
         mute={false}
         volume={1.0}
       />
-      <p className="happy1_text">신난다! 조금은 들뜨는데..?</p>
-      <h1>HAPPY_멜로디 1번</h1>
+      <h2 className="script">
+        신난다!
+        <br />
+        조금은 들뜨는데..?
+      </h2>
       {/* <button
         onClick={() => {
           setPlaying(false);

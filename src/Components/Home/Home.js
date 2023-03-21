@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import popupdeco from "../popupdeco.png";
 import "./Home.css";
 
 const Home = () => {
@@ -21,7 +22,10 @@ const Home = () => {
     <div className="container">
       <h1 className="Title_0">Between World</h1>
       <div className={"popup" + pageOne}></div>
-      <div className={"popupBox" + pageOne}>{popupInfo()}</div>
+      <div className={"popupBox" + pageOne}>
+        <img className="pdeco" src={popupdeco} alt="pdeco" />
+        {popupInfo()}
+      </div>
       <button
         className={"enterBtn" + checkInfo}
         onClick={() => {

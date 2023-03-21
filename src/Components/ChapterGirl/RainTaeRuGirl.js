@@ -4,6 +4,11 @@ import GSound6in2 from "../Girlmusic/GSound6in2";
 import GSound6in1 from "../Girlmusic/GSound6in1";
 import "../../css/Chapter2.css";
 import "../../css/Card.css";
+import coverdeco from "../backdeco.png";
+import chdeco from "../ChapterBoy/chdeco.png";
+import textdeco from "../textdecoration.png";
+import carddeco from "../carddeco.png";
+import carddecoback from "../carddecoback.png";
 
 const RainTaeRuGirl = () => {
   let [nextBtn, setNextBtn] = useState(0);
@@ -19,8 +24,14 @@ const RainTaeRuGirl = () => {
     } else if (nextBtn === 3) {
       return <Dialog3 />;
     } else if (nextBtn === 4) {
+      setTimeout(() => {
+        setChangeBox(1);
+      }, 10);
       return <Dialog4 nextBtn={nextBtn} setNextBtn={setNextBtn} />;
     } else if (nextBtn === 5) {
+      setTimeout(() => {
+        setChangeBox(0);
+      }, 10);
       return <Dialog5 />;
     } else if (nextBtn === 6) {
       return <Dialog6 />;
@@ -43,6 +54,9 @@ const RainTaeRuGirl = () => {
     } else if (nextBtn === 15) {
       return <Dialog15 />;
     } else if (nextBtn === 16) {
+      setTimeout(() => {
+        setChangeBox(1);
+      }, 10);
       return <Dialog16 nextBtn={nextBtn} setNextBtn={setNextBtn} />;
     } else if (nextBtn === 17) {
       return <Dialog17 />;
@@ -51,10 +65,10 @@ const RainTaeRuGirl = () => {
 
   return (
     <div className="CP2_UPPER">
-      <div className={"caracterIcon" + changeBox}></div>
+      {/* <div className={"caracterIcon" + changeBox}></div> */}
       {DialogFlow()}
       <button
-        className={"nextBtn" + changeBox}
+        className={"c2girlnextBtn" + changeBox}
         onClick={() => {
           setNextBtn(nextBtn + 1);
         }}
@@ -67,151 +81,172 @@ const RainTaeRuGirl = () => {
 
 const Dialog0 = () => {
   return (
-    <>
+    <div className="forFade_g">
+      <img className="deco" src={textdeco} alt="textdeco_rtr" />
       <h3 className="dialog_oneline">저기,</h3>
-    </>
+    </div>
   );
 };
 
 const Dialog1 = () => {
   return (
-    <>
+    <div className="forFade_g">
+      <img className="deco" src={textdeco} alt="textdeco_rtr" />
       <h3 className="dialog_oneline">곤란해 보이네</h3>
-    </>
+    </div>
   );
 };
 
 const Dialog2 = () => {
   return (
-    <>
+    <div className="forFade_g">
+      <img className="deco" src={textdeco} alt="textdeco_rtr" />
       <h3 className="dialog_oneline">비 때문이라면, 역시 테루테루보즈지!</h3>
-    </>
+    </div>
   );
 };
 
 const Dialog3 = () => {
   return (
-    <>
+    <div className="forFade_g">
+      <img className="deco" src={textdeco} alt="textdeco_rtr" />
       <h3 className="dialog_oneline">혹시 테루테루보즈 이야기 들어봤어?</h3>
-    </>
+    </div>
   );
 };
 const Dialog4 = (props) => {
   const { nextBtn, setNextBtn } = props;
 
   return (
-    <>
+    <div className="fadelick">
       <button
-        className="choiceNo1"
+        className="choiceNo2"
         onClick={() => {
           setNextBtn(nextBtn + 1);
         }}
       >
-        응
+        <img className="chdeco" src={chdeco} alt="chdeco2" />
+        <p className="yesp">응, 들어봤어</p>
       </button>
       <button
-        className="choiceNo1"
+        className="choiceNo2"
         onClick={() => {
           setNextBtn(nextBtn + 1);
         }}
       >
-        아니
+        <img className="chdeco" src={chdeco} alt="chdeco2" />
+        <p className="nop">아니.. 처음 들어봤어</p>
       </button>
-    </>
+    </div>
   );
 };
 const Dialog5 = () => {
   return (
-    <>
+    <div className="forFade_g">
+      <img className="deco" src={textdeco} alt="textdeco_rtr" />
       <h3 className="dialog_oneline">있지, 들어봐</h3>
-    </>
+    </div>
   );
 };
 const Dialog6 = () => {
   return (
-    <>
+    <div className="forFade_g">
+      <img className="deco" src={textdeco} alt="textdeco_rtr" />
       <h3 className="dialog_oneline">제멋대로 떠들어대기 시작했다...</h3>
-    </>
+    </div>
   );
 };
 const Dialog7 = () => {
   return (
-    <>
+    <div className="forFade_g">
+      <img className="deco" src={textdeco} alt="textdeco_rtr" />
       <h3 className="dialog_oneline">
         어느 마을에 비가 계속 내리는 바람에 모두가 슬픔에 잠겼어
       </h3>
-    </>
+    </div>
   );
 };
 const Dialog8 = () => {
   return (
-    <>
+    <div className="forFade_g">
+      <img className="deco" src={textdeco} alt="textdeco_rtr" />
       <h3 className="dialog_oneline">
-        그떄 어느 한 승려가 흐날에 공양을 하면 비가 그친다고 했어
+        그떄 어느 한 승려가 하늘에 공양을 하면 비가 그친다고 했어
       </h3>
-    </>
+    </div>
   );
 };
 const Dialog9 = () => {
   return (
-    <>
-      <h3 className="dialog_oneline">
-        허나 비는 그칠 줄 몰랐고,, 마을 사람들은 승려의 머리에 흰 천을 씌워 목을
-        매달었어.
+    <div className="forFade_g">
+      <img className="deco" src={textdeco} alt="textdeco_rtr" />
+      <h3 className="dialog_long">
+        허나 비는 그칠 줄 몰랐고 마을 사람들은
+        <br /> 승려의 머리에 흰 천을 씌워 목을 매달았어.
       </h3>
-    </>
+    </div>
   );
 };
 const Dialog10 = () => {
   return (
-    <>
+    <div className="forFade_g">
+      <img className="deco" src={textdeco} alt="textdeco_rtr" />
       <h3 className="dialog_oneline">그러자 거짓말 처럼 비가 그쳤고</h3>
-    </>
+    </div>
   );
 };
 const Dialog11 = () => {
   return (
-    <>
+    <div className="forFade_g">
+      <img className="deco" src={textdeco} alt="textdeco_rtr" />
       <h3 className="dialog_oneline">
         사람들은 이를 함께 기뻐하며 슬픔은 점차 줄어들었어
       </h3>
-    </>
+    </div>
   );
 };
 const Dialog12 = () => {
   return (
-    <>
-      <h3 className="dialog_oneline">
-        그 후 사람들은 비가 올 때마다 하얀 천을 목매단 사람 모양으로 매달기
-        시작했어..
+    <div className="forFade_g">
+      <img className="deco" src={textdeco} alt="textdeco_rtr" />
+      <h3 className="dialog_long">
+        그 후 사람들은 비가 올 때마다
+        <br /> 하얀 천을 목매단 사람 모양으로 매달기 시작했어..
       </h3>
-    </>
+    </div>
   );
 };
 
 const Dialog13 = () => {
   return (
-    <>
-      <h3 className="dialog_oneline">
-        반대로, 이를 거꾸로 매달면 슬픔이 전염되듯, 비가 온다고 전해진다고 해..
+    <div className="forFade_g">
+      <img className="deco" src={textdeco} alt="textdeco_rtr" />
+      <h3 className="dialog_long">
+        반대로, 이를 거꾸로 매달면 슬픔이 전염되듯
+        <br />
+        비가 온다고 전해진다고 해..
       </h3>
-    </>
+    </div>
   );
 };
 const Dialog14 = () => {
   return (
-    <>
-      <h3 className="dialog_oneline">
-        슬픔을 함께 할수록 줄어드는 것, 슬픔은 전염병 같은 것이라 불어나는 것,
+    <div className="forFade_g">
+      <img className="deco" src={textdeco} alt="textdeco_rtr" />
+      <h3 className="dialog_long">
+        슬픔을 함께 할수록 줄어드는 것 아니면
+        <br />
+        슬픔은 전염병 같은 것이라 불어나는 것
       </h3>
-    </>
+    </div>
   );
 };
 const Dialog15 = () => {
   return (
-    <>
+    <div className="forFade_g">
+      <img className="deco" src={textdeco} alt="textdeco_rtr" />
       <h3 className="dialog_oneline">너는 어느쪽?</h3>
-    </>
+    </div>
   );
 };
 
@@ -219,24 +254,32 @@ const Dialog16 = (props) => {
   const status = useSelector((state) => state);
 
   return (
-    <>
+    <div className="fadelick">
       <div className="wrap">
         <div className="card">
-          <div className="card-front">사운드 1앞면</div>
+          <div className="card-front">
+            <img className="carddeco" src={carddeco} alt="carddeco1" />
+            <img className="coverdeco" src={coverdeco} alt="coverdeco" />
+          </div>
           <div className="card-back">
+            <img className="carddeco" src={carddecoback} alt="carddeco1" />
             <GSound6in1 {...props} />
           </div>
         </div>
       </div>
       <div className="wrap2">
         <div className="card2">
-          <div className="card-front2">사운드 2앞면</div>
+          <div className="card-front2">
+            <img className="carddeco" src={carddeco} alt="carddeco1" />
+            <img className="coverdeco" src={coverdeco} alt="coverdeco" />
+          </div>
           <div className="card-back2">
+            <img className="carddeco" src={carddecoback} alt="carddeco1" />
             <GSound6in2 {...props} />
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
@@ -248,9 +291,10 @@ const Dialog17 = () => {
     }, 1000);
   }, [dispatch]);
   return (
-    <>
+    <div className="forFade_g">
+      <img className="deco" src={textdeco} alt="textdeco_rtr" />
       <h3 className="dialog_oneline">...</h3>
-    </>
+    </div>
   );
 };
 

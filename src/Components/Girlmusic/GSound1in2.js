@@ -30,8 +30,12 @@ const GSound1in2 = () => {
         mute={false}
         volume={1.0}
       />
-      <p>음악2 뒷면</p>
-      <h1>HAPPY_멜로디2</h1>
+      {/* <p>음악2 뒷면</p> */}
+      <h2 className="script">
+        당황스럽지만..
+        <br />
+        신기해 !
+      </h2>
       {/* <button
         onClick={() => {
           setPlaying(false);

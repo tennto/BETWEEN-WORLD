@@ -1,6 +1,6 @@
 .wrap {
   position: relative;
-  width: 400px;
+  width: 360px;
   height: 180px;
   right: 50px;
   margin: 50px auto;
@@ -51,7 +51,7 @@
 
 .wrap2 {
   position: relative;
-  width: 400px;
+  width: 360px;
   height: 180px;
   left: 50px;
   margin: 50px auto;
@@ -103,6 +103,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
+  opacity: 80%;
 }
 
 .happy_choice {
@@ -116,7 +117,7 @@
 }
 
 .coverdeco {
-  max-width: 200px;
+  max-width: 160px;
   opacity: 40%;
 }
 
@@ -135,4 +136,8 @@
 
 .fadelick {
   animation: fadein 3s;
+}
+
+.script {
+  margin: 64px auto;
 }

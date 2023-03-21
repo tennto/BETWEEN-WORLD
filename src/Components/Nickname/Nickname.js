@@ -66,7 +66,7 @@ const Dialog0 = () => {
   return (
     <div className="forFade">
       <img className="deco" src={deco} alt="deco" />
-      <h3 className="dialog_oneline">알 수 없는 곳에 도착하였습니다</h3>
+      <h3 className="dialog_oneline">다음 버튼을 눌러 진행해주세요</h3>
     </div>
   );
 };
@@ -79,7 +79,9 @@ const Dialog1 = () => {
   return (
     <div className="forFade">
       <img className="deco" src={deco} alt="deco" />
-      <h3 className="dialog_oneline">캐릭터 실루엣 등장</h3>
+      <h3 className="dialog_oneline">
+        (형용할 수 없는 어떤 세계에 도착하였습니다)
+      </h3>
     </div>
   );
 };

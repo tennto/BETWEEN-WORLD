@@ -1,13 +1,12 @@
 import React from "react";
 import { Player } from "@lottiefiles/react-lottie-player";
-import nick1 from "./data1.json";
-import "./Anime1.css";
+import data1 from "./data1.json";
 
 const MoodSelectAnime = () => {
   return (
-    <div className="fadelick">
+    <div className="fadelick1">
       <Player
-        src={nick1}
+        src={data1}
         style={{ width: "1920px" }}
         autoplay={true}
         loop={false}

@@ -1,8 +1,8 @@
 .c2boynextBtn0 {
   animation: fadein 3s;
   position: absolute;
-  background-color: #383838;
-  color: whitesmoke;
+  box-shadow: 0px 2px 6px #cecece;
+  color: #383838;
   border: none;
   font-size: 12px;
   border-radius: 20px;
@@ -14,6 +14,32 @@
 }
 
 .c2boynextBtn0:hover {
+  background-color: #b4a995;
+  color: whitesmoke;
+  transform: scale(1.1);
+  transition: 0.5s ease-in-out;
+  box-shadow: 0px 2px 6px #cecece;
+  font-weight: 700;
+}
+
+.c2girlnextBtn0 {
+  animation: fadein 3s;
+  position: absolute;
+  box-shadow: 0px 2px 6px #cecece;
+  color: #383838;
+  border: none;
+  font-size: 12px;
+  border-radius: 20px;
+  width: 60px;
+  height: 30px;
+  bottom: 40px;
+  right: 80px;
+  transition: 0.5s ease-in-out;
+}
+
+.c2girlnextBtn0:hover {
+  background-color: #b4a995;
+  color: whitesmoke;
   transform: scale(1.1);
   transition: 0.5s ease-in-out;
   box-shadow: 0px 2px 6px #cecece;
@@ -46,6 +72,9 @@
 .c2boynextBtn1 {
   display: none;
 }
+.c2girlnextBtn1 {
+  display: none;
+}
 
 .CP2_UPPER {
   width: 900px;
@@ -58,6 +87,16 @@
   font-family: "ongeul";
   position: absolute;
   top: 50.5px;
+  left: 240px;
+  font-size: 32px;
+}
+
+.dialog_long {
+  text-align: left;
+  animation: fadein 3s;
+  font-family: "ongeul";
+  position: absolute;
+  top: 33px;
   left: 240px;
   font-size: 32px;
 }
@@ -83,6 +122,9 @@
 
 .chdeco {
   max-width: 240px;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .CH_BOX:hover {
@@ -96,6 +138,7 @@
   position: absolute;
   top: 0;
   left: 73px;
+  margin: auto auto;
 }
 
 @font-face {
@@ -117,5 +160,46 @@
 }
 
 .fadelick {
-  animation: fadein 1s;
+  animation: fadein 3s;
+}
+
+.choiceNo2 {
+  position: relative;
+  width: 240px;
+  height: 200px;
+  background-color: whitesmoke;
+  display: inline-block;
+  margin: 0 40px;
+  border-radius: 12px;
+  position: relative;
+  border: none;
+  box-shadow: 0px 2px 6px #cecece;
+  transition: 0.5s ease-in;
+}
+.choiceNo2:hover {
+  background-color: #fffbf0;
+  transition: 0.5s ease-in;
+  transform: scale(1.02);
+}
+/* .choiceNo1 > p {
+  font-family: "ongeul";
+  position: absolute;
+  font-size: 32px;
+  top: 50px;
+  left: 68px;
+} */
+
+.yesp {
+  font-family: "ongeul";
+  position: absolute;
+  font-size: 32px;
+  top: 50px;
+  left: 82px;
+}
+.nop {
+  font-family: "ongeul";
+  position: absolute;
+  font-size: 32px;
+  top: 50px;
+  left: 56px;
 }

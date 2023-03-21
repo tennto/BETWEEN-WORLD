@@ -7,6 +7,7 @@ import "../../css/Card.css";
 import deco from "../textdecoration.png";
 import carddeco from "../carddeco.png";
 import carddecoback from "../carddecoback.png";
+import coverdeco from "../backdeco.png";
 
 const SeaOrMountainBoy = () => {
   let [nextBtn, setNextBtn] = useState(0);
@@ -72,7 +73,7 @@ const Dialog2 = (props) => {
         <div className="card">
           <div className="card-front">
             <img className="carddeco" src={carddeco} alt="carddeco1" />
-            사운드 1앞면
+            <img className="coverdeco" src={coverdeco} alt="coverdeco" />
           </div>
           <div className="card-back">
             <img className="carddeco" src={carddecoback} alt="carddeco1" />
@@ -84,7 +85,7 @@ const Dialog2 = (props) => {
         <div className="card2">
           <div className="card-front2">
             <img className="carddeco" src={carddeco} alt="carddeco1" />
-            사운드 2앞면
+            <img className="coverdeco" src={coverdeco} alt="coverdeco" />
           </div>
           <div className="card-back2">
             <img className="carddeco" src={carddecoback} alt="carddeco1" />
@@ -104,9 +105,10 @@ const Dialog3 = () => {
     }, 1000);
   }, [dispatch]);
   return (
-    <>
+    <div className="forFade_b">
+      <img className="deco" src={deco} alt="deco_som" />
       <h3 className="dialog_oneline">...</h3>
-    </>
+    </div>
   );
 };
 

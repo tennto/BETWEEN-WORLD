@@ -20,7 +20,7 @@ const GSound4in1 = (props) => {
       }}
       onClick={() => {
         dispatch(setSound4("바람소리,나뭇잎.mp3"));
-        props.setNextBtn(props.nextBtn + 1);
+        dispatch({ type: "index/RTRGIRL_1403" });
       }}
     >
       <ReactHowler

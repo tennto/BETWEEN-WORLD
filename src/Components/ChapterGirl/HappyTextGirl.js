@@ -2,13 +2,14 @@ import React, { useState } from "react";
 import GSound1in2 from "../Girlmusic/GSound1in2";
 import GSound1in1 from "../Girlmusic/GSound1in1";
 import "../../css/Card.css";
+import "../../css/Chapter2.css";
 import carddeco from "../carddeco.png";
 import carddecoback from "../carddecoback.png";
 import coverdeco from "../backdeco.png";
 
 const HappyTextGirl = () => {
   return (
-    <>
+    <div className="fadelick">
       <div className="wrap">
         <div className="card">
           <div className="card-front">
@@ -33,7 +34,7 @@ const HappyTextGirl = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

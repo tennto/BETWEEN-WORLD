@@ -1,9 +1,18 @@
 import React from "react";
+import { Player } from "@lottiefiles/react-lottie-player";
+import data2 from "./data2.json";
+import "../Nickname/Anime1.css";
 
 const C2AnimeBoy = () => {
   return (
-    <div>
-      <h1>챕터2 - 남자 1번 애니메이션</h1>
+    <div className="fadelick1">
+      <Player
+        src={data2}
+        style={{ width: "1920px" }}
+        autoplay={true}
+        loop={false}
+        speed={1}
+      />
     </div>
   );
 };

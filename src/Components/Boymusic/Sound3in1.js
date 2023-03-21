@@ -30,8 +30,11 @@ const Sound3in1 = () => {
         mute={false}
         volume={1.0}
       />
-      <p>음악1 뒷면</p>
-      <h1>THRILL_멜로디1</h1>
+      <h2 className="script">
+        누군가 나를 계속
+        <br />
+        쳐다보는 것 같아..
+      </h2>
       {/* <button
         onClick={() => {
           setPlaying(false);
