@@ -1,5 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import "./Main.css";
 import Nickname from "../Nickname/Nickname";
 import HappyTextBoy from "../ChapterBoy/HappyTextBoy";
@@ -50,7 +51,7 @@ import BirdBoy from "../ChapterBoy/BirdBoy";
 import BIRDAnimeGirl from "../ChapterGirl/BIRDAnimeGirl";
 import BirdGirl from "../ChapterGirl/BirdGirl";
 
-// import axios from "axios";
+import axios from "axios";
 
 const Main = () => {
   const status = useSelector((state) => state);
@@ -58,14 +59,14 @@ const Main = () => {
   const [play, setPlaying] = useState(true);
   //왼쪽 상단 플레이리스트 저장
   const savePlaylist1 = () => {
-    if (status.playersound.sound1 === undefined) {
+    if (status.sound1 === "") {
       return "";
     } else {
       return (
         <>
           <p>사운드 1</p>
           <ReactHowler
-            src={status.playersound.sound1}
+            src={status.sound1}
             playing={play}
             loop={false}
             mute={false}
@@ -90,14 +91,14 @@ const Main = () => {
     }
   };
   const savePlaylist2 = () => {
-    if (status.playersound.sound2 === undefined) {
+    if (status.sound2 === "") {
       return "";
     } else {
       return (
         <>
           <p>사운드 2</p>
           <ReactHowler
-            src={status.playersound.sound2}
+            src={status.sound2}
             playing={play}
             loop={false}
             mute={false}
@@ -122,14 +123,14 @@ const Main = () => {
     }
   };
   const savePlaylist3 = () => {
-    if (status.playersound.sound3 === undefined) {
+    if (status.sound3 === "") {
       return "";
     } else {
       return (
         <>
           <p>사운드 3</p>
           <ReactHowler
-            src={status.playersound.sound3}
+            src={status.sound3}
             playing={play}
             loop={false}
             mute={false}
@@ -154,14 +155,14 @@ const Main = () => {
     }
   };
   const savePlaylist4 = () => {
-    if (status.playersound.sound4 === undefined) {
+    if (status.sound4 === "") {
       return "";
     } else {
       return (
         <>
           <p>사운드 4</p>
           <ReactHowler
-            src={status.playersound.sound4}
+            src={status.sound4}
             playing={play}
             loop={false}
             mute={false}
@@ -186,14 +187,14 @@ const Main = () => {
     }
   };
   const savePlaylist5 = () => {
-    if (status.playersound.sound5 === undefined) {
+    if (status.sound5 === "") {
       return "";
     } else {
       return (
         <>
           <p>사운드 5</p>
           <ReactHowler
-            src={status.playersound.sound5}
+            src={status.sound5}
             playing={play}
             loop={false}
             mute={false}
@@ -218,14 +219,14 @@ const Main = () => {
     }
   };
   const savePlaylist6 = () => {
-    if (status.playersound.sound6 === undefined) {
+    if (status.sound6 === "") {
       return "";
     } else {
       return (
         <>
           <p>사운드 6</p>
           <ReactHowler
-            src={status.playersound.sound6}
+            src={status.sound6}
             playing={play}
             loop={false}
             mute={false}
@@ -250,14 +251,14 @@ const Main = () => {
     }
   };
   const savePlaylist7 = () => {
-    if (status.playersound.sound7 === undefined) {
+    if (status.sound7 === "") {
       return "";
     } else {
       return (
         <>
           <p>사운드 7</p>
           <ReactHowler
-            src={status.playersound.sound7}
+            src={status.sound7}
             playing={play}
             loop={false}
             mute={false}
@@ -282,14 +283,14 @@ const Main = () => {
     }
   };
   const savePlaylist8 = () => {
-    if (status.playersound.sound8 === undefined) {
+    if (status.sound8 === "") {
       return "";
     } else {
       return (
         <>
           <p>사운드 8</p>
           <ReactHowler
-            src={status.playersound.sound8}
+            src={status.sound8}
             playing={play}
             loop={false}
             mute={false}
@@ -428,17 +429,33 @@ const Main = () => {
     }
   };
 
+  async function postData() {
+    const str = JSON.stringify(status);
+    console.log(str);
+    try {
+      //응답 성공
+      const response = await axios.post("http://localhost:3000/gallery", {
+        str,
+      });
+      console.log(response);
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
   return (
     <div className="maincomp">
-      <div className="Container_m">
-        {/*         
+      <Link to="/gallery">
         <button
           onClick={() => {
-            axios.post("/gallery", { name: "status.playersound.sound6" });
+            postData();
           }}
         >
           server save button
-        </button> */}
+        </button>
+      </Link>
+
+      <div className="Container_m">
         <table className="playlist">
           <tr>
             <th>{savePlaylist1()}</th>
