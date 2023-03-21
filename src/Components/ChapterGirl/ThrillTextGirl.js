@@ -4,11 +4,12 @@ import GSound3in2 from "../Girlmusic/GSound3in2";
 import GSound3in1 from "../Girlmusic/GSound3in1";
 import coverdeco from "../backdeco.png";
 import carddeco from "../carddeco.png";
+import "../../css/Chapter2.css";
 import carddecoback from "../carddecoback.png";
 
 const ThrillTextGirl = () => {
   return (
-    <>
+    <div className="fadelick">
       <div className="wrap">
         <div className="card">
           <div className="card-front">
@@ -33,7 +34,7 @@ const ThrillTextGirl = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

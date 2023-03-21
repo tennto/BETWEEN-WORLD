@@ -5,10 +5,11 @@ import "../../css/Card.css";
 import carddeco from "../carddeco.png";
 import carddecoback from "../carddecoback.png";
 import coverdeco from "../backdeco.png";
+import "../../css/Chapter2.css";
 
 const SadTextGirl = () => {
   return (
-    <>
+    <div className="fadelick">
       <div className="wrap">
         <div className="card">
           <div className="card-front">
@@ -34,7 +35,7 @@ const SadTextGirl = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

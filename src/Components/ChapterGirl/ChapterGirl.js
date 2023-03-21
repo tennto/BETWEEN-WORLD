@@ -60,7 +60,7 @@ const Dialog2 = () => {
   const status = useSelector((state) => state);
   const dispatch = useDispatch();
   return (
-    <>
+    <div className="forFade_mood">
       <div
         onClick={() => {
           dispatch({ type: "index/HAPPY_MOOD_G" });
@@ -99,7 +99,7 @@ const Dialog2 = () => {
           긴장돼...
         </p>
       </div>
-    </>
+    </div>
   );
 };
 

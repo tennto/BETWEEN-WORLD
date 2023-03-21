@@ -2,13 +2,14 @@ import React, { useState } from "react";
 import Sound3in2 from "../Boymusic/Sound3in2";
 import Sound3in1 from "../Boymusic/Sound3in1";
 import "../../css/Card.css";
+import "../../css/Chapter2.css";
 import carddeco from "../carddeco.png";
 import carddecoback from "../carddecoback.png";
 import coverdeco from "../backdeco.png";
 
 const ThrillTextBoy = () => {
   return (
-    <>
+    <div className="fadelick">
       <div className="wrap">
         <div className="card">
           <div className="card-front">
@@ -33,7 +34,7 @@ const ThrillTextBoy = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

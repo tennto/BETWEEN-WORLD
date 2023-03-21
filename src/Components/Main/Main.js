@@ -386,7 +386,7 @@ const Main = () => {
       // 남자 애니메이션 분기점
       return <C2AnimeBoy />;
     } else if (status.moodSelect === 1000) {
-      return <HappyAnimeBoy />;
+      return <C2AnimeBoy />;
     } else if (status.moodSelect === 1001) {
       return <C3AnimeBoy />;
     } else if (status.moodSelect === 1002) {
@@ -400,9 +400,9 @@ const Main = () => {
     } else if (status.moodSelect === 1006) {
       return <BIRDAnimeBoy />;
     } else if (status.moodSelect === 2000) {
-      return <SadAnimeBoy />;
+      return <C2AnimeBoy />;
     } else if (status.moodSelect === 3000) {
-      return <ThrillAnimeBoy />;
+      return <C2AnimeBoy />;
     }
     // 여자 애니메이션 분기점
     else if (status.moodSelect === 7) {

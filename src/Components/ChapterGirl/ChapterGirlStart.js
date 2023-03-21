@@ -80,7 +80,7 @@ const Dialog2 = () => {
   return (
     <div className="forFade">
       <img className="deco" src={deco} alt="deco_g" />
-      <p className="dialog_oneline">{status.userName}이라고 하는구나..</p>
+      <p className="dialog_oneline">{status.userName}(이)라고 하는구나..</p>
     </div>
   );
 };
@@ -89,7 +89,7 @@ const Dialog3 = (props) => {
   const { nextBtn, setNextBtn } = props;
 
   return (
-    <>
+    <div className="fadelick">
       <button
         className="choiceNo1"
         onClick={() => {
@@ -106,9 +106,9 @@ const Dialog3 = (props) => {
         }}
       >
         <img className="chdeco_g1" src={chdeco} alt="chdeco3" />
-        <p>너는 누구야..?</p>
+        <p>당신은 누구야..?</p>
       </button>
-    </>
+    </div>
   );
 };
 

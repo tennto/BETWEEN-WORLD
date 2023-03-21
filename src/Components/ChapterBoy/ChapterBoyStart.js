@@ -79,7 +79,7 @@ const Dialog2 = () => {
   return (
     <div className="forFade">
       <img className="deco" src={deco} alt="deco1" />
-      <p className="dialog_oneline">{status.userName}이라고 하는구나..</p>
+      <p className="dialog_oneline">{status.userName}(이)라고 하는구나..</p>
     </div>
   );
 };

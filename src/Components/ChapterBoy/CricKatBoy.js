@@ -6,6 +6,9 @@ import "../../css/Chapter2.css";
 import "../../css/Card.css";
 import carddeco from "../carddeco.png";
 import carddecoback from "../carddecoback.png";
+import chdeco from "../ChapterBoy/chdeco.png";
+import textdeco from "../textdecoration.png";
+import coverdeco from "../backdeco.png";
 
 const CricKatBoy = () => {
   let [nextBtn, setNextBtn] = useState(0);
@@ -31,8 +34,14 @@ const CricKatBoy = () => {
     } else if (nextBtn === 8) {
       return <Dialog8 />;
     } else if (nextBtn === 9) {
+      setTimeout(() => {
+        setChangeBox(1);
+      }, 10);
       return <Dialog9 nextBtn={nextBtn} setNextBtn={setNextBtn} />;
     } else if (nextBtn === 10) {
+      setTimeout(() => {
+        setChangeBox(0);
+      }, 10);
       return <Dialog10 />;
     } else if (nextBtn === 11) {
       return <Dialog11 />;
@@ -43,7 +52,7 @@ const CricKatBoy = () => {
 
   return (
     <div className="CP2_UPPER">
-      <div className={"caracterIcon" + changeBox}></div>
+      {/* <div className={"caracterIcon" + changeBox}></div> */}
       {DialogFlow()}
       <button
         className={"nextBtn" + changeBox}
@@ -59,83 +68,92 @@ const CricKatBoy = () => {
 
 const Dialog0 = () => {
   return (
-    <>
+    <div className="forFade_b">
+      <img className="deco" src={textdeco} alt="textdeco_ck" />
       <h3 className="dialog_oneline">저기,</h3>
-    </>
+    </div>
   );
 };
 
 const Dialog1 = () => {
   return (
-    <>
+    <div className="forFade_b">
+      <img className="deco" src={textdeco} alt="textdeco_ck" />
       <h3 className="dialog_oneline">사랑이 뭐라고 생각해?</h3>
-    </>
+    </div>
   );
 };
 
 const Dialog2 = () => {
   return (
-    <>
+    <div className="forFade_b">
+      <img className="deco" src={textdeco} alt="textdeco_ck" />
       <h3 className="dialog_oneline">
         사랑한다면, 함께 하고 싶은게 당연하잖아?
       </h3>
-    </>
+    </div>
   );
 };
 
 const Dialog3 = () => {
   return (
-    <>
-      <h3 className="dialog_oneline">나 : ...</h3>
-    </>
+    <div className="forFade_b">
+      <img className="deco" src={textdeco} alt="textdeco_ck" />
+      <h3 className="dialog_oneline">...</h3>
+    </div>
   );
 };
 const Dialog4 = () => {
   return (
-    <>
+    <div className="forFade_b">
+      <img className="deco" src={textdeco} alt="textdeco_ck" />
       <h3 className="dialog_oneline">
-        사랑한다면, 목숨도 아깝지 않은게 당연하잖아?
+        사랑한다면, 가장 좋은걸 주고 싶은게 당연하잖아?
       </h3>
-    </>
+    </div>
   );
 };
 const Dialog5 = () => {
   return (
-    <>
-      <h3 className="dialog_oneline">나 : ...</h3>
-    </>
+    <div className="forFade_b">
+      <img className="deco" src={textdeco} alt="textdeco_ck" />
+      <h3 className="dialog_oneline">...</h3>
+    </div>
   );
 };
 const Dialog6 = () => {
   return (
-    <>
+    <div className="forFade_b">
+      <img className="deco" src={textdeco} alt="textdeco_ck" />
       <h3 className="dialog_oneline">
         사랑한다면, 목숨도 아깝지 않은게 당연하잖아?
       </h3>
-    </>
+    </div>
   );
 };
 const Dialog7 = () => {
   return (
-    <>
+    <div className="forFade_b">
+      <img className="deco" src={textdeco} alt="textdeco_ck" />
       <h3 className="dialog_oneline">......</h3>
-    </>
+    </div>
   );
 };
 const Dialog8 = () => {
   return (
-    <>
+    <div className="forFade_b">
+      <img className="deco" src={textdeco} alt="textdeco_ck" />
       <h3 className="dialog_oneline">
-        사랑한다면, 나는 어찌 되든 좋은게 당연하잖아
+        사랑한다면, 나는 어찌 되든 좋은게 당연하잖아..
       </h3>
-    </>
+    </div>
   );
 };
 const Dialog9 = (props) => {
   const status = useSelector((state) => state);
 
   return (
-    <>
+    <div className="fadelick">
       <div className="wrap">
         <div className="card">
           <div className="card-front">
@@ -160,7 +178,7 @@ const Dialog9 = (props) => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 const Dialog10 = () => {
@@ -171,16 +189,18 @@ const Dialog10 = () => {
     }, 1000);
   }, [dispatch]);
   return (
-    <>
+    <div className="forFade_b">
+      <img className="deco" src={textdeco} alt="textdeco_ck" />
       <h3 className="dialog_oneline">있지... 내가 죽으면 울어 줄거지?</h3>
-    </>
+    </div>
   );
 };
 const Dialog11 = () => {
   return (
-    <>
-      <h3 className="dialog_oneline">너가 살아야 나도 살아</h3>
-    </>
+    <div className="forFade_b">
+      <img className="deco" src={textdeco} alt="textdeco_ck" />
+      <h3 className="dialog_oneline">네가 살아야, 나도 살아</h3>
+    </div>
   );
 };
 const Dialog12 = () => {
@@ -191,9 +211,10 @@ const Dialog12 = () => {
     }, 1000);
   }, [dispatch]);
   return (
-    <>
+    <div className="forFade_b">
+      <img className="deco" src={textdeco} alt="textdeco_ck" />
       <h3 className="dialog_oneline">꽃아, 꽃아.</h3>
-    </>
+    </div>
   );
 };
 

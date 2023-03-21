@@ -1,9 +1,17 @@
 import React from "react";
+import { Player } from "@lottiefiles/react-lottie-player";
+import data3 from "./data3.json";
 
 const C3AnimeBoy = () => {
   return (
     <div>
-      <h1>지배자의 등장-남자</h1>
+      <Player
+        src={data3}
+        style={{ width: "1920px" }}
+        autoplay={true}
+        loop={false}
+        speed={1}
+      />
     </div>
   );
 };

@@ -1,4 +1,5 @@
 .bg_1 {
+  animation: fadein 1s;
   width: 1920px;
   height: 1080px;
 }
@@ -12,6 +13,9 @@
   }
 }
 
+.fadelick1 {
+  animation: fadein 5s;
+}
 .fadelick {
-  animation: fadein 1s;
+  animation: fadein 3s;
 }

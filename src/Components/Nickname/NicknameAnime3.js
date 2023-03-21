@@ -1,9 +1,17 @@
 import React from "react";
+// import { Player } from "@lottiefiles/react-lottie-player";
+// import nick2 from "../ChapterBoy/data2.json";
 
 const NicknameAnime3 = () => {
   return (
     <div>
-      <h1>#1 - 3번 닉네임 인풋</h1>
+      {/* <Player
+        src={nick2}
+        style={{ width: "1920px" }}
+        autoplay={true}
+        loop={false}
+        speed={1}
+      /> */}
     </div>
   );
 };
