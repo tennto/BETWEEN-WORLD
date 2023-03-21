@@ -4,6 +4,7 @@ import GSound8in2 from "../Girlmusic/GSound8in2";
 import GSound8in1 from "../Girlmusic/GSound8in1";
 import "../../css/Chapter2.css";
 import "../../css/Card.css";
+import { Link } from "react-router-dom";
 
 const BirdGirl = () => {
   let [nextBtn, setNextBtn] = useState(0);
@@ -209,15 +210,12 @@ const Dialog13 = () => {
   );
 };
 const Dialog14 = () => {
-  const dispatch = useDispatch();
-  useEffect(() => {
-    setTimeout(() => {
-      dispatch({ type: "index/SMBOY_1004" });
-    }, 1000);
-  }, [dispatch]);
   return (
     <>
-      <h3 className="dialog_oneline">^^</h3>
+      <Link to="/gallery">
+        <button>갤러리로</button>
+      </Link>
+      ;<h3 className="dialog_oneline">^^</h3>
     </>
   );
 };

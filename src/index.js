@@ -20,22 +20,16 @@ const initialState = {
   textLine: 1,
   btnReset: 0,
   moodSelect: 1,
-  userInfoArr: [],
   add: 1,
   userName: "",
-  playersound: [
-    {
-      player: "",
-      sound1: "",
-      sound2: "",
-      sound3: "",
-      sound4: "",
-      sound5: "",
-      sound6: "",
-      sound7: "",
-      sound8: "",
-    },
-  ],
+  sound1: "",
+  sound2: "",
+  sound3: "",
+  sound4: "",
+  sound5: "",
+  sound6: "",
+  sound7: "",
+  sound8: "",
 };
 
 export const setName = (name) => {
@@ -195,76 +189,28 @@ function reducer(state = initialState, action) {
     }
     //사운드 저장
     case SET_SOUND1: {
-      return {
-        ...state,
-        playersound: {
-          ...state.playersound,
-          sound1: [action.sound1],
-        },
-      };
+      return { ...state, sound1: action.sound1 };
     }
     case SET_SOUND2: {
-      return {
-        ...state,
-        playersound: {
-          ...state.playersound,
-          sound2: [action.sound2],
-        },
-      };
+      return { ...state, sound2: action.sound2 };
     }
     case SET_SOUND3: {
-      return {
-        ...state,
-        playersound: {
-          ...state.playersound,
-          sound3: [action.sound3],
-        },
-      };
+      return { ...state, sound3: action.sound3 };
     }
     case SET_SOUND4: {
-      return {
-        ...state,
-        playersound: {
-          ...state.playersound,
-          sound4: [action.sound4],
-        },
-      };
+      return { ...state, sound4: action.sound4 };
     }
     case SET_SOUND5: {
-      return {
-        ...state,
-        playersound: {
-          ...state.playersound,
-          sound5: [action.sound5],
-        },
-      };
+      return { ...state, sound5: action.sound5 };
     }
     case SET_SOUND6: {
-      return {
-        ...state,
-        playersound: {
-          ...state.playersound,
-          sound6: [action.sound6],
-        },
-      };
+      return { ...state, sound6: action.sound6 };
     }
     case SET_SOUND7: {
-      return {
-        ...state,
-        playersound: {
-          ...state.playersound,
-          sound7: [action.sound7],
-        },
-      };
+      return { ...state, sound7: action.sound7 };
     }
     case SET_SOUND8: {
-      return {
-        ...state,
-        playersound: {
-          ...state.playersound,
-          sound8: [action.sound8],
-        },
-      };
+      return { ...state, sound8: action.sound8 };
     }
     case CSBOY_1001: {
       return {
