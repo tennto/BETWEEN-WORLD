@@ -186,7 +186,7 @@ const Dialog10 = () => {
   useEffect(() => {
     setTimeout(() => {
       dispatch({ type: "index/CKBOY_1006" });
-    }, 1000);
+    }, 5000);
   }, [dispatch]);
   return (
     <div className="forFade_b">
@@ -214,7 +214,7 @@ const Dialog12 = () => {
   useEffect(() => {
     setTimeout(() => {
       dispatch({ type: "index/BIRDBOY_1006" });
-    }, 1000);
+    }, 5000);
   }, [dispatch]);
   return (
     <div className="forFade_b">

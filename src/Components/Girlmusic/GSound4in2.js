@@ -28,7 +28,7 @@ const GSound4in2 = (props) => {
         playing={play}
         loop={false}
         mute={false}
-        volume={1.0}
+        volume={0.3}
       />
       <p>음악2 뒷면</p>
       <h1>바다_멜로디</h1>

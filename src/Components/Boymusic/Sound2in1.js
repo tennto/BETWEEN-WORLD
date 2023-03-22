@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ReactHowler from "../../howler/ReactHowler.js";
 import { useSelector, useDispatch } from "react-redux";
-import { setSound2 } from "../../index";
+import { setSound1 } from "../../index";
 import "../../css/Card.css";
 
 const Sound2in1 = () => {
@@ -19,12 +19,12 @@ const Sound2in1 = () => {
         setPlaying(false);
       }}
       onClick={() => {
-        dispatch(setSound2("Decision - The Tower of Light.mp3"));
+        dispatch(setSound1("슬픔노래1.mp3"));
         dispatch({ type: "index/CSBOY_1001" });
       }}
     >
       <ReactHowler
-        src={["Decision - The Tower of Light.mp3"]}
+        src={["슬픔노래1.mp3"]}
         playing={play}
         loop={false}
         mute={false}

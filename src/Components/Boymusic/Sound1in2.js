@@ -19,12 +19,12 @@ const Sound1in2 = () => {
         setPlaying(false);
       }}
       onClick={() => {
-        dispatch(setSound1("Harlequin - Kevin MacLeod.mp3"));
+        dispatch(setSound1("기쁨노래2.mp3"));
         dispatch({ type: "index/CSBOY_1001" });
       }}
     >
       <ReactHowler
-        src={["Harlequin - Kevin MacLeod.mp3"]}
+        src={["기쁨노래2.mp3"]}
         playing={play}
         loop={false}
         mute={false}

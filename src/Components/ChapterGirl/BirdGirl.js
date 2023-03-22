@@ -2,6 +2,10 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import GSound8in2 from "../Girlmusic/GSound8in2";
 import GSound8in1 from "../Girlmusic/GSound8in1";
+import GSound8in3 from "../Girlmusic/GSound8in3";
+import GSound8in4 from "../Girlmusic/GSound8in4";
+import GSound8in5 from "../Girlmusic/GSound8in5";
+import GSound8in6 from "../Girlmusic/GSound8in6";
 import "../../css/Chapter2.css";
 import "../../css/Card.css";
 import { Link } from "react-router-dom";
@@ -174,22 +178,37 @@ const Dialog11 = () => {
 const Dialog12 = (props) => {
   const status = useSelector((state) => state);
 
+  const showSound1 = () => {
+    if (status.sound1 === "기쁨노래1" || status.sound1 === "기쁨노래2") {
+      return <GSound8in1 {...props} />;
+    } else if (status.sound1 === "슬픔노래1" || status.sound1 === "슬픔노래2") {
+      return <GSound8in3 {...props} />;
+    } else if (status.sound1 === "긴장노래1" || status.sound1 === "긴장노래2") {
+      return <GSound8in5 {...props} />;
+    }
+  };
+  const showSound2 = () => {
+    if (status.sound1 === "기쁨노래1" || status.sound1 === "기쁨노래2") {
+      return <GSound8in2 {...props} />;
+    } else if (status.sound1 === "슬픔노래1" || status.sound1 === "슬픔노래2") {
+      return <GSound8in4 {...props} />;
+    } else if (status.sound1 === "긴장노래1" || status.sound1 === "긴장노래2") {
+      return <GSound8in6 {...props} />;
+    }
+  };
+
   return (
     <>
       <div className="wrap">
         <div className="card">
           <div className="card-front">해야만 하는 일을 해</div>
-          <div className="card-back">
-            <GSound8in1 {...props} />
-          </div>
+          <div className="card-back">{showSound1()}</div>
         </div>
       </div>
       <div className="wrap2">
         <div className="card2">
           <div className="card-front2">하고 싶은 일을 해</div>
-          <div className="card-back2">
-            <GSound8in2 {...props} />
-          </div>
+          <div className="card-back2">{showSound2()}</div>
         </div>
       </div>
     </>

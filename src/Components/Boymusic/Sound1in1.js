@@ -21,12 +21,12 @@ const Sound1in1 = () => {
         setPlaying(false);
       }}
       onClick={() => {
-        dispatch(setSound1("Cooper Ave - The Westerlies.mp3"));
+        dispatch(setSound1("기쁨노래.mp3"));
         dispatch({ type: "index/CSBOY_1001" });
       }}
     >
       <ReactHowler
-        src={["Cooper Ave - The Westerlies.mp3"]}
+        src={["기쁨노래1.mp3"]}
         playing={play}
         loop={false}
         mute={false}

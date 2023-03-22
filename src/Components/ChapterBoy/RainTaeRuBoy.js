@@ -140,6 +140,7 @@ const Dialog4 = (props) => {
     </div>
   );
 };
+
 const Dialog5 = () => {
   return (
     <div className="forFade_b">
@@ -290,7 +291,7 @@ const Dialog17 = () => {
   useEffect(() => {
     setTimeout(() => {
       dispatch({ type: "index/SMBOY_1004" });
-    }, 1000);
+    }, 5000);
   }, [dispatch]);
   return (
     <div className="forFade_b">

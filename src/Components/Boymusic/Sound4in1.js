@@ -28,7 +28,7 @@ const Sound4in1 = (props) => {
         playing={play}
         loop={false}
         mute={false}
-        volume={0.4}
+        volume={0.5}
       />
       <p>음악1 뒷면</p>
       <h1>산_멜로디</h1>
