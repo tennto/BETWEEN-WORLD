@@ -28,10 +28,10 @@ const GSound7in1 = (props) => {
         playing={play}
         loop={false}
         mute={false}
-        volume={0.2}
+        volume={0.1}
       />
       <p>음악1 뒷면</p>
-      <h1>빗소리 크게</h1>
+      <h1>귀뚜라미 소리O</h1>
       {/* <button
         onClick={() => {
           setPlaying(false);

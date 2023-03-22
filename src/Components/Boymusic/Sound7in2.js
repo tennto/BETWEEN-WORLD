@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import ReactHowler from "../../howler/ReactHowler.js";
 import { useSelector, useDispatch } from "react-redux";
 import { setSound7 } from "../../index";
 import "../../css/Card.css";
@@ -19,17 +18,10 @@ const Sound7in2 = (props) => {
         setPlaying(false);
       }}
       onClick={() => {
-        dispatch(setSound7("rain.mp3"));
+        dispatch(setSound7(""));
         props.setNextBtn(props.nextBtn + 2);
       }}
     >
-      <ReactHowler
-        src={["rain.mp3"]}
-        playing={play}
-        loop={false}
-        mute={false}
-        volume={0}
-      />
       <p>음악2 뒷면</p>
       <h1>귀뚜라미소리 X</h1>
       {/* <button

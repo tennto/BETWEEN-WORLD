@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import ReactHowler from "../../howler/ReactHowler.js";
 import { useSelector, useDispatch } from "react-redux";
 import { setSound5 } from "../../index";
 import "../../css/Card.css";
@@ -19,17 +18,10 @@ const GSound5in2 = (props) => {
         setPlaying(false);
       }}
       onClick={() => {
-        dispatch(setSound5("Cooper Ave - The Westerlies.mp3"));
+        dispatch(setSound5(""));
         props.setNextBtn(props.nextBtn + 1);
       }}
     >
-      <ReactHowler
-        src={["Cooper Ave - The Westerlies.mp3"]}
-        playing={play}
-        loop={false}
-        mute={false}
-        volume={0}
-      />
       <p>음악2 뒷면</p>
       <h1>모닥불X_멜로디</h1>
       {/* <button

@@ -19,19 +19,12 @@ const GSound7in2 = (props) => {
         setPlaying(false);
       }}
       onClick={() => {
-        dispatch(setSound7("귀뚜라미소리.mp3"));
+        dispatch(setSound7(""));
         props.setNextBtn(props.nextBtn + 2);
       }}
     >
-      <ReactHowler
-        src={["귀뚜라미소리.mp3"]}
-        playing={play}
-        loop={false}
-        mute={false}
-        volume={0}
-      />
       <p>음악2 뒷면</p>
-      <h1>빗소리 작게</h1>
+      <h1>귀뚜라미 소리X</h1>
       {/* <button
         onClick={() => {
           setPlaying(false);

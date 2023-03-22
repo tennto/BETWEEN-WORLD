@@ -2,6 +2,11 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Sound8in2 from "../Boymusic/Sound8in2";
 import Sound8in1 from "../Boymusic/Sound8in1";
+import Sound8in3 from "../Boymusic/Sound8in3";
+import Sound8in4 from "../Boymusic/Sound8in4";
+import Sound8in5 from "../Boymusic/Sound8in5";
+import Sound8in6 from "../Boymusic/Sound8in6";
+
 import "../../css/Chapter2.css";
 import "../../css/Card.css";
 import carddeco from "../carddeco.png";
@@ -176,6 +181,25 @@ const Dialog11 = () => {
 const Dialog12 = (props) => {
   const status = useSelector((state) => state);
 
+  const showSound1 = () => {
+    if (status.sound1 === "기쁨노래1" || status.sound1 === "기쁨노래2") {
+      return <Sound8in1 {...props} />;
+    } else if (status.sound1 === "슬픔노래1" || status.sound1 === "슬픔노래2") {
+      return <Sound8in3 {...props} />;
+    } else if (status.sound1 === "긴장노래1" || status.sound1 === "긴장노래2") {
+      return <Sound8in5 {...props} />;
+    }
+  };
+  const showSound2 = () => {
+    if (status.sound1 === "기쁨노래1" || status.sound1 === "기쁨노래2") {
+      return <Sound8in2 {...props} />;
+    } else if (status.sound1 === "슬픔노래1" || status.sound1 === "슬픔노래2") {
+      return <Sound8in4 {...props} />;
+    } else if (status.sound1 === "긴장노래1" || status.sound1 === "긴장노래2") {
+      return <Sound8in6 {...props} />;
+    }
+  };
+
   return (
     <>
       <div className="wrap">
@@ -186,7 +210,7 @@ const Dialog12 = (props) => {
           </div>
           <div className="card-back">
             <img className="carddeco" src={carddecoback} alt="carddeco1" />
-            <Sound8in1 {...props} />
+            {showSound1()}
           </div>
         </div>
       </div>
@@ -198,7 +222,7 @@ const Dialog12 = (props) => {
           </div>
           <div className="card-back2">
             <img className="carddeco" src={carddecoback} alt="carddeco1" />
-            <Sound8in2 {...props} />
+            {showSound2()}
           </div>
         </div>
       </div>

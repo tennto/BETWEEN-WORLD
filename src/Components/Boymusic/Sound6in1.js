@@ -19,16 +19,16 @@ const Sound6in1 = (props) => {
         setPlaying(false);
       }}
       onClick={() => {
-        dispatch(setSound6("rain.mp3"));
+        dispatch(setSound6("빗소리.mp3"));
         props.setNextBtn(props.nextBtn + 1);
       }}
     >
       <ReactHowler
-        src={["rain.mp3"]}
+        src={["빗소리.mp3"]}
         playing={play}
         loop={false}
         mute={false}
-        volume={0.2}
+        volume={0.3}
       />
       <p>음악1 뒷면</p>
       <h1>빗소리 크게</h1>

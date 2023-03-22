@@ -19,12 +19,12 @@ const GSound6in2 = (props) => {
         setPlaying(false);
       }}
       onClick={() => {
-        dispatch(setSound6("rain.mp3"));
+        dispatch(setSound6("빗소리.mp3"));
         props.setNextBtn(props.nextBtn + 1);
       }}
     >
       <ReactHowler
-        src={["rain.mp3"]}
+        src={["빗소리.mp3"]}
         playing={play}
         loop={false}
         mute={false}

@@ -19,12 +19,12 @@ const Sound8in1 = (props) => {
         setPlaying(false);
       }}
       onClick={() => {
-        dispatch(setSound8("귀뚜라미소리.mp3"));
+        dispatch(setSound8("새소리.wav"));
         props.setNextBtn(props.nextBtn + 1);
       }}
     >
       <ReactHowler
-        src={["귀뚜라미소리.mp3"]}
+        src={["새소리.wav"]}
         playing={play}
         loop={false}
         mute={false}

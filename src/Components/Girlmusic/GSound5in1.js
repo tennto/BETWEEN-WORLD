@@ -28,7 +28,7 @@ const GSound5in1 = (props) => {
         playing={play}
         loop={false}
         mute={false}
-        volume={1.0}
+        volume={0.6}
       />
       <p>음악1 뒷면</p>
       <h1>모닥불O_멜로디</h1>
