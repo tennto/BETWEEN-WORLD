@@ -196,6 +196,12 @@ const Dialog10 = () => {
   );
 };
 const Dialog11 = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    setTimeout(() => {
+      dispatch({ type: "index/BIRDBOY_1006" });
+    }, 1000);
+  }, [dispatch]);
   return (
     <div className="forFade_b">
       <img className="deco" src={textdeco} alt="textdeco_ck" />

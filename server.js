@@ -20,11 +20,16 @@ MongoClient.connect(
         console.log("저장완료");
       }
     );
+<<<<<<< Updated upstream
     app.get("*", (req, res) => {
       res.sendFile(path.join(__dirname, "build/index.html"));
     });
     app.listen(3000, () => {
       console.log("3000");
+=======
+    app.listen(3005, () => {
+      console.log("8080");
+>>>>>>> Stashed changes
     });
   }
 );
@@ -38,4 +43,11 @@ app.post("/gallery", (req, res) => {
   //     console.log("저장완료");
   //   }
   // );
+<<<<<<< Updated upstream
+=======
+});
+
+app.get("*", (요청, 응답) => {
+  응답.sendFile(path.join(__dirname, "build/index.html"));
+>>>>>>> Stashed changes
 });
