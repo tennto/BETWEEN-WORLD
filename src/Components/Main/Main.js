@@ -51,7 +51,7 @@ import BirdBoy from "../ChapterBoy/BirdBoy";
 import BIRDAnimeGirl from "../ChapterGirl/BIRDAnimeGirl";
 import BirdGirl from "../ChapterGirl/BirdGirl";
 
-import axios from "axios";
+// import axios from "axios";
 
 const Main = () => {
   const status = useSelector((state) => state);
@@ -429,26 +429,26 @@ const Main = () => {
     }
   };
 
-  async function postData() {
-    const str = JSON.stringify(status);
-    console.log(str);
-    try {
-      //응답 성공
-      const response = await axios.post("http://localhost:3000/gallery", {
-        str,
-      });
-      console.log(response);
-    } catch (error) {
-      console.error(error);
-    }
-  }
+  // async function postData() {
+  //   const str = JSON.stringify(status);
+  //   console.log(str);
+  //   try {
+  //     //응답 성공
+  //     const response = await axios.post("http://localhost:3000/gallery", {
+  //       str,
+  //     });
+  //     console.log(response);
+  //   } catch (error) {
+  //     console.error(error);
+  //   }
+  // }
 
   return (
     <div className="maincomp">
       <Link to="/gallery">
         <button
           onClick={() => {
-            postData();
+            // postData();
           }}
         >
           server save button

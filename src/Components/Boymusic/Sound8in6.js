@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { setSound8 } from "../../index";
 import "../../css/Card.css";
 
-const Sound8in2 = (props) => {
+const Sound8in6 = (props) => {
   // const status = useSelector((state) => state);
   const dispatch = useDispatch();
   const [play, setPlaying] = useState(false);
@@ -53,4 +53,4 @@ const Sound8in2 = (props) => {
   );
 };
 
-export default Sound8in2;
+export default Sound8in6;

@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { setSound8 } from "../../index";
 import "../../css/Card.css";
 
-const Sound8in3 = (props) => {
+const GSound8in5 = (props) => {
   // const status = useSelector((state) => state);
   const dispatch = useDispatch();
   const [play, setPlaying] = useState(false);
@@ -19,19 +19,19 @@ const Sound8in3 = (props) => {
         setPlaying(false);
       }}
       onClick={() => {
-        dispatch(setSound8("부엉이.wav"));
+        dispatch(setSound8("까마귀.wav"));
         props.setNextBtn(props.nextBtn + 1);
       }}
     >
       <ReactHowler
-        src={["부엉이.wav"]}
+        src={["까마귀.wav"]}
         playing={play}
         loop={false}
         mute={false}
         volume={0.2}
       />
       <p>음악1 뒷면</p>
-      <h1>부엉이O</h1>
+      <h1>까마귀O</h1>
       {/* <button
         onClick={() => {
           setPlaying(false);
@@ -61,4 +61,4 @@ const Sound8in3 = (props) => {
   );
 };
 
-export default Sound8in3;
+export default GSound8in5;
