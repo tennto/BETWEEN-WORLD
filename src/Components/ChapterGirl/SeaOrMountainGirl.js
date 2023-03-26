@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import GSound4in2 from "../Girlmusic/GSound4in2";
@@ -15,9 +17,9 @@ const SeaOrMountainGirl = () => {
 
   const DialogFlow = () => {
     if (nextBtn === 0) {
-      return <Dialog0 />;
+      return <Dialog0 nextBtn={nextBtn} setNextBtn={setNextBtn} />;
     } else if (nextBtn === 1) {
-      return <Dialog1 />;
+      return <Dialog1 nextBtn={nextBtn} setNextBtn={setNextBtn} />;
     } else if (nextBtn === 2) {
       setTimeout(() => {
         setChangeBox(1);
@@ -33,7 +35,7 @@ const SeaOrMountainGirl = () => {
       {/* <div className={"caracterIcon" + changeBox}></div> */}
       {DialogFlow()}
       <button
-        className={"nextBtn" + changeBox}
+        className="nextBtn0"
         onClick={() => {
           setNextBtn(nextBtn + 1);
         }}
@@ -44,22 +46,38 @@ const SeaOrMountainGirl = () => {
   );
 };
 
-const Dialog0 = () => {
+const Dialog0 = (props) => {
   return (
     <div className="forFade">
       <img className="deco" src={deco} alt="deco_som2" />
       <p className="dialog_oneline">
-        지혜로운 자는 바다를 좋아하고,어진이는 산을 좋아한다고 했다.
+        어진 이는 산을 좋아하고, 지혜로운 자는 바다를 좋아한다고 했다.
       </p>
+      <button
+        className="nextBtn0"
+        onClick={() => {
+          props.setNextBtn(props.nextBtn + 1);
+        }}
+      >
+        다음
+      </button>
     </div>
   );
 };
 
-const Dialog1 = () => {
+const Dialog1 = (props) => {
   return (
     <div className="forFade">
       <img className="deco" src={deco} alt="deco_som2" />
       <p className="dialog_oneline">너는 어느 쪽?</p>
+      <button
+        className="nextBtn0"
+        onClick={() => {
+          props.setNextBtn(props.nextBtn + 1);
+        }}
+      >
+        다음
+      </button>
     </div>
   );
 };
@@ -107,7 +125,7 @@ const Dialog3 = () => {
   return (
     <div className="forFade">
       <img className="deco" src={deco} alt="deco_som2" />
-      <p className="dialog_oneline">...</p>
+      <p className="dialog_oneline">좋은 선택이군...</p>
     </div>
   );
 };

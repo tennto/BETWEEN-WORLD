@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React, { useState } from "react";
 import "../../css/Card.css";
 import GSound3in2 from "../Girlmusic/GSound3in2";

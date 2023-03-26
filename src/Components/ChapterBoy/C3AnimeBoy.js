@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React from "react";
 import { Player } from "@lottiefiles/react-lottie-player";
 import data3 from "./data3.json";

@@ -203,3 +203,19 @@
   top: 50px;
   left: 56px;
 }
+
+.yesp_bd {
+  font-family: "ongeul";
+  position: absolute;
+  font-size: 32px;
+  top: 50px;
+  left: 82px;
+}
+
+.nop_bd {
+  font-family: "ongeul";
+  position: absolute;
+  font-size: 32px;
+  top: 50px;
+  left: 67px;
+}

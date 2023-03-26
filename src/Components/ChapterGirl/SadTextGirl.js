@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React, { useState } from "react";
 import GSound2in2 from "../Girlmusic/GSound2in2";
 import GSound2in1 from "../Girlmusic/GSound2in1";

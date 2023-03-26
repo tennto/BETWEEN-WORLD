@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import "./Nickname.css";
@@ -13,21 +15,19 @@ const Nickname = () => {
   const status = useSelector((state) => state);
   const dispatch = useDispatch();
   let [nextBtn, setNextBtn] = useState(1);
-  let [changeBox, setChangeBox] = useState(0);
-
-  console.log(nextBtn);
+  let [changeBox, setChangeBox] = useState(1);
 
   const textFlow = () => {
     if (nextBtn === 1) {
-      return <Dialog0 />;
+      return <Dialog0 nextBtn={nextBtn} setNextBtn={setNextBtn} />;
     } else if (nextBtn === 2) {
-      return <Dialog1 />;
+      return <Dialog1 nextBtn={nextBtn} setNextBtn={setNextBtn} />;
     } else if (nextBtn === 3) {
-      return <Dialog2 />;
+      return <Dialog2 nextBtn={nextBtn} setNextBtn={setNextBtn} />;
     } else if (nextBtn === 4) {
       return <Dialog3 nextBtn={nextBtn} setNextBtn={setNextBtn} />;
     } else if (nextBtn === 5) {
-      return <Dialog4 />;
+      return <Dialog4 nextBtn={nextBtn} setNextBtn={setNextBtn} />;
     } else if (nextBtn === 6) {
       setTimeout(() => {
         setChangeBox(1);
@@ -36,61 +36,86 @@ const Nickname = () => {
     }
   };
   //이름 입력할 때 버튼 없애는 함수
-  const btnDelete = () => {
-    if (nextBtn === 4) {
-      return "";
-    } else {
-      return (
-        <button
-          className={"NnextBtn" + changeBox}
-          onClick={() => {
-            setNextBtn(nextBtn + 1);
-          }}
-        >
-          다음
-        </button>
-      );
-    }
-  };
+  // const btnDelete = () => {
+  //   if (nextBtn === 4) {
+  //     return "";
+  //   } else {
+  //     return (
+  //       <button
+  //         className={"NnextBtn" + changeBox}
+  //         onClick={() => {
+  //           setNextBtn(nextBtn + 1);
+  //         }}
+  //       >
+  //         다음
+  //       </button>
+  //     );
+  //   }
+  // };
 
   return (
     <div className="nicknameBox">
       {/* <div className={"caracterIcon" + changeBox}></div> */}
       {textFlow()}
-      {btnDelete()}
+      {/* {btnDelete()} */}
     </div>
   );
 };
 
-const Dialog0 = () => {
+const Dialog0 = (props) => {
   return (
     <div className="forFade">
       <img className="deco" src={deco} alt="deco" />
-      <h3 className="dialog_oneline">다음 버튼을 눌러 진행해주세요</h3>
+      <p className="dialog_oneline">다음 버튼을 눌러 진행해주세요</p>
+      <button
+        className="NnextBtn0"
+        onClick={() => {
+          props.setNextBtn(props.nextBtn + 1);
+        }}
+      >
+        다음
+      </button>
     </div>
   );
 };
 
-const Dialog1 = () => {
+const Dialog1 = (props) => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch({ type: "index/PLUS_STATE1" });
   }, []);
+
   return (
     <div className="forFade">
       <img className="deco" src={deco} alt="deco" />
-      <h3 className="dialog_oneline">
+      <p className="dialog_oneline">
         (형용할 수 없는 어떤 세계에 도착하였습니다)
-      </h3>
+      </p>
+      <button
+        className="NnextBtn0"
+        onClick={() => {
+          props.setNextBtn(props.nextBtn + 1);
+        }}
+      >
+        다음
+      </button>
     </div>
   );
 };
 
-const Dialog2 = () => {
+const Dialog2 = (props) => {
   return (
     <div className="forFade">
       <img className="deco" src={deco} alt="deco" />
-      <h3 className="dialog_oneline">. . .</h3>
+      <p className="dialog_oneline">. . .</p>
+      <button
+        className="NnextBtn0"
+        onClick={() => {
+          props.setNextBtn(props.nextBtn + 1);
+        }}
+      >
+        다음
+      </button>
     </div>
   );
 };
@@ -106,7 +131,7 @@ const Dialog3 = (props) => {
   return (
     <div className="forFade">
       <img className="deco" src={deco} alt="deco" />
-      <h3 className="dialog_oneline">당신의 이름은..?</h3>
+      <p className="dialog_oneline">당신의 이름은..?</p>
       <div className="nicknameDiv">
         <img className="decoinput" src={decoinput} alt="decoinp" />
         <p className="notice_input">닉네임을 입력해주세요</p>
@@ -125,7 +150,7 @@ const Dialog3 = (props) => {
     </div>
   );
 };
-const Dialog4 = () => {
+const Dialog4 = (props) => {
   const status = useSelector((state) => state);
   const dispatch = useDispatch();
   useEffect(() => {
@@ -134,7 +159,15 @@ const Dialog4 = () => {
   return (
     <div className="forFade">
       <img className="deco" src={deco} alt="deco" />
-      <h3 className="dialog_oneline">{status.userName} (이)라고 하는구나..?</h3>
+      <p className="dialog_oneline">나는 {status.userName}이구나..</p>
+      <button
+        className="NnextBtn0"
+        onClick={() => {
+          props.setNextBtn(props.nextBtn + 1);
+        }}
+      >
+        다음
+      </button>
     </div>
   );
 };

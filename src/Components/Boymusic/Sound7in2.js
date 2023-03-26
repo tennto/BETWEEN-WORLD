@@ -1,8 +1,10 @@
+/* eslint-disable */
+
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { setSound7 } from "../../index";
 import "../../css/Card.css";
-
+import "../../css/Chapter2.css";
 const Sound7in2 = (props) => {
   // const status = useSelector((state) => state);
   const dispatch = useDispatch();
@@ -19,11 +21,10 @@ const Sound7in2 = (props) => {
       }}
       onClick={() => {
         dispatch(setSound7(""));
-        props.setNextBtn(props.nextBtn + 2);
+        props.setNextBtn(props.nextBtn + 1);
       }}
     >
-      <p>음악2 뒷면</p>
-      <h1>귀뚜라미소리 X</h1>
+      <h2 className="script">고개를 가로젓는다</h2>
       {/* <button
         onClick={() => {
           setPlaying(false);

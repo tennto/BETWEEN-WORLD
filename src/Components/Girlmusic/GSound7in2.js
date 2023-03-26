@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React, { useState } from "react";
 import ReactHowler from "../../howler/ReactHowler.js";
 import { useSelector, useDispatch } from "react-redux";
@@ -20,7 +22,7 @@ const GSound7in2 = (props) => {
       }}
       onClick={() => {
         dispatch(setSound7(""));
-        props.setNextBtn(props.nextBtn + 2);
+        props.setNextBtn(props.nextBtn + 1);
       }}
     >
       <p>음악2 뒷면</p>

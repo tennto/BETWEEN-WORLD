@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import "./App.css";
 import React from "react";
 import "./Components/Main/Main";

@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React, { useState } from "react";
 import ReactHowler from "../../howler/ReactHowler.js";
 import { useSelector, useDispatch } from "react-redux";
@@ -21,6 +23,7 @@ const Sound8in1 = (props) => {
       onClick={() => {
         dispatch(setSound8("새소리.wav"));
         props.setNextBtn(props.nextBtn + 1);
+        console.log(props.nextBtn);
       }}
     >
       <ReactHowler
