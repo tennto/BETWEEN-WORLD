@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React, { useState } from "react";
 import ReactHowler from "../../howler/ReactHowler.js";
 import { useSelector, useDispatch } from "react-redux";
@@ -20,7 +22,7 @@ const GSound7in1 = (props) => {
       }}
       onClick={() => {
         dispatch(setSound7("귀뚜라미소리.mp3"));
-        props.setNextBtn(props.nextBtn + 1);
+        props.setNextBtn(props.nextBtn + 2);
       }}
     >
       <ReactHowler

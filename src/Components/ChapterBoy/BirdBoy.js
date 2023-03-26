@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Sound8in2 from "../Boymusic/Sound8in2";
@@ -12,36 +14,38 @@ import "../../css/Card.css";
 import carddeco from "../carddeco.png";
 import carddecoback from "../carddecoback.png";
 import { Link } from "react-router-dom";
+import chdeco from "../ChapterBoy/chdeco.png";
+import textdeco from "../textdecoration.png";
+import coverdeco from "../backdeco.png";
 
 const BirdBoy = () => {
   let [nextBtn, setNextBtn] = useState(0);
-  let [changeBox, setChangeBox] = useState(0);
 
   const DialogFlow = () => {
     if (nextBtn === 0) {
-      return <Dialog0 />;
+      return <Dialog0 nextBtn={nextBtn} setNextBtn={setNextBtn} />;
     } else if (nextBtn === 1) {
-      return <Dialog1 />;
+      return <Dialog1 nextBtn={nextBtn} setNextBtn={setNextBtn} />;
     } else if (nextBtn === 2) {
       return <Dialog2 nextBtn={nextBtn} setNextBtn={setNextBtn} />;
     } else if (nextBtn === 3) {
-      return <Dialog3 />;
+      return <Dialog3 nextBtn={nextBtn} setNextBtn={setNextBtn} />;
     } else if (nextBtn === 4) {
-      return <Dialog4 />;
+      return <Dialog4 nextBtn={nextBtn} setNextBtn={setNextBtn} />;
     } else if (nextBtn === 5) {
-      return <Dialog5 />;
+      return <Dialog5 nextBtn={nextBtn} setNextBtn={setNextBtn} />;
     } else if (nextBtn === 6) {
-      return <Dialog6 />;
+      return <Dialog6 nextBtn={nextBtn} setNextBtn={setNextBtn} />;
     } else if (nextBtn === 7) {
-      return <Dialog7 />;
+      return <Dialog7 nextBtn={nextBtn} setNextBtn={setNextBtn} />;
     } else if (nextBtn === 8) {
-      return <Dialog8 />;
+      return <Dialog8 nextBtn={nextBtn} setNextBtn={setNextBtn} />;
     } else if (nextBtn === 9) {
-      return <Dialog9 />;
+      return <Dialog9 nextBtn={nextBtn} setNextBtn={setNextBtn} />;
     } else if (nextBtn === 10) {
-      return <Dialog10 />;
+      return <Dialog10 nextBtn={nextBtn} setNextBtn={setNextBtn} />;
     } else if (nextBtn === 11) {
-      return <Dialog11 />;
+      return <Dialog11 nextBtn={nextBtn} setNextBtn={setNextBtn} />;
     } else if (nextBtn === 12) {
       return <Dialog12 nextBtn={nextBtn} setNextBtn={setNextBtn} />;
     } else if (nextBtn === 13) {
@@ -51,20 +55,36 @@ const BirdBoy = () => {
     }
   };
 
-  const buttonCount = () => {
-    if (nextBtn === 3) {
-      setNextBtn(nextBtn + 2);
-    } else {
-      setNextBtn(nextBtn + 1);
-    }
-  };
-
   return (
     <div className="CP2_UPPER">
-      <div className={"caracterIcon" + changeBox}></div>
+      {/* <div className={"caracterIcon" + changeBox}></div> */}
       {DialogFlow()}
+      {/* <button
+        className="nextBtn0"
+        onClick={() => {
+          buttonCount();
+        }}
+      >
+        다음
+      </button> */}
+    </div>
+  );
+};
+
+const Dialog0 = (props) => {
+  const buttonCount = () => {
+    if (props.nextBtn === 3) {
+      props.setNextBtn(props.nextBtn + 2);
+    } else {
+      props.setNextBtn(props.nextBtn + 1);
+    }
+  };
+  return (
+    <div className="forFade_b">
+      <img className="deco" src={textdeco} alt="textdeco_bd" />
+      <p className="dialog_oneline">안녕. 인간</p>
       <button
-        className={"nextBtn" + changeBox}
+        className="nextBtn0"
         onClick={() => {
           buttonCount();
         }}
@@ -75,19 +95,27 @@ const BirdBoy = () => {
   );
 };
 
-const Dialog0 = () => {
+const Dialog1 = (props) => {
+  const buttonCount = () => {
+    if (props.nextBtn === 3) {
+      props.setNextBtn(props.nextBtn + 2);
+    } else {
+      props.setNextBtn(props.nextBtn + 1);
+    }
+  };
   return (
-    <>
-      <h3 className="dialog_oneline">안녕. 인간</h3>
-    </>
-  );
-};
-
-const Dialog1 = () => {
-  return (
-    <>
-      <h3 className="dialog_oneline">또 만났네.</h3>
-    </>
+    <div className="forFade_b">
+      <img className="deco" src={textdeco} alt="textdeco_bd" />
+      <p className="dialog_oneline">또 만났네.</p>
+      <button
+        className="nextBtn0"
+        onClick={() => {
+          buttonCount();
+        }}
+      >
+        다음
+      </button>
+    </div>
   );
 };
 
@@ -95,88 +123,243 @@ const Dialog2 = (props) => {
   const { nextBtn, setNextBtn } = props;
 
   return (
-    <>
+    <div className="fadelick">
       <button
-        className="choiceNo1"
+        className="choiceNo2"
         onClick={() => {
           setNextBtn(nextBtn + 1);
         }}
       >
-        너는 누구지?
+        <img className="chdeco" src={chdeco} alt="chdeco2" />
+        <p className="yesp_bd">너는 누구지?</p>
       </button>
       <button
-        className="choiceNo1"
+        className="choiceNo2"
         onClick={() => {
           setNextBtn(nextBtn + 2);
         }}
       >
-        본 적이 있던가?
+        <img className="chdeco" src={chdeco} alt="chdeco2" />
+        <p className="nop_bd">본 적이 있던가?</p>
       </button>
-    </>
+    </div>
   );
 };
 
-const Dialog3 = () => {
+const Dialog3 = (props) => {
+  const buttonCount = () => {
+    if (props.nextBtn === 3) {
+      props.setNextBtn(props.nextBtn + 2);
+    } else {
+      props.setNextBtn(props.nextBtn + 1);
+    }
+  };
+
   return (
-    <>
-      <h3 className="dialog_oneline">지금은 이런 모습이야</h3>
-    </>
+    <div className="forFade_b">
+      <img className="deco" src={textdeco} alt="textdeco_bd" />
+      <p className="dialog_oneline">지금은 이런 모습이야</p>
+      <button
+        className="nextBtn0"
+        onClick={() => {
+          buttonCount();
+        }}
+      >
+        다음
+      </button>
+    </div>
   );
 };
-const Dialog4 = () => {
+const Dialog4 = (props) => {
+  const buttonCount = () => {
+    if (props.nextBtn === 3) {
+      props.setNextBtn(props.nextBtn + 2);
+    } else {
+      props.setNextBtn(props.nextBtn + 1);
+    }
+  };
+
   return (
-    <>
-      <h3 className="dialog_oneline">이미 여러번. 이 모습으론 처음이야</h3>
-    </>
+    <div className="forFade_b">
+      <img className="deco" src={textdeco} alt="textdeco_bd" />
+      <p className="dialog_oneline">이미 여러번. 이 모습으론 처음이야</p>
+      <button
+        className="nextBtn0"
+        onClick={() => {
+          buttonCount();
+        }}
+      >
+        다음
+      </button>
+    </div>
   );
 };
-const Dialog5 = () => {
+const Dialog5 = (props) => {
+  const buttonCount = () => {
+    if (props.nextBtn === 3) {
+      props.setNextBtn(props.nextBtn + 2);
+    } else {
+      props.setNextBtn(props.nextBtn + 1);
+    }
+  };
+
   return (
-    <>
-      <h3 className="dialog_oneline">사람들은 말하지</h3>
-    </>
+    <div className="forFade_b">
+      <img className="deco" src={textdeco} alt="textdeco_bd" />
+      <p className="dialog_oneline">사람들은 말하지</p>
+      <button
+        className="nextBtn0"
+        onClick={() => {
+          buttonCount();
+        }}
+      >
+        다음
+      </button>
+    </div>
   );
 };
-const Dialog6 = () => {
+const Dialog6 = (props) => {
+  const buttonCount = () => {
+    if (props.nextBtn === 3) {
+      props.setNextBtn(props.nextBtn + 2);
+    } else {
+      props.setNextBtn(props.nextBtn + 1);
+    }
+  };
+
   return (
-    <>
-      <h3 className="dialog_oneline">"나 답게 있고 싶다.</h3>
-    </>
+    <div className="forFade_b">
+      <img className="deco" src={textdeco} alt="textdeco_bd" />
+      <p className="dialog_oneline">"나 답게 있고 싶다"</p>
+      <button
+        className="nextBtn0"
+        onClick={() => {
+          buttonCount();
+        }}
+      >
+        다음
+      </button>
+    </div>
   );
 };
-const Dialog7 = () => {
+const Dialog7 = (props) => {
+  const buttonCount = () => {
+    if (props.nextBtn === 3) {
+      props.setNextBtn(props.nextBtn + 2);
+    } else {
+      props.setNextBtn(props.nextBtn + 1);
+    }
+  };
+
   return (
-    <>
-      <h3 className="dialog_oneline">그렇다면 나 다움이란 건 뭐지?</h3>
-    </>
+    <div className="forFade_b">
+      <img className="deco" src={textdeco} alt="textdeco_bd" />
+      <p className="dialog_oneline">그렇다면 나 다움이란 건 뭐지?</p>
+      <button
+        className="nextBtn0"
+        onClick={() => {
+          buttonCount();
+        }}
+      >
+        다음
+      </button>
+    </div>
   );
 };
-const Dialog8 = () => {
+const Dialog8 = (props) => {
+  const buttonCount = () => {
+    if (props.nextBtn === 3) {
+      props.setNextBtn(props.nextBtn + 2);
+    } else {
+      props.setNextBtn(props.nextBtn + 1);
+    }
+  };
+
   return (
-    <>
-      <h3 className="dialog_oneline">계속 이야기에 맞춰 내 모습을 바꿔왔어.</h3>
-    </>
+    <div className="forFade_b">
+      <img className="deco" src={textdeco} alt="textdeco_bd" />
+      <p className="dialog_oneline">계속 이야기에 맞춰 내 모습을 바꿔왔어.</p>
+      <button
+        className="nextBtn0"
+        onClick={() => {
+          buttonCount();
+        }}
+      >
+        다음
+      </button>
+    </div>
   );
 };
-const Dialog9 = () => {
+const Dialog9 = (props) => {
+  const buttonCount = () => {
+    if (props.nextBtn === 3) {
+      props.setNextBtn(props.nextBtn + 2);
+    } else {
+      props.setNextBtn(props.nextBtn + 1);
+    }
+  };
+
   return (
-    <>
-      <h3 className="dialog_oneline">이건 나에게 주어진 일</h3>
-    </>
+    <div className="forFade_b">
+      <img className="deco" src={textdeco} alt="textdeco_bd" />
+      <p className="dialog_oneline">이건 나에게 주어진 일</p>
+      <button
+        className="nextBtn0"
+        onClick={() => {
+          buttonCount();
+        }}
+      >
+        다음
+      </button>
+    </div>
   );
 };
-const Dialog10 = () => {
+const Dialog10 = (props) => {
+  const buttonCount = () => {
+    if (props.nextBtn === 3) {
+      props.setNextBtn(props.nextBtn + 2);
+    } else {
+      props.setNextBtn(props.nextBtn + 1);
+    }
+  };
+
   return (
-    <>
-      <h3 className="dialog_oneline">나는 항상 나 답게 있고 싶었다.</h3>
-    </>
+    <div className="forFade_b">
+      <img className="deco" src={textdeco} alt="textdeco_bd" />
+      <p className="dialog_oneline">나는 항상 나 답게 있고 싶었어.</p>
+      <button
+        className="nextBtn0"
+        onClick={() => {
+          buttonCount();
+        }}
+      >
+        다음
+      </button>
+    </div>
   );
 };
-const Dialog11 = () => {
+const Dialog11 = (props) => {
+  const buttonCount = () => {
+    if (props.nextBtn === 3) {
+      props.setNextBtn(props.nextBtn + 2);
+    } else {
+      props.setNextBtn(props.nextBtn + 1);
+    }
+  };
+
   return (
-    <>
-      <h3 className="dialog_oneline">나는 어떻게 해야만 하지?</h3>
-    </>
+    <div className="forFade_b">
+      <img className="deco" src={textdeco} alt="textdeco_bd" />
+      <p className="dialog_oneline">나는 어떻게 해야만 하지?</p>
+      <button
+        className="nextBtn0"
+        onClick={() => {
+          buttonCount();
+        }}
+      >
+        다음
+      </button>
+    </div>
   );
 };
 const Dialog12 = (props) => {
@@ -202,15 +385,17 @@ const Dialog12 = (props) => {
   };
 
   return (
-    <>
+    <div className="fadelick">
       <div className="wrap">
         <div className="card">
           <div className="card-front">
             <img className="carddeco" src={carddeco} alt="carddeco1" />
-            해야만 하는 일을 해
+            <img className="coverdeco" src={coverdeco} alt="coverdeco1" />
           </div>
           <div className="card-back">
             <img className="carddeco" src={carddecoback} alt="carddeco1" />
+            {/* <p className="chtext1">해야만 하는 일을 해</p> */}
+            <h2 className="script">해야만 하는 일을 해</h2>
             {showSound1()}
           </div>
         </div>
@@ -219,38 +404,55 @@ const Dialog12 = (props) => {
         <div className="card2">
           <div className="card-front2">
             <img className="carddeco" src={carddeco} alt="carddeco1" />
-            하고 싶은 일을 해
+            <img className="coverdeco" src={coverdeco} alt="coverdeco1" />
           </div>
           <div className="card-back2">
             <img className="carddeco" src={carddecoback} alt="carddeco1" />
+            {/* <p className="chtext1">하고 싶은 일을 해</p> */}
+            <h2 className="script">하고싶은 일을 해</h2>
             {showSound2()}
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
-const Dialog13 = () => {
+const Dialog13 = (props) => {
   const dispatch = useDispatch();
-  useEffect(() => {
-    setTimeout(() => {
-      dispatch({ type: "index/SMBOY_1004" });
-    }, 1000);
-  }, [dispatch]);
+  const buttonCount = () => {
+    if (props.nextBtn === 3) {
+      props.setNextBtn(props.nextBtn + 2);
+    } else {
+      props.setNextBtn(props.nextBtn + 1);
+    }
+  };
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     dispatch({ type: "index/SMBOY_1004" });
+  //   }, 1000);
+  // }, [dispatch]);
   return (
-    <>
-      <h3 className="dialog_oneline">새는 구슬프게 울기 시작했다.</h3>
-    </>
+    <div className="forFade_b">
+      <img className="deco" src={textdeco} alt="textdeco_bd" />
+      <p className="dialog_oneline">새는 구슬프게 울기 시작했다.</p>
+      <button
+        className="nextBtn0"
+        onClick={() => {
+          buttonCount();
+        }}
+      >
+        다음
+      </button>
+    </div>
   );
 };
 const Dialog14 = () => {
   return (
     <>
-      <Link to="/gallery">
-        <button>갤러리로</button>
+      <Link to="/ending">
+        <button>엔딩페이지로</button>
       </Link>
-      ;<h3 className="dialog_oneline">^^</h3>
     </>
   );
 };

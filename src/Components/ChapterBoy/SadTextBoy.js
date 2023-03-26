@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React, { useState } from "react";
 import Sound2in2 from "../Boymusic/Sound2in2";
 import Sound2in1 from "../Boymusic/Sound2in1";

@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
@@ -50,7 +52,6 @@ import BIRDAnimeBoy from "../ChapterBoy/BIRDAnimeBoy";
 import BirdBoy from "../ChapterBoy/BirdBoy";
 import BIRDAnimeGirl from "../ChapterGirl/BIRDAnimeGirl";
 import BirdGirl from "../ChapterGirl/BirdGirl";
-
 // import axios from "axios";
 
 const Main = () => {
@@ -445,42 +446,50 @@ const Main = () => {
 
   return (
     <div className="maincomp">
-      <Link to="/gallery">
+      {/* <Link to="/gallery">
         <button
           onClick={() => {
-            // postData();
+            postData();
           }}
         >
           server save button
         </button>
-      </Link>
-
+      </Link> */}
+      <button
+        onClick={() => {
+          dispatch({ type: "index/BIRDBOY_1006" });
+        }}
+      >
+        Manager Test
+      </button>
       <div className="Container_m">
         <table className="playlist">
-          <tr>
-            <th>{savePlaylist1()}</th>
-          </tr>
-          <tr>
-            <th>{savePlaylist2()}</th>
-          </tr>
-          <tr>
-            <th>{savePlaylist3()}</th>
-          </tr>
-          <tr>
-            <th>{savePlaylist4()}</th>
-          </tr>
-          <tr>
-            <th>{savePlaylist6()}</th>
-          </tr>
-          <tr>
-            <th>{savePlaylist5()}</th>
-          </tr>
-          <tr>
-            <th>{savePlaylist7()}</th>
-          </tr>
-          <tr>
-            <th>{savePlaylist8()}</th>
-          </tr>
+          <tbody>
+            <tr>
+              <th>{savePlaylist1()}</th>
+            </tr>
+            <tr>
+              <th>{savePlaylist2()}</th>
+            </tr>
+            <tr>
+              <th>{savePlaylist3()}</th>
+            </tr>
+            <tr>
+              <th>{savePlaylist4()}</th>
+            </tr>
+            <tr>
+              <th>{savePlaylist6()}</th>
+            </tr>
+            <tr>
+              <th>{savePlaylist5()}</th>
+            </tr>
+            <tr>
+              <th>{savePlaylist7()}</th>
+            </tr>
+            <tr>
+              <th>{savePlaylist8()}</th>
+            </tr>
+          </tbody>
         </table>
         <div className="Content_box">
           {/* <h2>Animation Area</h2> */}

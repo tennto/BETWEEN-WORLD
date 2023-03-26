@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React, { useState } from "react";
 import ReactHowler from "../../howler/ReactHowler.js";
 import { useSelector, useDispatch } from "react-redux";
@@ -30,7 +32,7 @@ const Sound6in1 = (props) => {
         mute={false}
         volume={0.3}
       />
-      <p>음악1 뒷면</p>
+      <h2 className="script">거꾸로 매단다</h2>
       <h1>빗소리 크게</h1>
       {/* <button
         onClick={() => {

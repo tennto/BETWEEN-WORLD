@@ -19,6 +19,7 @@
 }
 
 .NnextBtn0 {
+  animation-delay: 3s;
   animation: fadein 3s;
   position: absolute;
   box-shadow: 0px 2px 6px #cecece;
@@ -62,18 +63,7 @@
   left: 240px;
   font-size: 32px;
 }
-.gonguh {
-  width: 140px;
-  top: 40px;
-  left: 40px;
-  position: absolute;
-}
-.wagi {
-  width: 280px;
-  position: absolute;
-  top: -30px;
-  left: -42px;
-}
+
 .nicknameDiv {
   animation: fadein 3s;
   width: 400px;
@@ -177,16 +167,16 @@
   font-family: "ongeul";
 }
 .wata1 {
-  max-width: 360px;
+  max-width: 174px;
   position: absolute;
-  left: -12px;
-  top: 24px;
+  left: 88px;
+  top: 160px;
 }
 .wagi1 {
-  max-width: 360px;
+  max-width: 170px;
   position: absolute;
-  left: -12px;
-  top: 24px;
+  left: 88px;
+  top: 160px;
 }
 
 .forFade {
