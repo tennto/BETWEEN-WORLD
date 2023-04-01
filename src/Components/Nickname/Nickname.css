@@ -166,11 +166,10 @@
   font-size: 32px;
   font-family: "ongeul";
 }
-.wata1 {
-  max-width: 174px;
+.wata_motion {
   position: absolute;
-  left: 88px;
-  top: 160px;
+  left: -5px;
+  top: 34px;
 }
 .wagi1 {
   max-width: 170px;

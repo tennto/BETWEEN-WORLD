@@ -10,6 +10,8 @@ import deco from "../textdecoration.png";
 import carddeco from "../carddeco.png";
 import carddecoback from "../carddecoback.png";
 import coverdeco from "../backdeco.png";
+import wagichat from "./wagichat.png";
+import bnchat from "../bnchat.png";
 
 const SeaOrMountainGirl = () => {
   let [nextBtn, setNextBtn] = useState(0);
@@ -34,14 +36,14 @@ const SeaOrMountainGirl = () => {
     <div className="CP2_UPPER">
       {/* <div className={"caracterIcon" + changeBox}></div> */}
       {DialogFlow()}
-      <button
+      {/* <button
         className="nextBtn0"
         onClick={() => {
           setNextBtn(nextBtn + 1);
         }}
       >
         다음
-      </button>
+      </button> */}
     </div>
   );
 };
@@ -50,6 +52,7 @@ const Dialog0 = (props) => {
   return (
     <div className="forFade">
       <img className="deco" src={deco} alt="deco_som2" />
+      <img className="bnchat" src={bnchat} alt="bnchat" />
       <p className="dialog_oneline">
         어진 이는 산을 좋아하고, 지혜로운 자는 바다를 좋아한다고 했다.
       </p>
@@ -69,6 +72,7 @@ const Dialog1 = (props) => {
   return (
     <div className="forFade">
       <img className="deco" src={deco} alt="deco_som2" />
+      <img className="bnchat" src={bnchat} alt="bnchat" />
       <p className="dialog_oneline">너는 어느 쪽?</p>
       <button
         className="nextBtn0"
@@ -125,6 +129,7 @@ const Dialog3 = () => {
   return (
     <div className="forFade">
       <img className="deco" src={deco} alt="deco_som2" />
+      <img className="bnchat" src={bnchat} alt="bnchat" />
       <p className="dialog_oneline">좋은 선택이군...</p>
     </div>
   );

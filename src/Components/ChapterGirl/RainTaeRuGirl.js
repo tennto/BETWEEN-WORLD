@@ -11,6 +11,8 @@ import chdeco from "../ChapterBoy/chdeco.png";
 import textdeco from "../textdecoration.png";
 import carddeco from "../carddeco.png";
 import carddecoback from "../carddecoback.png";
+import wagichat from "./wagichat.png";
+import rtrchat1 from "../rtrchat1.png";
 
 const RainTaeRuGirl = () => {
   let [nextBtn, setNextBtn] = useState(0);
@@ -87,6 +89,7 @@ const Dialog0 = (props) => {
   return (
     <div className="forFade_g">
       <img className="deco" src={textdeco} alt="textdeco_rtr" />
+      <img className="rtrchat1" src={rtrchat1} alt="rtrchat" />
       <p className="dialog_oneline">저기,</p>
       <button
         className="c2girlnextBtn0"
@@ -104,6 +107,7 @@ const Dialog1 = (props) => {
   return (
     <div className="forFade_g">
       <img className="deco" src={textdeco} alt="textdeco_rtr" />
+      <img className="rtrchat1" src={rtrchat1} alt="rtrchat" />
       <p className="dialog_oneline">곤란해 보이네</p>
       <button
         className="c2girlnextBtn0"
@@ -121,6 +125,7 @@ const Dialog2 = (props) => {
   return (
     <div className="forFade_g">
       <img className="deco" src={textdeco} alt="textdeco_rtr" />
+      <img className="rtrchat1" src={rtrchat1} alt="rtrchat" />
       <p className="dialog_oneline">비 때문이라면, 역시 테루테루보즈지!</p>
       <button
         className="c2girlnextBtn0"
@@ -138,6 +143,7 @@ const Dialog3 = (props) => {
   return (
     <div className="forFade_g">
       <img className="deco" src={textdeco} alt="textdeco_rtr" />
+      <img className="rtrchat1" src={rtrchat1} alt="rtrchat" />
       <p className="dialog_oneline">혹시 테루테루보즈 이야기 들어봤어?</p>
       <button
         className="c2girlnextBtn0"
@@ -180,6 +186,7 @@ const Dialog5 = (props) => {
   return (
     <div className="forFade_g">
       <img className="deco" src={textdeco} alt="textdeco_rtr" />
+      <img className="rtrchat1" src={rtrchat1} alt="rtrchat" />
       <p className="dialog_oneline">있지, 들어봐</p>
       <button
         className="c2girlnextBtn0"
@@ -196,6 +203,7 @@ const Dialog6 = (props) => {
   return (
     <div className="forFade_g">
       <img className="deco" src={textdeco} alt="textdeco_rtr" />
+      <img className="wagichat" src={wagichat} alt="wagichat" />
       <p className="dialog_oneline">제멋대로 떠들어대기 시작했다...</p>
       <button
         className="c2girlnextBtn0"
@@ -212,6 +220,7 @@ const Dialog7 = (props) => {
   return (
     <div className="forFade_g">
       <img className="deco" src={textdeco} alt="textdeco_rtr" />
+      <img className="rtrchat1" src={rtrchat1} alt="rtrchat" />
       <p className="dialog_oneline">
         어느 마을에 비가 계속 내리는 바람에 모두가 슬픔에 잠겼어
       </p>
@@ -230,6 +239,7 @@ const Dialog8 = (props) => {
   return (
     <div className="forFade_g">
       <img className="deco" src={textdeco} alt="textdeco_rtr" />
+      <img className="rtrchat1" src={rtrchat1} alt="rtrchat" />
       <p className="dialog_oneline">
         그떄 어느 한 승려가 하늘에 공양을 하면 비가 그친다고 했어
       </p>
@@ -248,6 +258,7 @@ const Dialog9 = (props) => {
   return (
     <div className="forFade_g">
       <img className="deco" src={textdeco} alt="textdeco_rtr" />
+      <img className="rtrchat1" src={rtrchat1} alt="rtrchat" />
       <p className="dialog_long">
         허나 비는 그칠 줄 몰랐고 마을 사람들은
         <br /> 승려의 머리에 흰 천을 씌워 목을 매달았어.
@@ -267,6 +278,7 @@ const Dialog10 = (props) => {
   return (
     <div className="forFade_g">
       <img className="deco" src={textdeco} alt="textdeco_rtr" />
+      <img className="rtrchat1" src={rtrchat1} alt="rtrchat" />
       <p className="dialog_oneline">그러자 거짓말 처럼 비가 그쳤고</p>
       <button
         className="c2girlnextBtn0"
@@ -283,6 +295,7 @@ const Dialog11 = (props) => {
   return (
     <div className="forFade_g">
       <img className="deco" src={textdeco} alt="textdeco_rtr" />
+      <img className="rtrchat1" src={rtrchat1} alt="rtrchat" />
       <p className="dialog_oneline">
         사람들은 이를 함께 기뻐하며 슬픔은 점차 줄어들었어
       </p>
@@ -301,6 +314,7 @@ const Dialog12 = (props) => {
   return (
     <div className="forFade_g">
       <img className="deco" src={textdeco} alt="textdeco_rtr" />
+      <img className="rtrchat1" src={rtrchat1} alt="rtrchat" />
       <p className="dialog_long">
         그 후 사람들은 비가 올 때마다
         <br /> 하얀 천을 목매단 사람 모양으로 매달기 시작했어..
@@ -321,6 +335,7 @@ const Dialog13 = (props) => {
   return (
     <div className="forFade_g">
       <img className="deco" src={textdeco} alt="textdeco_rtr" />
+      <img className="rtrchat1" src={rtrchat1} alt="rtrchat" />
       <p className="dialog_long">
         반대로, 이를 거꾸로 매달면 슬픔이 전염되듯
         <br />
@@ -341,6 +356,7 @@ const Dialog14 = (props) => {
   return (
     <div className="forFade_g">
       <img className="deco" src={textdeco} alt="textdeco_rtr" />
+      <img className="rtrchat1" src={rtrchat1} alt="rtrchat" />
       <p className="dialog_long">
         슬픔을 함께 할수록 줄어드는 것 아니면
         <br />
@@ -361,6 +377,7 @@ const Dialog15 = (props) => {
   return (
     <div className="forFade_g">
       <img className="deco" src={textdeco} alt="textdeco_rtr" />
+      <img className="rtrchat1" src={rtrchat1} alt="rtrchat" />
       <p className="dialog_oneline">너는 어느쪽?</p>
       <button
         className="c2girlnextBtn0"

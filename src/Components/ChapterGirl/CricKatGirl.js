@@ -283,7 +283,7 @@ const Dialog12 = () => {
   return (
     <div className="forFade_g">
       <img className="deco" src={textdeco} alt="textdeco_ck" />
-      <p className="dialog_oneline">구슬픈 풀벌레의 울음소리가 들려온다..</p>
+      <p className="dialog_oneline">귀뚜라미는 서글프게 울기 시작했다..</p>
     </div>
   );
 };

@@ -10,6 +10,8 @@ import decoinput from "./inputdeco.png";
 import sexdeco from "./sexdeco.png";
 import wata1 from "./wata1.png";
 import wagi1 from "./wagi1.png";
+import watamotion from "./watamotion.json";
+import { Player } from "@lottiefiles/react-lottie-player";
 
 const Nickname = () => {
   const status = useSelector((state) => state);
@@ -185,9 +187,17 @@ const Dialog5 = () => {
           dispatch({ type: "index/STORY_NO2" });
         }}
       >
-        <img className="wata1" src={wata1} alt="wata1" />
+        {/* <img className="wata1" src={wata1} alt="wata1" /> */}
         <p className="sexText">남자</p>
         <img className="sexdeco" src={sexdeco} alt="sexdeco" />
+        <Player
+          className="wata_motion"
+          src={watamotion}
+          style={{ width: "360px" }}
+          autoplay={true}
+          loop={false}
+          speed={1}
+        />
       </button>
       <button
         className="choiceSex"

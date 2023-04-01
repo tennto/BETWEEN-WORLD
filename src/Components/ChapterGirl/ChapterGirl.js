@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import "../../css/ChapterGirl.css";
 import deco from "../textdecoration.png";
 import chdeco from "../ChapterBoy/chdeco.png";
+import wagichat from "./wagichat.png";
 
 const ChapterGirl = () => {
   const dispatch = useDispatch();
@@ -61,6 +62,7 @@ const Dialog1 = (props) => {
   return (
     <div className="forFade">
       <img className="deco" src={deco} alt="deco2" />
+      <img className="wagichat" src={wagichat} alt="wagichat" />
       <p className="dialog_oneline">여긴.. 어디지..?</p>
       <button
         className="nextBtn0"

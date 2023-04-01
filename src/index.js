@@ -96,7 +96,10 @@ const SET_SOUND8 = "index/SET_SOUND8";
 // #2 애니메이션 / 텍스트 동기화 용 남자버전
 //>>>>>>> Stashed changes
 const CSBOY_1001 = "index/CSBOY_1001";
+const CSBOY_2001 = "index/CSBOY_2001";
+const CSBOY_3001 = "index/CSBOY_3001";
 const SOMBOY_1002 = "index/SOMBOY_1002";
+const SOMBOY_3002 = "index/SOMBOY_3002";
 const RTRBOY_1003 = "index/RTRBOY_1003";
 const SMBOY_1004 = "index/SMBOY_1004";
 const CKBOY_1005 = "index/CKBOY_1005";
@@ -104,6 +107,7 @@ const BIRDBOY_1006 = "index/BIRDBOY_1006";
 
 // #2 애니메이션 / 텍스트 동기화 용 여자버전
 const CSGIRL_1401 = "index/CSGIRL_1401";
+const CSGIRL_3401 = "index/CSGIRL_3401";
 const SOMGIRL_1402 = "index/SOMGIRL_1402";
 const RTRGIRL_1403 = "index/RTRGIRL_1403";
 const SMGIRL_1404 = "index/SMGIRL_1404";
@@ -214,16 +218,38 @@ function reducer(state = initialState, action) {
     case SET_SOUND8: {
       return { ...state, sound8: action.sound8 };
     }
+    // 남자 행복 분기 시작
     case CSBOY_1001: {
       return {
         ...state,
         moodSelect: 1001,
       };
     }
+    // 남자 우울 분기 시작
+    case CSBOY_2001: {
+      return {
+        ...state,
+        moodSelect: 2001,
+      };
+    }
+    // 남자 긴장 분기 시작
+    case CSBOY_3001: {
+      return {
+        ...state,
+        moodSelect: 3001,
+      };
+    }
+
     case SOMBOY_1002: {
       return {
         ...state,
         moodSelect: 1002,
+      };
+    }
+    case SOMBOY_3002: {
+      return {
+        ...state,
+        moodSelect: 3002,
       };
     }
     case RTRBOY_1003: {
@@ -254,6 +280,12 @@ function reducer(state = initialState, action) {
       return {
         ...state,
         moodSelect: 1401,
+      };
+    }
+    case CSGIRL_3401: {
+      return {
+        ...state,
+        moodSelect: 3401,
       };
     }
     case SOMGIRL_1402: {

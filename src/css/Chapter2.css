@@ -219,3 +219,34 @@
   top: 50px;
   left: 67px;
 }
+
+.watachat {
+  max-width: 200px;
+  position: absolute;
+  top: 0;
+  left: 10px;
+}
+.wagichat {
+  max-width: 200px;
+  position: absolute;
+  top: 0;
+  left: 10px;
+}
+.rtrchat1 {
+  max-width: 200px;
+  position: absolute;
+  top: 0;
+  left: 10px;
+}
+.ckchat1 {
+  max-width: 200px;
+  position: absolute;
+  top: 0;
+  left: 10px;
+}
+.bdchat {
+  max-width: 200px;
+  position: absolute;
+  top: 0;
+  left: 10px;
+}
