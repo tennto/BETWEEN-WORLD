@@ -95,3 +95,24 @@
 .fadelick {
   animation: fadein 3s;
 }
+
+.watachat {
+  max-width: 200px;
+  position: absolute;
+  top: 0;
+  left: 10px;
+}
+
+.wagichat {
+  max-width: 200px;
+  position: absolute;
+  top: 0;
+  left: 10px;
+}
+
+.bnchat {
+  max-width: 200px;
+  position: absolute;
+  top: 0;
+  left: 10px;
+}

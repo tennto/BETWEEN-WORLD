@@ -11,6 +11,8 @@ import carddecoback from "../carddecoback.png";
 import chdeco from "../ChapterBoy/chdeco.png";
 import textdeco from "../textdecoration.png";
 import coverdeco from "../backdeco.png";
+import ckchat1 from "../ckchat.png";
+import watachat from "./watachat.png";
 
 const CricKatBoy = () => {
   let [nextBtn, setNextBtn] = useState(0);
@@ -54,12 +56,19 @@ const CricKatBoy = () => {
 };
 
 const Dialog0 = (props) => {
+  let [btnState, setBtnState] = useState(1);
+
+  setTimeout(() => {
+    setBtnState(0);
+  }, 7000);
+
   return (
     <div className="forFade_b">
       <img className="deco" src={textdeco} alt="textdeco_ck" />
+      <img className="ckchat1" src={ckchat1} alt="ckchat" />
       <p className="dialog_oneline">저기,</p>
       <button
-        className="nextBtn0"
+        className={"nextBtn" + btnState}
         onClick={() => {
           props.setNextBtn(props.nextBtn + 1);
         }}
@@ -74,6 +83,7 @@ const Dialog1 = (props) => {
   return (
     <div className="forFade_b">
       <img className="deco" src={textdeco} alt="textdeco_ck" />
+      <img className="ckchat1" src={ckchat1} alt="ckchat" />
       <p className="dialog_oneline">사랑이 뭐라고 생각해?</p>
       <button
         className="nextBtn0"
@@ -91,6 +101,7 @@ const Dialog2 = (props) => {
   return (
     <div className="forFade_b">
       <img className="deco" src={textdeco} alt="textdeco_ck" />
+      <img className="ckchat1" src={ckchat1} alt="ckchat" />
       <p className="dialog_oneline">사랑한다면, 함께 하고 싶은게 당연하잖아?</p>
       <button
         className="nextBtn0"
@@ -108,6 +119,7 @@ const Dialog3 = (props) => {
   return (
     <div className="forFade_b">
       <img className="deco" src={textdeco} alt="textdeco_ck" />
+      <img className="watachat" src={watachat} alt="watachat" />
       <p className="dialog_oneline">. . .</p>
       <button
         className="nextBtn0"
@@ -124,6 +136,7 @@ const Dialog4 = (props) => {
   return (
     <div className="forFade_b">
       <img className="deco" src={textdeco} alt="textdeco_ck" />
+      <img className="ckchat1" src={ckchat1} alt="ckchat" />
       <p className="dialog_oneline">
         사랑한다면, 가장 좋은걸 주고 싶은게 당연하잖아?
       </p>
@@ -142,6 +155,7 @@ const Dialog5 = (props) => {
   return (
     <div className="forFade_b">
       <img className="deco" src={textdeco} alt="textdeco_ck" />
+      <img className="watachat" src={watachat} alt="watachat" />
       <p className="dialog_oneline">. . .</p>
       <button
         className="nextBtn0"
@@ -158,6 +172,7 @@ const Dialog6 = (props) => {
   return (
     <div className="forFade_b">
       <img className="deco" src={textdeco} alt="textdeco_ck" />
+      <img className="ckchat1" src={ckchat1} alt="ckchat" />
       <p className="dialog_oneline">
         사랑한다면, 목숨도 아깝지 않은게 당연하잖아?
       </p>
@@ -176,6 +191,7 @@ const Dialog7 = (props) => {
   return (
     <div className="forFade_b">
       <img className="deco" src={textdeco} alt="textdeco_ck" />
+      <img className="watachat" src={watachat} alt="watachat" />
       <p className="dialog_oneline">. . . . . .</p>
       <button
         className="nextBtn0"
@@ -192,6 +208,7 @@ const Dialog8 = (props) => {
   return (
     <div className="forFade_b">
       <img className="deco" src={textdeco} alt="textdeco_ck" />
+      <img className="ckchat1" src={ckchat1} alt="ckchat" />
       <p className="dialog_oneline">
         사랑한다면, 나는 어찌 되든 좋은게 당연하잖아..
       </p>
@@ -248,6 +265,7 @@ const Dialog10 = () => {
   return (
     <div className="forFade_b">
       <img className="deco" src={textdeco} alt="textdeco_ck" />
+      <img className="ckchat1" src={ckchat1} alt="ckchat" />
       <p className="dialog_oneline">있지... 내가 죽으면 울어 줄거지?</p>
     </div>
   );
@@ -258,6 +276,7 @@ const Dialog11 = (props) => {
   return (
     <div className="forFade_b">
       <img className="deco" src={textdeco} alt="textdeco_ck" />
+      <img className="ckchat1" src={ckchat1} alt="ckchat" />
       <p className="dialog_oneline">네가 살아야, 나도 살아</p>
       <button
         className="nextBtn0"
@@ -280,6 +299,7 @@ const Dialog12 = () => {
   return (
     <div className="forFade_b">
       <img className="deco" src={textdeco} alt="textdeco_ck" />
+      <img className="watachat" src={watachat} alt="watachat" />
       <p className="dialog_oneline">구슬픈 풀벌레의 울음소리가 들려온다..</p>
     </div>
   );

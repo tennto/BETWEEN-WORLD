@@ -17,6 +17,8 @@ import { Link } from "react-router-dom";
 import chdeco from "../ChapterBoy/chdeco.png";
 import textdeco from "../textdecoration.png";
 import coverdeco from "../backdeco.png";
+import bdchat from "../bdchat.png";
+import watachat from "./watachat.png";
 
 const BirdBoy = () => {
   let [nextBtn, setNextBtn] = useState(0);
@@ -82,6 +84,7 @@ const Dialog0 = (props) => {
   return (
     <div className="forFade_b">
       <img className="deco" src={textdeco} alt="textdeco_bd" />
+      <img className="bdchat" src={bdchat} alt="bdchat" />
       <p className="dialog_oneline">안녕. 인간</p>
       <button
         className="nextBtn0"
@@ -106,6 +109,7 @@ const Dialog1 = (props) => {
   return (
     <div className="forFade_b">
       <img className="deco" src={textdeco} alt="textdeco_bd" />
+      <img className="bdchat" src={bdchat} alt="bdchat" />
       <p className="dialog_oneline">또 만났네.</p>
       <button
         className="nextBtn0"
@@ -158,6 +162,7 @@ const Dialog3 = (props) => {
   return (
     <div className="forFade_b">
       <img className="deco" src={textdeco} alt="textdeco_bd" />
+      <img className="bdchat" src={bdchat} alt="bdchat" />
       <p className="dialog_oneline">지금은 이런 모습이야</p>
       <button
         className="nextBtn0"
@@ -182,6 +187,7 @@ const Dialog4 = (props) => {
   return (
     <div className="forFade_b">
       <img className="deco" src={textdeco} alt="textdeco_bd" />
+      <img className="bdchat" src={bdchat} alt="bdchat" />
       <p className="dialog_oneline">이미 여러번. 이 모습으론 처음이야</p>
       <button
         className="nextBtn0"
@@ -206,6 +212,7 @@ const Dialog5 = (props) => {
   return (
     <div className="forFade_b">
       <img className="deco" src={textdeco} alt="textdeco_bd" />
+      <img className="bdchat" src={bdchat} alt="bdchat" />
       <p className="dialog_oneline">사람들은 말하지</p>
       <button
         className="nextBtn0"
@@ -230,6 +237,7 @@ const Dialog6 = (props) => {
   return (
     <div className="forFade_b">
       <img className="deco" src={textdeco} alt="textdeco_bd" />
+      <img className="bdchat" src={bdchat} alt="bdchat" />
       <p className="dialog_oneline">"나 답게 있고 싶다"</p>
       <button
         className="nextBtn0"
@@ -254,6 +262,7 @@ const Dialog7 = (props) => {
   return (
     <div className="forFade_b">
       <img className="deco" src={textdeco} alt="textdeco_bd" />
+      <img className="bdchat" src={bdchat} alt="bdchat" />
       <p className="dialog_oneline">그렇다면 나 다움이란 건 뭐지?</p>
       <button
         className="nextBtn0"
@@ -278,6 +287,7 @@ const Dialog8 = (props) => {
   return (
     <div className="forFade_b">
       <img className="deco" src={textdeco} alt="textdeco_bd" />
+      <img className="bdchat" src={bdchat} alt="bdchat" />
       <p className="dialog_oneline">계속 이야기에 맞춰 내 모습을 바꿔왔어.</p>
       <button
         className="nextBtn0"
@@ -302,6 +312,7 @@ const Dialog9 = (props) => {
   return (
     <div className="forFade_b">
       <img className="deco" src={textdeco} alt="textdeco_bd" />
+      <img className="bdchat" src={bdchat} alt="bdchat" />
       <p className="dialog_oneline">이건 나에게 주어진 일</p>
       <button
         className="nextBtn0"
@@ -326,6 +337,7 @@ const Dialog10 = (props) => {
   return (
     <div className="forFade_b">
       <img className="deco" src={textdeco} alt="textdeco_bd" />
+      <img className="bdchat" src={bdchat} alt="bdchat" />
       <p className="dialog_oneline">나는 항상 나 답게 있고 싶었어.</p>
       <button
         className="nextBtn0"
@@ -350,6 +362,7 @@ const Dialog11 = (props) => {
   return (
     <div className="forFade_b">
       <img className="deco" src={textdeco} alt="textdeco_bd" />
+      <img className="bdchat" src={bdchat} alt="bdchat" />
       <p className="dialog_oneline">나는 어떻게 해야만 하지?</p>
       <button
         className="nextBtn0"
@@ -435,22 +448,25 @@ const Dialog13 = (props) => {
   return (
     <div className="forFade_b">
       <img className="deco" src={textdeco} alt="textdeco_bd" />
-      <p className="dialog_oneline">새는 구슬프게 울기 시작했다.</p>
-      <button
-        className="nextBtn0"
-        onClick={() => {
-          buttonCount();
-        }}
-      >
-        다음
-      </button>
+      <img className="watachat" src={watachat} alt="watachat" />
+      <p className="dialog_oneline">새는 노래하기 시작했다.</p>
+      <Link to="/ending1">
+        <button
+          className="nextBtn0"
+          onClick={() => {
+            buttonCount();
+          }}
+        >
+          다음
+        </button>
+      </Link>
     </div>
   );
 };
 const Dialog14 = () => {
   return (
     <>
-      <Link to="/ending">
+      <Link to="/ending1">
         <button>엔딩페이지로</button>
       </Link>
     </>

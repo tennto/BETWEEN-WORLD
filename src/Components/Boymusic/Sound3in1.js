@@ -22,7 +22,7 @@ const Sound3in1 = () => {
       }}
       onClick={() => {
         dispatch(setSound1("긴장노래3.mp3"));
-        dispatch({ type: "index/CSBOY_1001" });
+        dispatch({ type: "index/CSBOY_3001" });
       }}
     >
       <ReactHowler

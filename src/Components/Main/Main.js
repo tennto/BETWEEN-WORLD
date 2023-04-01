@@ -52,6 +52,9 @@ import BIRDAnimeBoy from "../ChapterBoy/BIRDAnimeBoy";
 import BirdBoy from "../ChapterBoy/BirdBoy";
 import BIRDAnimeGirl from "../ChapterGirl/BIRDAnimeGirl";
 import BirdGirl from "../ChapterGirl/BirdGirl";
+import ChapterThrillStart from "../ChapterBoy/ChapterThrillStart";
+import ChapterThrillStartG from "../ChapterGirl/ChapterThrillStartG";
+
 // import axios from "axios";
 
 const Main = () => {
@@ -65,7 +68,7 @@ const Main = () => {
     } else {
       return (
         <>
-          <p>사운드 1</p>
+          <div className="playlistBox">사운드 1</div>
           <ReactHowler
             src={status.sound1}
             playing={play}
@@ -346,8 +349,14 @@ const Main = () => {
       return <ThrillTextGirl />;
     } else if (status.moodSelect === 1001) {
       return <ChapterBoyStart />;
+    } else if (status.moodSelect === 2001) {
+      return <ChapterBoyStart />;
+    } else if (status.moodSelect === 3001) {
+      return <ChapterThrillStart />;
     } else if (status.moodSelect === 1401) {
       return <ChapterGirlStart />;
+    } else if (status.moodSelect === 3401) {
+      return <ChapterThrillStartG />;
     } else if (status.moodSelect === 1002) {
       return <SeaOrMountainBoy />;
     } else if (status.moodSelect === 1402) {
@@ -357,16 +366,12 @@ const Main = () => {
     } else if (status.moodSelect === 1403) {
       return <RainTaeRuGirl />;
     } else if (status.moodSelect === 1004) {
-      return <SnowManBoy />;
-    } else if (status.moodSelect === 1404) {
-      return <SnowManGirl />;
-    } else if (status.moodSelect === 1005) {
       return <CricKatBoy />;
-    } else if (status.moodSelect === 1405) {
+    } else if (status.moodSelect === 1404) {
       return <CricKatGirl />;
-    } else if (status.moodSelect === 1006) {
+    } else if (status.moodSelect === 1005) {
       return <BirdBoy />;
-    } else if (status.moodSelect === 1406) {
+    } else if (status.moodSelect === 1405) {
       return <BirdGirl />;
     }
   };
@@ -392,20 +397,35 @@ const Main = () => {
     } else if (status.moodSelect === 1001) {
       return <C3AnimeBoy />;
     } else if (status.moodSelect === 1002) {
-      return <SOMAnimeBoy />;
+      return <C3AnimeBoy />;
     } else if (status.moodSelect === 1003) {
       return <RTRAnimeBoy />;
     } else if (status.moodSelect === 1004) {
-      return <SMAnimeBoy />;
-    } else if (status.moodSelect === 1005) {
       return <CKAnimeBoy />;
-    } else if (status.moodSelect === 1006) {
+    } else if (status.moodSelect === 1005) {
       return <BIRDAnimeBoy />;
-    } else if (status.moodSelect === 2000) {
-      return <C2AnimeBoy />;
-    } else if (status.moodSelect === 3000) {
-      return <C2AnimeBoy />;
     }
+
+    ////////////////////////남자 우울 애니메이션 /////////////////////////////
+    else if (status.moodSelect === 2000) {
+      return <C2AnimeBoy />;
+    } else if (status.moodSelect === 2001) {
+      return <C3AnimeBoy />;
+    } else if (status.moodSelect === 2002) {
+      return <C3AnimeBoy />; // som 우울 그대로
+    }
+
+    ////////////////////////남자 긴장 애니메이션 /////////////////////////////
+    else if (status.moodSelect === 3000) {
+      return <C2AnimeBoy />;
+    } else if (status.moodSelect === 3001) {
+      return <C3AnimeBoy />; // 긴장테마용 두둥실
+    } else if (status.moodSelect === 3002) {
+      return <C3AnimeBoy />; // 긴장테마용 두둥실 깜놀!!
+    }
+
+    /////////////////////////////////////////////////
+
     // 여자 애니메이션 분기점
     else if (status.moodSelect === 7) {
       return <CGAnimeGirl />;
@@ -430,20 +450,6 @@ const Main = () => {
     }
   };
 
-  // async function postData() {
-  //   const str = JSON.stringify(status);
-  //   console.log(str);
-  //   try {
-  //     //응답 성공
-  //     const response = await axios.post("http://localhost:3000/gallery", {
-  //       str,
-  //     });
-  //     console.log(response);
-  //   } catch (error) {
-  //     console.error(error);
-  //   }
-  // }
-
   return (
     <div className="maincomp">
       {/* <Link to="/gallery">
@@ -457,7 +463,7 @@ const Main = () => {
       </Link> */}
       <button
         onClick={() => {
-          dispatch({ type: "index/BIRDBOY_1006" });
+          dispatch({ type: "index/CKBOY_1005" });
         }}
       >
         Manager Test
