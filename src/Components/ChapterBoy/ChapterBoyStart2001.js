@@ -8,7 +8,7 @@ import chdeco from "./chdeco.png";
 import watachat from "./watachat.png";
 import bnchat from "../bnchat.png";
 
-const ChapterBoyStart = () => {
+const ChapterBoyStart2001 = () => {
   let [nextBtn, setNextBtn] = useState(1);
   let [changeBox, setChangeBox] = useState(0);
 
@@ -302,7 +302,7 @@ const Dialog8 = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     setTimeout(() => {
-      dispatch({ type: "index/SOMBOY_3002" });
+      dispatch({ type: "index/SOMBOY_2002" });
     }, 1000);
   }, [dispatch]);
 
@@ -315,4 +315,4 @@ const Dialog8 = () => {
   );
 };
 
-export default ChapterBoyStart;
+export default ChapterBoyStart2001;

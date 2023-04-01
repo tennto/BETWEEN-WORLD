@@ -4,11 +4,11 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import "../../css/ChapterNo3.css";
 import deco from "../textdecoration.png";
-import chdeco from "./chdeco.png";
-import watachat from "./watachat.png";
+import chdeco from "../ChapterBoy/chdeco.png";
+import wagichat from "./wagichat.png";
 import bnchat from "../bnchat.png";
 
-const ChapterBoyStart = () => {
+const ChapterGirlStart2401 = () => {
   let [nextBtn, setNextBtn] = useState(1);
   let [changeBox, setChangeBox] = useState(0);
 
@@ -48,19 +48,19 @@ const ChapterBoyStart = () => {
     }
   };
 
-  // const buttonCount = () => {
-  //   if (nextBtn === 4) {
-  //     setNextBtn(nextBtn + 2);
-  //   } else {
-  //     setNextBtn(nextBtn + 1);
-  //   }
-  // };
+  const buttonCount = () => {
+    if (nextBtn === 4) {
+      setNextBtn(nextBtn + 2);
+    } else {
+      setNextBtn(nextBtn + 1);
+    }
+  };
 
   return (
     <div className="CP3_UPPER">
       {textFlow()}
       {/* <button
-        className={"nextBtn" + changeBox}
+        className="nextBtn0"
         onClick={() => {
           buttonCount();
         }}
@@ -81,8 +81,8 @@ const Dialog1 = (props) => {
   };
   return (
     <div className="forFade">
-      <img className="deco" src={deco} alt="deco1" />
-      <img className="watachat" src={watachat} alt="watachat" />
+      <img className="deco" src={deco} alt="deco_g" />
+      <img className="wagichat" src={wagichat} alt="wagichat" />
       <p className="dialog_oneline">(어디선가 낯선 목소리가 들려온다..)</p>
       <button
         className="nextBtn0"
@@ -106,7 +106,7 @@ const Dialog2 = (props) => {
   const status = useSelector((state) => state);
   return (
     <div className="forFade">
-      <img className="deco" src={deco} alt="deco1" />
+      <img className="deco" src={deco} alt="deco_g" />
       <img className="bnchat" src={bnchat} alt="bnchat" />
       <p className="dialog_oneline">{status.userName}(이)라고 하는구나..</p>
       <button
@@ -132,7 +132,7 @@ const Dialog3 = (props) => {
           setNextBtn(4);
         }}
       >
-        <img className="chdeco_b1" src={chdeco} alt="chdeco2" />
+        <img className="chdeco_g1" src={chdeco} alt="chdeco3" />
         <p>여기는 어디야..?</p>
       </button>
       <button
@@ -141,8 +141,8 @@ const Dialog3 = (props) => {
           setNextBtn(5);
         }}
       >
-        <img className="chdeco_b1" src={chdeco} alt="chdeco2" />
-        <p> 당신은 누구야..?</p>
+        <img className="chdeco_g1" src={chdeco} alt="chdeco3" />
+        <p>당신은 누구야..?</p>
       </button>
     </div>
   );
@@ -158,7 +158,7 @@ const DialogA = (props) => {
   };
   return (
     <div className="forFade">
-      <img className="deco" src={deco} alt="deco1" />
+      <img className="deco" src={deco} alt="deco_g" />
       <img className="bnchat" src={bnchat} alt="bnchat" />
       <p className="dialog_oneline">여기가 어딘지는 중요하지 않아</p>
       <button
@@ -183,7 +183,7 @@ const DialogB = (props) => {
   };
   return (
     <div className="forFade">
-      <img className="deco" src={deco} alt="deco1" />
+      <img className="deco" src={deco} alt="deco_g" />
       <img className="bnchat" src={bnchat} alt="bnchat" />
       <p className="dialog_oneline">내가 누군지는 중요하지 않아</p>
       <button
@@ -208,7 +208,7 @@ const Dialog4 = (props) => {
   };
   return (
     <div className="forFade">
-      <img className="deco" src={deco} alt="deco1" />
+      <img className="deco" src={deco} alt="deco_g" />
       <img className="bnchat" src={bnchat} alt="bnchat" />
       <p className="dialog_oneline">네가 어떤 사람인지,</p>
       <button
@@ -233,7 +233,7 @@ const Dialog5 = (props) => {
   };
   return (
     <div className="forFade">
-      <img className="deco" src={deco} alt="deco1" />
+      <img className="deco" src={deco} alt="deco_g" />
       <img className="bnchat" src={bnchat} alt="bnchat" />
       <p className="dialog_oneline">네가 어떤 선택을 할지 정말 궁금한걸</p>
       <button
@@ -258,9 +258,9 @@ const Dialog6 = (props) => {
   };
   return (
     <div className="forFade">
-      <img className="deco" src={deco} alt="deco1" />
+      <img className="deco" src={deco} alt="deco_g" />
       <img className="bnchat" src={bnchat} alt="bnchat" />
-      <p className="dialog_oneline">선택은 한 번뿐 .</p>
+      <p className="dialog_oneline">선택은 한 번뿐.</p>
       <button
         className="nextBtn0"
         onClick={() => {
@@ -283,7 +283,7 @@ const Dialog7 = (props) => {
   };
   return (
     <div className="forFade">
-      <img className="deco" src={deco} alt="deco1" />
+      <img className="deco" src={deco} alt="deco_g" />
       <img className="bnchat" src={bnchat} alt="bnchat" />
       <p className="dialog_oneline">신중하게 선택해</p>
       <button
@@ -302,17 +302,17 @@ const Dialog8 = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     setTimeout(() => {
-      dispatch({ type: "index/SOMBOY_3002" });
+      dispatch({ type: "index/SOMGIRL_2402" });
     }, 1000);
   }, [dispatch]);
 
   return (
     <div className="forFade">
-      <img className="deco" src={deco} alt="deco1" />
+      <img className="deco" src={deco} alt="deco_g" />
       <img className="bnchat" src={bnchat} alt="bnchat" />
       <p className="dialog_oneline">시작한다...</p>
     </div>
   );
 };
 
-export default ChapterBoyStart;
+export default ChapterGirlStart2401;

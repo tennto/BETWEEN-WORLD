@@ -14,7 +14,7 @@ import carddecoback from "../carddecoback.png";
 import wagichat from "./wagichat.png";
 import rtrchat1 from "../rtrchat1.png";
 
-const RainTaeRuGirl = () => {
+const RainTaeRuGirl2403 = () => {
   let [nextBtn, setNextBtn] = useState(0);
   let [changeBox, setChangeBox] = useState(0);
 
@@ -428,8 +428,8 @@ const Dialog17 = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     setTimeout(() => {
-      dispatch({ type: "index/RTRGIRL_1413" });
-    });
+      dispatch({ type: "index/RTRGIRL_2413" });
+    }, 1000);
   }, [dispatch]);
   return (
     <div className="forFade_g">
@@ -438,7 +438,7 @@ const Dialog17 = () => {
       <button
         className="c2girlnextBtn0"
         onClick={() => {
-          dispatch({ type: "index/CKGIRL_1404" });
+          dispatch({ type: "index/CKGIRL_2404" });
         }}
       >
         다음
@@ -451,8 +451,8 @@ const Dialog18 = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     setTimeout(() => {
-      dispatch({ type: "index/RTRGIRL_1423" });
-    });
+      dispatch({ type: "index/RTRGIRL_2423" });
+    }, 1000);
   }, [dispatch]);
   return (
     <div className="forFade_g">
@@ -461,7 +461,7 @@ const Dialog18 = () => {
       <button
         className="c2girlnextBtn0"
         onClick={() => {
-          dispatch({ type: "index/CKGIRL_1404" });
+          dispatch({ type: "index/CKGIRL_2404" });
         }}
       >
         다음
@@ -470,4 +470,4 @@ const Dialog18 = () => {
   );
 };
 
-export default RainTaeRuGirl;
+export default RainTaeRuGirl2403;

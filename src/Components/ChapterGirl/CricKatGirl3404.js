@@ -12,7 +12,7 @@ import chdeco from "../ChapterBoy/chdeco.png";
 import textdeco from "../textdecoration.png";
 import coverdeco from "../backdeco.png";
 
-const CricKatGirl = () => {
+const CricKatGirl3404 = () => {
   let [nextBtn, setNextBtn] = useState(0);
 
   const DialogFlow = () => {
@@ -247,7 +247,7 @@ const Dialog10 = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     setTimeout(() => {
-      dispatch({ type: "index/CKGIRL_1414" });
+      dispatch({ type: "index/CKGIRL_3414" });
     });
   }, [dispatch]);
   return (
@@ -269,7 +269,7 @@ const Dialog11 = (props) => {
   const dispatch = useDispatch();
   useEffect(() => {
     setTimeout(() => {
-      dispatch({ type: "index/CKGIRL_1424" });
+      dispatch({ type: "index/CKGIRL_3424" });
     });
   }, [dispatch]);
   return (
@@ -291,7 +291,7 @@ const Dialog12 = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     setTimeout(() => {
-      dispatch({ type: "index/BIRDGIRL_1405" });
+      dispatch({ type: "index/BIRDGIRL_3405" });
     }, 5000);
   }, [dispatch]);
   return (
@@ -302,4 +302,4 @@ const Dialog12 = () => {
   );
 };
 
-export default CricKatGirl;
+export default CricKatGirl3404;

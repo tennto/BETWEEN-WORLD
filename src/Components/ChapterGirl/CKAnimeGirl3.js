@@ -3,12 +3,12 @@
 import React from "react";
 import { useState } from "react";
 
-const SMAnimeGirl = () => {
+const CKAnimeGirl = () => {
   return (
     <div>
-      <h1> 여자 눈사람 애니메이션</h1>
+      <h1> 귀뚜라미 애니메이션</h1>
     </div>
   );
 };
 
-export default SMAnimeGirl;
+export default CKAnimeGirl;

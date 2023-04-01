@@ -22,10 +22,6 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/main" element={<Main />} />
-          <Route path="/ending1" element={<Ending1 />} />
-          <Route path="/ending2" element={<Ending2 />} />
-          <Route path="/ending3" element={<Ending3 />} />
-          <Route path="/ending4" element={<Ending4 />} />
           <Route path="/gallery" element={<Gallery />} />
         </Routes>
       </Router>

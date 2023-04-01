@@ -2,14 +2,14 @@
 
 import React from "react";
 import { Player } from "@lottiefiles/react-lottie-player";
-import data4 from "./data4.json";
+import data5 from "./data5.json";
 import "../Nickname/Anime1.css";
 
-const CKAnimeBoy = () => {
+const BIRDAnimeBoy1 = () => {
   return (
     <div className="fadelick1">
       <Player
-        src={data4}
+        src={data5}
         style={{ width: "1920px" }}
         autoplay={true}
         loop={false}
@@ -19,4 +19,4 @@ const CKAnimeBoy = () => {
   );
 };
 
-export default CKAnimeBoy;
+export default BIRDAnimeBoy1;
