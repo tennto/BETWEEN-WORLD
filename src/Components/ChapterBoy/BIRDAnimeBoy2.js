@@ -5,7 +5,7 @@ import { Player } from "@lottiefiles/react-lottie-player";
 import data5 from "./data5.json";
 import "../Nickname/Anime1.css";
 
-const BIRDAnimeBoy = () => {
+const BIRDAnimeBoy1 = () => {
   return (
     <div className="fadelick1">
       <Player
@@ -19,4 +19,4 @@ const BIRDAnimeBoy = () => {
   );
 };
 
-export default BIRDAnimeBoy;
+export default BIRDAnimeBoy1;

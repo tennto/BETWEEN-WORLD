@@ -2,19 +2,19 @@
 
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import GSound6in2 from "../Girlmusic/GSound6in2";
-import GSound6in1 from "../Girlmusic/GSound6in1";
+import Sound6in2 from "../Boymusic/Sound6in2";
+import Sound6in1 from "../Boymusic/Sound6in1";
 import "../../css/Chapter2.css";
 import "../../css/Card.css";
-import coverdeco from "../backdeco.png";
 import chdeco from "../ChapterBoy/chdeco.png";
 import textdeco from "../textdecoration.png";
 import carddeco from "../carddeco.png";
 import carddecoback from "../carddecoback.png";
-import wagichat from "./wagichat.png";
+import coverdeco from "../backdeco.png";
 import rtrchat1 from "../rtrchat1.png";
+import watachat from "./watachat.png";
 
-const RainTaeRuGirl = () => {
+const RainTaeRuBoy3003 = () => {
   let [nextBtn, setNextBtn] = useState(0);
   let [changeBox, setChangeBox] = useState(0);
 
@@ -74,7 +74,7 @@ const RainTaeRuGirl = () => {
       {/* <div className={"caracterIcon" + changeBox}></div> */}
       {DialogFlow()}
       {/* <button
-        className="c2girlnextBtn0"
+        className="c2boynextBtn0"
         onClick={() => {
           setNextBtn(nextBtn + 1);
         }}
@@ -87,12 +87,12 @@ const RainTaeRuGirl = () => {
 
 const Dialog0 = (props) => {
   return (
-    <div className="forFade_g">
+    <div className="forFade_b">
       <img className="deco" src={textdeco} alt="textdeco_rtr" />
       <img className="rtrchat1" src={rtrchat1} alt="rtrchat" />
       <p className="dialog_oneline">저기,</p>
       <button
-        className="c2girlnextBtn0"
+        className="c2boynextBtn0"
         onClick={() => {
           props.setNextBtn(props.nextBtn + 1);
         }}
@@ -105,12 +105,12 @@ const Dialog0 = (props) => {
 
 const Dialog1 = (props) => {
   return (
-    <div className="forFade_g">
-      <img className="deco" src={textdeco} alt="textdeco_rtr" />
+    <div className="forFade_b">
+      <img className="deco" src={textdeco} alt="textdeco_rtr2" />
       <img className="rtrchat1" src={rtrchat1} alt="rtrchat" />
       <p className="dialog_oneline">곤란해 보이네</p>
       <button
-        className="c2girlnextBtn0"
+        className="c2boynextBtn0"
         onClick={() => {
           props.setNextBtn(props.nextBtn + 1);
         }}
@@ -123,12 +123,12 @@ const Dialog1 = (props) => {
 
 const Dialog2 = (props) => {
   return (
-    <div className="forFade_g">
-      <img className="deco" src={textdeco} alt="textdeco_rtr" />
+    <div className="forFade_b">
+      <img className="deco" src={textdeco} alt="textdeco_rtr3" />
       <img className="rtrchat1" src={rtrchat1} alt="rtrchat" />
       <p className="dialog_oneline">비 때문이라면, 역시 테루테루보즈지!</p>
       <button
-        className="c2girlnextBtn0"
+        className="c2boynextBtn0"
         onClick={() => {
           props.setNextBtn(props.nextBtn + 1);
         }}
@@ -141,12 +141,12 @@ const Dialog2 = (props) => {
 
 const Dialog3 = (props) => {
   return (
-    <div className="forFade_g">
-      <img className="deco" src={textdeco} alt="textdeco_rtr" />
+    <div className="forFade_b">
+      <img className="deco" src={textdeco} alt="textdeco_rtr4" />
       <img className="rtrchat1" src={rtrchat1} alt="rtrchat" />
       <p className="dialog_oneline">혹시 테루테루보즈 이야기 들어봤어?</p>
       <button
-        className="c2girlnextBtn0"
+        className="c2boynextBtn0"
         onClick={() => {
           props.setNextBtn(props.nextBtn + 1);
         }}
@@ -182,14 +182,15 @@ const Dialog4 = (props) => {
     </div>
   );
 };
+
 const Dialog5 = (props) => {
   return (
-    <div className="forFade_g">
-      <img className="deco" src={textdeco} alt="textdeco_rtr" />
+    <div className="forFade_b">
+      <img className="deco" src={textdeco} alt="textdeco_rtr4" />
       <img className="rtrchat1" src={rtrchat1} alt="rtrchat" />
       <p className="dialog_oneline">있지, 들어봐</p>
       <button
-        className="c2girlnextBtn0"
+        className="c2boynextBtn0"
         onClick={() => {
           props.setNextBtn(props.nextBtn + 1);
         }}
@@ -201,12 +202,12 @@ const Dialog5 = (props) => {
 };
 const Dialog6 = (props) => {
   return (
-    <div className="forFade_g">
-      <img className="deco" src={textdeco} alt="textdeco_rtr" />
-      <img className="wagichat" src={wagichat} alt="wagichat" />
+    <div className="forFade_b">
+      <img className="deco" src={textdeco} alt="textdeco_rtr4" />
+      <img className="watachat" src={watachat} alt="watachat" />
       <p className="dialog_oneline">제멋대로 떠들어대기 시작했다...</p>
       <button
-        className="c2girlnextBtn0"
+        className="c2boynextBtn0"
         onClick={() => {
           props.setNextBtn(props.nextBtn + 1);
         }}
@@ -218,14 +219,14 @@ const Dialog6 = (props) => {
 };
 const Dialog7 = (props) => {
   return (
-    <div className="forFade_g">
-      <img className="deco" src={textdeco} alt="textdeco_rtr" />
+    <div className="forFade_b">
+      <img className="deco" src={textdeco} alt="textdeco_rtr4" />
       <img className="rtrchat1" src={rtrchat1} alt="rtrchat" />
       <p className="dialog_oneline">
         어느 마을에 비가 계속 내리는 바람에 모두가 슬픔에 잠겼어
       </p>
       <button
-        className="c2girlnextBtn0"
+        className="c2boynextBtn0"
         onClick={() => {
           props.setNextBtn(props.nextBtn + 1);
         }}
@@ -237,14 +238,14 @@ const Dialog7 = (props) => {
 };
 const Dialog8 = (props) => {
   return (
-    <div className="forFade_g">
-      <img className="deco" src={textdeco} alt="textdeco_rtr" />
+    <div className="forFade_b">
+      <img className="deco" src={textdeco} alt="textdeco_rtr4" />
       <img className="rtrchat1" src={rtrchat1} alt="rtrchat" />
       <p className="dialog_oneline">
         그떄 어느 한 승려가 하늘에 공양을 하면 비가 그친다고 했어
       </p>
       <button
-        className="c2girlnextBtn0"
+        className="c2boynextBtn0"
         onClick={() => {
           props.setNextBtn(props.nextBtn + 1);
         }}
@@ -256,15 +257,16 @@ const Dialog8 = (props) => {
 };
 const Dialog9 = (props) => {
   return (
-    <div className="forFade_g">
-      <img className="deco" src={textdeco} alt="textdeco_rtr" />
+    <div className="forFade_b">
+      <img className="deco" src={textdeco} alt="textdeco_rtr4" />
       <img className="rtrchat1" src={rtrchat1} alt="rtrchat" />
       <p className="dialog_long">
-        허나 비는 그칠 줄 몰랐고 마을 사람들은
-        <br /> 승려의 머리에 흰 천을 씌워 목을 매달았어.
+        허나 비는 그칠 줄 몰랐고,, 마을 사람들은
+        <br />
+        승려의 머리에 흰 천을 씌워 목을 매달었어.
       </p>
       <button
-        className="c2girlnextBtn0"
+        className="c2boynextBtn0"
         onClick={() => {
           props.setNextBtn(props.nextBtn + 1);
         }}
@@ -276,12 +278,12 @@ const Dialog9 = (props) => {
 };
 const Dialog10 = (props) => {
   return (
-    <div className="forFade_g">
-      <img className="deco" src={textdeco} alt="textdeco_rtr" />
+    <div className="forFade_b">
+      <img className="deco" src={textdeco} alt="textdeco_rtr4" />
       <img className="rtrchat1" src={rtrchat1} alt="rtrchat" />
       <p className="dialog_oneline">그러자 거짓말 처럼 비가 그쳤고</p>
       <button
-        className="c2girlnextBtn0"
+        className="c2boynextBtn0"
         onClick={() => {
           props.setNextBtn(props.nextBtn + 1);
         }}
@@ -293,14 +295,14 @@ const Dialog10 = (props) => {
 };
 const Dialog11 = (props) => {
   return (
-    <div className="forFade_g">
-      <img className="deco" src={textdeco} alt="textdeco_rtr" />
+    <div className="forFade_b">
+      <img className="deco" src={textdeco} alt="textdeco_rtr4" />
       <img className="rtrchat1" src={rtrchat1} alt="rtrchat" />
       <p className="dialog_oneline">
         사람들은 이를 함께 기뻐하며 슬픔은 점차 줄어들었어
       </p>
       <button
-        className="c2girlnextBtn0"
+        className="c2boynextBtn0"
         onClick={() => {
           props.setNextBtn(props.nextBtn + 1);
         }}
@@ -312,15 +314,16 @@ const Dialog11 = (props) => {
 };
 const Dialog12 = (props) => {
   return (
-    <div className="forFade_g">
-      <img className="deco" src={textdeco} alt="textdeco_rtr" />
+    <div className="forFade_b">
+      <img className="deco" src={textdeco} alt="textdeco_rtr4" />
       <img className="rtrchat1" src={rtrchat1} alt="rtrchat" />
       <p className="dialog_long">
         그 후 사람들은 비가 올 때마다
-        <br /> 하얀 천을 목매단 사람 모양으로 매달기 시작했어..
+        <br />
+        하얀 천을 목매단 사람 모양으로 매달기 시작했어..
       </p>
       <button
-        className="c2girlnextBtn0"
+        className="c2boynextBtn0"
         onClick={() => {
           props.setNextBtn(props.nextBtn + 1);
         }}
@@ -333,8 +336,8 @@ const Dialog12 = (props) => {
 
 const Dialog13 = (props) => {
   return (
-    <div className="forFade_g">
-      <img className="deco" src={textdeco} alt="textdeco_rtr" />
+    <div className="forFade_b">
+      <img className="deco" src={textdeco} alt="textdeco_rtr4" />
       <img className="rtrchat1" src={rtrchat1} alt="rtrchat" />
       <p className="dialog_long">
         반대로, 이를 거꾸로 매달면 슬픔이 전염되듯
@@ -342,7 +345,7 @@ const Dialog13 = (props) => {
         비가 온다고 전해진다고 해..
       </p>
       <button
-        className="c2girlnextBtn0"
+        className="c2boynextBtn0"
         onClick={() => {
           props.setNextBtn(props.nextBtn + 1);
         }}
@@ -354,8 +357,8 @@ const Dialog13 = (props) => {
 };
 const Dialog14 = (props) => {
   return (
-    <div className="forFade_g">
-      <img className="deco" src={textdeco} alt="textdeco_rtr" />
+    <div className="forFade_b">
+      <img className="deco" src={textdeco} alt="textdeco_rtr4" />
       <img className="rtrchat1" src={rtrchat1} alt="rtrchat" />
       <p className="dialog_long">
         슬픔을 함께 할수록 줄어드는 것 아니면
@@ -363,7 +366,7 @@ const Dialog14 = (props) => {
         슬픔은 전염병 같은 것이라 불어나는 것
       </p>
       <button
-        className="c2girlnextBtn0"
+        className="c2boynextBtn0"
         onClick={() => {
           props.setNextBtn(props.nextBtn + 1);
         }}
@@ -375,12 +378,12 @@ const Dialog14 = (props) => {
 };
 const Dialog15 = (props) => {
   return (
-    <div className="forFade_g">
-      <img className="deco" src={textdeco} alt="textdeco_rtr" />
+    <div className="forFade_b">
+      <img className="deco" src={textdeco} alt="textdeco_rtr4" />
       <img className="rtrchat1" src={rtrchat1} alt="rtrchat" />
       <p className="dialog_oneline">너는 어느쪽?</p>
       <button
-        className="c2girlnextBtn0"
+        className="c2boynextBtn0"
         onClick={() => {
           props.setNextBtn(props.nextBtn + 1);
         }}
@@ -404,7 +407,7 @@ const Dialog16 = (props) => {
           </div>
           <div className="card-back">
             <img className="carddeco" src={carddecoback} alt="carddeco1" />
-            <GSound6in1 {...props} />
+            <Sound6in1 {...props} />
           </div>
         </div>
       </div>
@@ -416,7 +419,7 @@ const Dialog16 = (props) => {
           </div>
           <div className="card-back2">
             <img className="carddeco" src={carddecoback} alt="carddeco1" />
-            <GSound6in2 {...props} />
+            <Sound6in2 {...props} />
           </div>
         </div>
       </div>
@@ -428,17 +431,17 @@ const Dialog17 = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     setTimeout(() => {
-      dispatch({ type: "index/RTRGIRL_1413" });
+      dispatch({ type: "index/RTRBOY_3013" });
     });
   }, [dispatch]);
   return (
-    <div className="forFade_g">
-      <img className="deco" src={textdeco} alt="textdeco_rtr" />
+    <div className="forFade_b">
+      <img className="deco" src={textdeco} alt="textdeco_rtr4" />
       <p className="dialog_oneline">비가 세차게 내리기 시작했다...</p>
       <button
-        className="c2girlnextBtn0"
+        className="c2boynextBtn0"
         onClick={() => {
-          dispatch({ type: "index/CKGIRL_1404" });
+          dispatch({ type: "index/CKBOY_3004" });
         }}
       >
         다음
@@ -451,17 +454,17 @@ const Dialog18 = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     setTimeout(() => {
-      dispatch({ type: "index/RTRGIRL_1423" });
+      dispatch({ type: "index/CKBOY_3023" });
     });
   }, [dispatch]);
   return (
-    <div className="forFade_g">
-      <img className="deco" src={textdeco} alt="textdeco_rtr" />
+    <div className="forFade_b">
+      <img className="deco" src={textdeco} alt="textdeco_rtr4" />
       <p className="dialog_oneline">비가 잔잔히 내리기 시작했다...</p>
       <button
-        className="c2girlnextBtn0"
+        className="c2boynextBtn0"
         onClick={() => {
-          dispatch({ type: "index/CKGIRL_1404" });
+          dispatch({ type: "index/CKBOY_3004" });
         }}
       >
         다음
@@ -470,4 +473,4 @@ const Dialog18 = () => {
   );
 };
 
-export default RainTaeRuGirl;
+export default RainTaeRuBoy3003;

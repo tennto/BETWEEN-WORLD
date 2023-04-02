@@ -431,13 +431,21 @@ const Dialog17 = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     setTimeout(() => {
-      dispatch({ type: "index/SMBOY_1004" });
-    }, 5000);
+      dispatch({ type: "index/RTRBOY_1013" });
+    });
   }, [dispatch]);
   return (
     <div className="forFade_b">
       <img className="deco" src={textdeco} alt="textdeco_rtr4" />
       <p className="dialog_oneline">비가 세차게 내리기 시작했다...</p>
+      <button
+        className="c2boynextBtn0"
+        onClick={() => {
+          dispatch({ type: "index/CKBOY_1004" });
+        }}
+      >
+        다음
+      </button>
     </div>
   );
 };
@@ -446,13 +454,21 @@ const Dialog18 = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     setTimeout(() => {
-      dispatch({ type: "index/SMBOY_1004" });
-    }, 5000);
+      dispatch({ type: "index/RTRBOY_1023" });
+    });
   }, [dispatch]);
   return (
     <div className="forFade_b">
       <img className="deco" src={textdeco} alt="textdeco_rtr4" />
       <p className="dialog_oneline">비가 잔잔히 내리기 시작했다...</p>
+      <button
+        className="c2boynextBtn0"
+        onClick={() => {
+          dispatch({ type: "index/CKBOY_1004" });
+        }}
+      >
+        다음
+      </button>
     </div>
   );
 };

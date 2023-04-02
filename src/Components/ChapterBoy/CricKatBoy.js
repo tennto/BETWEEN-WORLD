@@ -259,20 +259,32 @@ const Dialog10 = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     setTimeout(() => {
-      dispatch({ type: "index/BIRDBOY_1006" });
-    }, 5000);
+      dispatch({ type: "index/CKBOY_1014" });
+    }, []);
   }, [dispatch]);
   return (
     <div className="forFade_b">
       <img className="deco" src={textdeco} alt="textdeco_ck" />
       <img className="ckchat1" src={ckchat1} alt="ckchat" />
       <p className="dialog_oneline">있지... 내가 죽으면 울어 줄거지?</p>
+      <button
+        className="nextBtn0"
+        onClick={() => {
+          dispatch({ type: "index/BIRDBOY_1005" });
+        }}
+      >
+        다음
+      </button>
     </div>
   );
 };
 const Dialog11 = (props) => {
   const dispatch = useDispatch();
-
+  useEffect(() => {
+    setTimeout(() => {
+      dispatch({ type: "index/CKBOY_1024" });
+    }, []);
+  }, [dispatch]);
   return (
     <div className="forFade_b">
       <img className="deco" src={textdeco} alt="textdeco_ck" />
@@ -293,7 +305,7 @@ const Dialog12 = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     setTimeout(() => {
-      dispatch({ type: "index/BIRDBOY_1006" });
+      dispatch({ type: "index/BIRDBOY_1005" });
     }, 5000);
   }, [dispatch]);
   return (

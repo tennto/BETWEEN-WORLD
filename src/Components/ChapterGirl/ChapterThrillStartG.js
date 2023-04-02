@@ -302,7 +302,7 @@ const Dialog8 = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     setTimeout(() => {
-      dispatch({ type: "index/SOMGIRL_1402" });
+      dispatch({ type: "index/SOMGIRL_3402" });
     }, 1000);
   }, [dispatch]);
 
