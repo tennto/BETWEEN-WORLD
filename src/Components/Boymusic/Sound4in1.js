@@ -21,12 +21,12 @@ const Sound4in1 = (props) => {
         setPlaying(false);
       }}
       onClick={() => {
-        dispatch(setSound4("바람소리,나뭇잎.mp3"));
+        dispatch(setSound4("산소리.mp3"));
         props.setNextBtn(props.nextBtn + 1);
       }}
     >
       <ReactHowler
-        src={["바람소리,나뭇잎.mp3"]}
+        src={["산소리.mp3"]}
         playing={play}
         loop={false}
         mute={false}

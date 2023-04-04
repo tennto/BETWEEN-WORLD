@@ -4,7 +4,6 @@ import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import "./Nickname.css";
 import { setName } from "../../index";
-import ChapterBoy from "../ChapterBoy/ChapterBoy";
 import deco from "../../Components/textdecoration.png";
 import decoinput from "./inputdeco.png";
 import sexdeco from "./sexdeco.png";

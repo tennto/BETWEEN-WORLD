@@ -1,16 +1,23 @@
 /* eslint-disable */
-
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ReactHowler from "../../howler/ReactHowler.js";
 import { useSelector, useDispatch } from "react-redux";
 import { setSound1 } from "../../index";
 import "../../css/Card.css";
+import { batch } from "react-redux";
 
 const Sound3in2 = () => {
-  // const status = useSelector((state) => state);
+  const status = useSelector((state) => state);
   const dispatch = useDispatch();
   const [play, setPlaying] = useState(false);
-
+  var [checkMS, setCheck] = useState("");
+  useEffect(() => {
+    if (status.sound4 === "산소리.mp3") {
+      setCheck("index/RTRAnimeMF");
+    } else if (status.sound4 === "바다소리.mp3") {
+      setCheck("index/RTRAnimeSF");
+    }
+  }, []);
   return (
     <div
       className="happy1"
@@ -21,8 +28,11 @@ const Sound3in2 = () => {
         setPlaying(false);
       }}
       onClick={() => {
-        dispatch(setSound1("긴장노래1.mp3"));
-        dispatch({ type: "index/CSBOY_3001" });
+        batch(() => {
+          dispatch(setSound1("긴장노래1.mp3"));
+          dispatch({ type: "index/RTR_1040" });
+          dispatch({ type: checkMS });
+        });
       }}
     >
       <ReactHowler

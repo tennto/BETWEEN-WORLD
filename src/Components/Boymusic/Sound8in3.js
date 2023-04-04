@@ -1,15 +1,24 @@
 /* eslint-disable */
-
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ReactHowler from "../../howler/ReactHowler.js";
 import { useSelector, useDispatch } from "react-redux";
 import { setSound8 } from "../../index";
+import { cardSelect } from "../../index";
 import "../../css/Card.css";
+import { batch } from "react-redux";
 
 const Sound8in3 = (props) => {
-  // const status = useSelector((state) => state);
+  const status = useSelector((state) => state);
   const dispatch = useDispatch();
   const [play, setPlaying] = useState(false);
+  var [checkMS, setCheck] = useState("");
+  useEffect(() => {
+    if (status.sound4 === "산소리.mp3") {
+      setCheck("index/BIRDAnimeMT");
+    } else if (status.sound4 === "바다소리.mp3") {
+      setCheck("index/BIRDAnimeST");
+    }
+  }, []);
 
   return (
     <div
@@ -21,7 +30,11 @@ const Sound8in3 = (props) => {
         setPlaying(false);
       }}
       onClick={() => {
-        dispatch(setSound8("부엉이.wav"));
+        batch(() => {
+          dispatch(setSound8("부엉이.wav"));
+          dispatch({ type: checkMS });
+          dispatch(cardSelect(0));
+        });
         props.setNextBtn(props.nextBtn + 1);
       }}
     >

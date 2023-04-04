@@ -21,12 +21,12 @@ const Sound4in2 = (props) => {
         setPlaying(false);
       }}
       onClick={() => {
-        dispatch(setSound4("파도소리.mp3"));
+        dispatch(setSound4("바다소리.mp3"));
         props.setNextBtn(props.nextBtn + 1);
       }}
     >
       <ReactHowler
-        src={["파도소리.mp3"]}
+        src={["바다소리.mp3"]}
         playing={play}
         loop={false}
         mute={false}

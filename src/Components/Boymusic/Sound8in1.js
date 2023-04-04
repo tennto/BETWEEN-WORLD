@@ -1,15 +1,25 @@
 /* eslint-disable */
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ReactHowler from "../../howler/ReactHowler.js";
 import { useSelector, useDispatch } from "react-redux";
 import { setSound8 } from "../../index";
+import { cardSelect } from "../../index";
 import "../../css/Card.css";
+import { batch } from "react-redux";
 
 const Sound8in1 = (props) => {
-  // const status = useSelector((state) => state);
+  const status = useSelector((state) => state);
   const dispatch = useDispatch();
   const [play, setPlaying] = useState(false);
+  var [checkMS, setCheck] = useState("");
+  useEffect(() => {
+    if (status.sound4 === "산소리.mp3") {
+      setCheck("index/BIRDAnimeMH");
+    } else if (status.sound4 === "바다소리.mp3") {
+      setCheck("index/BIRDAnimeSH");
+    }
+  }, []);
 
   return (
     <div
@@ -21,9 +31,12 @@ const Sound8in1 = (props) => {
         setPlaying(false);
       }}
       onClick={() => {
-        dispatch(setSound8("새소리.wav"));
+        batch(() => {
+          dispatch(setSound8("새소리.wav"));
+          dispatch({ type: checkMS });
+          dispatch(cardSelect(0));
+        });
         props.setNextBtn(props.nextBtn + 1);
-        console.log(props.nextBtn);
       }}
     >
       <ReactHowler
@@ -35,31 +48,6 @@ const Sound8in1 = (props) => {
       />
       <p>음악1 뒷면</p>
       <h1>새소리O</h1>
-      {/* <button
-        onClick={() => {
-          setPlaying(false);
-        }}
-      >
-        {" "}
-        멈춤{" "}
-      </button>
-      <button
-        onClick={() => {
-          setPlaying(true);
-        }}
-      >
-        {" "}
-        실행{" "}
-      </button>
-      <button
-        id="saveButtons"
-        onClick={() => {
-          dispatch(setSound5("The Quiet Aftermath - Sir Cubworth.mp3"));
-          props.setNextBtn(props.nextBtn + 1);
-        }}
-      >
-        저장하기
-      </button> */}
     </div>
   );
 };
