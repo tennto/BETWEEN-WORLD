@@ -13,6 +13,7 @@ import textdeco from "../textdecoration.png";
 import coverdeco from "../backdeco.png";
 import bdchat from "../bdchat.png";
 import watachat from "./watachat.png";
+import { useNavigate } from "react-router-dom";
 
 const BellNo = () => {
   let [nextBtn, setNextBtn] = useState(0);
@@ -30,6 +31,8 @@ const BellNo = () => {
       return <Dialog4 nextBtn={nextBtn} setNextBtn={setNextBtn} />;
     } else if (nextBtn === 5) {
       return <Dialog5 nextBtn={nextBtn} setNextBtn={setNextBtn} />;
+    } else if (nextBtn === 6) {
+      return <Dialog6 nextBtn={nextBtn} setNextBtn={setNextBtn} />;
     }
   };
 
@@ -196,6 +199,35 @@ const Dialog5 = (props) => {
         }}
       >
         다음
+      </button>
+    </div>
+  );
+};
+
+const Dialog6 = () => {
+  const navigate = useNavigate();
+  const status = useSelector((state) => state);
+  const gotoGallery = () => {
+    navigate("/gallery", {
+      state: { status },
+    });
+  };
+
+  return (
+    <div className="forFade_b">
+      <img className="deco" src={textdeco} alt="textdeco_bd" />
+      <img className="bdchat" src={bdchat} alt="bdchat" />
+      <p className="dialog_oneline">......</p>
+      <Link to="/main">
+        <button> 메인 페이지 </button>
+      </Link>
+      <button
+        onClick={() => {
+          gotoGallery();
+        }}
+      >
+        {" "}
+        갤러리로{" "}
       </button>
     </div>
   );
