@@ -5,6 +5,7 @@ import ReactHowler from "../../howler/ReactHowler.js";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Main.css";
 import Nickname from "../Nickname/Nickname";
 import NicknameAnime from "../Nickname/NicknameAnime";
@@ -75,7 +76,7 @@ const Main = () => {
   const dispatch = useDispatch();
   const [play, setPlaying] = useState(true);
   //왼쪽 상단 플레이리스트 저장
-
+  //기쁨,슬픔,긴장
   const savePlaylist1 = () => {
     if (status.sound1 === "") {
       return "";
@@ -108,6 +109,7 @@ const Main = () => {
       );
     }
   };
+  //종
   const savePlaylist2 = () => {
     if (status.sound2 === "") {
       return "";
@@ -172,6 +174,7 @@ const Main = () => {
       );
     }
   };
+  //산,바다
   const savePlaylist4 = () => {
     if (status.sound4 === "") {
       return "";
@@ -204,6 +207,7 @@ const Main = () => {
       );
     }
   };
+  //모닥불
   const savePlaylist5 = () => {
     if (status.sound5 === "") {
       return "";
@@ -236,6 +240,7 @@ const Main = () => {
       );
     }
   };
+  //비
   const savePlaylist6 = () => {
     if (status.sound6 === "") {
       return "";
@@ -268,6 +273,7 @@ const Main = () => {
       );
     }
   };
+  //귀뚜라미
   const savePlaylist7 = () => {
     if (status.sound7 === "") {
       return "";
@@ -300,6 +306,7 @@ const Main = () => {
       );
     }
   };
+  //새/까마귀/부엉이
   const savePlaylist8 = () => {
     if (status.sound8 === "") {
       return "";
@@ -541,6 +548,13 @@ const Main = () => {
   //     mainsetSound(i);
   //   }
   // };
+  const navigate = useNavigate();
+
+  const gotoGallery = () => {
+    navigate("/gallery", {
+      state: status,
+    });
+  };
 
   return (
     <div className="maincomp">
@@ -551,6 +565,14 @@ const Main = () => {
         }}
       >
         Manager Test
+      </button>
+      <button
+        onClick={() => {
+          gotoGallery();
+        }}
+      >
+        {" "}
+        갤러리로{" "}
       </button>
       <div className="Container_m">
         <table className="playlist">

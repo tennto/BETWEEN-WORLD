@@ -53,8 +53,6 @@ const Bird = () => {
       return <Dialog12 nextBtn={nextBtn} setNextBtn={setNextBtn} />;
     } else if (nextBtn === 13) {
       return <Dialog13 />;
-    } else if (nextBtn === 14) {
-      return <Dialog14 />;
     }
   };
 
@@ -379,43 +377,61 @@ const Dialog11 = (props) => {
 const Dialog12 = (props) => {
   const status = useSelector((state) => state);
   const showSound1 = () => {
-    if (status.sound1 === "기쁨노래1" || status.sound1 === "기쁨노래2") {
+    if (
+      status.sound1 === "기쁨노래1.mp3" ||
+      status.sound1 === "기쁨노래2.mp3"
+    ) {
       return (
         <>
           <Sound8in1 {...props} />;
         </>
       );
-    } else if (status.sound1 === "슬픔노래1" || status.sound1 === "슬픔노래2") {
-      return (
-        <>
-          <Sound8in3 {...props} />;
-        </>
-      );
-    } else if (status.sound1 === "긴장노래1" || status.sound1 === "긴장노래2") {
+    } else if (
+      status.sound1 === "슬픔노래1.mp3" ||
+      status.sound1 === "슬픔노래2.mp3"
+    ) {
       return (
         <>
           <Sound8in5 {...props} />;
         </>
       );
+    } else if (
+      status.sound1 === "긴장노래1.mp3" ||
+      status.sound1 === "긴장노래2.mp3"
+    ) {
+      return (
+        <>
+          <Sound8in3 {...props} />;
+        </>
+      );
     }
   };
   const showSound2 = () => {
-    if (status.sound1 === "기쁨노래1" || status.sound1 === "기쁨노래2") {
+    if (
+      status.sound1 === "기쁨노래1.mp3" ||
+      status.sound1 === "기쁨노래2.mp3"
+    ) {
       return (
         <>
           <Sound8in2 {...props} />;
         </>
       );
-    } else if (status.sound1 === "슬픔노래1" || status.sound1 === "슬픔노래2") {
-      return (
-        <>
-          <Sound8in4 {...props} />;
-        </>
-      );
-    } else if (status.sound1 === "긴장노래1" || status.sound1 === "긴장노래2") {
+    } else if (
+      status.sound1 === "슬픔노래1.mp3" ||
+      status.sound1 === "슬픔노래2.mp3"
+    ) {
       return (
         <>
           <Sound8in6 {...props} />;
+        </>
+      );
+    } else if (
+      status.sound1 === "긴장노래1.mp3" ||
+      status.sound1 === "긴장노래2.mp3"
+    ) {
+      return (
+        <>
+          <Sound8in4 {...props} />;
         </>
       );
     }
@@ -481,15 +497,6 @@ const Dialog13 = (props) => {
         다음
       </button>
     </div>
-  );
-};
-const Dialog14 = () => {
-  return (
-    <>
-      <Link to="/ending1">
-        <button>엔딩페이지로</button>
-      </Link>
-    </>
   );
 };
 
