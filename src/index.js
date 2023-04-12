@@ -398,38 +398,40 @@ function reducer(state = initialState, action) {
       return {
         ...state,
         moodSelect: 6,
+        aniSelect: 6,
       };
     }
     case STORY_NO3: {
       return {
         ...state,
         moodSelect: 7,
+        aniselect: 7,
       };
     }
     // #1 - 애니메이션 변경 1번
     case PLUS_STATE1: {
       return {
         ...state,
-        moodSelect: 2,
+        aniSelect: 2,
       };
     }
     // #1 - 애니메이션 변경 2번
     case PLUS_STATE2: {
       return {
         ...state,
-        moodSelect: 3,
+        aniSelect: 3,
       };
     }
     case PLUS_STATE3: {
       return {
         ...state,
-        moodSelect: 4,
+        aniSelect: 4,
       };
     }
     case PLUS_STATE4: {
       return {
         ...state,
-        moodSelect: 5,
+        aniSelect: 5,
       };
     }
     case SET_NAME: {

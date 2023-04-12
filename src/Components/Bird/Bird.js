@@ -449,7 +449,7 @@ const Dialog12 = (props) => {
             <img className="carddeco" src={carddecoback} alt="carddeco1" />
             {/* <p className="chtext1">해야만 하는 일을 해</p> */}
             <h2 className="script">해야만 하는 일을 해</h2>
-            <Sound8in1 {...props} />
+            {showSound1()}
           </div>
         </div>
       </div>
@@ -463,7 +463,7 @@ const Dialog12 = (props) => {
             <img className="carddeco" src={carddecoback} alt="carddeco1" />
             {/* <p className="chtext1">하고 싶은 일을 해</p> */}
             <h2 className="script">하고싶은 일을 해</h2>
-            <Sound8in2 {...props} />
+            {showSound2()}
           </div>
         </div>
       </div>

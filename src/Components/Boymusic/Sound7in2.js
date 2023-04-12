@@ -69,7 +69,7 @@ const Sound7in2 = (props) => {
         props.setNextBtn(props.nextBtn + 1);
       }}
     >
-      <h2 className="script">고개를 가로젓는다</h2>
+      <p className="script">고개를 끄덕인다 (소리 X)</p>
     </div>
   );
 };

@@ -76,7 +76,7 @@ const Sound7in1 = (props) => {
         mute={false}
         volume={0.1}
       />
-      <h2 className="script">고개를 끄덕인다</h2>
+      <p className="cscript">고개를 가로젓는다 (소리 O)</p>
     </div>
   );
 };

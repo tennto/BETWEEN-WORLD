@@ -45,6 +45,7 @@ const Dialog0 = (props) => {
   return (
     <div className="forFade_b">
       <img className="deco" src={deco} alt="deco" />
+      <img className="watachat" src={watachat} alt="watachat" />
       <p className="dialog_oneline">. . .</p>
       <button
         className="c2boynextBtn0"
@@ -63,7 +64,7 @@ const Dialog1 = (props) => {
     <div className="forFade_b">
       <img className="deco" src={deco} alt="deco" />
       <img className="watachat" src={watachat} alt="watachat" />
-      <p className="dialog_oneline">여긴.. 어디지..?</p>
+      <p className="dialog_oneline">방금건 도대체...</p>
       <button
         className="c2boynextBtn0"
         onClick={() => {
@@ -88,10 +89,11 @@ const Dialog2 = () => {
         className="CH_BOX"
       >
         <img className="chdeco" src={chdeco} alt="cddeco" />
-        <p>
+        <p className="moodText1">
           처음 와보는 곳<br />
           신난다..!
         </p>
+        <p className="moodText2">(밝은 테마로 진행)</p>
       </div>
       <div
         onClick={() => {
@@ -100,11 +102,12 @@ const Dialog2 = () => {
         className="CH_BOX"
       >
         <img className="chdeco" src={chdeco} alt="cddeco" />
-        <p>
+        <p className="moodText1">
           낯선 곳은 항상
           <br />
           피곤해...
         </p>
+        <p className="moodText3">(어두운 테마로 진행)</p>
       </div>
       <div
         onClick={() => {
@@ -113,11 +116,12 @@ const Dialog2 = () => {
         className="CH_BOX"
       >
         <img className="chdeco" src={chdeco} alt="cddeco" />
-        <p>
+        <p className="moodText1">
           도대체 어디지..
           <br />
           긴장돼...
         </p>
+        <p className="moodText3">(오싹한 테마로 진행)</p>
       </div>
     </div>
   );

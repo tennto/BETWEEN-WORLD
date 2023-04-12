@@ -44,7 +44,7 @@ const Sound1in2 = () => {
         mute={false}
         volume={1.0}
       />
-      <h2 className="script">
+      <h2 className="script2">
         당황스럽지만
         <br />
         신기해..!

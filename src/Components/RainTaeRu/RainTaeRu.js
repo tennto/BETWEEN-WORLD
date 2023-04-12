@@ -21,51 +21,53 @@ const RainTaeRu = () => {
 
   const DialogFlow = () => {
     if (nextBtn === 0) {
-      return <Dialog0 nextBtn={nextBtn} setNextBtn={setNextBtn} />;
+      return <Transition nextBtn={nextBtn} setNextBtn={setNextBtn} />;
     } else if (nextBtn === 1) {
-      return <Dialog1 nextBtn={nextBtn} setNextBtn={setNextBtn} />;
+      return <Dialog0 nextBtn={nextBtn} setNextBtn={setNextBtn} />;
     } else if (nextBtn === 2) {
-      return <Dialog2 nextBtn={nextBtn} setNextBtn={setNextBtn} />;
+      return <Dialog1 nextBtn={nextBtn} setNextBtn={setNextBtn} />;
     } else if (nextBtn === 3) {
-      return <Dialog3 nextBtn={nextBtn} setNextBtn={setNextBtn} />;
+      return <Dialog2 nextBtn={nextBtn} setNextBtn={setNextBtn} />;
     } else if (nextBtn === 4) {
+      return <Dialog3 nextBtn={nextBtn} setNextBtn={setNextBtn} />;
+    } else if (nextBtn === 5) {
       setTimeout(() => {
         setChangeBox(1);
       }, 10);
       return <Dialog4 nextBtn={nextBtn} setNextBtn={setNextBtn} />;
-    } else if (nextBtn === 5) {
+    } else if (nextBtn === 6) {
       setTimeout(() => {
         setChangeBox(0);
       }, 10);
       return <Dialog5 nextBtn={nextBtn} setNextBtn={setNextBtn} />;
-    } else if (nextBtn === 6) {
-      return <Dialog6 nextBtn={nextBtn} setNextBtn={setNextBtn} />;
     } else if (nextBtn === 7) {
-      return <Dialog7 nextBtn={nextBtn} setNextBtn={setNextBtn} />;
+      return <Dialog6 nextBtn={nextBtn} setNextBtn={setNextBtn} />;
     } else if (nextBtn === 8) {
-      return <Dialog8 nextBtn={nextBtn} setNextBtn={setNextBtn} />;
+      return <Dialog7 nextBtn={nextBtn} setNextBtn={setNextBtn} />;
     } else if (nextBtn === 9) {
-      return <Dialog9 nextBtn={nextBtn} setNextBtn={setNextBtn} />;
+      return <Dialog8 nextBtn={nextBtn} setNextBtn={setNextBtn} />;
     } else if (nextBtn === 10) {
-      return <Dialog10 nextBtn={nextBtn} setNextBtn={setNextBtn} />;
+      return <Dialog9 nextBtn={nextBtn} setNextBtn={setNextBtn} />;
     } else if (nextBtn === 11) {
-      return <Dialog11 nextBtn={nextBtn} setNextBtn={setNextBtn} />;
+      return <Dialog10 nextBtn={nextBtn} setNextBtn={setNextBtn} />;
     } else if (nextBtn === 12) {
-      return <Dialog12 nextBtn={nextBtn} setNextBtn={setNextBtn} />;
+      return <Dialog11 nextBtn={nextBtn} setNextBtn={setNextBtn} />;
     } else if (nextBtn === 13) {
-      return <Dialog13 nextBtn={nextBtn} setNextBtn={setNextBtn} />;
+      return <Dialog12 nextBtn={nextBtn} setNextBtn={setNextBtn} />;
     } else if (nextBtn === 14) {
-      return <Dialog14 nextBtn={nextBtn} setNextBtn={setNextBtn} />;
+      return <Dialog13 nextBtn={nextBtn} setNextBtn={setNextBtn} />;
     } else if (nextBtn === 15) {
-      return <Dialog15 nextBtn={nextBtn} setNextBtn={setNextBtn} />;
+      return <Dialog14 nextBtn={nextBtn} setNextBtn={setNextBtn} />;
     } else if (nextBtn === 16) {
+      return <Dialog15 nextBtn={nextBtn} setNextBtn={setNextBtn} />;
+    } else if (nextBtn === 17) {
       setTimeout(() => {
         setChangeBox(1);
       }, 10);
       return <Dialog16 nextBtn={nextBtn} setNextBtn={setNextBtn} />;
-    } else if (nextBtn === 17) {
-      return <Dialog17 />;
     } else if (nextBtn === 18) {
+      return <Dialog17 />;
+    } else if (nextBtn === 19) {
       return <Dialog18 />;
     }
   };
@@ -82,6 +84,30 @@ const RainTaeRu = () => {
       >
         다음
       </button> */}
+    </div>
+  );
+};
+
+const Transition = (props) => {
+  let [btnFade, setBtnFade] = useState(1);
+  setTimeout(() => {
+    setBtnFade(0);
+  }, 5000);
+
+  return (
+    <div className="forFade_b">
+      <img className="deco" src={textdeco} alt="textdeco_rtr" />
+      <p className="dialog_oneline">
+        알 수 없는 힘에 의해 지형이 변하기 시작했다..
+      </p>
+      <button
+        className={"c2boynextBtn" + btnFade}
+        onClick={() => {
+          props.setNextBtn(props.nextBtn + 1);
+        }}
+      >
+        다음
+      </button>
     </div>
   );
 };

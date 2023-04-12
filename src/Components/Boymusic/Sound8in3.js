@@ -45,8 +45,7 @@ const Sound8in3 = (props) => {
         mute={false}
         volume={0.2}
       />
-      <p>음악1 뒷면</p>
-      <h1>부엉이O</h1>
+      <p className="bscript">해야만 하는 일을 해 (소리 O)</p>
       {/* <button
         onClick={() => {
           setPlaying(false);

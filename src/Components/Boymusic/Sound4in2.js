@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import ReactHowler from "../../howler/ReactHowler.js";
 import { useSelector, useDispatch } from "react-redux";
 import { setSound4 } from "../../index";
+import schoice from "../ChapterBoy/schoice.png";
 import "../../css/Card.css";
 
 const Sound4in2 = (props) => {
@@ -32,7 +33,8 @@ const Sound4in2 = (props) => {
         mute={false}
         volume={0.3}
       />
-      <h2 className="script">바다가 좋겠어</h2>
+      <img className="schoice" src={schoice} alt="schoice" />
+      <p className="script">바다가 좋겠어..!</p>
 
       {/* <button
         onClick={() => {

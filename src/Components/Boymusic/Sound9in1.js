@@ -37,8 +37,7 @@ const Sound9in1 = (props) => {
         mute={false}
         volume={0.2}
       />
-      <p>음악1 뒷면</p>
-      <h1>종소리 O</h1>
+      <p className="bscript">눈을 뜬다 (종소리 O)</p>
     </div>
   );
 };

@@ -43,7 +43,7 @@ const Sound2in1 = () => {
         mute={false}
         volume={1.0}
       />
-      <h2 className="script">
+      <h2 className="script2">
         뭔가 우울하고..
         <br />
         쓸쓸한 것 같아

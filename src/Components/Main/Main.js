@@ -14,6 +14,7 @@ import NicknameAnime3 from "../Nickname/NicknameAnime3";
 import NicknameAnime4 from "../Nickname/NicknameAnime4";
 import C2AnimeBoy from "../ChapterBoy/C2AnimeBoy";
 import C3AnimeBoy from "../ChapterBoy/C3AnimeBoy";
+import C4AnimeBoy from "../ChapterBoy/C4AnimeBoy.js";
 
 ///텍스트
 import ChapterStart from "../ChapterBoy/ChapterStart";
@@ -399,9 +400,9 @@ const Main = () => {
   const setAnimation = () => {
     // 닉네임 애니메이션
     if (status.aniSelect === 1) {
-      return <NicknameAnime />;
+      return <NicknameAnime />; //교체
     } else if (status.aniSelect === 2) {
-      return <NicknameAnime2 />;
+      return <NicknameAnime2 />; //교체
     } else if (status.aniSelect === 3) {
       return <NicknameAnime2 />;
     } else if (status.aniSelect === 4) {
@@ -410,11 +411,12 @@ const Main = () => {
       return <NicknameAnime2 />;
     } else if (status.aniSelect === 6) {
       // 남자 애니메이션 분기점
-      return <C2AnimeBoy />;
+      return <C2AnimeBoy />; //교체
     } else if (status.aniSelect === 1010) {
-      return <SOMAnime />;
+      return <C3AnimeBoy />;
+      // <SOMAnime />;
     } else if (status.aniSelect === 1000) {
-      return <MOODAnime />;
+      return <C4AnimeBoy />; //농담이사라지는 에니메이션
     }
     /// RainTaeRu Animation /////////////////////////////////////////////////////////////////////
     else if (status.aniSelect === 1040) {
@@ -561,7 +563,7 @@ const Main = () => {
       {/* {audio} */}
       <button
         onClick={() => {
-          dispatch({ type: "index/CKBOY_1005" });
+          dispatch({ type: "index/CKAnimeMF" });
         }}
       >
         Manager Test
