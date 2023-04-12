@@ -2,6 +2,11 @@
 
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { Player } from "@lottiefiles/react-lottie-player";
+import h_m_c_d from "./happy_san_wata_crikat_default.json";
+import s_m_c_d from "./sad_san_wata_crikat_default.json";
+import t_m_c_d from "./thrill_san_wata_crikat_default.json";
+import "../../css/Chapter2.css";
 
 const CKAnimeMF = () => {
   const status = useSelector((state) => state);
@@ -10,7 +15,14 @@ const CKAnimeMF = () => {
     if (status.sound1 === "기쁨노래.mp3" || status.sound1 === "기쁨노래2.mp3") {
       return (
         <>
-          <h1> 귀뚜라미 시작 애니메이션 (산)(기쁨)</h1>
+          <Player
+            className="fadelick"
+            src={h_m_c_d}
+            style={{ width: "1920px" }}
+            autoplay={true}
+            loop={false}
+            speed={1}
+          />
         </>
       );
     } else if (
@@ -19,7 +31,14 @@ const CKAnimeMF = () => {
     ) {
       return (
         <>
-          <h1> 귀뚜라미 시작 애니메이션 (산)(슬픔)</h1>
+          <Player
+            className="fadelick"
+            src={s_m_c_d}
+            style={{ width: "1920px" }}
+            autoplay={true}
+            loop={false}
+            speed={1}
+          />
         </>
       );
     } else if (
@@ -28,7 +47,14 @@ const CKAnimeMF = () => {
     ) {
       return (
         <>
-          <h1> 귀뚜라미 시작 애니메이션 (산)(긴장)</h1>
+          <Player
+            className="fadelick"
+            src={t_m_c_d}
+            style={{ width: "1920px" }}
+            autoplay={true}
+            loop={false}
+            speed={1}
+          />
         </>
       );
     }

@@ -263,11 +263,23 @@ const Dialog10 = () => {
       checkMS = "index/BIRDAnimeSF";
     }
   }, []);
+
+  const setText = () => {
+    if (
+      status.sound1 === "기쁨노래1.mp3" ||
+      status.sound1 === "기쁨노래2.mp3"
+    ) {
+      return "...거짓말, 넌 사랑에 대해 아무것도 몰라.";
+    } else {
+      return "있지... 내가 죽으면 울어 줄거지?";
+    }
+  };
+
   return (
     <div className="forFade_b">
       <img className="deco" src={textdeco} alt="textdeco_ck" />
       <img className="ckchat1" src={ckchat1} alt="ckchat" />
-      <p className="dialog_oneline">있지... 내가 죽으면 울어 줄거지?</p>
+      <p className="dialog_oneline">{setText()}</p>
       <button
         className="nextBtn0"
         onClick={() => {
@@ -283,11 +295,24 @@ const Dialog10 = () => {
   );
 };
 const Dialog11 = (props) => {
+  const status = useSelector((state) => state);
+
+  const setText = () => {
+    if (
+      status.sound1 === "기쁨노래1.mp3" ||
+      status.sound1 === "기쁨노래2.mp3"
+    ) {
+      return "역시 그렇지?! (귀뚜라미는 기쁜 듯 울기 시작했다)";
+    } else {
+      return "네가 살아야, 나도 살아...";
+    }
+  };
+
   return (
     <div className="forFade_b">
       <img className="deco" src={textdeco} alt="textdeco_ck" />
       <img className="ckchat1" src={ckchat1} alt="ckchat" />
-      <p className="dialog_oneline">네가 살아야, 나도 살아</p>
+      <p className="dialog_oneline">{setText()}</p>
       <button
         className="nextBtn0"
         onClick={() => {

@@ -99,7 +99,7 @@ const Dialog2 = (props) => {
             <img className="coverdeco" src={coverdeco} alt="coverdeco" />
           </div>
           <div className="card-back">
-            <img className="carddeco" src={carddecoback} alt="carddeco1" />
+            {/* <img className="carddeco" src={carddecoback} alt="carddeco1" /> */}
             <Sound4in1 {...props} />
           </div>
         </div>
@@ -111,7 +111,7 @@ const Dialog2 = (props) => {
             <img className="coverdeco" src={coverdeco} alt="coverdeco" />
           </div>
           <div className="card-back2">
-            <img className="carddeco" src={carddecoback} alt="carddeco1" />
+            {/* <img className="carddeco" src={carddecoback} alt="carddeco1" /> */}
             <Sound4in2 {...props} />
           </div>
         </div>
@@ -122,19 +122,29 @@ const Dialog2 = (props) => {
 
 const Dialog3 = () => {
   const dispatch = useDispatch();
+  const status = useSelector((state) => state);
   useEffect(() => {
     setTimeout(() => {
       batch(() => {
         dispatch({ type: "index/MOOD_SELECT" });
         dispatch({ type: "index/MOODAnime" });
       });
-    }, 1000);
+    }, 3000);
   }, [dispatch]);
+
+  const setText = () => {
+    if (status.sound4 === "산소리.mp3") {
+      return "어디선가 나무가 스산거리는 소리가 들려오기 시작했다...";
+    } else {
+      return "어디선가 파도소리가 들려오기 시작했다...";
+    }
+  };
+
   return (
     <div className="forFade_b">
       <img className="deco" src={deco} alt="deco_som" />
-      <img className="bnchat" src={bnchat} alt="bnchat" />
-      <h3 className="dialog_oneline">좋은 선택이군...</h3>
+      {/* <img className="bnchat" src={bnchat} alt="bnchat" /> */}
+      <p className="dialog_oneline">{setText()}</p>
     </div>
   );
 };

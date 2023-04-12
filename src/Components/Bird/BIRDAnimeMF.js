@@ -2,6 +2,10 @@
 
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { Player } from "@lottiefiles/react-lottie-player";
+import h_m_b_d from "./happy_san_wata_bird_default.json";
+import s_m_b_d from "./sad_san_wata_bird_default.json";
+
 const BIRDAnimeMF = () => {
   const status = useSelector((state) => state);
 
@@ -9,7 +13,13 @@ const BIRDAnimeMF = () => {
     if (status.sound1 === "기쁨노래.mp3" || status.sound1 === "기쁨노래2.mp3") {
       return (
         <>
-          <h1> 새 시작 애니메이션 (산)(기쁨)</h1>
+          <Player
+            src={h_m_b_d}
+            style={{ width: "1920px" }}
+            autoplay={true}
+            loop={false}
+            speed={1}
+          />
         </>
       );
     } else if (
@@ -18,7 +28,13 @@ const BIRDAnimeMF = () => {
     ) {
       return (
         <>
-          <h1> 새 시작 애니메이션 (산)(슬픔)</h1>
+          <Player
+            src={s_m_b_d}
+            style={{ width: "1920px" }}
+            autoplay={true}
+            loop={false}
+            speed={1}
+          />
         </>
       );
     } else if (

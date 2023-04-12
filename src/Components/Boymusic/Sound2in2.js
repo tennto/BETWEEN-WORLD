@@ -44,7 +44,7 @@ const Sound2in2 = () => {
         mute={false}
         volume={1.0}
       />
-      <h2 className="script">
+      <h2 className="script2">
         어느 누구와도
         <br />
         대화하고싶지않아..

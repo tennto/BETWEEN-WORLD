@@ -7,6 +7,7 @@ import { setSound6 } from "../../index";
 import { cardSelect } from "../../index";
 import "../../css/Card.css";
 import { batch } from "react-redux";
+import treverse from "../RainTaeRu/treverse.png";
 
 const Sound6in1 = (props) => {
   const status = useSelector((state) => state);
@@ -76,8 +77,8 @@ const Sound6in1 = (props) => {
         mute={false}
         volume={0.3}
       />
-      <h2 className="script">거꾸로 매단다</h2>
-      <h1>빗소리 크게</h1>
+      <img className="terucard1" src={treverse} alt="treverse" />
+      <h2 className="tscript">거꾸로 매단다 (강한 빗소리)</h2>
     </div>
   );
 };

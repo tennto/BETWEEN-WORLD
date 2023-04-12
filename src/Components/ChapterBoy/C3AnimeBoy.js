@@ -6,7 +6,7 @@ import data3 from "./data3.json";
 
 const C3AnimeBoy = () => {
   return (
-    <div className="fadelick1">
+    <div>
       <Player
         src={data3}
         style={{ width: "1920px" }}

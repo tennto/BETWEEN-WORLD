@@ -73,22 +73,30 @@ const ChapterStart = () => {
 };
 
 const Dialog1 = (props) => {
-  const buttonCount = () => {
-    if (props.nextBtn === 4) {
-      props.setNextBtn(props.nextBtn + 2);
-    } else {
-      props.setNextBtn(props.nextBtn + 1);
-    }
-  };
+  // const buttonCount = () => {
+  //   if (props.nextBtn === 4) {
+  //     props.setNextBtn(props.nextBtn + 2);
+  //   } else {
+  //     props.setNextBtn(props.nextBtn + 1);
+  //   }
+  // };
+  let [btnFade, setBtnFade] = useState(1);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setBtnFade(0);
+    }, 5000);
+  }, []);
+
   return (
     <div className="forFade">
       <img className="deco" src={deco} alt="deco1" />
       <img className="watachat" src={watachat} alt="watachat" />
       <p className="dialog_oneline">(어디선가 낯선 목소리가 들려온다..)</p>
       <button
-        className="nextBtn0"
+        className={"nextBtn" + btnFade}
         onClick={() => {
-          buttonCount();
+          props.setNextBtn(props.nextBtn + 1);
         }}
       >
         다음
@@ -97,6 +105,11 @@ const Dialog1 = (props) => {
   );
 };
 const Dialog2 = (props) => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch({ type: "index/SOMANI" });
+  }, [dispatch]);
+
   const buttonCount = () => {
     if (props.nextBtn === 4) {
       props.setNextBtn(props.nextBtn + 2);

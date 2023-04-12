@@ -82,8 +82,10 @@ const Dialog0 = (props) => {
 
 const Dialog1 = (props) => {
   const dispatch = useDispatch();
+  const status = useSelector((state) => state);
   useEffect(() => {
     dispatch({ type: "index/PLUS_STATE1" });
+    console.log(status.moodSelect);
   }, []);
 
   return (
@@ -174,9 +176,9 @@ const Dialog4 = (props) => {
 };
 const Dialog5 = () => {
   const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch({ type: "index/PLUS_STATE4" });
-  }, []);
+  // useEffect(() => {
+  //   dispatch({ type: "index/PLUS_STATE4" });
+  // }, []);
 
   return (
     <div className="sexBox">

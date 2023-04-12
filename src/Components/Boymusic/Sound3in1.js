@@ -41,7 +41,7 @@ const Sound3in1 = () => {
         mute={false}
         volume={1.0}
       />
-      <h2 className="script">
+      <h2 className="script2">
         누군가 나를 계속
         <br />
         쳐다보는 것 같아..

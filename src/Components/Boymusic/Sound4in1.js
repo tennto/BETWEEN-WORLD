@@ -4,6 +4,8 @@ import React, { useState } from "react";
 import ReactHowler from "../../howler/ReactHowler.js";
 import { useSelector, useDispatch } from "react-redux";
 import { setSound4 } from "../../index";
+
+import mchoice from "../ChapterBoy/mchoice.png";
 import "../../css/Card.css";
 
 const Sound4in1 = (props) => {
@@ -32,7 +34,8 @@ const Sound4in1 = (props) => {
         mute={false}
         volume={0.5}
       />
-      <h2 className="script">산이 좋겠어</h2>
+      <img className="mchoice" src={mchoice} alt="mchoice" />
+      <p className="script">산이 좋겠어..!</p>
       {/* <button
         onClick={() => {
           setPlaying(false);

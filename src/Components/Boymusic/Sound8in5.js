@@ -31,8 +31,7 @@ const Sound8in5 = (props) => {
         props.setNextBtn(props.nextBtn + 1);
       }}
     >
-      <p>음악2 뒷면</p>
-      <h1>까마귀 X</h1>
+      <p className="bscript">하고 싶은 일을 해 (소리 X)</p>
     </div>
   );
 };

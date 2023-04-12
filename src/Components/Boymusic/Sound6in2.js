@@ -7,6 +7,7 @@ import { setSound6 } from "../../index";
 import { cardSelect } from "../../index";
 import "../../css/Card.css";
 import { batch } from "react-redux";
+import tstrait from "../RainTaeRu/tstrait.png";
 
 const Sound6in2 = (props) => {
   const status = useSelector((state) => state);
@@ -76,7 +77,8 @@ const Sound6in2 = (props) => {
         mute={false}
         volume={0.1}
       />
-      <h2 className="script">반듯이 매단다</h2>
+      <img className="terucard" src={tstrait} alt="tstrait" />
+      <h2 className="tscript">반듯이 매단다 (약한 빗소리)</h2>
       {/* <button
         onClick={() => {
           setPlaying(false);

@@ -42,7 +42,7 @@ const Sound3in2 = () => {
         mute={false}
         volume={1.0}
       />
-      <h2 className="script">
+      <h2 className="script2">
         도망치고 싶어..!
         <br />
         원래 있던 곳으로..

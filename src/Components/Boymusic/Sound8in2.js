@@ -46,8 +46,7 @@ const Sound8in2 = (props) => {
         mute={false}
         volume={0.2}
       />
-      <p>음악2 뒷면</p>
-      <h1>까마귀 O</h1>
+      <p>해야만 하는 일을 해 (소리 O)</p>
     </div>
   );
 };
