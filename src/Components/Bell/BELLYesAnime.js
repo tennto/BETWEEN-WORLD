@@ -2,6 +2,10 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 const BELLYesAnime = () => {
-  return <div>엔딩 아니요 애니메이션</div>;
+  return (
+    <div>
+      <p>침대엔딩</p>
+    </div>
+  );
 };
 export default BELLYesAnime;

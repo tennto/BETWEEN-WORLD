@@ -12,8 +12,10 @@ import chdeco from "../ChapterBoy/chdeco.png";
 import textdeco from "../textdecoration.png";
 import coverdeco from "../backdeco.png";
 import bdchat from "../bdchat.png";
+import bnchat from "../bnchat.png";
 import watachat from "./watachat.png";
 import { useNavigate } from "react-router-dom";
+import ReactHowler from "../../howler/ReactHowler.js";
 
 const BellNo = () => {
   let [nextBtn, setNextBtn] = useState(0);
@@ -63,7 +65,7 @@ const Dialog0 = (props) => {
   return (
     <div className="forFade_b">
       <img className="deco" src={textdeco} alt="textdeco_bd" />
-      <img className="bdchat" src={bdchat} alt="bdchat" />
+      <img className="bnchat" src={bnchat} alt="bnchat" />
       <p className="dialog_oneline">........</p>
       <button
         className="nextBtn0"
@@ -88,7 +90,7 @@ const Dialog1 = (props) => {
   return (
     <div className="forFade_b">
       <img className="deco" src={textdeco} alt="textdeco_bd" />
-      <img className="bdchat" src={bdchat} alt="bdchat" />
+      <img className="watachat" src={watachat} alt="watachat" />
       <p className="dialog_oneline">.........</p>
       <button
         className="nextBtn0"
@@ -113,7 +115,7 @@ const Dialog2 = (props) => {
   return (
     <div className="forFade_b">
       <img className="deco" src={textdeco} alt="textdeco_bd" />
-      <img className="bdchat" src={bdchat} alt="bdchat" />
+      <img className="bnchat" src={bnchat} alt="bnchat" />
       <p className="dialog_oneline">그래</p>
       <button
         className="nextBtn0"
@@ -139,7 +141,7 @@ const Dialog3 = (props) => {
   return (
     <div className="forFade_b">
       <img className="deco" src={textdeco} alt="textdeco_bd" />
-      <img className="bdchat" src={bdchat} alt="bdchat" />
+      <img className="bnchat" src={bnchat} alt="bnchat" />
       <p className="dialog_oneline">그것 또한 너의 선택</p>
       <button
         className="nextBtn0"
@@ -165,7 +167,7 @@ const Dialog4 = (props) => {
   return (
     <div className="forFade_b">
       <img className="deco" src={textdeco} alt="textdeco_bd" />
-      <img className="bdchat" src={bdchat} alt="bdchat" />
+      <img className="bnchat" src={bnchat} alt="bnchat" />
       <p className="dialog_oneline">......</p>
       <button
         className="nextBtn0"
@@ -190,7 +192,7 @@ const Dialog5 = (props) => {
   return (
     <div className="forFade_b">
       <img className="deco" src={textdeco} alt="textdeco_bd" />
-      <img className="bdchat" src={bdchat} alt="bdchat" />
+      <img className="watachat" src={watachat} alt="watachat" />
       <p className="dialog_oneline">......</p>
       <button
         className="nextBtn0"
@@ -214,10 +216,10 @@ const Dialog6 = () => {
   };
 
   return (
-    <div className="forFade_b">
-      <img className="deco" src={textdeco} alt="textdeco_bd" />
+    <div>
+      {/* <img className="deco" src={textdeco} alt="textdeco_bd" />
       <img className="bdchat" src={bdchat} alt="bdchat" />
-      <p className="dialog_oneline">......</p>
+      <p className="dialog_oneline">......</p> */}
       <Link to="/main">
         <button> 메인 페이지 </button>
       </Link>

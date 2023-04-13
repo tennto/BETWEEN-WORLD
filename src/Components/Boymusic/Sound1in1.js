@@ -29,7 +29,7 @@ const Sound1in1 = () => {
       }}
       onClick={() => {
         batch(() => {
-          dispatch(setSound1("기쁨노래.mp3"));
+          dispatch(setSound1("기쁨노래1.mp3"));
           dispatch({ type: "index/RTR_1040" });
           dispatch({ type: checkMS });
         });

@@ -12,41 +12,28 @@ const Sound8in2 = (props) => {
   const status = useSelector((state) => state);
   const dispatch = useDispatch();
   const [play, setPlaying] = useState(false);
-  var [checkMS, setCheck] = useState("");
+  var [checkMH, setCheck] = useState("");
   useEffect(() => {
     if (status.sound4 === "산소리.mp3") {
-      setCheck("index/BIRDAnimeMS");
+      setCheck("index/BIRDAnimeMH");
     } else if (status.sound4 === "바다소리.mp3") {
-      setCheck("index/BIRDAnimeSS");
+      setCheck("index/BIRDAnimeSH");
     }
   }, []);
 
   return (
     <div
       className="happy1"
-      onMouseOver={() => {
-        setPlaying(true);
-      }}
-      onMouseLeave={() => {
-        setPlaying(false);
-      }}
       onClick={() => {
         batch(() => {
-          dispatch(setSound8("까마귀.wav"));
-          dispatch({ type: checkMS });
-          dispatch(cardSelect(0));
+          dispatch(setSound8(""));
+          dispatch({ type: checkMH });
+          dispatch(cardSelect(1));
         });
-        props.setNextBtn(props.nextBtn + 1);
+        props.setNextBtn(props.nextBtn + 2);
       }}
     >
-      <ReactHowler
-        src={["까마귀.wav"]}
-        playing={play}
-        loop={false}
-        mute={false}
-        volume={0.2}
-      />
-      <p>해야만 하는 일을 해 (소리 O)</p>
+      <p className="bscript">하고 싶은 일을 해 (소리 X)</p>
     </div>
   );
 };

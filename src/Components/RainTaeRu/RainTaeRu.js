@@ -290,7 +290,7 @@ const Dialog9 = (props) => {
       <p className="dialog_long">
         허나 비는 그칠 줄 몰랐고,, 마을 사람들은
         <br />
-        승려의 머리에 흰 천을 씌워 목을 매달었어.
+        승려의 머리에 흰 천을 씌워 목을 매달았어.
       </p>
       <button
         className="c2boynextBtn0"

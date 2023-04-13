@@ -57,7 +57,7 @@ const Popup1 = (props) => {
           props.setPageTwo(1);
         }}
       >
-        다음
+        NEXT
       </button>
     </>
   );
@@ -75,7 +75,7 @@ const Popup2 = () => {
         </p>
       </div>
       <Link to="/main">
-        <button className="homeNext2">알겠습니다</button>
+        <button className="homeNext2">START</button>
       </Link>
     </>
   );

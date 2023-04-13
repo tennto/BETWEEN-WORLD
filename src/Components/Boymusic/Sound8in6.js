@@ -28,7 +28,7 @@ const Sound8in6 = (props) => {
           dispatch({ type: checkMS });
           dispatch(cardSelect(1));
         });
-        props.setNextBtn(props.nextBtn + 1);
+        props.setNextBtn(props.nextBtn + 2);
       }}
     >
       <p className="bscript">하고 싶은 일을 해 (소리 X)</p>

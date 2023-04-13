@@ -13,9 +13,9 @@ const Sound8in4 = (props) => {
   var [checkMS, setCheck] = useState("");
   useEffect(() => {
     if (status.sound4 === "산소리.mp3") {
-      setCheck("index/BIRDAnimeMH");
+      setCheck("index/BIRDAnimeMS");
     } else if (status.sound4 === "바다소리.mp3") {
-      setCheck("index/BIRDAnimeSH");
+      setCheck("index/BIRDAnimeSS");
     }
   }, []);
 
@@ -28,7 +28,7 @@ const Sound8in4 = (props) => {
           dispatch({ type: checkMS });
           dispatch(cardSelect(1));
         });
-        props.setNextBtn(props.nextBtn + 1);
+        props.setNextBtn(props.nextBtn + 2);
       }}
     >
       <p className="bscript">하고 싶은 일을 해 (소리 X)</p>
