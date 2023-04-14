@@ -189,7 +189,7 @@ const Dialog5 = () => {
         }}
       >
         {/* <img className="wata1" src={wata1} alt="wata1" /> */}
-        <p className="sexText">남자</p>
+        <p className="sexText">Boy</p>
         <img className="sexdeco" src={sexdeco} alt="sexdeco" />
         <Player
           className="wata_motion"
@@ -207,7 +207,7 @@ const Dialog5 = () => {
         }}
       >
         <img className="wagi1" src={wagi1} alt="wagi1" />
-        <p className="sexText">여자</p>
+        <p className="sexText">Girl</p>
         <img className="sexdeco" src={sexdeco} alt="sexdeco" />
       </button>
     </div>

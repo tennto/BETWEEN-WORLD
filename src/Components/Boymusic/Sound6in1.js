@@ -17,7 +17,7 @@ const Sound6in1 = (props) => {
   useEffect(() => {
     if (status.sound4 === "산소리.mp3") {
       if (
-        status.sound1 === "기쁨노래.mp3" ||
+        status.sound1 === "기쁨노래1.mp3" ||
         status.sound1 === "기쁨노래2.mp3"
       ) {
         setCheck("index/RTRAnimeMH");
@@ -34,7 +34,7 @@ const Sound6in1 = (props) => {
       }
     } else if (status.sound4 === "바다소리.mp3") {
       if (
-        status.sound1 === "기쁨노래.mp3" ||
+        status.sound1 === "기쁨노래1.mp3" ||
         status.sound1 === "기쁨노래2.mp3"
       ) {
         setCheck("index/RTRAnimeSH");

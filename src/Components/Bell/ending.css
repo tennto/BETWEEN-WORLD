@@ -1,0 +1,15 @@
+.endingPic {
+  max-width: 1920px;
+  position: absolute;
+  animation: fadein 10s;
+  top: 0;
+  left: 0;
+}
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

@@ -384,13 +384,13 @@ function reducer(state = initialState, action) {
     case BELLYESAnime: {
       return {
         ...state,
-        aniSelect: 1080,
+        aniSelect: 1071,
       };
     }
     case BELLNOAnime: {
       return {
         ...state,
-        aniSelect: 1090,
+        aniSelect: 1072,
       };
     }
     ///////

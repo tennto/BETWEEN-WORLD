@@ -12,7 +12,7 @@ const Sound8in1 = (props) => {
   const status = useSelector((state) => state);
   const dispatch = useDispatch();
   const [play, setPlaying] = useState(false);
-  var [checkMS, setCheck] = useState("");
+  var [checkMH, setCheck] = useState("");
   useEffect(() => {
     if (status.sound4 === "산소리.mp3") {
       setCheck("index/BIRDAnimeMH");
@@ -33,7 +33,7 @@ const Sound8in1 = (props) => {
       onClick={() => {
         batch(() => {
           dispatch(setSound8("새소리.wav"));
-          dispatch({ type: checkMS });
+          dispatch({ type: checkMH });
           dispatch(cardSelect(0));
         });
         props.setNextBtn(props.nextBtn + 1);

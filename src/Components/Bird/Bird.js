@@ -17,6 +17,7 @@ import { Link } from "react-router-dom";
 import chdeco from "../ChapterBoy/chdeco.png";
 import textdeco from "../textdecoration.png";
 import coverdeco from "../backdeco.png";
+import hbdchat from "../bdchat.png";
 import bdchat from "../bdchat.png";
 import watachat from "./watachat.png";
 import { batch } from "react-redux";
@@ -53,6 +54,8 @@ const Bird = () => {
       return <Dialog12 nextBtn={nextBtn} setNextBtn={setNextBtn} />;
     } else if (nextBtn === 13) {
       return <Dialog13 />;
+    } else if (nextBtn === 14) {
+      return <Dialog14 />;
     }
   };
 
@@ -73,6 +76,22 @@ const Bird = () => {
 };
 
 const Dialog0 = (props) => {
+  const status = useSelector((state) => state);
+  const imgReturn = () => {
+    if (
+      status.moodSelect === "기쁨노래1.mp3" ||
+      status.moodSelect === "기쁨노래2.mp3"
+    ) {
+      return <img className="bdchat" src={hbdchat} alt="hbdchat" />;
+    } else if (
+      status.moodSelect === "슬픔노래1.mp3" ||
+      status.moodSelect === "슬픔노래2.mp3"
+    ) {
+      return <img className="bdchat" src={hbdchat} alt="hbdchat" />;
+    } else {
+      return <img className="bdchat" src={hbdchat} alt="hbdchat" />;
+    }
+  };
   const buttonCount = () => {
     if (props.nextBtn === 3) {
       props.setNextBtn(props.nextBtn + 2);
@@ -83,7 +102,7 @@ const Dialog0 = (props) => {
   return (
     <div className="forFade_b">
       <img className="deco" src={textdeco} alt="textdeco_bd" />
-      <img className="bdchat" src={bdchat} alt="bdchat" />
+      {imgReturn()}
       <p className="dialog_oneline">안녕. 인간</p>
       <button
         className="nextBtn0"
@@ -374,6 +393,7 @@ const Dialog11 = (props) => {
     </div>
   );
 };
+
 const Dialog12 = (props) => {
   const status = useSelector((state) => state);
   const showSound1 = () => {
@@ -392,20 +412,22 @@ const Dialog12 = (props) => {
     ) {
       return (
         <>
-          <Sound8in5 {...props} />;
+          <Sound8in3 {...props} />;
         </>
       );
     } else if (
       status.sound1 === "긴장노래1.mp3" ||
-      status.sound1 === "긴장노래2.mp3"
+      status.sound1 === "긴장노래2.mp3" ||
+      status.sound1 === "긴장노래3.mp3"
     ) {
       return (
         <>
-          <Sound8in3 {...props} />;
+          <Sound8in5 {...props} />;
         </>
       );
     }
   };
+
   const showSound2 = () => {
     if (
       status.sound1 === "기쁨노래1.mp3" ||
@@ -422,16 +444,17 @@ const Dialog12 = (props) => {
     ) {
       return (
         <>
-          <Sound8in6 {...props} />;
+          <Sound8in4 {...props} />;
         </>
       );
     } else if (
       status.sound1 === "긴장노래1.mp3" ||
-      status.sound1 === "긴장노래2.mp3"
+      status.sound1 === "긴장노래2.mp3" ||
+      status.sound1 === "긴장노래3.mp3"
     ) {
       return (
         <>
-          <Sound8in4 {...props} />;
+          <Sound8in6 {...props} />;
         </>
       );
     }
@@ -448,7 +471,7 @@ const Dialog12 = (props) => {
           <div className="card-back">
             <img className="carddeco" src={carddecoback} alt="carddeco1" />
             {/* <p className="chtext1">해야만 하는 일을 해</p> */}
-            <h2 className="script">해야만 하는 일을 해</h2>
+            {/* <h2 className="script">해야만 하는 일을 해</h2> */}
             {showSound1()}
           </div>
         </div>
@@ -462,7 +485,7 @@ const Dialog12 = (props) => {
           <div className="card-back2">
             <img className="carddeco" src={carddecoback} alt="carddeco1" />
             {/* <p className="chtext1">하고 싶은 일을 해</p> */}
-            <h2 className="script">하고싶은 일을 해</h2>
+            {/* <h2 className="script">하고싶은 일을 해</h2> */}
             {showSound2()}
           </div>
         </div>
@@ -500,4 +523,32 @@ const Dialog13 = (props) => {
   );
 };
 
+const Dialog14 = (props) => {
+  const dispatch = useDispatch();
+  const buttonCount = () => {
+    if (props.nextBtn === 3) {
+      props.setNextBtn(props.nextBtn + 2);
+    } else {
+      props.setNextBtn(props.nextBtn + 1);
+    }
+  };
+  return (
+    <div className="forFade_b">
+      <img className="deco" src={textdeco} alt="textdeco_bd" />
+      <img className="watachat" src={watachat} alt="watachat" />
+      <p className="dialog_oneline">새는 부리를 벗고 환하게 웃기 시작했다.</p>
+      <button
+        className="nextBtn0"
+        onClick={() => {
+          batch(() => {
+            dispatch({ type: "index/BELL_1070" });
+            dispatch({ type: "index/BELLAnimeF" });
+          });
+        }}
+      >
+        다음
+      </button>
+    </div>
+  );
+};
 export default Bird;

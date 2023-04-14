@@ -11,7 +11,10 @@ const RTRAnimeMF = () => {
   const status = useSelector((state) => state);
 
   const chooseMood = () => {
-    if (status.sound1 === "기쁨노래.mp3" || status.sound1 === "기쁨노래2.mp3") {
+    if (
+      status.sound1 === "기쁨노래1.mp3" ||
+      status.sound1 === "기쁨노래2.mp3"
+    ) {
       return (
         <>
           <Player

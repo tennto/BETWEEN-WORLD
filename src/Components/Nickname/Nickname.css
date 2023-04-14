@@ -23,7 +23,8 @@
   animation: fadein 3s;
   position: absolute;
   box-shadow: 0px 2px 6px #cecece;
-  color: #383838;
+  background-color: #383838;
+  color: whitesmoke;
   border: none;
   font-size: 12px;
   border-radius: 20px;
@@ -73,7 +74,7 @@
   border-radius: 12px;
   left: 249px;
   bottom: 360px;
-  background-color: whitesmoke;
+  background-color: #fcfbf9;
   box-shadow: 0px 2px 6px #cecece;
 }
 .nicknameInput {
@@ -124,6 +125,11 @@
   src: url("./ongeul.ttf");
 }
 
+@font-face {
+  font-family: "pencil";
+  src: url("./Pencil\ Child.ttf");
+}
+
 @-webkit-keyframes fadein {
   from {
     opacity: 0;
@@ -136,7 +142,7 @@
 .choiceSex {
   width: 360px;
   height: 600px;
-  background-color: whitesmoke;
+  background-color: #fcfbf9;
   display: inline-block;
   margin: 0 20px;
   border-radius: 20px;
@@ -162,10 +168,11 @@
 }
 .sexText {
   position: absolute;
+  color: #383838;
   top: 40px;
-  left: 162px;
+  left: 153px;
   font-size: 32px;
-  font-family: "ongeul";
+  font-family: "pencil";
 }
 .wata_motion {
   position: absolute;
@@ -181,7 +188,8 @@
 
 .forFade {
   animation: fadein 1s;
-  background-color: whitesmoke;
+  /* background-color: whitesmoke; */
+  background-color: #fcfbf9;
   width: 900px;
   height: 200px;
   border: none;
