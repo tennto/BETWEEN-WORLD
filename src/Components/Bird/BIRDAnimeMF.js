@@ -6,6 +6,7 @@ import { Player } from "@lottiefiles/react-lottie-player";
 import h_m_b_d from "./happy_san_wata_bird_default.json";
 import s_m_b_d from "./sad_san_wata_bird_default.json";
 import t_m_b_d from "./thrill_san_wata_bird_default.json";
+import "../../css/Chapter2.css";
 
 const BIRDAnimeMF = () => {
   const status = useSelector((state) => state);
@@ -18,6 +19,7 @@ const BIRDAnimeMF = () => {
       return (
         <>
           <Player
+            className="fadelick"
             src={h_m_b_d}
             style={{ width: "1920px" }}
             autoplay={true}
