@@ -96,6 +96,7 @@ const Dialog0 = (props) => {
 };
 
 const Dialog1 = (props) => {
+  const status = useSelector((state) => state);
   const buttonCount = () => {
     if (props.nextBtn === 3) {
       props.setNextBtn(props.nextBtn + 2);
@@ -107,7 +108,9 @@ const Dialog1 = (props) => {
     <div className="forFade_b">
       <img className="deco" src={textdeco} alt="textdeco_bd" />
       <img className="bnchat" src={bnchat} alt="bnchat" />
-      <p className="dialog_oneline">지금 들리는 소리는 마음에 드니?</p>
+      <p className="dialog_oneline">
+        {status.userName}지금 들리는 소리는 마음에 드니?
+      </p>
       <button
         className="nextBtn0"
         onClick={() => {

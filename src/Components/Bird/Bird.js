@@ -17,7 +17,11 @@ import { Link } from "react-router-dom";
 import chdeco from "../ChapterBoy/chdeco.png";
 import textdeco from "../textdecoration.png";
 import coverdeco from "../backdeco.png";
-import hbdchat from "../bdchat.png";
+import hbchat2 from "../bdchat2.png";
+import sbchat from "../sbchat1.png";
+import sbchat2 from "../sbchat2.png";
+import tbchat from "../tbchat1.png";
+import tbchat2 from "../tbchat2.png";
 import bdchat from "../bdchat.png";
 import watachat from "./watachat.png";
 import { batch } from "react-redux";
@@ -79,17 +83,17 @@ const Dialog0 = (props) => {
   const status = useSelector((state) => state);
   const imgReturn = () => {
     if (
-      status.moodSelect === "기쁨노래1.mp3" ||
-      status.moodSelect === "기쁨노래2.mp3"
+      status.sound1 === "기쁨노래1.mp3" ||
+      status.sound1 === "기쁨노래2.mp3"
     ) {
-      return <img className="bdchat" src={hbdchat} alt="hbdchat" />;
+      return <img className="bdchat" src={bdchat} alt="hbdchat" />;
     } else if (
-      status.moodSelect === "슬픔노래1.mp3" ||
-      status.moodSelect === "슬픔노래2.mp3"
+      status.sound1 === "슬픔노래1.mp3" ||
+      status.sound1 === "슬픔노래2.mp3"
     ) {
-      return <img className="bdchat" src={hbdchat} alt="hbdchat" />;
+      return <img className="bdchat" src={sbchat} alt="hbdchat" />;
     } else {
-      return <img className="bdchat" src={hbdchat} alt="hbdchat" />;
+      return <img className="bdchat" src={tbchat} alt="hbdchat" />;
     }
   };
   const buttonCount = () => {
@@ -117,6 +121,22 @@ const Dialog0 = (props) => {
 };
 
 const Dialog1 = (props) => {
+  const status = useSelector((state) => state);
+  const imgReturn = () => {
+    if (
+      status.sound1 === "기쁨노래1.mp3" ||
+      status.sound1 === "기쁨노래2.mp3"
+    ) {
+      return <img className="bdchat" src={bdchat} alt="hbdchat" />;
+    } else if (
+      status.sound1 === "슬픔노래1.mp3" ||
+      status.sound1 === "슬픔노래2.mp3"
+    ) {
+      return <img className="bdchat" src={sbchat} alt="hbdchat" />;
+    } else {
+      return <img className="bdchat" src={tbchat} alt="hbdchat" />;
+    }
+  };
   const buttonCount = () => {
     if (props.nextBtn === 3) {
       props.setNextBtn(props.nextBtn + 2);
@@ -127,7 +147,7 @@ const Dialog1 = (props) => {
   return (
     <div className="forFade_b">
       <img className="deco" src={textdeco} alt="textdeco_bd" />
-      <img className="bdchat" src={bdchat} alt="bdchat" />
+      {imgReturn()}
       <p className="dialog_oneline">또 만났네.</p>
       <button
         className="nextBtn0"
@@ -169,6 +189,22 @@ const Dialog2 = (props) => {
 };
 
 const Dialog3 = (props) => {
+  const status = useSelector((state) => state);
+  const imgReturn = () => {
+    if (
+      status.sound1 === "기쁨노래1.mp3" ||
+      status.sound1 === "기쁨노래2.mp3"
+    ) {
+      return <img className="bdchat" src={bdchat} alt="hbdchat" />;
+    } else if (
+      status.sound1 === "슬픔노래1.mp3" ||
+      status.sound1 === "슬픔노래2.mp3"
+    ) {
+      return <img className="bdchat" src={sbchat} alt="hbdchat" />;
+    } else {
+      return <img className="bdchat" src={tbchat} alt="hbdchat" />;
+    }
+  };
   const buttonCount = () => {
     if (props.nextBtn === 3) {
       props.setNextBtn(props.nextBtn + 2);
@@ -180,7 +216,7 @@ const Dialog3 = (props) => {
   return (
     <div className="forFade_b">
       <img className="deco" src={textdeco} alt="textdeco_bd" />
-      <img className="bdchat" src={bdchat} alt="bdchat" />
+      {imgReturn()}
       <p className="dialog_oneline">지금은 이런 모습이야</p>
       <button
         className="nextBtn0"
@@ -194,6 +230,22 @@ const Dialog3 = (props) => {
   );
 };
 const Dialog4 = (props) => {
+  const status = useSelector((state) => state);
+  const imgReturn = () => {
+    if (
+      status.sound1 === "기쁨노래1.mp3" ||
+      status.sound1 === "기쁨노래2.mp3"
+    ) {
+      return <img className="bdchat" src={bdchat} alt="hbdchat" />;
+    } else if (
+      status.sound1 === "슬픔노래1.mp3" ||
+      status.sound1 === "슬픔노래2.mp3"
+    ) {
+      return <img className="bdchat" src={sbchat} alt="hbdchat" />;
+    } else {
+      return <img className="bdchat" src={tbchat} alt="hbdchat" />;
+    }
+  };
   const buttonCount = () => {
     if (props.nextBtn === 3) {
       props.setNextBtn(props.nextBtn + 2);
@@ -205,7 +257,7 @@ const Dialog4 = (props) => {
   return (
     <div className="forFade_b">
       <img className="deco" src={textdeco} alt="textdeco_bd" />
-      <img className="bdchat" src={bdchat} alt="bdchat" />
+      {imgReturn()}
       <p className="dialog_oneline">이미 여러번. 이 모습으론 처음이야</p>
       <button
         className="nextBtn0"
@@ -219,6 +271,22 @@ const Dialog4 = (props) => {
   );
 };
 const Dialog5 = (props) => {
+  const status = useSelector((state) => state);
+  const imgReturn = () => {
+    if (
+      status.sound1 === "기쁨노래1.mp3" ||
+      status.sound1 === "기쁨노래2.mp3"
+    ) {
+      return <img className="bdchat" src={bdchat} alt="hbdchat" />;
+    } else if (
+      status.sound1 === "슬픔노래1.mp3" ||
+      status.sound1 === "슬픔노래2.mp3"
+    ) {
+      return <img className="bdchat" src={sbchat} alt="hbdchat" />;
+    } else {
+      return <img className="bdchat" src={tbchat} alt="hbdchat" />;
+    }
+  };
   const buttonCount = () => {
     if (props.nextBtn === 3) {
       props.setNextBtn(props.nextBtn + 2);
@@ -230,7 +298,7 @@ const Dialog5 = (props) => {
   return (
     <div className="forFade_b">
       <img className="deco" src={textdeco} alt="textdeco_bd" />
-      <img className="bdchat" src={bdchat} alt="bdchat" />
+      {imgReturn()}
       <p className="dialog_oneline">사람들은 말하지</p>
       <button
         className="nextBtn0"
@@ -244,6 +312,22 @@ const Dialog5 = (props) => {
   );
 };
 const Dialog6 = (props) => {
+  const status = useSelector((state) => state);
+  const imgReturn = () => {
+    if (
+      status.sound1 === "기쁨노래1.mp3" ||
+      status.sound1 === "기쁨노래2.mp3"
+    ) {
+      return <img className="bdchat" src={bdchat} alt="hbdchat" />;
+    } else if (
+      status.sound1 === "슬픔노래1.mp3" ||
+      status.sound1 === "슬픔노래2.mp3"
+    ) {
+      return <img className="bdchat" src={sbchat} alt="hbdchat" />;
+    } else {
+      return <img className="bdchat" src={tbchat} alt="hbdchat" />;
+    }
+  };
   const buttonCount = () => {
     if (props.nextBtn === 3) {
       props.setNextBtn(props.nextBtn + 2);
@@ -255,7 +339,7 @@ const Dialog6 = (props) => {
   return (
     <div className="forFade_b">
       <img className="deco" src={textdeco} alt="textdeco_bd" />
-      <img className="bdchat" src={bdchat} alt="bdchat" />
+      {imgReturn()}
       <p className="dialog_oneline">"나 답게 있고 싶다"</p>
       <button
         className="nextBtn0"
@@ -269,6 +353,22 @@ const Dialog6 = (props) => {
   );
 };
 const Dialog7 = (props) => {
+  const status = useSelector((state) => state);
+  const imgReturn = () => {
+    if (
+      status.sound1 === "기쁨노래1.mp3" ||
+      status.sound1 === "기쁨노래2.mp3"
+    ) {
+      return <img className="bdchat" src={bdchat} alt="hbdchat" />;
+    } else if (
+      status.sound1 === "슬픔노래1.mp3" ||
+      status.sound1 === "슬픔노래2.mp3"
+    ) {
+      return <img className="bdchat" src={sbchat} alt="hbdchat" />;
+    } else {
+      return <img className="bdchat" src={tbchat} alt="hbdchat" />;
+    }
+  };
   const buttonCount = () => {
     if (props.nextBtn === 3) {
       props.setNextBtn(props.nextBtn + 2);
@@ -280,7 +380,7 @@ const Dialog7 = (props) => {
   return (
     <div className="forFade_b">
       <img className="deco" src={textdeco} alt="textdeco_bd" />
-      <img className="bdchat" src={bdchat} alt="bdchat" />
+      {imgReturn()}
       <p className="dialog_oneline">그렇다면 나 다움이란 건 뭐지?</p>
       <button
         className="nextBtn0"
@@ -294,6 +394,22 @@ const Dialog7 = (props) => {
   );
 };
 const Dialog8 = (props) => {
+  const status = useSelector((state) => state);
+  const imgReturn = () => {
+    if (
+      status.sound1 === "기쁨노래1.mp3" ||
+      status.sound1 === "기쁨노래2.mp3"
+    ) {
+      return <img className="bdchat" src={bdchat} alt="hbdchat" />;
+    } else if (
+      status.sound1 === "슬픔노래1.mp3" ||
+      status.sound1 === "슬픔노래2.mp3"
+    ) {
+      return <img className="bdchat" src={sbchat} alt="hbdchat" />;
+    } else {
+      return <img className="bdchat" src={tbchat} alt="hbdchat" />;
+    }
+  };
   const buttonCount = () => {
     if (props.nextBtn === 3) {
       props.setNextBtn(props.nextBtn + 2);
@@ -305,7 +421,7 @@ const Dialog8 = (props) => {
   return (
     <div className="forFade_b">
       <img className="deco" src={textdeco} alt="textdeco_bd" />
-      <img className="bdchat" src={bdchat} alt="bdchat" />
+      {imgReturn()}
       <p className="dialog_oneline">계속 이야기에 맞춰 내 모습을 바꿔왔어.</p>
       <button
         className="nextBtn0"
@@ -319,6 +435,22 @@ const Dialog8 = (props) => {
   );
 };
 const Dialog9 = (props) => {
+  const status = useSelector((state) => state);
+  const imgReturn = () => {
+    if (
+      status.sound1 === "기쁨노래1.mp3" ||
+      status.sound1 === "기쁨노래2.mp3"
+    ) {
+      return <img className="bdchat" src={bdchat} alt="hbdchat" />;
+    } else if (
+      status.sound1 === "슬픔노래1.mp3" ||
+      status.sound1 === "슬픔노래2.mp3"
+    ) {
+      return <img className="bdchat" src={sbchat} alt="hbdchat" />;
+    } else {
+      return <img className="bdchat" src={tbchat} alt="hbdchat" />;
+    }
+  };
   const buttonCount = () => {
     if (props.nextBtn === 3) {
       props.setNextBtn(props.nextBtn + 2);
@@ -330,7 +462,7 @@ const Dialog9 = (props) => {
   return (
     <div className="forFade_b">
       <img className="deco" src={textdeco} alt="textdeco_bd" />
-      <img className="bdchat" src={bdchat} alt="bdchat" />
+      {imgReturn()}
       <p className="dialog_oneline">이건 나에게 주어진 일</p>
       <button
         className="nextBtn0"
@@ -344,6 +476,22 @@ const Dialog9 = (props) => {
   );
 };
 const Dialog10 = (props) => {
+  const status = useSelector((state) => state);
+  const imgReturn = () => {
+    if (
+      status.sound1 === "기쁨노래1.mp3" ||
+      status.sound1 === "기쁨노래2.mp3"
+    ) {
+      return <img className="bdchat" src={bdchat} alt="hbdchat" />;
+    } else if (
+      status.sound1 === "슬픔노래1.mp3" ||
+      status.sound1 === "슬픔노래2.mp3"
+    ) {
+      return <img className="bdchat" src={sbchat} alt="hbdchat" />;
+    } else {
+      return <img className="bdchat" src={tbchat} alt="hbdchat" />;
+    }
+  };
   const buttonCount = () => {
     if (props.nextBtn === 3) {
       props.setNextBtn(props.nextBtn + 2);
@@ -355,7 +503,7 @@ const Dialog10 = (props) => {
   return (
     <div className="forFade_b">
       <img className="deco" src={textdeco} alt="textdeco_bd" />
-      <img className="bdchat" src={bdchat} alt="bdchat" />
+      {imgReturn()}
       <p className="dialog_oneline">나는 항상 나 답게 있고 싶었어.</p>
       <button
         className="nextBtn0"
@@ -369,6 +517,22 @@ const Dialog10 = (props) => {
   );
 };
 const Dialog11 = (props) => {
+  const status = useSelector((state) => state);
+  const imgReturn = () => {
+    if (
+      status.sound1 === "기쁨노래1.mp3" ||
+      status.sound1 === "기쁨노래2.mp3"
+    ) {
+      return <img className="bdchat" src={bdchat} alt="hbdchat" />;
+    } else if (
+      status.sound1 === "슬픔노래1.mp3" ||
+      status.sound1 === "슬픔노래2.mp3"
+    ) {
+      return <img className="bdchat" src={sbchat} alt="hbdchat" />;
+    } else {
+      return <img className="bdchat" src={tbchat} alt="hbdchat" />;
+    }
+  };
   const buttonCount = () => {
     if (props.nextBtn === 3) {
       props.setNextBtn(props.nextBtn + 2);
@@ -380,7 +544,7 @@ const Dialog11 = (props) => {
   return (
     <div className="forFade_b">
       <img className="deco" src={textdeco} alt="textdeco_bd" />
-      <img className="bdchat" src={bdchat} alt="bdchat" />
+      {imgReturn()}
       <p className="dialog_oneline">나는 어떻게 해야만 하지?</p>
       <button
         className="nextBtn0"

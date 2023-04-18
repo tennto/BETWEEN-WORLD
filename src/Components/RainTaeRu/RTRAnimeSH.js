@@ -2,6 +2,10 @@
 
 import React from "react";
 import { useSelector } from "react-redux";
+import { Player } from "@lottiefiles/react-lottie-player";
+import h_b_t_s from "./happy_sea_wata_teru_strait.json";
+import h_b_t_r from "./happy_sea_wata_teru_reverse.json";
+import "../../css/Chapter2.css";
 
 const RTRAnimeSH = () => {
   const status = useSelector((state) => state);
@@ -10,13 +14,27 @@ const RTRAnimeSH = () => {
     if (status.cardSelect === 0) {
       return (
         <>
-          <h1> 비 애니메이션 (바다)(기쁨)(빗소리 많이)</h1>
+          <Player
+            className="fadelick1"
+            src={h_b_t_r}
+            style={{ width: "1920px" }}
+            autoplay={true}
+            loop={false}
+            speed={1}
+          />
         </>
       );
     } else if (status.cardSelect === 1) {
       return (
         <>
-          <h1> 비 애니메이션 (바다)(기쁨)(빗소리 적게)</h1>
+          <Player
+            className="fadelick1"
+            src={h_b_t_s}
+            style={{ width: "1920px" }}
+            autoplay={true}
+            loop={false}
+            speed={1}
+          />
         </>
       );
     }

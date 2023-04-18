@@ -48,7 +48,7 @@
 }
 
 .forFade_b {
-  animation: fadein 3s;
+  animation: fadein 1s;
   background-color: whitesmoke;
   width: 900px;
   height: 200px;
@@ -57,7 +57,7 @@
   box-shadow: 0px 2px 6px #cecece;
 }
 .forFade_g {
-  animation: fadein 3s;
+  animation: fadein 1s;
   background-color: whitesmoke;
   width: 900px;
   height: 200px;
@@ -67,7 +67,7 @@
 }
 
 .forFade_mood {
-  animation: fadein 3s;
+  animation: fadein 1s;
 }
 
 .c2boynextBtn1 {
@@ -94,7 +94,7 @@
 
 .dialog_long {
   text-align: left;
-  animation: fadein 3s;
+  animation: fadein 1s;
   font-family: "ongeul";
   position: absolute;
   top: 33px;

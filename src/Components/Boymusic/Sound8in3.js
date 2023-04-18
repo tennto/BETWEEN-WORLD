@@ -14,9 +14,9 @@ const Sound8in3 = (props) => {
   var [checkMS, setCheck] = useState("");
   useEffect(() => {
     if (status.sound4 === "산소리.mp3") {
-      setCheck("index/BIRDAnimeMT");
+      setCheck("index/BIRDAnimeMS");
     } else if (status.sound4 === "바다소리.mp3") {
-      setCheck("index/BIRDAnimeST");
+      setCheck("index/BIRDAnimeSS");
     }
   }, []);
 
