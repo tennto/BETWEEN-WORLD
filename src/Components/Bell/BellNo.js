@@ -216,22 +216,14 @@ const Dialog6 = () => {
   };
 
   return (
-    <div>
+    <>
       {/* <img className="deco" src={textdeco} alt="textdeco_bd" />
-      <img className="bdchat" src={bdchat} alt="bdchat" />
-      <p className="dialog_oneline">......</p> */}
-      <Link to="/main">
-        <button> 메인 페이지 </button>
+      <img className="bnchat" src={bnchat} alt="bnchat" />
+      <p className="dialog_oneline">……</p> */}
+      <Link to="/">
+        <button> 처음으로 </button>
       </Link>
-      <button
-        onClick={() => {
-          gotoGallery();
-        }}
-      >
-        {" "}
-        갤러리로{" "}
-      </button>
-    </div>
+    </>
   );
 };
 

@@ -2,33 +2,17 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-// import axios from "axios";
+import axios from "axios";
 import "../../css/Gallery.css";
 import Modal from "./Modal";
-
 import { useLocation } from "react-router-dom";
+// import Loding from "./Loding";
 
 const Gallery = () => {
   const [userInfo, setUserList] = useState();
   const [isOpen, setIsOpen] = useState(false);
+  // const [displayNow, setDisplay] = useState(false);
   const [idCheck, setIdCheck] = useState([]);
-  const store = useLocation();
-  const allInfo = store.state;
-
-  console.log(allInfo.userName);
-
-  const dataSubmit = async () => {
-    await axios.post("/gallery/userinfo", {
-      userName: allInfo.userName,
-      sound1: allInfo.sound1,
-      sound2: allInfo.sound2,
-      sound4: allInfo.sound4,
-      sound6: allInfo.sound6,
-      sound7: allInfo.sound7,
-      sound8: allInfo.sound8,
-    });
-    axiosData();
-  };
 
   const axiosData = async () => {
     const response = await axios.get("/gallery/userinfo");
@@ -57,25 +41,21 @@ const Gallery = () => {
       {/* post요청 다르게 써야함 */}
       {/* 데이터 새로고침 GET */}
       <div className="topnav">
+        {/* {displayNow && <Loding />} */}
+        <img
+          width="600px"
+          src="https://user-images.githubusercontent.com/109796814/225483015-7c1ef2c7-54aa-40d9-addd-7c127d9ebfff.png"
+        />
         <button
           className="refresh"
           onClick={() => {
             {
+              setDisplay(true);
               refreshData();
             }
           }}
         >
           제 음악이 없어요
-        </button>
-        <button
-          className="refresh"
-          onClick={() => {
-            {
-              dataSubmit();
-            }
-          }}
-        >
-          post요청
         </button>
       </div>
       <div className="all-gallery">
