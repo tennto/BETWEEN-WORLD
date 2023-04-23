@@ -6,6 +6,7 @@ import "../../css/Chapter2.css";
 import deco from "../../Components/textdecoration.png";
 import chdeco from "./chdeco.png";
 import watachat from "./watachat.png";
+import wagichat from "../ChapterBoy/wagichat.png";
 
 const MoodSelect = () => {
   const dispatch = useDispatch();
@@ -42,10 +43,19 @@ const MoodSelect = () => {
 };
 
 const Dialog0 = (props) => {
+  const status = useSelector((state) => state);
+  const imgReturn = () => {
+    if (status.userSex === 1) {
+      return <img className="watachat" src={watachat} alt="watachat" />;
+    } else if (status.userSex === 2) {
+      return <img className="watachat" src={wagichat} alt="wagichat" />;
+    }
+  };
+
   return (
     <div className="forFade_b">
       <img className="deco" src={deco} alt="deco" />
-      <img className="watachat" src={watachat} alt="watachat" />
+      {imgReturn()}
       <p className="dialog_oneline">. . .</p>
       <button
         className="c2boynextBtn0"
@@ -60,10 +70,18 @@ const Dialog0 = (props) => {
 };
 
 const Dialog1 = (props) => {
+  const status = useSelector((state) => state);
+  const imgReturn = () => {
+    if (status.userSex === 1) {
+      return <img className="watachat" src={watachat} alt="watachat" />;
+    } else if (status.userSex === 2) {
+      return <img className="watachat" src={wagichat} alt="wagichat" />;
+    }
+  };
   return (
     <div className="forFade_b">
       <img className="deco" src={deco} alt="deco" />
-      <img className="watachat" src={watachat} alt="watachat" />
+      {imgReturn()}
       <p className="dialog_oneline">방금건 도대체...</p>
       <button
         className="c2boynextBtn0"

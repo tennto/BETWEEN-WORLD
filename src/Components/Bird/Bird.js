@@ -24,6 +24,7 @@ import tbchat from "../tbchat1.png";
 import tbchat2 from "../tbchat2.png";
 import bdchat from "../bdchat.png";
 import watachat from "./watachat.png";
+import wagichat from "../ChapterBoy/wagichat.png";
 import { batch } from "react-redux";
 
 const Bird = () => {
@@ -567,7 +568,7 @@ const Dialog12 = (props) => {
     ) {
       return (
         <>
-          <Sound8in1 {...props} />;
+          <Sound8in1 {...props} />
         </>
       );
     } else if (
@@ -576,7 +577,7 @@ const Dialog12 = (props) => {
     ) {
       return (
         <>
-          <Sound8in3 {...props} />;
+          <Sound8in3 {...props} />
         </>
       );
     } else if (
@@ -586,7 +587,7 @@ const Dialog12 = (props) => {
     ) {
       return (
         <>
-          <Sound8in5 {...props} />;
+          <Sound8in5 {...props} />
         </>
       );
     }
@@ -599,7 +600,7 @@ const Dialog12 = (props) => {
     ) {
       return (
         <>
-          <Sound8in2 {...props} />;
+          <Sound8in2 {...props} />
         </>
       );
     } else if (
@@ -608,7 +609,7 @@ const Dialog12 = (props) => {
     ) {
       return (
         <>
-          <Sound8in4 {...props} />;
+          <Sound8in4 {...props} />
         </>
       );
     } else if (
@@ -618,7 +619,7 @@ const Dialog12 = (props) => {
     ) {
       return (
         <>
-          <Sound8in6 {...props} />;
+          <Sound8in6 {...props} />
         </>
       );
     }
@@ -659,6 +660,14 @@ const Dialog12 = (props) => {
 };
 
 const Dialog13 = (props) => {
+  const status = useSelector((state) => state);
+  const imgReturn = () => {
+    if (status.userSex === 1) {
+      return <img className="watachat" src={watachat} alt="watachat" />;
+    } else if (status.userSex === 2) {
+      return <img className="watachat" src={wagichat} alt="wagichat" />;
+    }
+  };
   const dispatch = useDispatch();
   const buttonCount = () => {
     if (props.nextBtn === 3) {
@@ -670,7 +679,7 @@ const Dialog13 = (props) => {
   return (
     <div className="forFade_b">
       <img className="deco" src={textdeco} alt="textdeco_bd" />
-      <img className="watachat" src={watachat} alt="watachat" />
+      {imgReturn()}
       <p className="dialog_oneline">새는 노래하기 시작했다.</p>
       <button
         className="nextBtn0"

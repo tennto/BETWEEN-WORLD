@@ -19,6 +19,7 @@ const root = createRoot(container);
 // userName 은 유저닉네임을 위한 프로퍼티
 
 const initialState = {
+  userSex: 0,
   textLine: 1,
   btnReset: 0,
   moodSelect: 1,
@@ -68,6 +69,10 @@ export const setSound8 = (sound8) => {
   return { type: SET_SOUND8, sound8 };
 };
 // 선택지 액션 - 남자버전
+const SET_SEX1 = "index/SET_SEX1"; // 성별 남자
+const SET_SEX2 = "index/SET_SEX2"; // 성별 여자
+const BEFORE_NONAME1 = "index/BEFORE_NONAME1";
+const BEFORE_NONAME2 = "index/BEFORE_NONAME2";
 const HAPPY_MOOD = "index/HAPPY_MOOD";
 const SAD_MOOD = "index/SAD_MOOD";
 const THRILL_MOOD = "index/THRILL_MOOD";
@@ -138,6 +143,18 @@ const SET_SOUND8 = "index/SET_SOUND8";
 // reducer 설정
 function reducer(state = initialState, action) {
   switch (action.type) {
+    case SET_SEX1: {
+      return {
+        ...state,
+        userSex: 1, // 남자
+      };
+    }
+    case SET_SEX2: {
+      return {
+        ...state,
+        userSex: 2, // 여자
+      };
+    }
     case CS: {
       return {
         ...state,
@@ -398,14 +415,24 @@ function reducer(state = initialState, action) {
       return {
         ...state,
         moodSelect: 6,
-        aniSelect: 6,
       };
     }
     case STORY_NO3: {
       return {
         ...state,
-        moodSelect: 7,
-        aniselect: 7,
+        moodSelect: 6,
+      };
+    }
+    case BEFORE_NONAME1: {
+      return {
+        ...state,
+        aniSelect: 6,
+      };
+    }
+    case BEFORE_NONAME2: {
+      return {
+        ...state,
+        aniSelect: 6,
       };
     }
     // #1 - 애니메이션 변경 1번

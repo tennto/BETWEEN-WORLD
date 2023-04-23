@@ -14,6 +14,7 @@ import coverdeco from "../backdeco.png";
 import bdchat from "../bdchat.png";
 import bnchat from "../bnchat.png";
 import watachat from "./watachat.png";
+import wagichat from "../ChapterBoy/wagichat.png";
 import { useNavigate } from "react-router-dom";
 import ReactHowler from "../../howler/ReactHowler.js";
 
@@ -80,6 +81,14 @@ const Dialog0 = (props) => {
 };
 
 const Dialog1 = (props) => {
+  const status = useSelector((state) => state);
+  const imgReturn = () => {
+    if (status.userSex === 1) {
+      return <img className="watachat" src={watachat} alt="watachat" />;
+    } else if (status.userSex === 2) {
+      return <img className="watachat" src={wagichat} alt="wagichat" />;
+    }
+  };
   const buttonCount = () => {
     if (props.nextBtn === 3) {
       props.setNextBtn(props.nextBtn + 2);
@@ -90,7 +99,7 @@ const Dialog1 = (props) => {
   return (
     <div className="forFade_b">
       <img className="deco" src={textdeco} alt="textdeco_bd" />
-      <img className="watachat" src={watachat} alt="watachat" />
+      {imgReturn()}
       <p className="dialog_oneline">.........</p>
       <button
         className="nextBtn0"
@@ -181,6 +190,14 @@ const Dialog4 = (props) => {
   );
 };
 const Dialog5 = (props) => {
+  const status = useSelector((state) => state);
+  const imgReturn = () => {
+    if (status.userSex === 1) {
+      return <img className="watachat" src={watachat} alt="watachat" />;
+    } else if (status.userSex === 2) {
+      return <img className="watachat" src={wagichat} alt="wagichat" />;
+    }
+  };
   const buttonCount = () => {
     if (props.nextBtn === 3) {
       props.setNextBtn(props.nextBtn + 2);
@@ -192,7 +209,7 @@ const Dialog5 = (props) => {
   return (
     <div className="forFade_b">
       <img className="deco" src={textdeco} alt="textdeco_bd" />
-      <img className="watachat" src={watachat} alt="watachat" />
+      {imgReturn()}
       <p className="dialog_oneline">......</p>
       <button
         className="nextBtn0"

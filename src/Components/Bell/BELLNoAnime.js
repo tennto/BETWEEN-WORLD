@@ -15,13 +15,13 @@ const BELLNoAnime = () => {
       status.sound1 === "기쁨노래1.mp3" ||
       status.sound1 === "기쁨노래2.mp3"
     ) {
-      if (status.moodSelect === 1090) {
+      if (status.userSex === 1) {
         return (
           <>
             <img className="endingPic" src={wataHappyEnding} alt="wataHE" />
           </>
         );
-      } else if (status.moodSelect === 2090) {
+      } else if (status.userSex === 2) {
         return (
           <>
             <img className="endingPic" src={wagiHappyEnding} alt="wagiHE" />
@@ -32,13 +32,13 @@ const BELLNoAnime = () => {
       status.sound1 === "슬픔노래1.mp3" ||
       status.sound1 === "슬픔노래2.mp3"
     ) {
-      if (status.moodSelect === 1090) {
+      if (status.userSex === 1) {
         return (
           <>
             <img className="endingPic" src={wataSadEnding} alt="wataSE" />
           </>
         );
-      } else if (status.moodSelect == 2090) {
+      } else if (status.userSex == 2) {
         return (
           <>
             <img className="endingPic" src={wagiSadEnding} alt="wagiSE" />
@@ -49,7 +49,7 @@ const BELLNoAnime = () => {
       status.sound1 === "긴장노래3.mp3" ||
       status.sound1 === "긴장노래1.mp3"
     ) {
-      if (status.moodSelect === 1090) {
+      if (status.userSex === 1) {
         return (
           <>
             <img className="endingPic" src={wataThrillEnding} alt="wataTE" />

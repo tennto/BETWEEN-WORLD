@@ -5,6 +5,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { Player } from "@lottiefiles/react-lottie-player";
 import h_s_b_c from "./happy_sea_wata_bird_cry.json";
 import h_s_b_s from "./happy_sea_wata_bird_smile.json";
+import g_h_s_b_c from "./happy_sea_wagi_bird_cry.json";
+import g_h_s_b_s from "./happy_sea_wagi_bird_smile.json";
 import "../../css/Chapter2.css";
 
 const BIRDAnimeSH = () => {
@@ -12,31 +14,61 @@ const BIRDAnimeSH = () => {
 
   const chooseMood = () => {
     if (status.cardSelect === 0) {
-      return (
-        <>
-          <Player
-            className="fadelick"
-            src={h_s_b_c}
-            style={{ width: "1920px" }}
-            autoplay={true}
-            loop={false}
-            speed={1}
-          />
-        </>
-      );
+      if (status.userSex === 1) {
+        return (
+          <>
+            <Player
+              className="fadelick1"
+              src={h_s_b_c}
+              style={{ width: "1920px" }}
+              autoplay={true}
+              loop={false}
+              speed={1}
+            />
+          </>
+        );
+      } else {
+        return (
+          <>
+            <Player
+              className="fadelick1"
+              src={g_h_s_b_c}
+              style={{ width: "1920px" }}
+              autoplay={true}
+              loop={false}
+              speed={1}
+            />
+          </>
+        );
+      }
     } else if (status.cardSelect === 1) {
-      return (
-        <>
-          <Player
-            className="fadelick"
-            src={h_s_b_s}
-            style={{ width: "1920px" }}
-            autoplay={true}
-            loop={false}
-            speed={1}
-          />
-        </>
-      );
+      if (status.userSex === 1) {
+        return (
+          <>
+            <Player
+              className="fadelick1"
+              src={h_s_b_s}
+              style={{ width: "1920px" }}
+              autoplay={true}
+              loop={false}
+              speed={1}
+            />
+          </>
+        );
+      } else {
+        return (
+          <>
+            <Player
+              className="fadelick1"
+              src={g_h_s_b_s}
+              style={{ width: "1920px" }}
+              autoplay={true}
+              loop={false}
+              speed={1}
+            />
+          </>
+        );
+      }
     }
   };
   return <div>{chooseMood()}</div>;
