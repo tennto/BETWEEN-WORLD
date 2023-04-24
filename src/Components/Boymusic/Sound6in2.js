@@ -78,7 +78,7 @@ const Sound6in2 = (props) => {
         volume={0.1}
       />
       <img className="terucard" src={tstrait} alt="tstrait" />
-      <h2 className="tscript">반듯이 매단다 (약한 빗소리)</h2>
+      <h2 className="tscript">슬픔은 나눌수록 줄어드는 것 (약한 빗소리)</h2>
       {/* <button
         onClick={() => {
           setPlaying(false);

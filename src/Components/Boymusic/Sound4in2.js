@@ -34,7 +34,7 @@ const Sound4in2 = (props) => {
         volume={0.3}
       />
       <img className="schoice" src={schoice} alt="schoice" />
-      <p className="script">바다가 좋겠어..!</p>
+      <p className="script">나는 지혜로운 것 같아</p>
 
       {/* <button
         onClick={() => {
