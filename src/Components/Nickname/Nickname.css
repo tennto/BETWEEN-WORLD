@@ -176,8 +176,13 @@
 }
 .wata_motion {
   position: absolute;
-  left: -5px;
-  top: 34px;
+  left: -98px;
+  top: -40px;
+}
+.wagi_motion {
+  position: absolute;
+  left: -100px;
+  top: -40px;
 }
 .wagi1 {
   max-width: 170px;

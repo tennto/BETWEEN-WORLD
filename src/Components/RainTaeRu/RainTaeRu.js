@@ -13,6 +13,7 @@ import carddecoback from "../carddecoback.png";
 import coverdeco from "../backdeco.png";
 import rtrchat1 from "../rtrchat1.png";
 import watachat from "./watachat.png";
+import wagichat from "../ChapterBoy/wagichat.png";
 import { batch } from "react-redux";
 
 const RainTaeRu = () => {
@@ -135,7 +136,7 @@ const Dialog1 = (props) => {
     <div className="forFade_b">
       <img className="deco" src={textdeco} alt="textdeco_rtr2" />
       <img className="rtrchat1" src={rtrchat1} alt="rtrchat" />
-      <p className="dialog_oneline">곤란해 보이네</p>
+      <p className="dialog_oneline">금방이라도 비가 올 것만 같네.</p>
       <button
         className="c2boynextBtn0"
         onClick={() => {
@@ -153,7 +154,7 @@ const Dialog2 = (props) => {
     <div className="forFade_b">
       <img className="deco" src={textdeco} alt="textdeco_rtr3" />
       <img className="rtrchat1" src={rtrchat1} alt="rtrchat" />
-      <p className="dialog_oneline">비 때문이라면, 역시 테루테루보즈지!</p>
+      <p className="dialog_oneline">그럴땐, 역시 테루테루보즈지!</p>
       <button
         className="c2boynextBtn0"
         onClick={() => {
@@ -228,10 +229,19 @@ const Dialog5 = (props) => {
   );
 };
 const Dialog6 = (props) => {
+  const status = useSelector((state) => state);
+  const imgReturn = () => {
+    if (status.userSex === 1) {
+      return <img className="watachat" src={watachat} alt="watachat" />;
+    } else if (status.userSex === 2) {
+      return <img className="watachat" src={wagichat} alt="wagichat" />;
+    }
+  };
+
   return (
     <div className="forFade_b">
       <img className="deco" src={textdeco} alt="textdeco_rtr4" />
-      <img className="watachat" src={watachat} alt="watachat" />
+      {imgReturn()}
       <p className="dialog_oneline">제멋대로 떠들어대기 시작했다...</p>
       <button
         className="c2boynextBtn0"

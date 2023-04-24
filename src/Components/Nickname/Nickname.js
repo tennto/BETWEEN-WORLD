@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 import React, { useEffect, useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector, useDispatch, batch } from "react-redux";
 import "./Nickname.css";
 import { setName } from "../../index";
 import deco from "../../Components/textdecoration.png";
@@ -9,7 +9,8 @@ import decoinput from "./inputdeco.png";
 import sexdeco from "./sexdeco.png";
 import wata1 from "./wata1.png";
 import wagi1 from "./wagi1.png";
-import watamotion from "./watamotion.json";
+import watamotion from "./watarerender.json";
+import wagimotion from "./wagimotion.json";
 import { Player } from "@lottiefiles/react-lottie-player";
 
 const Nickname = () => {
@@ -36,23 +37,6 @@ const Nickname = () => {
       return <Dialog5 />;
     }
   };
-  //이름 입력할 때 버튼 없애는 함수
-  // const btnDelete = () => {
-  //   if (nextBtn === 4) {
-  //     return "";
-  //   } else {
-  //     return (
-  //       <button
-  //         className={"NnextBtn" + changeBox}
-  //         onClick={() => {
-  //           setNextBtn(nextBtn + 1);
-  //         }}
-  //       >
-  //         다음
-  //       </button>
-  //     );
-  //   }
-  // };
 
   return (
     <div className="nicknameBox">
@@ -176,16 +160,17 @@ const Dialog4 = (props) => {
 };
 const Dialog5 = () => {
   const dispatch = useDispatch();
-  // useEffect(() => {
-  //   dispatch({ type: "index/PLUS_STATE4" });
-  // }, []);
 
   return (
     <div className="sexBox">
       <button
         className="choiceSex"
         onClick={() => {
-          dispatch({ type: "index/STORY_NO2" });
+          batch(() => {
+            dispatch({ type: "index/SET_SEX1" });
+            dispatch({ type: "index/STORY_NO2" });
+            dispatch({ type: "index/BEFORE_NONAME1" });
+          });
         }}
       >
         {/* <img className="wata1" src={wata1} alt="wata1" /> */}
@@ -194,19 +179,28 @@ const Dialog5 = () => {
         <Player
           className="wata_motion"
           src={watamotion}
-          style={{ width: "360px" }}
+          style={{ width: "560px" }}
           autoplay={true}
-          loop={false}
+          loop={true}
           speed={1}
         />
       </button>
       <button
         className="choiceSex"
         onClick={() => {
+          dispatch({ type: "index/SET_SEX2" });
+          dispatch({ type: "index/BEFORE_NONAME2" });
           dispatch({ type: "index/STORY_NO3" });
         }}
       >
-        <img className="wagi1" src={wagi1} alt="wagi1" />
+        <Player
+          className="wagi_motion"
+          src={wagimotion}
+          style={{ width: "560px" }}
+          autoplay={true}
+          loop={true}
+          speed={1}
+        />
         <p className="sexText">Girl</p>
         <img className="sexdeco" src={sexdeco} alt="sexdeco" />
       </button>

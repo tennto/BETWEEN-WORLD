@@ -13,6 +13,7 @@ import textdeco from "../textdecoration.png";
 import coverdeco from "../backdeco.png";
 import ckchat1 from "../ckchat.png";
 import watachat from "./watachat.png";
+import wagichat from "../ChapterBoy/wagichat.png";
 import { batch } from "react-redux";
 
 const CricKatBoy = () => {
@@ -113,10 +114,18 @@ const Dialog2 = (props) => {
 };
 
 const Dialog3 = (props) => {
+  const status = useSelector((state) => state);
+  const imgReturn = () => {
+    if (status.userSex === 1) {
+      return <img className="watachat" src={watachat} alt="watachat" />;
+    } else if (status.userSex === 2) {
+      return <img className="watachat" src={wagichat} alt="wagichat" />;
+    }
+  };
   return (
     <div className="forFade_b">
       <img className="deco" src={textdeco} alt="textdeco_ck" />
-      <img className="watachat" src={watachat} alt="watachat" />
+      {imgReturn()}
       <p className="dialog_oneline">. . .</p>
       <button
         className="nextBtn0"
@@ -149,10 +158,18 @@ const Dialog4 = (props) => {
   );
 };
 const Dialog5 = (props) => {
+  const status = useSelector((state) => state);
+  const imgReturn = () => {
+    if (status.userSex === 1) {
+      return <img className="watachat" src={watachat} alt="watachat" />;
+    } else if (status.userSex === 2) {
+      return <img className="watachat" src={wagichat} alt="wagichat" />;
+    }
+  };
   return (
     <div className="forFade_b">
       <img className="deco" src={textdeco} alt="textdeco_ck" />
-      <img className="watachat" src={watachat} alt="watachat" />
+      {imgReturn()}
       <p className="dialog_oneline">. . .</p>
       <button
         className="nextBtn0"
@@ -185,10 +202,18 @@ const Dialog6 = (props) => {
   );
 };
 const Dialog7 = (props) => {
+  const status = useSelector((state) => state);
+  const imgReturn = () => {
+    if (status.userSex === 1) {
+      return <img className="watachat" src={watachat} alt="watachat" />;
+    } else if (status.userSex === 2) {
+      return <img className="watachat" src={wagichat} alt="wagichat" />;
+    }
+  };
   return (
     <div className="forFade_b">
       <img className="deco" src={textdeco} alt="textdeco_ck" />
-      <img className="watachat" src={watachat} alt="watachat" />
+      {imgReturn()}
       <p className="dialog_oneline">. . . . . .</p>
       <button
         className="nextBtn0"
@@ -327,6 +352,13 @@ const Dialog11 = (props) => {
 const Dialog12 = () => {
   const dispatch = useDispatch();
   const status = useSelector((state) => state);
+  const imgReturn = () => {
+    if (status.userSex === 1) {
+      return <img className="watachat" src={watachat} alt="watachat" />;
+    } else if (status.userSex === 2) {
+      return <img className="watachat" src={wagichat} alt="wagichat" />;
+    }
+  };
   var checkMS;
   useEffect(() => {
     if (status.sound4 === "산소리.mp3") {
@@ -338,7 +370,7 @@ const Dialog12 = () => {
   return (
     <div className="forFade_b">
       <img className="deco" src={textdeco} alt="textdeco_ck" />
-      <img className="watachat" src={watachat} alt="watachat" />
+      {imgReturn()}
       <p className="dialog_oneline">구슬픈 풀벌레의 울음소리가 들려온다..</p>
       <button
         className="nextBtn0"

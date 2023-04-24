@@ -16,6 +16,7 @@ import textdeco from "../textdecoration.png";
 import coverdeco from "../backdeco.png";
 import bnchat from "../bnchat.png";
 import watachat from "./watachat.png";
+import wagichat from "../ChapterBoy/wagichat.png";
 
 const Bell = () => {
   let [nextBtn, setNextBtn] = useState(0);
@@ -71,6 +72,14 @@ const Bell = () => {
 };
 
 const Dialog0 = (props) => {
+  const status = useSelector((state) => state);
+  const imgReturn = () => {
+    if (status.userSex === 1) {
+      return <img className="watachat" src={watachat} alt="watachat" />;
+    } else if (status.userSex === 2) {
+      return <img className="watachat" src={wagichat} alt="wagichat" />;
+    }
+  };
   const buttonCount = () => {
     if (props.nextBtn === 3) {
       props.setNextBtn(props.nextBtn + 2);
@@ -81,7 +90,7 @@ const Dialog0 = (props) => {
   return (
     <div className="forFade_b">
       <img className="deco" src={textdeco} alt="textdeco_bd" />
-      <img className="watachat" src={watachat} alt="watachat" />
+      {imgReturn()}
       <p className="dialog_oneline">............</p>
       <button
         className="nextBtn0"
