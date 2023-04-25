@@ -298,21 +298,6 @@ const Main = () => {
   return (
     <div className="maincomp">
       {/* {audio} */}
-      <button
-        onClick={() => {
-          dispatch({ type: "index/CKAnimeMF" });
-        }}
-      >
-        Manager Test
-      </button>
-      <button
-        onClick={() => {
-          gotoGallery();
-        }}
-      >
-        {" "}
-        갤러리로{" "}
-      </button>
       <div className="Container_m">
         <div className="Content_box">
           {/* <h2>Animation Area</h2> */}

@@ -142,22 +142,22 @@
   font-size: 32px;
   /* margin: 64px auto; */
   position: absolute;
-  bottom: -20px;
-  right: 20px;
+  bottom: 40px;
+  right: 93px;
 }
 .tscript {
-  font-size: 22px;
+  font-size: 26px;
   /* margin: 64px auto; */
   position: absolute;
   bottom: -10px;
   right: 10px;
 }
 .cscript {
-  font-size: 22px;
+  font-size: 32px;
   /* margin: 64px auto; */
   position: absolute;
-  bottom: -10px;
-  right: 10px;
+  bottom: 40px;
+  right: 85px;
 }
 .bscript {
   font-size: 22px;
@@ -195,16 +195,16 @@
 }
 
 .terucard {
-  max-width: 360px;
+  max-width: 300px;
   position: absolute;
   z-index: -1;
   top: 0;
-  left: 0;
+  left: 30px;
 }
 .terucard1 {
-  max-width: 360px;
+  max-width: 300px;
   position: absolute;
   z-index: -1;
   top: 0;
-  left: 0px;
+  left: 30px;
 }

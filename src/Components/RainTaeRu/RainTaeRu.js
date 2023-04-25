@@ -90,17 +90,31 @@ const RainTaeRu = () => {
 };
 
 const Transition = (props) => {
+  const status = useSelector((state) => state);
   let [btnFade, setBtnFade] = useState(1);
   setTimeout(() => {
     setBtnFade(0);
   }, 5000);
+  const textReturn = () => {
+    if (
+      status.sound1 === "기쁨노래1.mp3" ||
+      status.sound1 === "기쁨노래2.mp3"
+    ) {
+      return "길을 걸어가 보자...";
+    } else if (
+      status.sound1 === "슬픔노래1.mp3" ||
+      status.sound1 === "슬픔노래2.mp3"
+    ) {
+      return "하늘이 어두워 졌다...";
+    } else {
+      return "하늘이 검붉게 물들었다";
+    }
+  };
 
   return (
     <div className="forFade_b">
       <img className="deco" src={textdeco} alt="textdeco_rtr" />
-      <p className="dialog_oneline">
-        알 수 없는 힘에 의해 지형이 변하기 시작했다..
-      </p>
+      <p className="dialog_oneline">{textReturn()}</p>
       <button
         className={"c2boynextBtn" + btnFade}
         onClick={() => {
