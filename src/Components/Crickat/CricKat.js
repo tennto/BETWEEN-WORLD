@@ -58,7 +58,10 @@ const CricKatBoy = () => {
 };
 
 const Dialog0 = (props) => {
-  let [btnState, setBtnState] = useState(0);
+  let [btnFade, setBtnFade] = useState(1);
+  setTimeout(() => {
+    setBtnFade(0);
+  }, 5000);
 
   return (
     <div className="forFade_b">
@@ -66,7 +69,7 @@ const Dialog0 = (props) => {
       <img className="ckchat1" src={ckchat1} alt="ckchat" />
       <p className="dialog_oneline">저기,</p>
       <button
-        className={"nextBtn" + btnState}
+        className={"nextBtn" + btnFade}
         onClick={() => {
           props.setNextBtn(props.nextBtn + 1);
         }}
@@ -280,6 +283,7 @@ const Dialog9 = (props) => {
 const Dialog10 = () => {
   const dispatch = useDispatch();
   const status = useSelector((state) => state);
+
   var checkMS;
   useEffect(() => {
     if (status.sound4 === "산소리.mp3") {
@@ -352,6 +356,17 @@ const Dialog11 = (props) => {
 const Dialog12 = () => {
   const dispatch = useDispatch();
   const status = useSelector((state) => state);
+
+  const textReturn = () => {
+    if (
+      status.sound1 === "기쁨노래1.mp3" ||
+      status.sound1 === "기쁨노래2.mp3"
+    ) {
+      return "행복한 풀벌레의 울음소리가 들려온다";
+    } else {
+      return "구슬픈 풀벌레의 울음소리가 들려온다...";
+    }
+  };
   const imgReturn = () => {
     if (status.userSex === 1) {
       return <img className="watachat" src={watachat} alt="watachat" />;
@@ -367,11 +382,12 @@ const Dialog12 = () => {
       checkMS = "index/BIRDAnimeSF";
     }
   }, []);
+
   return (
     <div className="forFade_b">
       <img className="deco" src={textdeco} alt="textdeco_ck" />
       {imgReturn()}
-      <p className="dialog_oneline">구슬픈 풀벌레의 울음소리가 들려온다..</p>
+      <p className="dialog_oneline">{textReturn()}</p>
       <button
         className="nextBtn0"
         onClick={() => {

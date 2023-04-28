@@ -30,7 +30,7 @@ const Sound9in2 = (props) => {
         });
       }}
     >
-      <p className="bscript">머무른다 (종소리 X)</p>
+      <p className="bellscript">머무른다 (종소리 X)</p>
     </div>
   );
 };

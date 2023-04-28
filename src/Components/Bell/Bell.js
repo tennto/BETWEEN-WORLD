@@ -80,6 +80,13 @@ const Dialog0 = (props) => {
       return <img className="watachat" src={wagichat} alt="wagichat" />;
     }
   };
+
+  let [btnFade, setBtnFade] = useState(1);
+  useEffect(() => {
+    setTimeout(() => {
+      setBtnFade(0);
+    }, 5000);
+  }, []);
   const buttonCount = () => {
     if (props.nextBtn === 3) {
       props.setNextBtn(props.nextBtn + 2);
@@ -93,7 +100,7 @@ const Dialog0 = (props) => {
       {imgReturn()}
       <p className="dialog_oneline">............</p>
       <button
-        className="nextBtn0"
+        className={"nextBtn" + btnFade}
         onClick={() => {
           buttonCount();
         }}
@@ -165,7 +172,7 @@ const Dialog3 = (props) => {
       <button
         className="choiceNo2"
         onClick={() => {
-          setNextBtn(nextBtn + 2);
+          setNextBtn(nextBtn + 1);
         }}
       >
         <img className="chdeco" src={chdeco} alt="chdeco2" />
@@ -174,7 +181,7 @@ const Dialog3 = (props) => {
       <button
         className="choiceNo2"
         onClick={() => {
-          setNextBtn(nextBtn + 1);
+          setNextBtn(nextBtn + 2);
         }}
       >
         <img className="chdeco" src={chdeco} alt="chdeco2" />

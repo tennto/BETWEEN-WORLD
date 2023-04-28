@@ -70,13 +70,165 @@ import BELLAnimeF from "../Bell/BELLAnimeF";
 
 /////////////////////////////////////////////////////////////////////////
 
-// import axios from "axios";
+import axios from "axios";
 
 const Main = () => {
   const status = useSelector((state) => state);
   const dispatch = useDispatch();
+  const [play, setPlaying] = useState(true);
   //왼쪽 상단 플레이리스트 저장
   //기쁨,슬픔,긴장
+  const dataSubmit = async () => {
+    await axios.post("/gallery/userinfo", {
+      userName: status.userName,
+      sound1: status.sound1,
+      sound4: status.sound4,
+      sound5: status.sound5,
+      sound6: status.sound6,
+    });
+  };
+
+  const savePlaylist1 = () => {
+    if (status.sound1 === "") {
+      return "";
+    } else {
+      return (
+        <>
+          <ReactHowler
+            src={status.sound1}
+            playing={play}
+            loop={true}
+            mute={false}
+            volume={1.0}
+          />
+        </>
+      );
+    }
+  };
+  //종
+  const savePlaylist2 = () => {
+    if (status.sound2 === "") {
+      return "";
+    } else {
+      return (
+        <>
+          <ReactHowler
+            src={status.sound2}
+            playing={play}
+            loop={true}
+            mute={false}
+            volume={0.3}
+          />
+        </>
+      );
+    }
+  };
+  const savePlaylist3 = () => {
+    if (status.sound3 === "") {
+      return "";
+    } else {
+      return (
+        <>
+          <ReactHowler
+            src={status.sound3}
+            playing={play}
+            loop={true}
+            mute={false}
+            volume={1.0}
+          />
+        </>
+      );
+    }
+  };
+  //산,바다
+  const savePlaylist4 = () => {
+    if (status.sound4 === "") {
+      return "";
+    } else {
+      return (
+        <>
+          <ReactHowler
+            src={status.sound4}
+            playing={play}
+            loop={true}
+            mute={false}
+            volume={0.5}
+          />
+        </>
+      );
+    }
+  };
+  const savePlaylist5 = () => {
+    if (status.sound5 === "") {
+      return "";
+    } else {
+      return (
+        <>
+          <ReactHowler
+            src={status.sound5}
+            playing={play}
+            loop={true}
+            mute={false}
+            volume={1.0}
+          />
+        </>
+      );
+    }
+  };
+  //비
+  const savePlaylist6 = () => {
+    if (status.sound6 === "") {
+      return "";
+    } else {
+      return (
+        <>
+          <ReactHowler
+            src={status.sound6}
+            playing={play}
+            loop={true}
+            mute={false}
+            volume={0.1}
+          />
+        </>
+      );
+    }
+  };
+  //귀뚜라미
+  const savePlaylist7 = () => {
+    if (status.sound7 === "") {
+      return "";
+    } else {
+      return (
+        <>
+          <ReactHowler
+            src={status.sound7}
+            playing={play}
+            loop={true}
+            mute={false}
+            volume={0.3}
+          />
+        </>
+      );
+    }
+  };
+  //새/까마귀/부엉이
+  const savePlaylist8 = () => {
+    if (status.sound8 === "") {
+      return "";
+    } else {
+      return (
+        <>
+          <ReactHowler
+            src={status.sound8}
+            playing={play}
+            loop={true}
+            mute={false}
+            volume={0.5}
+          />
+        </>
+      );
+    }
+  };
 
   // 분위기 테마 별 State 및 최초 상위 리턴컴포넌트 선언
   const setMoodStatus = () => {
@@ -260,33 +412,23 @@ const Main = () => {
     // }
   };
 
-  //main 기본 재생음악 함수//////////////////////////////////////////////
+  // const [mainPlay, mainsetSound] = useState(true);
+  // //main 기본 재생음악 함수//////////////////////////////////////////////
   // var audio = (
   //   <ReactHowler
-  //     src={["메인 사운드.mp3"]}
+  //     src={["메인사운드.wav"]}
   //     playing={mainPlay}
   //     loop={true}
-  //     volume={1.0}
+  //     volume={0.05}
   //   />
   // );
 
-  //   const mainPlayStop = () => {
-  //   if (
-  //     status.moodSelect === 1000 ||
-  //     status.moodSelect === 1400 ||
-  //     status.moodSelect === 2000 ||
-  //     status.moodSelect === 2400 ||
-  //     status.moodSelect === 3000 ||
-  //     status.moodSelect === 3400
-  //   ) {
+  // const mainPlayStop = () => {
+  //   if (status.moodSelect === 7) {
   //     mainsetPlaying(false);
   //   }
   // };
-  // const mainSoundStop = () => {
-  //   for (var i = 1.0; i >= 0.0; i -= 0.1) {
-  //     mainsetSound(i);
-  //   }
-  // };
+
   const navigate = useNavigate();
 
   const gotoGallery = () => {
@@ -297,7 +439,43 @@ const Main = () => {
 
   return (
     <div className="maincomp">
-      {/* {audio} */}
+      {/* <button
+        onClick={() => {
+          dataSubmit();
+        }}
+      >
+        포스트요청하기
+      </button> */}
+      {/* {audio}
+      {mainPlayStop} */}
+      <table className="playlist">
+        <tbody>
+          <tr>
+            <th>{savePlaylist1()}</th>
+          </tr>
+          <tr>
+            <th>{savePlaylist2()}</th>
+          </tr>
+          <tr>
+            <th>{savePlaylist3()}</th>
+          </tr>
+          <tr>
+            <th>{savePlaylist4()}</th>
+          </tr>
+          <tr>
+            <th>{savePlaylist6()}</th>
+          </tr>
+          <tr>
+            <th>{savePlaylist5()}</th>
+          </tr>
+          <tr>
+            <th>{savePlaylist7()}</th>
+          </tr>
+          <tr>
+            <th>{savePlaylist8()}</th>
+          </tr>
+        </tbody>
+      </table>
       <div className="Container_m">
         <div className="Content_box">
           {/* <h2>Animation Area</h2> */}

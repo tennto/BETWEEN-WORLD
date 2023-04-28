@@ -1,8 +1,7 @@
 /* eslint-disable */
 
 import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-
+import { useDispatch, useSelector, batch } from "react-redux";
 import "../../css/Chapter2.css";
 import "../../css/Card.css";
 import carddeco from "../carddeco.png";
@@ -13,11 +12,26 @@ import textdeco from "../textdecoration.png";
 import coverdeco from "../backdeco.png";
 import bnchat from "../bnchat.png";
 import watachat from "./watachat.png";
+import wagichat from "../ChapterBoy/wagichat.png";
 import { useNavigate } from "react-router-dom";
 import ReactHowler from "../../howler/ReactHowler.js";
+import axios from "axios";
 
 const BellYes = () => {
   let [nextBtn, setNextBtn] = useState(0);
+  const status = useSelector((state) => state);
+  const dataSubmit = async () => {
+    await axios.post("/gallery/userinfo", {
+      userName: status.userName,
+      userSex: status.userSex,
+      sound1: status.sound1,
+      sound2: status.sound2,
+      sound4: status.sound4,
+      sound6: status.sound6,
+      sound7: status.sound7,
+      sound8: status.sound8,
+    });
+  };
 
   const DialogFlow = () => {
     if (nextBtn === 0) {
@@ -34,8 +48,14 @@ const BellYes = () => {
       return <Dialog5 nextBtn={nextBtn} setNextBtn={setNextBtn} />;
     } else if (nextBtn === 6) {
       return <Dialog6 nextBtn={nextBtn} setNextBtn={setNextBtn} />;
+    } else if (nextBtn === 7) {
+      return <Dialog7 />;
     }
   };
+
+  useEffect(() => {
+    dataSubmit();
+  }, []);
 
   return (
     <div className="CP2_UPPER">
@@ -61,13 +81,19 @@ const Dialog0 = (props) => {
       props.setNextBtn(props.nextBtn + 1);
     }
   };
+  let [btnFade, setBtnFade] = useState(1);
+  useEffect(() => {
+    setTimeout(() => {
+      setBtnFade(0);
+    }, 5000);
+  }, []);
   return (
     <div className="forFade_b">
       <img className="deco" src={textdeco} alt="textdeco_bd" />
       <img className="bnchat" src={bnchat} alt="bnchat" />
       <p className="dialog_oneline">그래</p>
       <button
-        className="nextBtn0"
+        className={"nextBtn" + btnFade}
         onClick={() => {
           buttonCount();
         }}
@@ -115,7 +141,7 @@ const Dialog2 = (props) => {
     <div className="forFade_b">
       <img className="deco" src={textdeco} alt="textdeco_bd" />
       <img className="bnchat" src={bnchat} alt="bnchat" />
-      <p className="dialog_oneline">앞으로 무수한 선택의 기로가 놓이겠지</p>
+      <p className="dialog_oneline">앞으로 무수한 선택의 기로에 놓이겠지</p>
       <button
         className="nextBtn0"
         onClick={() => {
@@ -155,6 +181,14 @@ const Dialog3 = (props) => {
 };
 
 const Dialog4 = (props) => {
+  // const status = useSelector((state) => state);
+  // const imgReturn = () => {
+  //   if (status.userSex === 1) {
+  //     return <img className="watachat" src={watachat} alt="watachat" />;
+  //   } else {
+  //     return <img className="watachat" src={wagichat} alt="watachat" />;
+  //   }
+  // };
   const buttonCount = () => {
     if (props.nextBtn === 3) {
       props.setNextBtn(props.nextBtn + 2);
@@ -166,7 +200,7 @@ const Dialog4 = (props) => {
   return (
     <div className="forFade_b">
       <img className="deco" src={textdeco} alt="textdeco_bd" />
-      <img className="watachat" src={watachat} alt="watachat" />
+      <img className="bnchat" src={bnchat} alt="bnchat" />
       <p className="dialog_oneline">......</p>
       <button
         className="nextBtn0"
@@ -180,6 +214,14 @@ const Dialog4 = (props) => {
   );
 };
 const Dialog5 = (props) => {
+  const status = useSelector((state) => state);
+  const imgReturn = () => {
+    if (status.userSex === 1) {
+      return <img className="watachat" src={watachat} alt="watachat" />;
+    } else {
+      return <img className="watachat" src={wagichat} alt="watachat" />;
+    }
+  };
   const buttonCount = () => {
     if (props.nextBtn === 3) {
       props.setNextBtn(props.nextBtn + 2);
@@ -191,7 +233,7 @@ const Dialog5 = (props) => {
   return (
     <div className="forFade_b">
       <img className="deco" src={textdeco} alt="textdeco_bd" />
-      <img className="watachat" src={watachat} alt="watachat" />
+      {imgReturn()}
       <p className="dialog_oneline">......</p>
       <button
         className="nextBtn0"
@@ -204,25 +246,74 @@ const Dialog5 = (props) => {
     </div>
   );
 };
-
-const Dialog6 = () => {
-  const navigate = useNavigate();
+const Dialog6 = (props) => {
   const status = useSelector((state) => state);
-  const gotoGallery = () => {
-    navigate("/gallery", {
-      state: { status },
-    });
+  const imgReturn = () => {
+    if (status.userSex === 1) {
+      return <img className="watachat" src={watachat} alt="watachat" />;
+    } else {
+      return <img className="watachat" src={wagichat} alt="watachat" />;
+    }
+  };
+  const buttonCount = () => {
+    if (props.nextBtn === 3) {
+      props.setNextBtn(props.nextBtn + 2);
+    } else {
+      props.setNextBtn(props.nextBtn + 1);
+    }
   };
 
   return (
-    <>
+    <div className="forFade_b">
+      <img className="deco" src={textdeco} alt="textdeco_bd" />
+      {imgReturn()}
+      <p className="dialog_oneline">어디선가 익숙한 소리가 귓가에 맴돈다...</p>
+      <button
+        className="nextBtn0"
+        onClick={() => {
+          buttonCount();
+        }}
+      >
+        다음
+      </button>
+    </div>
+  );
+};
+const Dialog7 = () => {
+  const navigate = useNavigate();
+  const status = useSelector((state) => state);
+  const dispatch = useDispatch();
+
+  return (
+    <div className="fadelick">
       {/* <img className="deco" src={textdeco} alt="textdeco_bd" />
       <img className="bnchat" src={bnchat} alt="bnchat" />
       <p className="dialog_oneline">……</p> */}
       <Link to="/">
-        <button> 처음으로 </button>
+        <button
+          className="goToHome"
+          onClick={() => {
+            batch(() => {
+              dispatch({ type: "index/RESET_ALL1" });
+              dispatch({ type: "index/RESET_ALL2" });
+              dispatch({ type: "index/RESET_ALL3" });
+              dispatch({ type: "index/RESET_ALL4" });
+              dispatch({ type: "index/RESET_ALL5" });
+              dispatch({ type: "index/RESET_ALL6" });
+              dispatch({ type: "index/RESET_ALL7" });
+              dispatch({ type: "index/RESET_ALL8" });
+              dispatch({ type: "index/RESET_ALL9" });
+              dispatch({ type: "index/RESET_ALL10" });
+              dispatch({ type: "index/RESET_ALL11" });
+              dispatch({ type: "index/RESET_ALL12" });
+              dispatch({ type: "index/RESET_ALL13" });
+            });
+          }}
+        >
+          처음으로
+        </button>
       </Link>
-    </>
+    </div>
   );
 };
 

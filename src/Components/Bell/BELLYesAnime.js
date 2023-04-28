@@ -1,10 +1,12 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
+import "./ending.css";
+import bedEnding from "./bedEnding.png";
 
 const BELLYesAnime = () => {
   return (
     <div>
-      <p>침대엔딩</p>
+      <img className="endingPic" src={bedEnding} alt="wataHE" />
     </div>
   );
 };

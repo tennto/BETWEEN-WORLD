@@ -6,6 +6,7 @@ import { setSound8 } from "../../index";
 import { cardSelect } from "../../index";
 import "../../css/Card.css";
 import { batch } from "react-redux";
+import SBCard1 from "../Bird/birdcard2.png";
 
 const Sound8in3 = (props) => {
   const status = useSelector((state) => state);
@@ -31,7 +32,7 @@ const Sound8in3 = (props) => {
       }}
       onClick={() => {
         batch(() => {
-          dispatch(setSound8("부엉이.wav"));
+          dispatch(setSound8("부엉이.mp3"));
           dispatch({ type: checkMS });
           dispatch(cardSelect(0));
         });
@@ -39,12 +40,13 @@ const Sound8in3 = (props) => {
       }}
     >
       <ReactHowler
-        src={["부엉이.wav"]}
+        src={["부엉이.mp3"]}
         playing={play}
         loop={false}
         mute={false}
         volume={0.2}
       />
+      <img className="HBCard1" src={SBCard1} alt="SBCard1" />
       <p className="bscript">해야만 하는 일을 해 (소리 O)</p>
       {/* <button
         onClick={() => {

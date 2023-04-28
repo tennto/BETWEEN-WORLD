@@ -75,7 +75,7 @@ const Sound6in2 = (props) => {
         playing={play}
         loop={false}
         mute={false}
-        volume={0.1}
+        volume={0.4}
       />
       <img className="terucard" src={tstrait} alt="tstrait" />
       <h2 className="tscript">슬픔은 나눌수록 줄어드는 것 (약한 빗소리)</h2>

@@ -19,34 +19,6 @@ const CKAnimeMT = () => {
           <>
             <Player
               className="fadelick1"
-              src={t_m_c_1}
-              style={{ width: "1920px" }}
-              autoplay={true}
-              loop={false}
-              speed={1}
-            />
-          </>
-        );
-      } else {
-        return (
-          <>
-            <Player
-              className="fadelick1"
-              src={g_t_m_c_1}
-              style={{ width: "1920px" }}
-              autoplay={true}
-              loop={false}
-              speed={1}
-            />
-          </>
-        );
-      }
-    } else if (status.cardSelect === 1) {
-      if (status.userSex === 1) {
-        return (
-          <>
-            <Player
-              className="fadelick1"
               src={t_m_c_2}
               style={{ width: "1920px" }}
               autoplay={true}
@@ -61,6 +33,34 @@ const CKAnimeMT = () => {
             <Player
               className="fadelick1"
               src={g_t_m_c_2}
+              style={{ width: "1920px" }}
+              autoplay={true}
+              loop={false}
+              speed={1}
+            />
+          </>
+        );
+      }
+    } else if (status.cardSelect === 1) {
+      if (status.userSex === 1) {
+        return (
+          <>
+            <Player
+              className="fadelick1"
+              src={t_m_c_1}
+              style={{ width: "1920px" }}
+              autoplay={true}
+              loop={false}
+              speed={1}
+            />
+          </>
+        );
+      } else {
+        return (
+          <>
+            <Player
+              className="fadelick1"
+              src={g_t_m_c_1}
               style={{ width: "1920px" }}
               autoplay={true}
               loop={false}

@@ -6,11 +6,15 @@ import axios from "axios";
 import "../../css/Gallery.css";
 import Modal from "./Modal";
 import { useLocation } from "react-router-dom";
+import { Player } from "@lottiefiles/react-lottie-player";
+import motion1 from "../Nickname/watarerender.json";
+import motion2 from "../Nickname/wagimotion.json";
 // import Loding from "./Loding";
 
 const Gallery = () => {
   const [userInfo, setUserList] = useState();
   const [isOpen, setIsOpen] = useState(false);
+  const [sex, setsex] = useState("");
   // const [displayNow, setDisplay] = useState(false);
   const [idCheck, setIdCheck] = useState([]);
 
@@ -31,11 +35,33 @@ const Gallery = () => {
     axiosData();
   }, []);
 
+  const lottieReturn = () => {
+    if (userInfo.userSex === "1") {
+      return (
+        <Player
+          src={motion1}
+          style={{ width: "500px" }}
+          autoplay={true}
+          loop={true}
+          speed={1}
+        />
+      );
+    } else if (userInfo.userSex === "2") {
+      return (
+        <Player
+          src={motion2}
+          style={{ width: "500px" }}
+          autoplay={true}
+          loop={true}
+          speed={1}
+        />
+      );
+    }
+  };
   const onClickButton = (id) => {
     setIdCheck(userInfo[id - 1]);
     setIsOpen(true);
   };
-
   return (
     <div>
       {/* post요청 다르게 써야함 */}
@@ -50,7 +76,7 @@ const Gallery = () => {
           className="refresh"
           onClick={() => {
             {
-              setDisplay(true);
+              // setDisplay(true);
               refreshData();
             }
           }}
@@ -68,22 +94,18 @@ const Gallery = () => {
                 onClickButton(ex._id);
               }}
             >
-              ID : {ex._id}
-              <br />
-              USERNAME : {ex.userName}
-              <br />
-              SOUND1 : {ex.sound1}
-              <br />
-              SOUND2 : {ex.sound2}
-              <br />
-              SOUND4 : {ex.sound4}
-              <br />
-              SOUND6 : {ex.sound6}
-              <br />
-              SOUND7 : {ex.sound7}
-              <br />
-              SOUND8 : {ex.sound8}
-              <br />
+              <div className="wagiwata">
+                {" "}
+                <Player
+                  src={motion1}
+                  style={{ width: "500px" }}
+                  autoplay={true}
+                  loop={true}
+                  speed={1}
+                />
+              </div>
+              <p className="first-ptag">{ex.userName}님의</p>
+              <p className="second-ptag">기억</p>
             </div>
           );
         })}

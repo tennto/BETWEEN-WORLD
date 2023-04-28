@@ -8,7 +8,7 @@ import s_s_c_d from "./sad_sea_wata_crikat_default.json";
 import t_s_c_d from "./thrill_sea_wata_crikat_default.json";
 import g_h_s_c_d from "./happy_sea_wagi_crikat_default.json";
 import g_s_s_c_d from "./sad_sea_wagi_crikat_default.json";
-import g_t_s_c_d from "./thrill_san_wagi_crikat_default.json";
+import g_t_s_c_d from "./thrill_sea_wagi_crikat_default.json";
 import "../../css/Chapter2.css";
 
 const CKAnimeSF = () => {

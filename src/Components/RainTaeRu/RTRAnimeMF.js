@@ -5,8 +5,8 @@ import { Player } from "@lottiefiles/react-lottie-player";
 import g_h_m_t_d from "./happy_san_wagi_teru_default.json";
 import g_s_m_t_d from "./sad_san_wagi_teru_default.json";
 import g_t_m_t_d from "./thrill_san_wagi_teru_default.json";
-import h_m_t_d from "./happy_san_wata_teru_default.json";
 import s_m_t_d from "./sad_san_wata_teru_default.json";
+import h_m_t_d from "./happy_san_wata_teru_default.json";
 import t_m_t_d from "./thrill_san_wata_teru_default.json";
 import "../../css/Chapter2.css";
 
@@ -54,7 +54,7 @@ const RTRAnimeMF = () => {
           <>
             <Player
               className="fadelick1"
-              src={h_s_t_d}
+              src={s_m_t_d}
               style={{ width: "1920px" }}
               autoplay={true}
               loop={false}

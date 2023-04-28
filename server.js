@@ -39,8 +39,16 @@ MongoClient.connect(
 
     //post요청 받은 데이터 userInfo에 추가하기
     app.post("/gallery/userinfo", (req, res) => {
-      const { userName, sound1, sound2, sound4, sound7, sound6, sound8 } =
-        req.body;
+      const {
+        userName,
+        userSex,
+        sound1,
+        sound2,
+        sound4,
+        sound7,
+        sound6,
+        sound8,
+      } = req.body;
 
       const promise = new Promise((resolve, reject) => {
         db.collection("users")
@@ -65,6 +73,7 @@ MongoClient.connect(
           {
             _id: lastIndex,
             userName,
+            userSex,
             sound1,
             sound2,
             sound4,
