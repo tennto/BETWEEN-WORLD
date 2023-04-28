@@ -107,7 +107,11 @@ const Transition = (props) => {
     ) {
       return "하늘이 어두워 졌다...";
     } else {
-      return "하늘이 검붉게 물들었다";
+      if (status.sound4 === "바다소리.mp3") {
+        return "바다가 검붉게 물들었다";
+      } else {
+        return "하늘이 검붉게 물들었다";
+      }
     }
   };
 
@@ -293,7 +297,7 @@ const Dialog8 = (props) => {
       <img className="deco" src={textdeco} alt="textdeco_rtr4" />
       <img className="rtrchat1" src={rtrchat1} alt="rtrchat" />
       <p className="dialog_oneline">
-        그떄 어느 한 승려가 하늘에 공양을 하면 비가 그친다고 했어
+        그때 어느 한 승려가 하늘에 공양을 하면 비가 그친다고 했어
       </p>
       <button
         className="c2boynextBtn0"

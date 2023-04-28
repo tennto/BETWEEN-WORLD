@@ -43,6 +43,12 @@ const MoodSelect = () => {
 };
 
 const Dialog0 = (props) => {
+  const [btnState, setBtnState] = useState(1);
+  useEffect(() => {
+    setTimeout(() => {
+      setBtnState(0);
+    }, 5000);
+  }, []);
   const status = useSelector((state) => state);
   const imgReturn = () => {
     if (status.userSex === 1) {
@@ -58,7 +64,7 @@ const Dialog0 = (props) => {
       {imgReturn()}
       <p className="dialog_oneline">. . .</p>
       <button
-        className="c2boynextBtn0"
+        className={"c2boynextBtn" + btnState}
         onClick={() => {
           props.setNextBtn(props.nextBtn + 1);
         }}

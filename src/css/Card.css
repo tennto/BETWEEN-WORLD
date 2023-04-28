@@ -135,9 +135,11 @@
 }
 
 .fadelick {
-  animation: fadein 3s;
+  animation: fadein 5s;
 }
-
+.fadelick_ch {
+  animation: fadein 1s;
+}
 .script {
   font-size: 32px;
   /* margin: 64px auto; */
@@ -146,6 +148,13 @@
   right: 93px;
 }
 .tscript {
+  font-size: 26px;
+  /* margin: 64px auto; */
+  position: absolute;
+  bottom: -10px;
+  right: 10px;
+}
+.rtrscript {
   font-size: 26px;
   /* margin: 64px auto; */
   position: absolute;
@@ -163,8 +172,8 @@
   font-size: 22px;
   /* margin: 64px auto; */
   position: absolute;
-  bottom: -10px;
-  right: 10px;
+  top: 0px;
+  left: 20px;
 }
 
 .script2 {
@@ -207,4 +216,31 @@
   z-index: -1;
   top: 0;
   left: 30px;
+}
+
+.HBCard1 {
+  position: absolute;
+  max-width: 240px;
+  left: 60px;
+  bottom: 10px;
+}
+.HBCard2 {
+  position: absolute;
+  max-width: 380px;
+  left: 0px;
+  top: 2px;
+}
+.HBCard {
+  position: absolute;
+  max-width: 380px;
+  left: -10px;
+  top: -10px;
+}
+
+.bellscript {
+  font-size: 32px;
+  /* margin: 64px auto; */
+  position: absolute;
+  bottom: 40px;
+  right: 110px;
 }

@@ -1,7 +1,3 @@
-body {
-  /* overflow: hidden; */
-}
-
 .Container_m {
   max-height: 1080px;
   background-color: white;
@@ -32,7 +28,7 @@ body {
   margin-left: 100px;
   width: 200px;
   height: 400px;
-  z-index: 10;
+  z-index: -100;
 }
 .playlistBox {
   font-size: 12px;

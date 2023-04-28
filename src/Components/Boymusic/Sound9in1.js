@@ -12,6 +12,18 @@ const Sound9in1 = (props) => {
   const status = useSelector((state) => state);
   const dispatch = useDispatch();
   const [play, setPlaying] = useState(false);
+  // let [name, setName] = useState("");
+
+  // useEffect(() => {
+  //   if (
+  //     status.sound1 === "긴장노래1.mp3" ||
+  //     status.sound1 === "긴장노래3.mp3"
+  //   ) {
+  //     setName("종소리.mp3");
+  //   } else {
+  //     setName("풍경소리.wav");
+  //   }
+  // }, []);
 
   return (
     <div
@@ -37,7 +49,7 @@ const Sound9in1 = (props) => {
         mute={false}
         volume={0.2}
       />
-      <p className="bscript">눈을 뜬다 (종소리 O)</p>
+      <p className="bellscript">눈을 뜬다 (종소리 O)</p>
     </div>
   );
 };

@@ -1,6 +1,11 @@
 import React from "react";
 import "../../css/Gallery.css";
 import ReactHowler from "../../howler/ReactHowler.js";
+import bgmountainH from "./hapsan.png";
+import bgmountainS from "./sadsan.png";
+import bgmountainT from "./thrillsan.png";
+import bgseaH from "./hsea.png";
+import bgseaT from "./tsea.png";
 
 function Modal({ onClose, idCheck }) {
   const handleClose = () => {
@@ -34,7 +39,7 @@ function Modal({ onClose, idCheck }) {
             playing={true}
             loop={true}
             mute={false}
-            volume={1.0}
+            volume={0.5}
           />
         </div>
       );
@@ -51,7 +56,7 @@ function Modal({ onClose, idCheck }) {
             playing={true}
             loop={true}
             mute={false}
-            volume={1.0}
+            volume={0.5}
           />
         </div>
       );
@@ -68,7 +73,7 @@ function Modal({ onClose, idCheck }) {
             playing={true}
             loop={true}
             mute={false}
-            volume={1.0}
+            volume={0.2}
           />
         </div>
       );
@@ -85,7 +90,7 @@ function Modal({ onClose, idCheck }) {
             playing={true}
             loop={true}
             mute={false}
-            volume={1.0}
+            volume={0.5}
           />
         </div>
       );
@@ -102,13 +107,55 @@ function Modal({ onClose, idCheck }) {
             playing={true}
             loop={true}
             mute={false}
-            volume={1.0}
+            volume={0.5}
           />
         </div>
       );
     }
   };
-
+  const bgReturn = () => {
+    if (idCheck.sound4 === "산소리.mp3") {
+      if (
+        idCheck.sound1 === "기쁨노래1.mp3" ||
+        idCheck.sound1 === "기쁨노래2.mp3"
+      ) {
+        return <img className="popbg" src={bgmountainH} alt="mountainH" />;
+      } else if (
+        idCheck.sound1 === "슬픔노래1.mp3" ||
+        idCheck.sound1 === "슬픔노래2.mp3"
+      ) {
+        return <img className="popbg" src={bgmountainS} alt="mountainS" />;
+      } else {
+        return <img className="popbg" src={bgmountainT} alt="mountainT" />;
+      }
+    } else if (idCheck.sound4 === "바다소리.mp3") {
+      if (
+        idCheck.sound1 === "기쁨노래1.mp3" ||
+        idCheck.sound1 === "기쁨노래2.mp3" ||
+        idCheck.sound1 === "슬픔노래1.mp3" ||
+        idCheck.sound1 === "슬픔노래2.mp3"
+      ) {
+        return <img className="popbg" src={bgseaH} alt="seaH" />;
+      } else {
+        return <img className="popbg" src={bgseaT} alt="seaT" />;
+      }
+    }
+  };
+  const textReturn = () => {
+    if (
+      idCheck.sound1 === "기쁨노래1.mp3" ||
+      idCheck.sound1 === "기쁨노래2.mp3"
+    ) {
+      return "밝은 분위기 선택";
+    } else if (
+      idCheck.sound1 === "슬픔노래1.mp3" ||
+      idCheck.sound1 === "슬픔노래2.mp3"
+    ) {
+      return "우울한 분위기 선택";
+    } else {
+      return "오싹한 분위기 선택";
+    }
+  };
   return (
     <div className="Overlay">
       {console.log(idCheck)}
@@ -117,12 +164,15 @@ function Modal({ onClose, idCheck }) {
           X
         </button>
         <div className="Contents">
-          {showData1()} <br />
-          이미지가 들어갈 자리입니다.
+          {bgReturn()}
+          <p className="poptext">{textReturn()}</p>
+          {showData1()}
+          <br />
           {showData2()} <br />
           {showData4()} <br />
           {showData6()} <br />
-          {showData7()} <br />
+          {showData7()}
+          <br />
           {showData8()}
           <br />
         </div>

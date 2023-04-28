@@ -8,7 +8,7 @@
   font-size: 100px;
   position: absolute;
   left: 524px;
-  top: 200px;
+  top: 330px;
   z-index: -1;
 }
 
@@ -21,7 +21,7 @@
   background-color: black;
   color: white;
   font-size: 14px;
-  top: 540px;
+  top: 640px;
   left: 880px;
   transition: 1.1s;
 }
@@ -45,7 +45,7 @@
 
 .popupBox1 {
   position: relative;
-  margin: 80px auto;
+  margin: 240px auto;
   animation: fadein 1s;
   width: 600px;
   height: 600px;

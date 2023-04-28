@@ -118,7 +118,13 @@ const Dialog2 = (props) => {
   useEffect(() => {
     dispatch({ type: "index/SOMANI" });
   }, [dispatch]);
+  let [btnFade, setBtnFade] = useState(1);
 
+  useEffect(() => {
+    setTimeout(() => {
+      setBtnFade(0);
+    }, 5000);
+  }, []);
   const buttonCount = () => {
     if (props.nextBtn === 4) {
       props.setNextBtn(props.nextBtn + 2);
@@ -133,7 +139,7 @@ const Dialog2 = (props) => {
       <img className="bnchat" src={bnchat} alt="bnchat" />
       <p className="dialog_oneline">{status.userName}(이)라고 하는구나..</p>
       <button
-        className="nextBtn0"
+        className={"nextBtn" + btnFade}
         onClick={() => {
           buttonCount();
         }}

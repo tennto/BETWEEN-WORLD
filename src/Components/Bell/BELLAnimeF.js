@@ -12,6 +12,7 @@ const BELLAnimeF = () => {
       return (
         <>
           <Player
+            className="fadelick"
             src={wata_ending1}
             style={{ width: "1920px" }}
             autoplay={true}
@@ -24,6 +25,7 @@ const BELLAnimeF = () => {
       return (
         <>
           <Player
+            className="fadelick"
             src={wagi_ending1}
             style={{ width: "1920px" }}
             autoplay={true}

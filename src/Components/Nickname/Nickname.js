@@ -146,7 +146,7 @@ const Dialog4 = (props) => {
   return (
     <div className="forFade">
       <img className="deco" src={deco} alt="deco" />
-      <p className="dialog_oneline">나는 {status.userName}이구나..</p>
+      <p className="dialog_oneline">나는 {status.userName}(이)구나..</p>
       <button
         className="NnextBtn0"
         onClick={() => {

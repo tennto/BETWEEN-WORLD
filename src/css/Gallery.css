@@ -1,13 +1,41 @@
 .btn-open-popup {
   display: inline-block;
   margin: 50px 50px;
-  width: 400px;
-  height: 450px;
+  width: 500px;
+  height: 550px;
   text-align: center;
-  border-radius: 15px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
-    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  border-radius: 30px;
+  box-shadow: 0px 2px 6px #cecece;
+  background-color: #fcfbf9;
+  position: relative;
+}
+.poptext {
+  margin: 60px auto;
+  font-family: "ongeul";
+  font-size: 32px;
+}
+.popbg {
+  z-index: -1;
+  width: 145%;
+  position: absolute;
+  top: 0;
+  left: -330px;
+}
+.wagiwata {
+  bottom: 2%;
+  position: absolute;
+}
+.first-ptag {
+  font-size: 60px;
+  font-family: "ongeul";
+  margin-top: 80%;
+  margin-bottom: 0%;
+}
+.second-ptag {
+  margin: 0 0 0 0;
+  font-size: 45px;
+  opacity: 0.7;
+  font-family: "ongeul";
 }
 
 .Overlay {
@@ -21,20 +49,43 @@
   background: rgba(0, 0, 0, 0.2);
   z-index: 9999;
 }
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .ModalWrap {
+  animation: fadein 2s;
+  overflow: hidden;
+  position: relative;
   height: fit-content;
   border-radius: 15px;
   background-color: #fff;
   position: absolute;
+  width: 1200px;
+  height: 620px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 .CloseButton {
-  float: right;
-  width: 30px;
-  height: 30px;
+  height: 40px;
+  background-color: whitesmoke;
+  right: 40px;
+  top: 20px;
+  width: 40px;
+  position: absolute;
+  border: none;
+  border-radius: 20px;
   cursor: pointer;
+  transition: 0.5s ease-in;
+}
+.CloseButton:hover {
+  transition: 0.5s ease-in;
+  transform: scale(1.1);
 }
 
 .topnav {

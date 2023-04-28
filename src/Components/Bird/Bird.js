@@ -27,6 +27,13 @@ import watachat from "./watachat.png";
 import wagichat from "../ChapterBoy/wagichat.png";
 import { batch } from "react-redux";
 
+import HBCard from "./birdcard1.png";
+import SBCard from "./birdcard2.png";
+import TBCard from "./birdcard3.png";
+import HBCard2 from "./birdcard4.png";
+import SBCard2 from "./birdcard5.png";
+import TBCard2 from "./birdcard6.png";
+
 const Bird = () => {
   let [nextBtn, setNextBtn] = useState(0);
 
@@ -104,13 +111,20 @@ const Dialog0 = (props) => {
       props.setNextBtn(props.nextBtn + 1);
     }
   };
+  let [btnFade, setBtnFade] = useState(1);
+  useEffect(() => {
+    setTimeout(() => {
+      setBtnFade(0);
+    }, 5000);
+  }, []);
+
   return (
     <div className="forFade_b">
       <img className="deco" src={textdeco} alt="textdeco_bd" />
       {imgReturn()}
       <p className="dialog_oneline">안녕. 인간</p>
       <button
-        className="nextBtn0"
+        className={"nextBtn" + btnFade}
         onClick={() => {
           buttonCount();
         }}
@@ -166,7 +180,7 @@ const Dialog2 = (props) => {
   const { nextBtn, setNextBtn } = props;
 
   return (
-    <div className="fadelick">
+    <div className="fadelick_ch">
       <button
         className="choiceNo2"
         onClick={() => {
@@ -697,6 +711,14 @@ const Dialog13 = (props) => {
 };
 
 const Dialog14 = (props) => {
+  const status = useSelector((state) => state);
+  const imgReturn = () => {
+    if (status.userSex === 1) {
+      return <img className="watachat" src={watachat} alt="watachat" />;
+    } else {
+      return <img className="watachat" src={wagichat} alt="watachat" />;
+    }
+  };
   const dispatch = useDispatch();
   const buttonCount = () => {
     if (props.nextBtn === 3) {
@@ -708,7 +730,7 @@ const Dialog14 = (props) => {
   return (
     <div className="forFade_b">
       <img className="deco" src={textdeco} alt="textdeco_bd" />
-      <img className="watachat" src={watachat} alt="watachat" />
+      {imgReturn()}
       <p className="dialog_oneline">새는 부리를 벗고 환하게 웃기 시작했다.</p>
       <button
         className="nextBtn0"

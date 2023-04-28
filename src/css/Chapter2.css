@@ -49,7 +49,7 @@
 
 .forFade_b {
   animation: fadein 1s;
-  background-color: whitesmoke;
+  background-color: #fcfbf9;
   width: 900px;
   height: 200px;
   border: none;
@@ -161,14 +161,14 @@
 }
 
 .fadelick {
-  animation: fadein 3s;
+  animation: fadein 5s;
 }
 
 .choiceNo2 {
   position: relative;
   width: 240px;
   height: 200px;
-  background-color: whitesmoke;
+  background-color: #fcfbf9;
   display: inline-block;
   margin: 0 40px;
   border-radius: 12px;
@@ -288,4 +288,25 @@
   font-size: 32px;
   top: 50px;
   left: 86px;
+}
+
+.goToHome {
+  position: absolute;
+  top: -740px;
+  left: -420px;
+  width: 200px;
+  height: 60px;
+  background-color: whitesmoke;
+  color: #383838;
+  border: none;
+  border-radius: 40px;
+  font-size: 36px;
+  font-family: "ongeul";
+  transition: 0.8s ease-in;
+}
+.goToHome:hover {
+  transform: scale(1.05);
+  transition: 0.8s ease-in;
+  background-color: #b4a995;
+  color: whitesmoke;
 }

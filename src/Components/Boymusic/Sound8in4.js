@@ -6,6 +6,7 @@ import { setSound8 } from "../../index";
 import { cardSelect } from "../../index";
 import "../../css/Card.css";
 import { batch } from "react-redux";
+import SBCard2 from "../Bird/birdcard5.png";
 
 const Sound8in4 = (props) => {
   const status = useSelector((state) => state);
@@ -31,6 +32,7 @@ const Sound8in4 = (props) => {
         props.setNextBtn(props.nextBtn + 2);
       }}
     >
+      <img className="HBCard2" src={SBCard2} alt="SBCard2" />
       <p className="bscript">하고 싶은 일을 해 (소리 X)</p>
     </div>
   );
