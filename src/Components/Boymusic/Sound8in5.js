@@ -36,6 +36,7 @@ const Sound8in5 = (props) => {
           dispatch(setSound8("까마귀.wav"));
           dispatch({ type: checkMT });
           dispatch(cardSelect(0));
+          dispatch({ type: "index/BD_CASE1" });
         });
         props.setNextBtn(props.nextBtn + 1);
       }}

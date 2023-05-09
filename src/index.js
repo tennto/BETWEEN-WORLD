@@ -20,11 +20,15 @@ const root = createRoot(container);
 
 const initialState = {
   userSex: 0,
+  mainSound: true,
   textLine: 1,
   btnReset: 0,
   moodSelect: 1,
   aniSelect: 1,
   cardSelect: 1,
+  rtrCase: 0,
+  ckCase: 0,
+  bdCase: 0,
   userName: "",
   sound1: "",
   sound2: "",
@@ -67,7 +71,23 @@ export const setSound7 = (sound7) => {
 export const setSound8 = (sound8) => {
   return { type: SET_SOUND8, sound8 };
 };
+export const mainSound = (mainSound) => {
+  return { type: MAIN_SOUND, mainSound };
+};
 
+const rtrCase1 = "index/RTR_CASE1";
+const rtrCase2 = "index/RTR_CASE2";
+const rtrCase3 = "index/RTR_CASE3";
+
+const ckCase1 = "index/CK_CASE1";
+const ckCase2 = "index/CK_CASE2";
+const ckCase3 = "index/CK_CASE3";
+
+const bdCase1 = "index/BD_CASE1";
+const bdCase2 = "index/BD_CASE2";
+const bdCase3 = "index/BD_CASE3";
+
+const MAIN_SOUND = " index/MAIN_SOUND";
 const RESET_ALL1 = "index/RESET_ALL1";
 const RESET_ALL2 = "index/RESET_ALL2";
 const RESET_ALL3 = "index/RESET_ALL3";
@@ -158,6 +178,66 @@ const SET_SOUND8 = "index/SET_SOUND8";
 // reducer 설정
 function reducer(state = initialState, action) {
   switch (action.type) {
+    case rtrCase1: {
+      return {
+        ...state,
+        rtrCase: 1,
+      };
+    }
+    case rtrCase2: {
+      return {
+        ...state,
+        rtrCase: 2,
+      };
+    }
+    case rtrCase3: {
+      return {
+        ...state,
+        rtrCase: 3,
+      };
+    }
+    case ckCase1: {
+      return {
+        ...state,
+        ckCase: 1,
+      };
+    }
+    case ckCase2: {
+      return {
+        ...state,
+        ckCase: 2,
+      };
+    }
+    case ckCase3: {
+      return {
+        ...state,
+        ckCase: 3,
+      };
+    }
+    case bdCase1: {
+      return {
+        ...state,
+        bdCase: 1,
+      };
+    }
+    case bdCase2: {
+      return {
+        ...state,
+        bdCase: 2,
+      };
+    }
+    case bdCase3: {
+      return {
+        ...state,
+        bdCase: 3,
+      };
+    }
+    case MAIN_SOUND: {
+      return {
+        ...state,
+        mainSound: false,
+      };
+    }
     case RESET_ALL1: {
       return {
         ...state,

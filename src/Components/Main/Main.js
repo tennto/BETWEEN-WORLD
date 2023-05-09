@@ -78,15 +78,6 @@ const Main = () => {
   const [play, setPlaying] = useState(true);
   //왼쪽 상단 플레이리스트 저장
   //기쁨,슬픔,긴장
-  const dataSubmit = async () => {
-    await axios.post("/gallery/userinfo", {
-      userName: status.userName,
-      sound1: status.sound1,
-      sound4: status.sound4,
-      sound5: status.sound5,
-      sound6: status.sound6,
-    });
-  };
 
   const savePlaylist1 = () => {
     if (status.sound1 === "") {
@@ -152,7 +143,7 @@ const Main = () => {
             playing={play}
             loop={true}
             mute={false}
-            volume={0.5}
+            volume={0.35}
           />
         </>
       );
@@ -412,16 +403,15 @@ const Main = () => {
     // }
   };
 
-  // const [mainPlay, mainsetSound] = useState(true);
-  // //main 기본 재생음악 함수//////////////////////////////////////////////
-  // var audio = (
-  //   <ReactHowler
-  //     src={["메인사운드.wav"]}
-  //     playing={mainPlay}
-  //     loop={true}
-  //     volume={0.05}
-  //   />
-  // );
+  //main 기본 재생음악 함수//////////////////////////////////////////////
+  var audio = (
+    <ReactHowler
+      src={["메인사운드.wav"]}
+      playing={status.mainSound}
+      loop={true}
+      volume={0.05}
+    />
+  );
 
   // const mainPlayStop = () => {
   //   if (status.moodSelect === 7) {
@@ -446,8 +436,7 @@ const Main = () => {
       >
         포스트요청하기
       </button> */}
-      {/* {audio}
-      {mainPlayStop} */}
+      {audio}
       <table className="playlist">
         <tbody>
           <tr>

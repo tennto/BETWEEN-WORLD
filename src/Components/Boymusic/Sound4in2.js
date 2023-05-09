@@ -1,9 +1,10 @@
 /* eslint-disable */
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ReactHowler from "../../howler/ReactHowler.js";
 import { useSelector, useDispatch } from "react-redux";
 import { setSound4 } from "../../index";
+import { mainSound } from "../../index";
 import schoice from "../ChapterBoy/schoice.png";
 import "../../css/Card.css";
 
@@ -11,6 +12,9 @@ const Sound4in2 = (props) => {
   // const status = useSelector((state) => state);
   const dispatch = useDispatch();
   const [play, setPlaying] = useState(false);
+  useEffect(() => {
+    dispatch(mainSound(false));
+  }, []);
 
   return (
     <div
@@ -31,7 +35,7 @@ const Sound4in2 = (props) => {
         playing={play}
         loop={false}
         mute={false}
-        volume={0.3}
+        volume={0.4}
       />
       <img className="schoice" src={schoice} alt="schoice" />
       <p className="rtrscript">나는 지혜로운 것 같아</p>

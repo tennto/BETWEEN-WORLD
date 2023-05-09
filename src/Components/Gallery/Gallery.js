@@ -14,9 +14,9 @@ import motion2 from "../Nickname/wagimotion.json";
 const Gallery = () => {
   const [userInfo, setUserList] = useState();
   const [isOpen, setIsOpen] = useState(false);
-  const [sex, setsex] = useState("");
   // const [displayNow, setDisplay] = useState(false);
   const [idCheck, setIdCheck] = useState([]);
+  const [sexInfo, setSexInfo] = useState(null);
 
   const axiosData = async () => {
     const response = await axios.get("/gallery/userinfo");
@@ -25,7 +25,8 @@ const Gallery = () => {
 
   const refreshData = async () => {
     const response = await axios.get("/gallery/refresh");
-    setUserList(response.data);
+    let parsingData = JSON.parse(response.data);
+    setUserList(parsingData);
   };
   // useEffect(() => {
   //   dataSubmit();
@@ -35,29 +36,6 @@ const Gallery = () => {
     axiosData();
   }, []);
 
-  const lottieReturn = () => {
-    if (userInfo.userSex === "1") {
-      return (
-        <Player
-          src={motion1}
-          style={{ width: "500px" }}
-          autoplay={true}
-          loop={true}
-          speed={1}
-        />
-      );
-    } else if (userInfo.userSex === "2") {
-      return (
-        <Player
-          src={motion2}
-          style={{ width: "500px" }}
-          autoplay={true}
-          loop={true}
-          speed={1}
-        />
-      );
-    }
-  };
   const onClickButton = (id) => {
     setIdCheck(userInfo[id - 1]);
     setIsOpen(true);
@@ -95,14 +73,30 @@ const Gallery = () => {
               }}
             >
               <div className="wagiwata">
-                {" "}
-                <Player
-                  src={motion1}
+                {ex.userSex === 1 ? (
+                  <Player
+                    src={motion1}
+                    style={{ width: "500px" }}
+                    autoplay={true}
+                    loop={true}
+                    speed={1}
+                  />
+                ) : (
+                  <Player
+                    src={motion2}
+                    style={{ width: "480px" }}
+                    autoplay={true}
+                    loop={true}
+                    speed={1}
+                  />
+                )}
+                {/* <Player
+                  src={sexInfo}
                   style={{ width: "500px" }}
                   autoplay={true}
                   loop={true}
                   speed={1}
-                />
+                /> */}
               </div>
               <p className="first-ptag">{ex.userName}님의</p>
               <p className="second-ptag">기억</p>
