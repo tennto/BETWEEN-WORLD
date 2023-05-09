@@ -89,6 +89,7 @@ const Dialog1 = (props) => {
 
 const Dialog2 = (props) => {
   const status = useSelector((state) => state);
+  const dispatch = useDispatch();
 
   return (
     <div className="fadelick">
