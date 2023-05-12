@@ -73,3 +73,25 @@
     opacity: 0;
   }
 }
+
+.ContainerPro {
+  margin: 10px auto;
+  background-color: #eee;
+  width: 800px;
+  height: 10px;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  border-radius: 20px;
+  top: 10px;
+  left: 25%;
+}
+.Dot {
+  width: 30px;
+  height: 30px;
+  box-sizing: border-box;
+  border: 6px solid black;
+  border-radius: 35px;
+  background: white;
+  margin-left: -30px;
+}

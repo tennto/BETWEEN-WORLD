@@ -36,7 +36,6 @@ const BellNo = () => {
   useEffect(() => {
     dataSubmit();
   }, []);
-
   const DialogFlow = () => {
     if (nextBtn === 0) {
       return <Dialog0 nextBtn={nextBtn} setNextBtn={setNextBtn} />;

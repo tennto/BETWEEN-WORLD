@@ -35,7 +35,6 @@ const Sound8in3 = (props) => {
           dispatch(setSound8("부엉이.mp3"));
           dispatch({ type: checkMS });
           dispatch(cardSelect(0));
-          dispatch({ type: "index/BD_CASE1" });
         });
         props.setNextBtn(props.nextBtn + 1);
       }}

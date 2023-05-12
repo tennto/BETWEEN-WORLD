@@ -65,7 +65,6 @@ const Sound7in1 = (props) => {
           dispatch(setSound7("귀뚜라미소리.mp3"));
           dispatch(cardSelect(0));
           dispatch({ type: checkMS });
-          dispatch({ type: "index/CK_CASE1" });
         });
         props.setNextBtn(props.nextBtn + 2);
       }}

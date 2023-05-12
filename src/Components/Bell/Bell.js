@@ -125,7 +125,7 @@ const Dialog1 = (props) => {
       <img className="deco" src={textdeco} alt="textdeco_bd" />
       <img className="bnchat" src={bnchat} alt="bnchat" />
       <p className="dialog_oneline">
-        {status.userName}, 지금 들리는 소리는 마음에 드니?
+        {status.userName}지금 들리는 소리는 마음에 드니?
       </p>
       <button
         className="nextBtn0"

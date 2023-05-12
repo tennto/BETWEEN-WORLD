@@ -9,24 +9,24 @@ import { useLocation } from "react-router-dom";
 import { Player } from "@lottiefiles/react-lottie-player";
 import motion1 from "../Nickname/watarerender.json";
 import motion2 from "../Nickname/wagimotion.json";
-// import Loding from "./Loding";
+import Loding from "./Loading";
 
 const Gallery = () => {
   const [userInfo, setUserList] = useState();
   const [isOpen, setIsOpen] = useState(false);
+  const [lodingOpen, setlodingOpen] = useState(false);
+  const [sex, setsex] = useState("");
   // const [displayNow, setDisplay] = useState(false);
   const [idCheck, setIdCheck] = useState([]);
-  const [sexInfo, setSexInfo] = useState(null);
 
   const axiosData = async () => {
     const response = await axios.get("/gallery/userinfo");
-    setUserList(response.data);
+    setUserList(response.data.reverse());
   };
 
   const refreshData = async () => {
     const response = await axios.get("/gallery/refresh");
-    let parsingData = JSON.parse(response.data);
-    setUserList(parsingData);
+    setUserList(response.data.reverse());
   };
   // useEffect(() => {
   //   dataSubmit();
@@ -39,6 +39,9 @@ const Gallery = () => {
   const onClickButton = (id) => {
     setIdCheck(userInfo[id - 1]);
     setIsOpen(true);
+  };
+  const onClickLoding = () => {
+    setlodingOpen(true);
   };
   return (
     <div>
@@ -56,6 +59,7 @@ const Gallery = () => {
             {
               // setDisplay(true);
               refreshData();
+              onClickLoding();
             }
           }}
         >
@@ -73,30 +77,14 @@ const Gallery = () => {
               }}
             >
               <div className="wagiwata">
-                {ex.userSex === 1 ? (
-                  <Player
-                    src={motion1}
-                    style={{ width: "500px" }}
-                    autoplay={true}
-                    loop={true}
-                    speed={1}
-                  />
-                ) : (
-                  <Player
-                    src={motion2}
-                    style={{ width: "480px" }}
-                    autoplay={true}
-                    loop={true}
-                    speed={1}
-                  />
-                )}
-                {/* <Player
-                  src={sexInfo}
+                {" "}
+                <Player
+                  src={motion1}
                   style={{ width: "500px" }}
                   autoplay={true}
                   loop={true}
                   speed={1}
-                /> */}
+                />
               </div>
               <p className="first-ptag">{ex.userName}님의</p>
               <p className="second-ptag">기억</p>
@@ -110,6 +98,14 @@ const Gallery = () => {
           open={isOpen}
           onClose={() => {
             setIsOpen(false);
+          }}
+        />
+      )}
+      {lodingOpen && (
+        <Loding
+          open={lodingOpen}
+          onCloseing={() => {
+            setlodingOpen(false);
           }}
         />
       )}
