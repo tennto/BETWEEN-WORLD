@@ -26,9 +26,9 @@
   <br/>
   <div align="center">
   <span>
-  <img width="320px" src="https://github.com/tennto/BETWEEN-WORLD/assets/109796814/ae9c4dcf-059a-489d-82f2-cad70570ee1f"/>
-    <img width="320px" src="https://github.com/tennto/BETWEEN-WORLD/assets/109796814/85f75186-5985-4867-83e2-0e38d36f6a9f"/>
-      <img width="320px" src="https://github.com/tennto/BETWEEN-WORLD/assets/109796814/e19d731e-12fe-4002-817f-b02b4d128040"/>
+  <img width="220px" src="https://github.com/tennto/BETWEEN-WORLD/assets/109796814/ae9c4dcf-059a-489d-82f2-cad70570ee1f"/>
+    <img width="220px" src="https://github.com/tennto/BETWEEN-WORLD/assets/109796814/85f75186-5985-4867-83e2-0e38d36f6a9f"/>
+      <img width="220px" src="https://github.com/tennto/BETWEEN-WORLD/assets/109796814/e19d731e-12fe-4002-817f-b02b4d128040"/>
 </span>
   </div>
 
