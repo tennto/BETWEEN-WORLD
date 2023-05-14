@@ -6,6 +6,23 @@ import bgmountainS from "./sadsan.png";
 import bgmountainT from "./thrillsan.png";
 import bgseaH from "./hsea.png";
 import bgseaT from "./tsea.png";
+import { useRef } from "react";
+import { Player } from "@lottiefiles/react-lottie-player";
+import teru1 from "./terumotion.json";
+import teru2 from "./terumotion2.json";
+import hcl from "./happyCrikatLove.json";
+import sce from "./sadCrikatEat.json";
+import scne from "./sadCrikatNoEat.json";
+import hbc from "./happyBirdCry.json";
+import hbs from "./happyBirdSmile.json";
+import sbc from "./sadBirdCry.json";
+import sbs from "./sadBirdSmile.json";
+import tce from "./thrillCrikatEatmotion.json";
+import tcne from "./sadCrikatNoEat.json";
+import tbc from "./thrillBirdCry.json";
+import tbs from "./thrillBirdSmile.json";
+import watamotion from "../Nickname/watarerender.json";
+import wagimotion from "../Nickname/wagimotion.json";
 
 function Modal({ onClose, idCheck }) {
   const handleClose = () => {
@@ -141,31 +158,230 @@ function Modal({ onClose, idCheck }) {
       }
     }
   };
-  const textReturn = () => {
+  // const textReturn = () => {
+  //   if (
+  //     idCheck.sound1 === "기쁨노래1.mp3" ||
+  //     idCheck.sound1 === "기쁨노래2.mp3"
+  //   ) {
+  //     return "밝은 분위기 선택";
+  //   } else if (
+  //     idCheck.sound1 === "슬픔노래1.mp3" ||
+  //     idCheck.sound1 === "슬픔노래2.mp3"
+  //   ) {
+  //     return "우울한 분위기 선택";
+  //   } else {
+  //     return "오싹한 분위기 선택";
+  //   }
+  // };
+
+  const watagiRetrun = () => {
+    if (idCheck.userSex === 1) {
+      return (
+        <Player
+          src={watamotion}
+          style={{ width: "400px" }}
+          autoplay={true}
+          loop={true}
+          speed={1}
+        />
+      ); // 와타 모션
+    } else {
+      return (
+        <Player
+          src={wagimotion}
+          style={{ width: "400px" }}
+          autoplay={true}
+          loop={true}
+          speed={1}
+        />
+      ); // 와기 모션
+    }
+  };
+
+  const teruReturn = () => {
+    if (idCheck.rtrCase === 1) {
+      return (
+        <Player
+          className="terumotion"
+          src={teru2}
+          style={{ width: "400px" }}
+          autoplay={true}
+          loop={true}
+          speed={1}
+        />
+      );
+    } else {
+      return (
+        <Player
+          className="terumotion"
+          src={teru1}
+          style={{ width: "400px" }}
+          autoplay={true}
+          loop={true}
+          speed={1}
+        />
+      );
+    }
+  };
+
+  const ckReturn = () => {
     if (
       idCheck.sound1 === "기쁨노래1.mp3" ||
       idCheck.sound1 === "기쁨노래2.mp3"
     ) {
-      return "밝은 분위기 선택";
+      if (idCheck.ckCase === 1) {
+        return (
+          <Player
+            src={hcl}
+            style={{ width: "400px" }}
+            autoplay={true}
+            loop={true}
+            speed={1}
+          />
+        ); // 귀뚜 러브
+      } else {
+        return ""; // 귀뚜 런 ok
+      }
     } else if (
       idCheck.sound1 === "슬픔노래1.mp3" ||
       idCheck.sound1 === "슬픔노래2.mp3"
     ) {
-      return "우울한 분위기 선택";
+      if (idCheck.ckCase === 1) {
+        return (
+          <Player
+            src={scne}
+            style={{ width: "400px" }}
+            autoplay={true}
+            loop={true}
+            speed={1}
+          />
+        ); // 슬픔 노 이트
+      } else {
+        return (
+          <Player
+            src={sce}
+            style={{ width: "400px" }}
+            autoplay={true}
+            loop={true}
+            speed={1}
+          />
+        ); // 슬픔 이트
+      }
     } else {
-      return "오싹한 분위기 선택";
+      if (idCheck.ckCase === 1) {
+        return (
+          <Player
+            src={tcne}
+            style={{ width: "400px" }}
+            autoplay={true}
+            loop={true}
+            speed={1}
+          />
+        ); // 긴장 노이트
+      } else {
+        return (
+          <Player
+            src={tce}
+            style={{ width: "400px" }}
+            autoplay={true}
+            loop={true}
+            speed={1}
+          />
+        ); // 긴장 이트
+      }
     }
   };
+
+  const bdReturn = () => {
+    if (
+      idCheck.sound1 === "기쁨노래1.mp3" ||
+      idCheck.sound1 === "기쁨노래2.mp3"
+    ) {
+      if (idCheck.bdCase === 1) {
+        return (
+          <Player
+            src={hbc}
+            style={{ width: "400px" }}
+            autoplay={true}
+            loop={true}
+            speed={1}
+          />
+        ); // 새 울음
+      } else {
+        return (
+          <Player
+            src={hbs}
+            style={{ width: "400px" }}
+            autoplay={true}
+            loop={true}
+            speed={1}
+          />
+        ); // 새 웃음
+      }
+    } else if (
+      idCheck.sound1 === "슬픔노래1.mp3" ||
+      idCheck.sound1 === "슬픔노래2.mp3"
+    ) {
+      if (idCheck.bdCase === 1) {
+        return (
+          <Player
+            src={sbc}
+            style={{ width: "400px" }}
+            autoplay={true}
+            loop={true}
+            speed={1}
+          />
+        ); // 부엉이 울음
+      } else {
+        return (
+          <Player
+            src={sbs}
+            style={{ width: "400px" }}
+            autoplay={true}
+            loop={true}
+            speed={1}
+          />
+        ); // 부엉이 웃음
+      }
+    } else {
+      if (idCheck.bdCase === 1) {
+        return (
+          <Player
+            src={tbc}
+            style={{ width: "400px" }}
+            autoplay={true}
+            loop={true}
+            speed={1}
+          />
+        ); // 까마귀 울음
+      } else {
+        return (
+          <Player
+            src={tbs}
+            style={{ width: "400px" }}
+            autoplay={true}
+            loop={true}
+            speed={1}
+          />
+        ); // 까마귀 웃음
+      }
+    }
+  };
+
   return (
     <div className="Overlay">
       {console.log(idCheck)}
       <div className="ModalWrap">
         <button className="CloseButton" onClick={handleClose}>
-          X
+          돌아가기
         </button>
         <div className="Contents">
           {bgReturn()}
-          <p className="poptext">{textReturn()}</p>
+          {/* <p className="poptext">{textReturn()}</p> */}
+          <div className="terumotion">{teruReturn()}</div>
+          <div className="ckmotion">{ckReturn()}</div>
+          <div className="bdmotion">{bdReturn()}</div>
+          {watagiRetrun()}
           {showData1()}
           <br />
           {showData2()} <br />

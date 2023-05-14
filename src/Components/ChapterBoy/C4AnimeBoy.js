@@ -4,8 +4,8 @@ import React from "react";
 import { Player } from "@lottiefiles/react-lottie-player";
 import WSTM from "./wata_swap_to_san.json";
 import GSTM from "./wagi_swap_to_san.json";
-import WSTS from "./wata_swap_to_sea.json";
-import GSTS from "./wagi_swap_to_sea.json";
+import STSW from "./swap_to_sea_wata.json";
+import STSG from "./swap_to_sea_wagi.json";
 import { useSelector } from "react-redux";
 
 const C4AnimeBoy = () => {
@@ -45,7 +45,7 @@ const C4AnimeBoy = () => {
           <>
             <Player
               className="fadelick1"
-              src={WSTS}
+              src={STSW}
               style={{ width: "1920px" }}
               autoplay={true}
               loop={false}
@@ -58,7 +58,7 @@ const C4AnimeBoy = () => {
           <>
             <Player
               className="fadelick1"
-              src={GSTS}
+              src={STSG}
               style={{ width: "1920px" }}
               autoplay={true}
               loop={false}
