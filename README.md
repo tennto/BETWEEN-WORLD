@@ -22,9 +22,17 @@
   <h5 align="center">비트윈월드 프로젝트는 사용자가 스토리 라인에 따라 ASMR 사운드를 쌓아가며
   <br/> 
   시각적 그리고 청각적인 인터랙션 요소를 경험할 수 있는 웹 서비스입니다</h5>
-  <img width="600px" src="https://github.com/tennto/BETWEEN-WORLD/assets/109796814/ae9c4dcf-059a-489d-82f2-cad70570ee1f"/>
-
 </h3>
+  <br/>
+  <div align="center">
+  <span>
+  <img width="320px" src="https://github.com/tennto/BETWEEN-WORLD/assets/109796814/ae9c4dcf-059a-489d-82f2-cad70570ee1f"/>
+    <img width="320px" src="https://github.com/tennto/BETWEEN-WORLD/assets/109796814/85f75186-5985-4867-83e2-0e38d36f6a9f"/>
+      <img width="320px" src="https://github.com/tennto/BETWEEN-WORLD/assets/109796814/e19d731e-12fe-4002-817f-b02b4d128040"/>
+</span>
+  </div>
+
+
 
 
   <br/>
