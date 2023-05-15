@@ -21,6 +21,13 @@
   top: 0;
   left: -330px;
 }
+.popbg2 {
+  z-index: -1;
+  width: 130%;
+  position: absolute;
+  top: -60px;
+  left: -330px;
+}
 .wagiwata {
   bottom: 2%;
   position: absolute;
@@ -79,11 +86,12 @@
   position: absolute;
   font-family: "ongeul";
   font-size: 22px;
-  right: 36%;
+  right: 530px;
   letter-spacing: 1px;
   bottom: 40px;
   transition: 0.5s ease-in;
   width: 140px;
+  z-index: 10;
 }
 .CloseButton:hover {
   transition: 0.5s ease-in;
@@ -225,4 +233,35 @@
   bottom: 0;
   left: 0;
   right: 0;
+}
+.terumotion {
+  position: absolute;
+  max-width: 320px;
+  z-index: 1;
+  left: 152px;
+  top: -50px;
+}
+.bdmotion {
+  position: absolute;
+  max-width: 320px;
+  top: 154px;
+  left: 160px;
+  z-index: 1;
+}
+.ckmotion {
+  position: absolute;
+  max-width: 320px;
+  left: 688px;
+  top: 70px;
+  z-index: 1;
+}
+.watagimotion {
+  position: absolute;
+  max-width: 320px;
+  top: 90px;
+  left: 392px;
+  z-index: 1;
+}
+.Contents {
+  position: relative;
 }

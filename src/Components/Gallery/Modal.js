@@ -4,8 +4,8 @@ import ReactHowler from "../../howler/ReactHowler.js";
 import bgmountainH from "./hapsan.png";
 import bgmountainS from "./sadsan.png";
 import bgmountainT from "./thrillsan.png";
-import bgseaH from "./hsea.png";
-import bgseaT from "./tsea.png";
+import bgseaH from "./hsea2.png";
+import bgseaT from "./tsea2.png";
 import { useRef } from "react";
 import { Player } from "@lottiefiles/react-lottie-player";
 import teru1 from "./terumotion.json";
@@ -152,9 +152,9 @@ function Modal({ onClose, idCheck }) {
         idCheck.sound1 === "슬픔노래1.mp3" ||
         idCheck.sound1 === "슬픔노래2.mp3"
       ) {
-        return <img className="popbg" src={bgseaH} alt="seaH" />;
+        return <img className="popbg2" src={bgseaH} alt="seaH" />;
       } else {
-        return <img className="popbg" src={bgseaT} alt="seaT" />;
+        return <img className="popbg2" src={bgseaT} alt="seaT" />;
       }
     }
   };
@@ -301,7 +301,7 @@ function Modal({ onClose, idCheck }) {
         return (
           <Player
             src={hbc}
-            style={{ width: "400px" }}
+            style={{ width: "320px" }}
             autoplay={true}
             loop={true}
             speed={1}
@@ -311,7 +311,7 @@ function Modal({ onClose, idCheck }) {
         return (
           <Player
             src={hbs}
-            style={{ width: "400px" }}
+            style={{ width: "320px" }}
             autoplay={true}
             loop={true}
             speed={1}
@@ -326,7 +326,7 @@ function Modal({ onClose, idCheck }) {
         return (
           <Player
             src={sbc}
-            style={{ width: "400px" }}
+            style={{ width: "320px" }}
             autoplay={true}
             loop={true}
             speed={1}
@@ -336,7 +336,7 @@ function Modal({ onClose, idCheck }) {
         return (
           <Player
             src={sbs}
-            style={{ width: "400px" }}
+            style={{ width: "320px" }}
             autoplay={true}
             loop={true}
             speed={1}
@@ -348,7 +348,7 @@ function Modal({ onClose, idCheck }) {
         return (
           <Player
             src={tbc}
-            style={{ width: "400px" }}
+            style={{ width: "320px" }}
             autoplay={true}
             loop={true}
             speed={1}
@@ -358,7 +358,7 @@ function Modal({ onClose, idCheck }) {
         return (
           <Player
             src={tbs}
-            style={{ width: "400px" }}
+            style={{ width: "320px" }}
             autoplay={true}
             loop={true}
             speed={1}
@@ -381,7 +381,7 @@ function Modal({ onClose, idCheck }) {
           <div className="terumotion">{teruReturn()}</div>
           <div className="ckmotion">{ckReturn()}</div>
           <div className="bdmotion">{bdReturn()}</div>
-          {watagiRetrun()}
+          <div className="watagimotion">{watagiRetrun()}</div>
           {showData1()}
           <br />
           {showData2()} <br />
