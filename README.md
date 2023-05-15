@@ -62,7 +62,7 @@ dependency 로 인해 정상적인 설치가 어려운 경우 --force 명령어�
 ## Version Information
 ### `v1.0.4 patch`
 
-## Dependency
+## Library Version Dependency
     "mongodb": "^3.6.4",
     "mongoose": "^7.0.3",
     "react": "^18.2.0",
