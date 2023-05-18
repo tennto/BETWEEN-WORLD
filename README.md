@@ -60,7 +60,7 @@ dependency 로 인해 정상적인 설치가 어려운 경우 --force 명령어�
 ### `npm install @lottiefiles/lottie-player`
 
 ## Version Information
-### `v1.0.4 patch`
+### `v1.1 beta`
 
 ## Library Version Dependency
     "mongodb": "^3.6.4",
