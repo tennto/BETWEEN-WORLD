@@ -9,25 +9,31 @@ import { useLocation } from "react-router-dom";
 import { Player } from "@lottiefiles/react-lottie-player";
 import motion1 from "../Nickname/watarerender.json";
 import motion2 from "../Nickname/wagimotion.json";
-// import Loding from "./Loding";
+import Loding from "./Loading";
 
 const Gallery = () => {
   const [userInfo, setUserList] = useState();
   const [isOpen, setIsOpen] = useState(false);
   // const [displayNow, setDisplay] = useState(false);
   const [idCheck, setIdCheck] = useState([]);
-  const [sexInfo, setSexInfo] = useState(null);
+  const [lodingOpen, setlodingOpen] = useState(false);
 
   const axiosData = async () => {
     const response = await axios.get("/gallery/userinfo");
+    // setUserList(response.data.reverse());
     setUserList(response.data);
   };
 
   const refreshData = async () => {
     const response = await axios.get("/gallery/refresh");
-    let parsingData = JSON.parse(response.data);
-    setUserList(parsingData);
+    // setUserList(response.data.reverse());
+    setUserList(response.data);
   };
+
+  const onClickLoding = () => {
+    setlodingOpen(true);
+  };
+
   // useEffect(() => {
   //   dataSubmit();
   // }, []);
@@ -55,6 +61,7 @@ const Gallery = () => {
           onClick={() => {
             {
               // setDisplay(true);
+              onClickLoding();
               refreshData();
             }
           }}
@@ -110,6 +117,14 @@ const Gallery = () => {
           open={isOpen}
           onClose={() => {
             setIsOpen(false);
+          }}
+        />
+      )}
+      {lodingOpen && (
+        <Loding
+          open={lodingOpen}
+          onCloseing={() => {
+            setlodingOpen(false);
           }}
         />
       )}

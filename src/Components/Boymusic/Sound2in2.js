@@ -47,7 +47,7 @@ const Sound2in2 = () => {
       <h2 className="script2">
         어느 누구와도
         <br />
-        대화하고싶지않아..
+        대화하고 싶지 않아..
       </h2>
       {/* <button
         onClick={() => {

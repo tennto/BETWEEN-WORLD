@@ -78,7 +78,7 @@ const Sound6in1 = (props) => {
         volume={0.5}
       />
       <img className="terucard1" src={treverse} alt="treverse" />
-      <h2 className="tscript">슬픔은 퍼져가는 것 (강한 빗소리)</h2>
+      <h2 className="tscript">슬픔은 퍼져 나가는 것 (강한 빗소리)</h2>
     </div>
   );
 };

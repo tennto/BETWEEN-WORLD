@@ -49,7 +49,7 @@ const Sound9in1 = (props) => {
         mute={false}
         volume={0.2}
       />
-      <p className="bellscript">눈을 뜬다 (종소리 O)</p>
+      <p className="bellscript">눈을 뜬다 (소리 O)</p>
     </div>
   );
 };

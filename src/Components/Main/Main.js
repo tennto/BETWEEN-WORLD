@@ -79,15 +79,6 @@ const Main = () => {
   const [play, setPlaying] = useState(true);
   //왼쪽 상단 플레이리스트 저장
   //기쁨,슬픔,긴장
-  const dataSubmit = async () => {
-    await axios.post("/gallery/userinfo", {
-      userName: status.userName,
-      sound1: status.sound1,
-      sound4: status.sound4,
-      sound5: status.sound5,
-      sound6: status.sound6,
-    });
-  };
 
   const savePlaylist1 = () => {
     if (status.sound1 === "") {
@@ -405,30 +396,18 @@ const Main = () => {
     ////////////////////////남자 긴장 애니메이션 /////////////////////////////
   };
 
-  const [mainPlay, mainsetSound] = useState(true);
+  // const [mainPlay, mainsetSound] = useState(true);
   //main 기본 재생음악 함수//////////////////////////////////////////////
 
-  const mainPlayStop = () => {
-    if (status.moodSelect === 7) {
-      mainsetSound(false);
-    }
-  };
-
   const navigate = useNavigate();
-
-  const gotoGallery = () => {
-    navigate("/gallery", {
-      state: status,
-    });
-  };
 
   return (
     <div className="maincomp">
       <ReactHowler
         src={["메인사운드.wav"]}
-        playing={mainPlay}
+        playing={status.mainstop}
         loop={true}
-        volume={0.01}
+        volume={0.3}
       />
       <table className="playlist">
         <tbody>

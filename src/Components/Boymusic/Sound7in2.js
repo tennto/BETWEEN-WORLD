@@ -13,6 +13,17 @@ const Sound7in2 = (props) => {
   const dispatch = useDispatch();
   const [play, setPlaying] = useState(false);
   var [checkMS, setCheck] = useState("");
+
+  const hotfix = () => {
+    if (
+      status.sound1 === "기쁨노래1.mp3" ||
+      status.sound1 === "기쁨노래2.mp3"
+    ) {
+      return "고개를 가로젓는다 (소리 X)";
+    } else {
+      return "고개를 끄덕인다 (소리 X)";
+    }
+  };
   useEffect(() => {
     if (status.sound4 === "산소리.mp3") {
       if (
@@ -69,7 +80,7 @@ const Sound7in2 = (props) => {
         props.setNextBtn(props.nextBtn + 1);
       }}
     >
-      <p className="script">고개를 끄덕인다 (소리 X)</p>
+      <p className="script">{hotfix()}</p>
     </div>
   );
 };

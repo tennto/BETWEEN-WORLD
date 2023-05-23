@@ -141,7 +141,7 @@ const Dialog2 = () => {
       >
         <img className="chdeco" src={chdeco} alt="cddeco" />
         <p className="moodText1">
-          도대체 어디지..
+          여긴 도대체 어디지..
           <br />
           긴장돼...
         </p>
