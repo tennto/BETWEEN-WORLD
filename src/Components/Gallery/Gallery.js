@@ -66,7 +66,8 @@ const Gallery = () => {
             }
           }}
         >
-          제 음악이 없어요
+          제 음악이
+          <br /> 없어요
         </button>
       </div>
       <div className="all-gallery">

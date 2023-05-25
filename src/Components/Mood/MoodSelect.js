@@ -140,7 +140,7 @@ const Dialog2 = () => {
         className="CH_BOX"
       >
         <img className="chdeco" src={chdeco} alt="cddeco" />
-        <p className="moodText1">
+        <p className="moodText4">
           여긴 도대체 어디지..
           <br />
           긴장돼...

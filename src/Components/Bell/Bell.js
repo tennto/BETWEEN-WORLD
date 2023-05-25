@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import ReactHowler from "../../howler/ReactHowler.js";
 import Sound9in2 from "../Boymusic/Sound9in2";
 import Sound9in1 from "../Boymusic/Sound9in1";
+import Sound9in3 from "../Boymusic/Sound9in3";
 
 import "../../css/Chapter2.css";
 import "../../css/Card.css";
@@ -419,6 +420,26 @@ const Dialog12 = (props) => {
   );
 };
 const Dialog13 = (props) => {
+  const status = useSelector((state) => state);
+  const showSound1 = () => {
+    if (
+      status.sound1 === "긴장노래1.mp3" ||
+      status.sound1 === "긴장노래3.mp3"
+    ) {
+      return (
+        <>
+          <Sound9in3 {...props} />
+        </>
+      );
+    } else {
+      return (
+        <>
+          <Sound9in1 {...props} />
+        </>
+      );
+    }
+  };
+
   return (
     <div className="fadelick">
       <div className="wrap">
@@ -431,7 +452,7 @@ const Dialog13 = (props) => {
             <img className="carddeco" src={carddecoback} alt="carddeco1" />
             {/* <p className="chtext1">해야만 하는 일을 해</p> */}
             {/* <h2 className="script">해야만 하는 일을 해</h2> */}
-            <Sound9in1 {...props} />
+            {showSound1()}
           </div>
         </div>
       </div>
