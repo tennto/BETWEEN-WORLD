@@ -181,7 +181,7 @@ const Dialog3 = (props) => {
       <button
         className="choiceNo2"
         onClick={() => {
-          setNextBtn(nextBtn + 2);
+          setNextBtn(nextBtn + 1);
         }}
       >
         <img className="chdeco" src={chdeco} alt="chdeco2" />
@@ -304,7 +304,7 @@ const Dialog8 = (props) => {
       <img className="deco" src={textdeco} alt="textdeco_bd" />
       <img className="bnchat" src={bnchat} alt="bnchat" />
       <p className="dialog_oneline">
-        알잖아, 삶이란게 네 선택대로 흘러가지 않는 다는 사실
+        알잖아, 삶이란게 네 선택대로 흘러가지 않는다는 사실
       </p>
       <button
         className="nextBtn0"

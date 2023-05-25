@@ -20,6 +20,7 @@ const root = createRoot(container);
 
 const initialState = {
   userSex: 0,
+  mainstop: true,
   textLine: 1,
   btnReset: 0,
   moodSelect: 1,
@@ -83,6 +84,8 @@ const RESET_ALL12 = "index/RESET_ALL12";
 const RESET_ALL13 = "index/RESET_ALL13";
 // const RESET_ALL14 = "index/RESET_ALL14";
 // const RESET_ALL15 = "index/RESET_ALL15";
+const MAIN_STOP = "index/MAIN_STOP";
+// 성별 남자
 // 선택지 액션 - 남자버전
 const SET_SEX1 = "index/SET_SEX1"; // 성별 남자
 const SET_SEX2 = "index/SET_SEX2"; // 성별 여자
@@ -158,6 +161,12 @@ const SET_SOUND8 = "index/SET_SOUND8";
 // reducer 설정
 function reducer(state = initialState, action) {
   switch (action.type) {
+    case MAIN_STOP: {
+      return {
+        ...state,
+        mainstop: false,
+      };
+    }
     case RESET_ALL1: {
       return {
         ...state,

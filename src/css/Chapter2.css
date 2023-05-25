@@ -273,6 +273,13 @@
   top: 100px;
   left: 58px;
 }
+.moodText4 {
+  font-family: "ongeul";
+  font-size: 32px;
+  position: absolute;
+  top: 20px;
+  left: 54px;
+}
 
 .yesp_bell {
   font-family: "ongeul";

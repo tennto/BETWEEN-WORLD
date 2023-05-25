@@ -70,6 +70,7 @@ const Dialog0 = (props) => {
 };
 
 const Dialog1 = (props) => {
+  const dispatch = useDispatch();
   return (
     <div className="forFade_g">
       <img className="deco" src={deco} alt="deco_som" />
@@ -79,6 +80,7 @@ const Dialog1 = (props) => {
         className="nextBtn0"
         onClick={() => {
           props.setNextBtn(props.nextBtn + 1);
+          dispatch({ type: "index/MAIN_STOP" });
         }}
       >
         다음
