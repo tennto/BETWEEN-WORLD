@@ -76,6 +76,7 @@ const Sound7in2 = (props) => {
           dispatch(setSound7(""));
           dispatch(cardSelect(1));
           dispatch({ type: checkMS });
+          dispatch({ type: "index/CK_CASE2" });
         });
         props.setNextBtn(props.nextBtn + 1);
       }}

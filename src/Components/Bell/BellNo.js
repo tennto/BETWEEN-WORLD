@@ -31,6 +31,9 @@ const BellNo = () => {
       sound6: status.sound6,
       sound7: status.sound7,
       sound8: status.sound8,
+      rtrCase: status.rtrCase,
+      ckCase: status.ckCase,
+      bdCase: status.bdCase,
     });
   };
   useEffect(() => {

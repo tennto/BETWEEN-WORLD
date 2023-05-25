@@ -66,6 +66,7 @@ const Sound6in1 = (props) => {
           dispatch(setSound6("빗소리.mp3"));
           dispatch(cardSelect(0));
           dispatch({ type: checkMS });
+          dispatch({ type: "index/RTR_CASE1" });
         });
         props.setNextBtn(props.nextBtn + 1);
       }}

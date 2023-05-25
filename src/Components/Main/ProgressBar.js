@@ -43,7 +43,10 @@ const ProgressBar = () => {
     } else if (status.moodSelect === 1070) {
       setCount(count + 1);
       console.log(count + "입니다");
-    } else if (status.moodSelect === 1080 || status.aniselect === 1090) {
+    } else if (status.moodSelect === 1080) {
+      setCount(count + 1);
+      console.log(count + "입니다");
+    } else if (status.moodSelect === 1090) {
       setCount(count + 1);
       console.log(count + "입니다");
     }

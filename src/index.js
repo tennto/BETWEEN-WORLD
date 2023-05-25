@@ -19,6 +19,9 @@ const root = createRoot(container);
 // userName 은 유저닉네임을 위한 프로퍼티
 
 const initialState = {
+  rtrCase: "",
+  ckCase: "",
+  bdCase: "",
   userSex: 0,
   mainstop: true,
   textLine: 1,
@@ -68,6 +71,13 @@ export const setSound7 = (sound7) => {
 export const setSound8 = (sound8) => {
   return { type: SET_SOUND8, sound8 };
 };
+
+const BD_CASE1 = "index/BD_CASE1";
+const RTR_CASE1 = "index/RTR_CASE1";
+const CK_CASE1 = "index/CK_CASE1";
+const BD_CASE2 = "index/BD_CASE2";
+const RTR_CASE2 = "index/RTR_CASE2";
+const CK_CASE2 = "index/CK_CASE2";
 
 const RESET_ALL1 = "index/RESET_ALL1";
 const RESET_ALL2 = "index/RESET_ALL2";
@@ -161,6 +171,42 @@ const SET_SOUND8 = "index/SET_SOUND8";
 // reducer 설정
 function reducer(state = initialState, action) {
   switch (action.type) {
+    case RTR_CASE1: {
+      return {
+        ...state,
+        rtrCase: 1,
+      };
+    }
+    case RTR_CASE2: {
+      return {
+        ...state,
+        rtrCase: 2,
+      };
+    }
+    case CK_CASE1: {
+      return {
+        ...state,
+        ckCase: 1,
+      };
+    }
+    case CK_CASE2: {
+      return {
+        ...state,
+        ckCase: 2,
+      };
+    }
+    case BD_CASE1: {
+      return {
+        ...state,
+        bdCase: 1,
+      };
+    }
+    case BD_CASE2: {
+      return {
+        ...state,
+        bdCase: 2,
+      };
+    }
     case MAIN_STOP: {
       return {
         ...state,
