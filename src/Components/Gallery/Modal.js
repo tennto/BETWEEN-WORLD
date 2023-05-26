@@ -56,7 +56,7 @@ function Modal({ onClose, idCheck }) {
             playing={true}
             loop={true}
             mute={false}
-            volume={0.5}
+            volume={0.2}
           />
         </div>
       );
@@ -73,7 +73,7 @@ function Modal({ onClose, idCheck }) {
             playing={true}
             loop={true}
             mute={false}
-            volume={0.5}
+            volume={0.2}
           />
         </div>
       );
@@ -90,7 +90,7 @@ function Modal({ onClose, idCheck }) {
             playing={true}
             loop={true}
             mute={false}
-            volume={0.2}
+            volume={0.1}
           />
         </div>
       );
@@ -107,7 +107,7 @@ function Modal({ onClose, idCheck }) {
             playing={true}
             loop={true}
             mute={false}
-            volume={0.5}
+            volume={0.2}
           />
         </div>
       );
@@ -124,7 +124,7 @@ function Modal({ onClose, idCheck }) {
             playing={true}
             loop={true}
             mute={false}
-            volume={0.5}
+            volume={0.3}
           />
         </div>
       );

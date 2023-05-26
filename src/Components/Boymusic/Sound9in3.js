@@ -47,7 +47,7 @@ const Sound9in3 = (props) => {
         playing={play}
         loop={false}
         mute={false}
-        volume={0.2}
+        volume={0.1}
       />
       <p className="bellscript">눈을 뜬다 (소리 O)</p>
     </div>

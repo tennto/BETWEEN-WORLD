@@ -31,7 +31,7 @@ const Sound4in2 = (props) => {
         playing={play}
         loop={false}
         mute={false}
-        volume={0.3}
+        volume={0.2}
       />
       <img className="schoice" src={schoice} alt="schoice" />
       <p className="rtrscript">지혜로운 사람</p>

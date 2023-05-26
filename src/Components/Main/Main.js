@@ -109,7 +109,7 @@ const Main = () => {
             playing={play}
             loop={true}
             mute={false}
-            volume={0.3}
+            volume={0.2}
           />
         </>
       );
@@ -144,7 +144,7 @@ const Main = () => {
             playing={play}
             loop={true}
             mute={false}
-            volume={0.5}
+            volume={0.2}
           />
         </>
       );
@@ -197,7 +197,7 @@ const Main = () => {
             playing={play}
             loop={true}
             mute={false}
-            volume={0.3}
+            volume={0.2}
           />
         </>
       );
@@ -215,7 +215,7 @@ const Main = () => {
             playing={play}
             loop={true}
             mute={false}
-            volume={0.5}
+            volume={0.3}
           />
         </>
       );
